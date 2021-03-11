@@ -57,7 +57,7 @@ const SidebarNav = props => {
   const { pages, onClose, className, ...rest } = props;
   const classes = useStyles();
 
-  const landings = pages.landings;
+  const retirement = pages.retirement;
   const supportedPages = pages.pages;
   const account = pages.account;
 
@@ -92,16 +92,12 @@ const SidebarNav = props => {
     );
   };
 
-  const LandingPages = () => {
-    const { services, apps, web } = landings.children;
+  const RetirementPages = () => {
+    const { pages } = retirement.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
-          <MenuGroup item={services} />
-          <MenuGroup item={apps} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={web} />
+          <MenuGroup item={pages} />
         </div>
       </div>
     );
@@ -158,9 +154,9 @@ const SidebarNav = props => {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Typography variant="h6" color="textPrimary" gutterBottom>
-          Landings
+          Altersvorsorge
         </Typography>
-        <LandingPages />
+        <RetirementPages />
       </ListItem>
       <ListItem className={classes.listItem}>
         <Divider className={classes.divider} />

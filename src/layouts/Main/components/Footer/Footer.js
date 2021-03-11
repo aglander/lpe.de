@@ -99,10 +99,6 @@ const Footer = props => {
 
   const classes = useStyles();
 
-  const landings = pages.landings;
-  const supportedPages = pages.pages;
-  const account = pages.account;
-
   const MenuGroup = props => {
     const { item } = props;
     return (
@@ -126,66 +122,7 @@ const Footer = props => {
         ))}
       </List>
     );
-  };
-
-  const LandingPages = () => {
-    const { services, apps, web } = landings.children;
-    return (
-      <div className={classes.menu}>
-        <div>
-          <MenuGroup item={services} />
-          <MenuGroup item={apps} />
-        </div>
-        <div>
-          <MenuGroup item={web} />
-        </div>
-      </div>
-    );
-  };
-
-  const SupportedPages = () => {
-    const {
-      career,
-      helpCenter,
-      company,
-      contact,
-      blog,
-      portfolio,
-    } = supportedPages.children;
-    return (
-      <div className={classes.menu}>
-        <div>
-          <MenuGroup item={career} />
-          <MenuGroup item={helpCenter} />
-        </div>
-        <div>
-          <MenuGroup item={company} />
-          <MenuGroup item={contact} />
-        </div>
-        <div>
-          <MenuGroup item={blog} />
-          <MenuGroup item={portfolio} />
-        </div>
-      </div>
-    );
-  };
-
-  const AccountPages = () => {
-    const { settings, signup, signin, password, error } = account.children;
-    return (
-      <div className={classes.menu}>
-        <div>
-          <MenuGroup item={settings} />
-          <MenuGroup item={signup} />
-        </div>
-        <div>
-          <MenuGroup item={signin} />
-          <MenuGroup item={password} />
-          <MenuGroup item={error} />
-        </div>
-      </div>
-    );
-  };
+  };  
 
   return (
     <div {...rest} className={clsx(classes.root, className)}>
@@ -224,13 +161,13 @@ const Footer = props => {
           <Grid item xs={12} md={10} className={classes.menuListContainer}>
             <Grid container spacing={0}>
               <Grid item>
-                <LandingPages />
+                
               </Grid>
               <Grid item>
-                <SupportedPages />
+                
               </Grid>
               <Grid item>
-                <AccountPages />
+                
               </Grid>
             </Grid>
           </Grid>
