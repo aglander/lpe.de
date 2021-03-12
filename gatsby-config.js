@@ -102,8 +102,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages/`,
+        name: 'data',
+        path: `${__dirname}/src/data/`,
       },
     },
     'gatsby-plugin-top-layout',
