@@ -80,6 +80,20 @@ module.exports = {
         parent: 'risikovorsorge',
         title: 'Berufsunfähigkeitsversicherung',
         url: '/berufsunfaehigkeitsversicherung'
+      },
+      {
+        id: 'finanzierungen',
+        title: 'Finanzierungen',
+      },
+      {
+        id: 'liebe-familie',
+        title: 'Liebe Familie',
+        url: '/liebe-familie'
+      },
+      {
+        id: 'immobilien',
+        title: 'Immobilien',
+        url: '/immobilien'
       }
     ]
   },
