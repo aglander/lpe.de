@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Hero = props => {
-  const { className, ...rest } = props;
+  const { className, title, claim, description, ...rest } = props;
   const classes = useStyles();
 
   const theme = useTheme();
@@ -30,14 +30,11 @@ const Hero = props => {
           <SectionHeader
             title={
               <span>
-                Risiko-Lebensversicherung{' '}
-                <Typography component="span" variant="inherit" color="primary">Schützen, was Ihnen lieb und wichtig
-							ist!</Typography>
+                {title}{' '}
+                <Typography component="span" variant="inherit" color="primary">{claim}</Typography>
               </span>
             }
-            subtitle="Mit einer
-            Risikolebensversicherung können Sie die Existenz Ihrer Ehepartner,
-            Lebenspartner oder Geschäftspartner optimal absichern."
+            subtitle={description}
             ctaGroup={[
               <Button
                 variant="contained"
