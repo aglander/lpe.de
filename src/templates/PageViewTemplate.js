@@ -24,9 +24,8 @@ export const query = graphql`
 	}
 `;
 
-const PageViewTemplate = ( {data} ) => {
-	return <WithLayout 
-        component={PageView} layout={Main} data={data} />;
+const PageViewTemplate = ({ data }) => {
+	return <WithLayout component={PageView} layout={Main} data={data} />;
 };
 
 export default PageViewTemplate;
