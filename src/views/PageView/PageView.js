@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography, List, ListItem } from '@material-ui/core';
-import { Section, SectionAlternate } from 'components/organisms';
+import { Section, SectionAlternate, ContactPanel } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
@@ -13,7 +13,6 @@ import {
 	SidebarArticles,
 	SidebarNewsletter,
 	SimilarStories,
-	ContactPanel
 } from './components';
 
 import { content, sidebarArticles, similarStories } from './data';
@@ -86,10 +85,12 @@ const PageView = (data) => {
 	};
 	return (
 		<div className={classes.root}>
-			<Hero
-				title={data.data.mdx.frontmatter.title}
-				claim={data.data.mdx.frontmatter.claim}
-				description={data.data.mdx.frontmatter.description}
+      <Hero
+				data={data.data.mdx.frontmatter.heroTitle}
+				claim={data.data.mdx.frontmatter.heroClaim}
+				description={data.data.mdx.frontmatter.heroDescription}
+        slug={data.data.mdx.slug}
+        compare={data.data.mdx.frontmatter.compare}
 			/>
 			<Section>
 				<Grid container spacing={4}>

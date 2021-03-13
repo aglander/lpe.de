@@ -9,6 +9,9 @@ exports.createPages = async ({ graphql, actions }) => {
 				edges {
 					node {
 						slug
+						frontmatter {
+							compare
+						}
 					}
 				}
 			}
@@ -27,5 +30,14 @@ exports.createPages = async ({ graphql, actions }) => {
 				slug: edge.node.slug,
 			},
 		});
+		if (edge.node.frontmatter.compare) {
+			createPage({
+				path: `/${edge.node.slug}-vergleichen`,
+				component: path.resolve('./src/templates/CompareViewTemplate.js'),
+				context: {
+					slug: edge.node.slug,
+				},
+			});
+		}
 	});
 };
