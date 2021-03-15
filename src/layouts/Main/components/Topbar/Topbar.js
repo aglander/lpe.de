@@ -286,8 +286,7 @@ const Topbar = ({
 						variant="contained"
 						color="primary"
 						component="a"
-						target="blank"
-						href="https://material-ui.com/store/items/the-front-landing-page/"
+						href="/kontakt"
 						className={classes.listItemButton}
 					>
 						Kontakt
