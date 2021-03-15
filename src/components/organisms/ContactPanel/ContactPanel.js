@@ -4,8 +4,6 @@ import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {
 	colors,
-	Typography,
-	Grid,
 	List,
 	ListItem,
 	ListItemText,
@@ -18,7 +16,6 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import SmartphoneIcon from '@material-ui/icons/Smartphone';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
-import { Image } from 'components/atoms';
 
 const useStyles = makeStyles((theme) => ({
 	root: {

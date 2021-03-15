@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography, List, ListItem } from '@material-ui/core';
-import { Section, SectionHeader, ContactPanel } from 'components/organisms';
+import { Grid, Typography } from '@material-ui/core';
+import { Section, ContactPanel } from 'components/organisms';
 
 import PropTypes from 'prop-types';
 
@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
 
 const CompareView = (data) => {
 	const classes = useStyles();
-	const props = '';
 
 	return (
 		<div className={classes.root}>
@@ -44,6 +43,7 @@ const CompareView = (data) => {
 							<iframe
 								src={data.data.mdx.frontmatter.compare}
 								className={classes.compare}
+								title="Vergleichsrechner"
 							/>
 						</Section>
 					</Grid>

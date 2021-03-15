@@ -10,11 +10,9 @@ import {
 	ListItemIcon,
 	Popover,
 	Typography,
-	IconButton,
 	Button,
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MenuIcon from '@material-ui/icons/Menu';
 import { Image } from 'components/atoms';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -130,7 +128,7 @@ const Topbar = ({
 	const [openedPopoverId, setOpenedPopoverId] = useState(null);
 
 	const handleClick = (event, popoverId) => {
-		setAnchorEl(event.target);
+		setAnchorEl('event.target');
 		setOpenedPopoverId(popoverId);
 	};
 
@@ -161,7 +159,7 @@ const Topbar = ({
 
 		const renderSubMenu = (id) => {
 			const subMenu = navigation
-				.filter((navItem) => navItem.parent == id)
+				.filter((navItem) => navItem.parent === id)
 				.map((navItem) => {
 					if (navItem.url) {
 						return (

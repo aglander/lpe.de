@@ -1,21 +1,19 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography, List, ListItem } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { Section, SectionAlternate, ContactPanel } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
 import PropTypes from 'prop-types';
 import {
-	Content,
 	FooterNewsletter,
 	Hero,
-	SidebarArticles,
 	SidebarNewsletter,
 	SimilarStories,
 } from './components';
 
-import { content, sidebarArticles, similarStories } from './data';
+import { similarStories } from './data';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -45,9 +43,9 @@ const useStyles = makeStyles((theme) => ({
 	footerNewsletterSection: {
 		background: theme.palette.primary.dark,
 	},
-  contactPanel: {
-    fick: 'dich'
-  }
+	contactPanel: {
+		fick: 'dich',
+	},
 }));
 
 const PageView = (data) => {
@@ -85,12 +83,12 @@ const PageView = (data) => {
 	};
 	return (
 		<div className={classes.root}>
-      <Hero
+			<Hero
 				data={data.data.mdx.frontmatter.heroTitle}
 				claim={data.data.mdx.frontmatter.heroClaim}
 				description={data.data.mdx.frontmatter.heroDescription}
-        slug={data.data.mdx.slug}
-        compare={data.data.mdx.frontmatter.compare}
+				slug={data.data.mdx.slug}
+				compare={data.data.mdx.frontmatter.compare}
 			/>
 			<Section>
 				<Grid container spacing={4}>
