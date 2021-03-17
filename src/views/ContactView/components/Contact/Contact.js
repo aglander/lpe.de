@@ -22,22 +22,23 @@ function ListItemLink(props) {
 
 const useStyles = makeStyles((theme) => ({
 	list: {
-		width: '300px'
-	},
-	listItemText: {
 		display: 'flex',
 		flexDirection: 'column',
-		flex: '0 0 auto',
-	},
-	listItem: {
-		justifyContent: 'flex-start',
+		alignItems: 'left',
 		[theme.breakpoints.up('md')]: {
-			justifyContent: 'center',
+			alignItems: 'center',
 		},
 	},
+	listItemText: {},
+	listItem: {
+		width: '300px',
+	},
 	icon: {
-		background: 'transparent',
-		borderRadius: 0,
+		background: theme.palette.primary.main,
+		color: 'white',
+		borderRadius: '50%',
+		padding: '10px',
+		fontSize: '3em',
 	},
 }));
 
@@ -53,7 +54,7 @@ const Contact = (props) => {
 	return (
 		<div className={className} {...rest}>
 			<Grid container spacing={isMd ? 4 : 2}>
-				<Grid item xs={6} data-aos="fade-up">
+				<Grid item xs={isMd ? 6 : 12} data-aos="fade-up">
 					<SectionHeader
 						title="Kontaktdaten"
 						subtitle="Our contact details. We carefully read and answer to all your questions."
@@ -61,7 +62,7 @@ const Contact = (props) => {
 						align={isMd ? 'center' : 'left'}
 					/>
 					<List disablePadding className={classes.list}>
-						<ListItem>
+						<ListItem className={classes.listItem}>
 							<ListItemIcon>
 								<LocationOnIcon className={classes.icon} />
 							</ListItemIcon>
@@ -75,7 +76,7 @@ const Contact = (props) => {
 								}}
 							/>
 						</ListItem>
-						<ListItem>
+						<ListItem className={classes.listItem}>
 							<ListItemLink disableGutters href="tel:01723829922">
 								<ListItemIcon>
 									<SmartphoneIcon className={classes.icon} />
@@ -83,7 +84,7 @@ const Contact = (props) => {
 								<ListItemText primary="(0172) 3 829 922" />
 							</ListItemLink>
 						</ListItem>
-						<ListItem>
+						<ListItem className={classes.listItem}>
 							<ListItemLink disableGutters href="tel:033627000251">
 								<ListItemIcon>
 									<PhoneIcon className={classes.icon} />
@@ -91,7 +92,7 @@ const Contact = (props) => {
 								<ListItemText primary="(0 33 62) 7000 251" />
 							</ListItemLink>
 						</ListItem>
-						<ListItem>
+						<ListItem className={classes.listItem}>
 							<ListItemLink disableGutters href="mailto:LPE@LPE.de">
 								<ListItemIcon>
 									<EmailIcon className={classes.icon} />
@@ -101,7 +102,21 @@ const Contact = (props) => {
 						</ListItem>
 					</List>
 				</Grid>
-        <Grid item xs={6} data-aos="fade-up">Hallo</Grid>
+				<Grid item xs={6} data-aos="fade-up">
+					<SectionHeader
+						title="Videoberatung"
+						subtitle="Wie ist die eigentlich genau gedacht Lars?"
+						data-aos="fade-up"
+						align={isMd ? 'center' : 'left'}
+					/>
+					<a
+						href="https://fondsfinanz.br-idge.de/public/room.a?key=LPE&skipCheck=true"
+						target="_blank"
+					>
+						Videoberatung
+					</a>
+				
+				</Grid>
 			</Grid>
 		</div>
 	);

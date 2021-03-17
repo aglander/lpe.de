@@ -19,15 +19,15 @@ export const query = graphql`
 				heroDescription
 				heroTitle
 				compare
+				slug
 			}
-			slug
 			body
 		}
 	}
 `;
 
-const PageViewTemplate = ({ data }) => {
+const CompareViewTemplate = ({ data }) => {
 	return <WithLayout component={CompareView} layout={Main} data={data} />;
 };
 
-export default PageViewTemplate;
+export default CompareViewTemplate;

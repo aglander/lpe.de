@@ -23,17 +23,29 @@ exports.createPages = async ({ graphql, actions }) => {
     }
 
 	result.data.allMdx.edges.forEach((edge) => {
-		createPage({
-			path: `/${edge.node.slug}`,
-			component: path.resolve('./src/templates/PageViewTemplate.js'),
-			context: {
-				slug: edge.node.slug,
-			},
-		});
-		if (edge.node.frontmatter.compare) {
-			createPage({
-				path: `/${edge.node.slug}-vergleichen`,
-				component: path.resolve('./src/templates/CompareViewTemplate.js'),
+		const slug = edge.node.slug.split('/');
+		if (slug[0]  === 'page') {
+			createPage({		
+				path: `/${slug[1]}`,
+				component: path.resolve('./src/templates/PageViewTemplate.js'),
+				context: {
+					slug: edge.node.slug,
+				},
+			});
+			if (edge.node.frontmatter.compare) {
+				createPage({
+					path: `/${slug[1]}-vergleichen`,
+					component: path.resolve('./src/templates/CompareViewTemplate.js'),
+					context: {
+						slug: edge.node.slug,
+					},
+				});
+			}
+		}
+		if (slug[0] === 'legal') {
+			createPage({		
+				path: `/${slug[1]}`,
+				component: path.resolve('./src/templates/LegalViewTemplate.js'),
 				context: {
 					slug: edge.node.slug,
 				},
