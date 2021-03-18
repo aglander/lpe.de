@@ -5,53 +5,63 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { useMediaQuery, Divider } from '@material-ui/core';
 import { Topbar, Footer, Sidebar } from './components';
 
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    height: '100%',
-  },
+const useStyles = makeStyles((theme) => ({
+	root: {
+		height: '100%',
+	},
+	topBar: {
+		position: 'fixed',
+    backgroundColor: 'white',
+    width: '100%',
+    borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
+    zIndex: 999
+	},
+  main: {
+    paddingTop: '65px'
+  }
 }));
 
 const Main = ({ children, themeToggler, themeMode }) => {
-  const classes = useStyles();
+	const classes = useStyles();
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
+	const theme = useTheme();
+	const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+		defaultMatches: true,
+	});
 
-  const [openSidebar, setOpenSidebar] = useState(false);
+	const [openSidebar, setOpenSidebar] = useState(false);
 
-  const handleSidebarOpen = () => {
-    setOpenSidebar(true);
-  };
+	const handleSidebarOpen = () => {
+		setOpenSidebar(true);
+	};
 
-  const handleSidebarClose = () => {
-    setOpenSidebar(false);
-  };
+	const handleSidebarClose = () => {
+		setOpenSidebar(false);
+	};
 
-  const open = isMd ? false : openSidebar;
-
-  return (
-    <div
-      className={clsx({
-        [classes.root]: true,
-      })}
-    >
-      <Topbar onSidebarOpen={handleSidebarOpen} />
-      <main>
-        <Divider />
-        {children}
-      </main>
-      <Footer  />
-    </div>
-  );
+	const open = isMd ? false : openSidebar;
+	console.log(classes.topBar);
+	return (
+		<div
+			className={clsx({
+				[classes.root]: true,
+			})}
+		>
+			<div className={classes.topBar}>
+        <Topbar onSidebarOpen={handleSidebarOpen} />
+      </div>
+			<main className={classes.main}>
+				{children}
+			</main>
+			<Footer />
+		</div>
+	);
 };
 
 Main.propTypes = {
-  children: PropTypes.node,
-  themeToggler: PropTypes.func.isRequired,
-  themeMode: PropTypes.string.isRequired,
+	children: PropTypes.node,
+	themeToggler: PropTypes.func.isRequired,
+	themeMode: PropTypes.string.isRequired,
 };
 
 export default Main;

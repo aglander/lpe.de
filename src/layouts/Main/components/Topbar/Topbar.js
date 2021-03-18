@@ -296,9 +296,9 @@ const Topbar = ({
 			</List>
 		);
 	};
-
+	
 	return (
-		<Toolbar disableGutters className={classes.toolbar} {...rest}>
+		<Toolbar disableGutters className={clsx(classes.toolbar, className)} {...rest}>
 			<div className={classes.logoContainer}>
 				<a href="/" title="LPE.de">
 					<Image
