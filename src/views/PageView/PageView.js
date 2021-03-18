@@ -51,6 +51,16 @@ const useStyles = makeStyles((theme) => ({
 const PageView = (data) => {
 	const classes = useStyles();
 	const props = '';
+
+	const {
+		data: {
+			mdx: {
+				frontmatter: { heroTitle, heroClaim, heroDescription, slug, compare },
+				body,
+			},
+		},
+	} = data;
+
 	const components = {
 		p: (props) => (
 			<Typography
@@ -84,17 +94,17 @@ const PageView = (data) => {
 	return (
 		<div className={classes.root}>
 			<Hero
-				data={data.data.mdx.frontmatter.heroTitle}
-				claim={data.data.mdx.frontmatter.heroClaim}
-				description={data.data.mdx.frontmatter.heroDescription}
-				slug={data.data.mdx.slug}
-				compare={data.data.mdx.frontmatter.compare}
+				data={heroTitle}
+				claim={heroClaim}
+				description={heroDescription}
+				slug={slug}
+				compare={compare}
 			/>
 			<Section>
 				<Grid container spacing={4}>
 					<Grid item xs={12} md={8}>
 						<MDXProvider components={components}>
-							<MDXRenderer>{data.data.mdx.body}</MDXRenderer>
+							<MDXRenderer>{body}</MDXRenderer>
 						</MDXProvider>
 					</Grid>
 					<Grid item xs={12} md={4}>
