@@ -38,7 +38,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
         [classes.root]: true,
       })}
     >
-      <Topbar onSidebarOpen={handleSidebarOpen} themeMode={themeMode} themeToggler={themeToggler} />
+      <Topbar onSidebarOpen={handleSidebarOpen} />
       <main>
         <Divider />
         {children}

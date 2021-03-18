@@ -116,28 +116,29 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Topbar = ({
-	themeMode,
-	themeToggler,
 	onSidebarOpen,
 	className,
 	...rest
 }) => {
 	const classes = useStyles();
 
-	const [anchorEl, setAnchorEl] = useState(null);
-	const [openedPopoverId, setOpenedPopoverId] = useState(null);
-
-	const handleClick = (event, popoverId) => {
-		setAnchorEl('event.target');
-		setOpenedPopoverId(popoverId);
-	};
-
-	const handleClose = () => {
-		setAnchorEl(null);
-		setOpenedPopoverId(null);
-	};
+	
 
 	const Navigation = () => {
+
+		const [anchorEl, setAnchorEl] = useState(null);
+		const [openedPopoverId, setOpenedPopoverId] = useState(null);
+
+		const handleClick = (event, popoverId) => {
+			setAnchorEl(event.target);
+			setOpenedPopoverId(popoverId);
+		};
+
+		const handleClose = () => {
+			setAnchorEl(null);
+			setOpenedPopoverId(null);
+		};
+
 		const {
 			site: {
 				siteMetadata: { navigation },
@@ -302,7 +303,7 @@ const Topbar = ({
 				<a href="/" title="LPE.de">
 					<Image
 						className={classes.logoImage}
-						src={themeMode === 'light' ? logo : logo}
+						src={logo}
 						alt="LPE.de"
 						lazy={false}
 					/>
@@ -318,9 +319,7 @@ const Topbar = ({
 
 Topbar.propTypes = {
 	className: PropTypes.string,
-	onSidebarOpen: PropTypes.func,
-	themeToggler: PropTypes.func.isRequired,
-	themeMode: PropTypes.string.isRequired,
+	onSidebarOpen: PropTypes.func
 };
 
 export default Topbar;
