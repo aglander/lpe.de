@@ -120,5 +120,8 @@ module.exports = {
     },
     "gatsby-plugin-react-helmet",
     'gatsby-plugin-resolve-src',
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
   ],
 };
