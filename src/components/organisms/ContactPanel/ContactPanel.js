@@ -88,6 +88,7 @@ const useStyles = makeStyles((theme) => ({
 		right: '18px',
 		width: '60px',
 		height: '60px',
+		paddingTop: '20px'
 	},
 	contactPanel: {
 		background: theme.palette.background.footer,
