@@ -16,6 +16,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import SmartphoneIcon from '@material-ui/icons/Smartphone';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -90,11 +91,11 @@ const useStyles = makeStyles((theme) => ({
 	},
 	contactPanel: {
 		background: theme.palette.background.footer,
-		color: theme.palette.common.white
+		color: theme.palette.common.white,
 	},
 	icon: {
-		color: 'rgba(255,255,255,1)'
-	}
+		color: 'rgba(255,255,255,1)',
+	},
 }));
 
 function ListItemLink(props) {
@@ -115,11 +116,16 @@ const ContactPanel = () => {
 			<List aria-label="contacts">
 				<ListItem className={classes.listItem}>
 					<ListItemAvatar className={classes.listItemAvatar}>
-						<Avatar
-							src="https://assets.maccarianagency.com/the-front/photos/people/jack-smith.jpg"
-							srcSet="https://assets.maccarianagency.com/the-front/photos/people/jack-smith@2x.jpg 2x"
-							className={classes.avatar}
-						/>
+						<Avatar className={classes.avatar}>
+							<StaticImage
+								src="../../../assets/images/LPE_HP.jpg"
+								alt="Lars-Peter Eckhardt"
+								placeholder="blurred"
+								layout="fixed"
+								width={60}
+								height={80}
+							/>
+						</Avatar>
 					</ListItemAvatar>
 					<ListItemText
 						className={classes.listItemText}

@@ -119,11 +119,11 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 				rightSide={
 					<StaticImage
 						src="../../../../assets/images/LPE_Start.jpg"
-						alt="A dinosaur"
+						alt="Lars-Peter Eckhardt"
 						placeholder="blurred"
 						layout="fixed"
-						width={900}
-						height={600}
+						width={1000}
+						height={667}
 					/>
 				}
 			/>
