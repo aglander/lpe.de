@@ -55,7 +55,14 @@ const PageView = (data) => {
 	const {
 		data: {
 			mdx: {
-				frontmatter: { heroTitle, heroClaim, heroDescription, slug, compare },
+				frontmatter: {
+					heroTitle,
+					heroClaim,
+					heroDescription,
+					slug,
+					compare,
+					heroImage
+				},
 				body,
 			},
 		},
@@ -99,6 +106,7 @@ const PageView = (data) => {
 				description={heroDescription}
 				slug={slug}
 				compare={compare}
+				image={heroImage}
 			/>
 			<Section>
 				<Grid container spacing={4}>

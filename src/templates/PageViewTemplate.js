@@ -19,6 +19,14 @@ export const query = graphql`
 				heroTitle
 				compare
 				slug
+				heroImage {
+					childImageSharp {
+						gatsbyImageData(
+							width: 800
+							placeholder: BLURRED
+						)
+					}
+				}
 			}
 			body
 		}

@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import { useMediaQuery, Button, Typography } from '@material-ui/core';
-import { SectionHeader, SwiperImage } from 'components/molecules';
+import { SectionHeader } from 'components/molecules';
 import { HeroShaped } from 'components/organisms';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const useStyles = makeStyles((theme) => ({
 	swiperNavButton: {
@@ -22,6 +23,7 @@ const Hero = (props) => {
 		description,
 		slug,
 		compare,
+		image,
 		...rest
 	} = props;
 	const classes = useStyles();
@@ -74,32 +76,7 @@ const Hero = (props) => {
 					/>
 				}
 				rightSide={
-					<SwiperImage
-						navigationButtonStyle={classes.swiperNavButton}
-						items={[
-							{
-								src:
-									'https://assets.maccarianagency.com/the-front/photos/coworking/place2.jpg',
-								srcSet:
-									'https://assets.maccarianagency.com/the-front/photos/coworking/place2@2x.jpg 2x',
-								alt: '...',
-							},
-							{
-								src:
-									'https://assets.maccarianagency.com/the-front/photos/coworking/place1.jpg',
-								srcSet:
-									'https://assets.maccarianagency.com/the-front/photos/coworking/place1@2x.jpg 2x',
-								alt: '...',
-							},
-							{
-								src:
-									'https://assets.maccarianagency.com/the-front/photos/coworking/place3.jpg',
-								srcSet:
-									'https://assets.maccarianagency.com/the-front/photos/coworking/place3@2x.jpg 2x',
-								alt: '...',
-							},
-						]}
-					/>
+					<GatsbyImage image={getImage(image)} alt={title} />
 				}
 			/>
 		</div>
