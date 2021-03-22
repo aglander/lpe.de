@@ -42,7 +42,7 @@ const Hero = (props) => {
 			Kontakt aufnehmen
 		</Button>,
 	];
-  console.log(compare);
+	
 	if (compare) {
 		ctas.push(
 			<Button

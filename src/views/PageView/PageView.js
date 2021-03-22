@@ -11,6 +11,7 @@ import {
 	Hero,
 	SidebarNewsletter,
 	SimilarStories,
+	ContactAndCompareBox
 } from './components';
 
 import { similarStories } from './data';
@@ -61,12 +62,14 @@ const PageView = (data) => {
 					heroDescription,
 					slug,
 					compare,
-					heroImage
+					heroImage,
 				},
 				body,
 			},
 		},
 	} = data;
+
+	console.log(slug, 'ARIAN');
 
 	const components = {
 		p: (props) => (
@@ -97,7 +100,9 @@ const PageView = (data) => {
 			/>
 		),
 		ul: (props) => <ul {...props} className={classes.list} />,
+		ContactAndCompareBox: (props) => <ContactAndCompareBox {...props} slug={slug} compare={compare} />,
 	};
+	
 	return (
 		<div className={classes.root}>
 			<Hero
