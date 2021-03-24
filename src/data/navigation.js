@@ -4,6 +4,8 @@ export default [
 	id: 'altersvorsorge',
 	title: 'Altersvorsorge',
 },
+
+
 	{
 		id: 'riesterrente',
 		parent: 'altersvorsorge',
@@ -28,11 +30,14 @@ export default [
 		title: 'Lebensversicherung',
 		url: '/lebensversicherung',
 	},
-	
+
+
 {
 	id: 'versicherungen',
 	title: 'Versicherungen',
 },
+
+
 	{
 		id: 'risikovorsorge-arbeitskraftabsicherung',
 		parent: 'versicherungen',
@@ -44,55 +49,6 @@ export default [
 			title: 'Test 1',
 			url: '/test'
 		},
-	{
-		id: 'haftpflicht-haus',
-		parent: 'versicherungen',
-		title: 'Haftpflicht & Haus',
-	},
-		{
-			id: 'test2',
-			parent: 'risikovorsorge-arbeitskraftabsicherung',
-			title: 'Test 2',
-			url: '/test'
-		},
-	{
-		id: 'rechtsschutz-reisen',
-		parent: 'versicherungen',
-		title: 'Rechtsschutz & Reisen',
-	},
-		{
-			id: 'test3',
-			parent: 'risikovorsorge-arbeitskraftabsicherung',
-			title: 'Test 3',
-			url: '/test'
-		},
-	{
-		id: 'auto-fahrzeuge',
-		parent: 'versicherungen',
-		title: 'Auto & Fahrzeuge',
-	},
-		{
-			id: 'test4',
-			parent: 'risikovorsorge-arbeitskraftabsicherung',
-			title: 'Test 4',
-			url: '/test'
-		},
-	{
-		id: 'krankenzusatzversicherungen',
-		parent: 'versicherungen',
-		title: 'Risikovorsorge & Arbeitskraftabsicherung2',
-	},
-		{
-			id: 'test5',
-			parent: 'risikovorsorge-arbeitskraftabsicherung',
-			title: 'Test 5',
-			url: '/test'
-		},
-	{
-		id: 'risikovorsorge-arbeitskraftabsicherung',
-		parent: 'versicherungen',
-		title: 'Risikovorsorge & Arbeitskraftabsicherung3',
-	},
 		{
 			id: 'risikolebensversicherung',
 			parent: 'risikovorsorge-arbeitskraftabsicherung',
@@ -141,6 +97,56 @@ export default [
 			title: 'Sterbegeldversicherung',
 			url: '/sterbegeldversicherung',
 		},
+
+	{
+		id: 'haftpflicht-haus',
+		parent: 'versicherungen',
+		title: 'Haftpflicht & Haus',
+	},
+		{
+			id: 'test2',
+			parent: 'haftpflicht-haus',
+			title: 'Test 2',
+			url: '/test'
+		},
+
+	{
+		id: 'rechtsschutz-reisen',
+		parent: 'versicherungen',
+		title: 'Rechtsschutz & Reisen',
+	},
+		{
+			id: 'test3',
+			parent: 'rechtsschutz-reisen',
+			title: 'Test 3',
+			url: '/test'
+		},
+
+	{
+		id: 'auto-fahrzeuge',
+		parent: 'versicherungen',
+		title: 'Auto & Fahrzeuge',
+	},
+		{
+			id: 'test4',
+			parent: 'auto-fahrzeuge',
+			title: 'Test 4',
+			url: '/test'
+		},
+		
+	{
+		id: 'krankenzusatzversicherungen',
+		parent: 'versicherungen',
+		title: 'Risikovorsorge & Arbeitskraftabsicherung2',
+	},
+		{
+			id: 'test5',
+			parent: 'krankenzusatzversicherungen',
+			title: 'Test 5',
+			url: '/test'
+		},
+
+	
 
 {
 	id: 'finanzierungen',
