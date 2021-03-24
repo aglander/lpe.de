@@ -1,4 +1,5 @@
 const path = require('path');
+const { places } = require('./src/data/places');
 
 // create pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
@@ -18,14 +19,14 @@ exports.createPages = async ({ graphql, actions }) => {
 		}
 	`);
 
-    if (result.errors) {
-        reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
-    }
+	if (result.errors) {
+		reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
+	}
 
 	result.data.allMdx.edges.forEach((edge) => {
 		const slug = edge.node.slug.split('/');
-		if (slug[0]  === 'page') {
-			createPage({		
+		if (slug[0] === 'page') {
+			createPage({
 				path: `/${slug[1]}`,
 				component: path.resolve('./src/templates/PageViewTemplate.js'),
 				context: {
@@ -43,12 +44,23 @@ exports.createPages = async ({ graphql, actions }) => {
 			}
 		}
 		if (slug[0] === 'legal') {
-			createPage({		
+			createPage({
 				path: `/${slug[1]}`,
 				component: path.resolve('./src/templates/LegalViewTemplate.js'),
 				context: {
 					slug: edge.node.slug,
 				},
+			});
+		}
+		if (slug[0] === 'seo') {
+			places.forEach((place) => {
+				createPage({
+					path: `/${slug[1]}-${place.slug}`,
+					component: path.resolve('./src/templates/PageViewTemplate.js'),
+					context: {
+						slug: edge.node.slug,
+					},
+				});
 			});
 		}
 	});
