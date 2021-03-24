@@ -4,6 +4,7 @@
 - Navigation flackert, beim klicken
 - Responsiveness
 - Hero Bilder
+-  heroTitle
 
 # Epics
 - Tracking
