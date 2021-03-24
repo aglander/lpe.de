@@ -4,8 +4,6 @@ export default [
 	id: 'altersvorsorge',
 	title: 'Altersvorsorge',
 },
-
-
 	{
 		id: 'riesterrente',
 		parent: 'altersvorsorge',
@@ -30,14 +28,12 @@ export default [
 		title: 'Lebensversicherung',
 		url: '/lebensversicherung',
 	},
-
-
+//#########################################################
 {
 	id: 'versicherungen',
 	title: 'Versicherungen',
 },
-
-
+//---------------------------------------------------------
 	{
 		id: 'risikovorsorge-arbeitskraftabsicherung',
 		parent: 'versicherungen',
@@ -76,8 +72,8 @@ export default [
 		{
 			id: 'grundfaehigkeitsabsicherung',
 			parent: 'risikovorsorge-arbeitskraftabsicherung',
-			title: 'grundfaehigkeitsabsicherung',
-			url: '/grundfaehigkeitsabsicherungg',
+			title: 'Grundfähigkeitsabsicherung',
+			url: '/grundfaehigkeitsabsicherung',
 		},
 		{
 			id: 'krankentagegeld',
@@ -97,7 +93,7 @@ export default [
 			title: 'Sterbegeldversicherung',
 			url: '/sterbegeldversicherung',
 		},
-
+//---------------------------------------------------------
 	{
 		id: 'haftpflicht-haus',
 		parent: 'versicherungen',
@@ -109,7 +105,7 @@ export default [
 			title: 'Test 2',
 			url: '/test'
 		},
-
+//---------------------------------------------------------
 	{
 		id: 'rechtsschutz-reisen',
 		parent: 'versicherungen',
@@ -121,7 +117,7 @@ export default [
 			title: 'Test 3',
 			url: '/test'
 		},
-
+//---------------------------------------------------------
 	{
 		id: 'auto-fahrzeuge',
 		parent: 'versicherungen',
@@ -133,7 +129,7 @@ export default [
 			title: 'Test 4',
 			url: '/test'
 		},
-		
+//---------------------------------------------------------
 	{
 		id: 'krankenzusatzversicherungen',
 		parent: 'versicherungen',
@@ -146,19 +142,18 @@ export default [
 			url: '/test'
 		},
 
-	
-
+//#########################################################
 {
 	id: 'finanzierungen',
 	title: 'Finanzierungen',
 },
-
+//#########################################################
 {
 	id: 'liebe-familie',
 	title: 'Liebe Familie',
 	url: '/liebe-familie',
 },
-
+//#########################################################
 {
 	id: 'immobilien',
 	title: 'Immobilien',
