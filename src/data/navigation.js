@@ -129,6 +129,12 @@ export default [
 			title: 'Test 4',
 			url: '/test'
 		},
+		{
+			id: 'test7',
+			parent: 'auto-fahrzeuge',
+			title: 'Test 7',
+			url: '/test'
+		},
 //---------------------------------------------------------
 	{
 		id: 'krankenzusatzversicherungen',
@@ -139,6 +145,12 @@ export default [
 			id: 'test5',
 			parent: 'krankenzusatzversicherungen',
 			title: 'Test 5',
+			url: '/test'
+		},
+		{
+			id: 'test6',
+			parent: 'krankenzusatzversicherungen',
+			title: 'Test 6',
 			url: '/test'
 		},
 
