@@ -69,8 +69,6 @@ const PageView = (data) => {
 		},
 	} = data;
 
-	console.log(slug, 'ARIAN');
-
 	const components = {
 		p: (props) => (
 			<Typography
