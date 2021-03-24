@@ -14,7 +14,7 @@ import {
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Image } from 'components/atoms';
-import { useStaticQuery, graphql } from 'gatsby';
+import navigationData from 'data/navigation';
 
 import logo from 'assets/images/LPE_Logo.svg';
 
@@ -122,8 +122,6 @@ const Topbar = ({
 }) => {
 	const classes = useStyles();
 
-	
-
 	const Navigation = () => {
 
 		const [anchorEl, setAnchorEl] = useState(null);
@@ -139,24 +137,7 @@ const Topbar = ({
 			setOpenedPopoverId(null);
 		};
 
-		const {
-			site: {
-				siteMetadata: { navigation },
-			},
-		} = useStaticQuery(graphql`
-			{
-				site {
-					siteMetadata {
-						navigation {
-							title
-							id
-							parent
-							url
-						}
-					}
-				}
-			}
-		`);
+		const navigation = navigationData;
 
 		const renderSubMenu = (id) => {
 			const subMenu = navigation

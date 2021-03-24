@@ -1,9 +1,6 @@
-const { navigation } = require('./src/data/navigation.js');
-
 module.exports = {
 	siteMetadata: {
-		title: 'LPE.de',
-		navigation: navigation,
+		title: 'LPE.de'
 	},
 	plugins: [
 		'gatsby-plugin-mdx',
