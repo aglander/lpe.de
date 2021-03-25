@@ -10,7 +10,7 @@
 - Tracking
 - SEO
 - Bilder optimieren
-- PLZ Seiten generieren
+- PLZ-Seiten mit dynamischen Daten befüllen
 - Startseite
 - Kontaktseite
     - Automatische Antwort

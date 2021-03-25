@@ -21,3 +21,4 @@ export { default as CardPricingStandard } from './CardPricingStandard';
 export { default as Parallax } from './Parallax';
 export { default as ContactForm } from './ContactForm';
 export { default as ContactPanel } from './ContactPanel';
+export { default as ContactAndCompareBox } from './ContactAndCompareBox';

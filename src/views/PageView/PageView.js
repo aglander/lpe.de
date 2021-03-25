@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
-import { Section, SectionAlternate, ContactPanel } from 'components/organisms';
+import { Section, SectionAlternate, ContactPanel, ContactAndCompareBox } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
@@ -11,7 +11,6 @@ import {
 	Hero,
 	SidebarNewsletter,
 	SimilarStories,
-	ContactAndCompareBox
 } from './components';
 
 import { similarStories } from './data';
