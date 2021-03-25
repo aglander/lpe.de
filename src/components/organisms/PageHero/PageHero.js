@@ -19,6 +19,8 @@ const PageHero = (props) => {
 		...rest
 	} = props;
 
+	console.log(title, 'ARIAN');
+
 	const theme = useTheme();
 	const isMd = useMediaQuery(theme.breakpoints.up('md'), {
 		defaultMatches: true,

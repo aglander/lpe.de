@@ -85,7 +85,7 @@ const PageView = (data) => {
 	return (
 		<div className={classes.root}>
 			<PageHero
-				data={heroTitle}
+				title={heroTitle}
 				claim={heroClaim}
 				description={heroDescription}
 				slug={slug}
