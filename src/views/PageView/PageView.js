@@ -1,14 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
-import { Section, ContactPanel, ContactAndCompareBox } from 'components/organisms';
+import { Section, ContactPanel, ContactAndCompareBox, PageHero } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
 import PropTypes from 'prop-types';
-import {
-	Hero,
-} from './components';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -87,7 +84,7 @@ const PageView = (data) => {
 	
 	return (
 		<div className={classes.root}>
-			<Hero
+			<PageHero
 				data={heroTitle}
 				claim={heroClaim}
 				description={heroDescription}

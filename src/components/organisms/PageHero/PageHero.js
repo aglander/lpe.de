@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const Hero = (props) => {
+const PageHero = (props) => {
 	const {
 		className,
 		title,
@@ -26,7 +26,6 @@ const Hero = (props) => {
 		image,
 		...rest
 	} = props;
-	const classes = useStyles();
 
 	const theme = useTheme();
 	const isMd = useMediaQuery(theme.breakpoints.up('md'), {
@@ -83,11 +82,11 @@ const Hero = (props) => {
 	);
 };
 
-Hero.propTypes = {
+PageHero.propTypes = {
 	/**
 	 * External classes
 	 */
 	className: PropTypes.string,
 };
 
-export default Hero;
+export default PageHero;
