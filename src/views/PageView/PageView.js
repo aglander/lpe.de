@@ -1,19 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
-import { Section, SectionAlternate, ContactPanel, ContactAndCompareBox } from 'components/organisms';
+import { Section, ContactPanel, ContactAndCompareBox } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
 import PropTypes from 'prop-types';
 import {
-	FooterNewsletter,
 	Hero,
-	SidebarNewsletter,
-	SimilarStories,
 } from './components';
-
-import { similarStories } from './data';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -34,15 +29,6 @@ const useStyles = makeStyles((theme) => ({
 			marginBottom: theme.spacing(4),
 		},
 	},
-	sidebarNewsletter: {
-		marginTop: theme.spacing(4),
-		[theme.breakpoints.down('sm')]: {
-			marginTop: theme.spacing(2),
-		},
-	},
-	footerNewsletterSection: {
-		background: theme.palette.primary.dark,
-	},
 	contactPanel: {
 		fick: 'dich',
 	},
@@ -50,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
 
 const PageView = (data) => {
 	const classes = useStyles();
-	const props = '';
 
 	const {
 		data: {
@@ -119,16 +104,9 @@ const PageView = (data) => {
 					</Grid>
 					<Grid item xs={12} md={4}>
 						<ContactPanel />
-						<SidebarNewsletter className={classes.sidebarNewsletter} />
 					</Grid>
 				</Grid>
 			</Section>
-			<SectionAlternate>
-				<SimilarStories data={similarStories} />
-			</SectionAlternate>
-			<SectionAlternate className={classes.footerNewsletterSection}>
-				<FooterNewsletter />
-			</SectionAlternate>
 		</div>
 	);
 };
