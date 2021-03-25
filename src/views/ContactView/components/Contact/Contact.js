@@ -112,6 +112,7 @@ const Contact = (props) => {
 					<a
 						href="https://fondsfinanz.br-idge.de/public/room.a?key=LPE&skipCheck=true"
 						target="_blank"
+						rel="noreferrer"
 					>
 						Videoberatung
 					</a>

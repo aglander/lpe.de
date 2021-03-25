@@ -1,4 +1,4 @@
-export default [
+const navigation = [
 
 {
 	id: 'altersvorsorge',
@@ -173,3 +173,5 @@ export default [
 },
 
 ];
+
+export default navigation;

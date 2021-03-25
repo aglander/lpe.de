@@ -1,19 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
 
 import { useMediaQuery, Button, Typography } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
 import { HeroShaped } from 'components/organisms';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
-const useStyles = makeStyles((theme) => ({
-	swiperNavButton: {
-		width: `${theme.spacing(3)}px !important`,
-		height: `${theme.spacing(3)}px !important`,
-		padding: `${theme.spacing(2)}px !important`,
-	},
-}));
 
 const PageHero = (props) => {
 	const {
