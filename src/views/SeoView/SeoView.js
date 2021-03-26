@@ -1,5 +1,4 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
 import {
@@ -61,10 +60,10 @@ const SeoView = (data) => {
 	} = data;
 
 	const placeData = places.filter((placeItem) => placeItem.slug === place)[0];
-	if (placeData.heroClaim) heroClaim = placeData.heroClaim;
+	if (placeData.title) heroClaim = placeData.title;
 
 
-	if (placeData.heroImage) {
+	if (placeData.image) {
 		heroImage = imageSharp;
 	}
 

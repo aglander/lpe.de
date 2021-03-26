@@ -60,7 +60,7 @@ exports.createPages = async ({ graphql, actions }) => {
 					context: {
 						slug: edge.node.slug,
 						place: place.slug,
-						image: place.heroImage,
+						image: place.image,
 					},
 				});
 			});

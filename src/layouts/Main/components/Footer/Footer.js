@@ -13,6 +13,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import PinterestIcon from '@material-ui/icons/Pinterest';
+import { Link } from "gatsby"
 
 import { Image } from 'components/atoms';
 
@@ -161,7 +162,7 @@ const Footer = props => {
           <Grid item xs={12} md={10} className={classes.menuListContainer}>
             <Grid container spacing={0}>
               <Grid item>
-                
+                <Link to="/ortsverzeichnis">Ortsverzeichnis</Link>
               </Grid>
               <Grid item>
                 
