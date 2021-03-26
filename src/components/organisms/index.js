@@ -24,3 +24,4 @@ export { default as ContactPanel } from './ContactPanel';
 export { default as ContactAndCompareBox } from './ContactAndCompareBox';
 export { default as PageHero } from './PageHero';
 export { default as ProvenExpert } from './ProvenExpert';
+export { default as SEO } from './SEO';

@@ -1,6 +1,11 @@
 module.exports = {
 	siteMetadata: {
-		title: 'LPE.de'
+		title: 'Lars-Peter Eckhardt | LPE Versicherungsmakler & Finanzmakler',
+		titleTemplate: '%s · Lars-Peter Eckhardt | LPE Versicherungsmakler & Finanzmakler',
+		description:
+			'5★ Top-Empfehlung: Lars-Peter Eckhardt | LPE Versicherungsmakler & Finanzmakler ► Altersvorsorge ✔ | Versicherungen ✔ | Finanzierungen ✔ | Immobilien ✔ | ★★★★★ |',
+		url: 'https://www.lpe.de', // No trailing slash allowed!
+		image: '/assets/images/icon.png', // Path to your image you placed in the 'static' folder
 	},
 	plugins: [
 		'gatsby-plugin-mdx',
