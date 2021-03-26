@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
-import { Section, ContactPanel, ContactAndCompareBox, PageHero } from 'components/organisms';
+import { Section, ContactPanel, ContactAndCompareBox, PageHero, ProvenExpert } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
@@ -80,6 +80,7 @@ const PageView = (data) => {
 		),
 		ul: (props) => <ul {...props} className={classes.list} />,
 		ContactAndCompareBox: (props) => <ContactAndCompareBox {...props} slug={slug} compare={compare} />,
+		ProvenExpert
 	};
 	
 	return (

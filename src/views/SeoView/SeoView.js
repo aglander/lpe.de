@@ -6,6 +6,7 @@ import {
 	ContactPanel,
 	ContactAndCompareBox,
 	PageHero,
+	ProvenExpert,
 } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
@@ -62,7 +63,6 @@ const SeoView = (data) => {
 	const placeData = places.filter((placeItem) => placeItem.slug === place)[0];
 	if (placeData.title) heroClaim = placeData.title;
 
-
 	if (placeData.image) {
 		heroImage = imageSharp;
 	}
@@ -99,6 +99,7 @@ const SeoView = (data) => {
 		ContactAndCompareBox: (props) => (
 			<ContactAndCompareBox {...props} slug={slug} compare={compare} />
 		),
+		ProvenExpert,
 	};
 
 	return (
