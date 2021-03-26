@@ -2,12 +2,12 @@ exports.places = [
 
     {
         slug: '15566-schoeneiche-bei-berlin',
-        name: '15566 Schöneiche b. Berlin',
-        heroImage: '../assets/risikolebensversicherung.jpg'
+        heroClaim: '15566 Schöneiche bei Berlin',
+        heroImage: 'schoeneiche.jpg',
     },
     {
         slug: '15569-woltersdorf',
-        name: '15569 Woltersdorf',
+        heroClaim: '15569 Woltersdorf',
     },
     
  ];    

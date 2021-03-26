@@ -50,7 +50,6 @@ const ContactAndCompareBox = (props) => {
 		</Button>,
 	];
 
-  console.log(compare, slug, 'ARIAN');
 	if (compare) {
 		ctas.push(
 			<Button

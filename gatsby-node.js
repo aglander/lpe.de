@@ -56,9 +56,11 @@ exports.createPages = async ({ graphql, actions }) => {
 			places.forEach((place) => {
 				createPage({
 					path: `/${slug[1]}-${place.slug}`,
-					component: path.resolve('./src/templates/PageViewTemplate.js'),
+					component: path.resolve('./src/templates/SeoViewTemplate.js'),
 					context: {
 						slug: edge.node.slug,
+						place: place.slug,
+						image: place.heroImage,
 					},
 				});
 			});

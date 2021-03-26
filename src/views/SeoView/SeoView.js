@@ -1,0 +1,135 @@
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Typography } from '@material-ui/core';
+import {
+	Section,
+	ContactPanel,
+	ContactAndCompareBox,
+	PageHero,
+} from 'components/organisms';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { MDXProvider } from '@mdx-js/react';
+
+import PropTypes from 'prop-types';
+
+const { places } = require('../../data/places');
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		height: '100%',
+		width: '100%',
+	},
+	list: {
+		marginBottom: theme.spacing(2),
+		[theme.breakpoints.up('md')]: {
+			marginBottom: theme.spacing(4),
+		},
+		fontSize: '1.5em',
+		marginLeft: '40px',
+	},
+	section: {
+		marginBottom: theme.spacing(2),
+		[theme.breakpoints.up('md')]: {
+			marginBottom: theme.spacing(4),
+		},
+	},
+	contactPanel: {
+		fick: 'dich',
+	},
+}));
+
+const SeoView = (data) => {
+	const classes = useStyles();
+
+	let {
+		data: {
+			mdx: {
+				frontmatter: {
+					heroTitle,
+					heroClaim,
+					heroDescription,
+					slug,
+					compare,
+					heroImage,
+				},
+				body,
+			},
+			imageSharp,
+			place,
+		},
+	} = data;
+
+	const placeData = places.filter((placeItem) => placeItem.slug === place)[0];
+	if (placeData.heroClaim) heroClaim = placeData.heroClaim;
+
+
+	if (placeData.heroImage) {
+		heroImage = imageSharp;
+	}
+
+	const components = {
+		p: (props) => (
+			<Typography
+				{...props}
+				component="p"
+				variant="h6"
+				color="textPrimary"
+				className={classes.section}
+			/>
+		),
+		h1: (props) => (
+			<Typography
+				{...props}
+				component="h1"
+				variant="h3"
+				color="textPrimary"
+				className={classes.section}
+			/>
+		),
+		h2: (props) => (
+			<Typography
+				{...props}
+				component="h2"
+				variant="h4"
+				color="textPrimary"
+				className={classes.section}
+			/>
+		),
+		ul: (props) => <ul {...props} className={classes.list} />,
+		ContactAndCompareBox: (props) => (
+			<ContactAndCompareBox {...props} slug={slug} compare={compare} />
+		),
+	};
+
+	return (
+		<div className={classes.root}>
+			<PageHero
+				title={heroTitle}
+				claim={heroClaim}
+				description={heroDescription}
+				slug={slug}
+				compare={compare}
+				image={heroImage}
+			/>
+			<Section>
+				<Grid container spacing={4}>
+					<Grid item xs={12} md={8}>
+						<MDXProvider components={components}>
+							<MDXRenderer>{body}</MDXRenderer>
+						</MDXProvider>
+					</Grid>
+					<Grid item xs={12} md={4}>
+						<ContactPanel />
+					</Grid>
+				</Grid>
+			</Section>
+		</div>
+	);
+};
+
+SeoView.propTypes = {
+	data: PropTypes.object,
+};
+
+export default SeoView;
