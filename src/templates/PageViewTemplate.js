@@ -22,7 +22,7 @@ export const query = graphql`
 				heroImage {
 					childImageSharp {
 						gatsbyImageData(
-							width: 800
+							width: 1000
 							placeholder: BLURRED
 						)
 					}

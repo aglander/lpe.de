@@ -21,14 +21,14 @@ export const query = graphql`
 				slug
 				heroImage {
 					childImageSharp {
-						gatsbyImageData(width: 800, placeholder: BLURRED)
+						gatsbyImageData(width: 1000, placeholder: BLURRED)
 					}
 				}
 			}
 			body
 		}
 		imageSharp(fluid: { originalName: { eq: $image } }) {
-			gatsbyImageData(width: 800, placeholder: BLURRED)
+			gatsbyImageData(width: 1000, placeholder: BLURRED)
 		}
 	}
 `;
