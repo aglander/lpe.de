@@ -32,9 +32,9 @@ const useStyles = makeStyles((theme) => ({
 		maxWidth: theme.layout.contentWidth,
 		width: '100%',
 		margin: '0 auto',
-		padding: theme.spacing(0, 2),
+		padding: '0px',
 		[theme.breakpoints.up('sm')]: {
-			padding: theme.spacing(0, 8),
+			padding: '0px',
 		},
 	},
 	navLink: {

@@ -8,8 +8,6 @@
 # Epics
 - Tracking
 - SEO
-- Bilder optimieren
-- PLZ-Seiten mit dynamischen Daten befüllen
 - Startseite
 - Kontaktseite
     - Automatische Antwort
