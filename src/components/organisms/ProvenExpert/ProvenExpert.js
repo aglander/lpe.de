@@ -17,7 +17,7 @@ const ProvenExpert = () => {
 	const classes = useStyles();
 
 	return (
-		<iframe src="/provenexpert.html" className={classes.iframe} />
+		<iframe src="/provenexpert.html" className={classes.iframe} title="ProvenExpert" />
 	);
 };
 
