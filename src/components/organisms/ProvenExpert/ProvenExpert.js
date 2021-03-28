@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
 		height: '220px',
 		width: '100%',
 		border: 0,
-		margin: '0px -0px 30px -13px',
+		margin: '0px 0px 30px 0px',
 		overflow: 'hidden',
 		display: 'block'
 	},
