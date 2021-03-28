@@ -108,25 +108,25 @@ const navigation = [
 		{
 			id: 'tierhalterhaftpflichtversicherung',
 			parent: 'haftpflicht-haus',
-			title: 'Tierhalter- Haftpflichtversicherung',
+			title: 'Tierhalterhaftpflichtversicherung',
 			url: '/tierhalterhaftpflichtversicherung'
 		},
 		{
 			id: 'haus-und-grundbesitzerhaftpflicht',
 			parent: 'haftpflicht-haus',
-			title: 'Haus- und Grundbesitzer- haftpflichtversicherung',
+			title: 'Haus- und Grundbesitzerhaftpflichtversicherung',
 			url: '/haus-und-grundbesitzerhaftpflicht'
 		},
 		{
 			id: 'bauherrenhaftpflichtversicherung',
 			parent: 'haftpflicht-haus',
-			title: 'Bauherren- haftpflichtversicherung',
+			title: 'Bauherrenhaftpflichtversicherung',
 			url: '/bauherrenhaftpflichtversicherung'
 		},
 		{
 			id: 'gewaesserschadenhaftpflichtversicherung',
 			parent: 'haftpflicht-haus',
-			title: 'Gewässerschaden- haftpflichtversicherung',
+			title: 'Gewässerschadenhaftpflichtversicherung',
 			url: '/gewaesserschadenhaftpflichtversicherung'
 		},
 //---------------------------------------------------------
