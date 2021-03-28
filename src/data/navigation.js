@@ -100,10 +100,10 @@ const navigation = [
 		title: 'Haftpflicht & Haus',
 	},
 		{
-			id: 'test2',
+			id: 'privathaftpflichtversicherung',
 			parent: 'haftpflicht-haus',
-			title: 'Test 2',
-			url: '/test'
+			title: 'Privathaftpflichtversicherung',
+			url: '/privathaftpflichtversicherung'
 		},
 //---------------------------------------------------------
 	{
