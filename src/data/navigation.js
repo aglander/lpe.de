@@ -105,6 +105,30 @@ const navigation = [
 			title: 'Privathaftpflichtversicherung',
 			url: '/privathaftpflichtversicherung'
 		},
+		{
+			id: 'tierhalterhaftpflichtversicherung',
+			parent: 'haftpflicht-haus',
+			title: 'Tierhalter- Haftpflichtversicherung',
+			url: '/tierhalterhaftpflichtversicherung'
+		},
+		{
+			id: 'haus-und-grundbesitzerhaftpflicht',
+			parent: 'haftpflicht-haus',
+			title: 'Haus- und Grundbesitzer- haftpflichtversicherung',
+			url: '/haus-und-grundbesitzerhaftpflicht'
+		},
+		{
+			id: 'bauherrenhaftpflichtversicherung',
+			parent: 'haftpflicht-haus',
+			title: 'Bauherren- haftpflichtversicherung',
+			url: '/bauherrenhaftpflichtversicherung'
+		},
+		{
+			id: 'gewaesserschadenhaftpflichtversicherung',
+			parent: 'haftpflicht-haus',
+			title: 'Gewässerschaden- haftpflichtversicherung',
+			url: '/gewaesserschadenhaftpflichtversicherung'
+		},
 //---------------------------------------------------------
 	{
 		id: 'rechtsschutz-reisen',
