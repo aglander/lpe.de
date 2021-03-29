@@ -39,17 +39,17 @@ const navigation = [
 		parent: 'versicherungen',
 		title: 'Risikovorsorge & Arbeitskraftabsicherung',
 	},
-		{
-			id: 'test1',
-			parent: 'risikovorsorge-arbeitskraftabsicherung',
-			title: 'Test 1',
-			url: '/test'
-		},
-		{
+			{
 			id: 'risikolebensversicherung',
 			parent: 'risikovorsorge-arbeitskraftabsicherung',
 			title: 'Risikolebensversicherung',
 			url: '/risikolebensversicherung',
+		},
+		{
+			id: 'sterbegeldversicherung',
+			parent: 'risikovorsorge-arbeitskraftabsicherung',
+			title: 'Sterbegeldversicherung',
+			url: '/sterbegeldversicherung',
 		},
 		{
 			id: 'berufsunfaehigkeitsversicherung',
@@ -64,16 +64,16 @@ const navigation = [
 			url: '/unfallversicherung',
 		},
 		{
-			id: 'schwere-krankheiten',
-			parent: 'risikovorsorge-arbeitskraftabsicherung',
-			title: 'Schwere Krankheiten',
-			url: '/schwere-krankheiten',
-		},
-		{
 			id: 'grundfaehigkeitsabsicherung',
 			parent: 'risikovorsorge-arbeitskraftabsicherung',
 			title: 'Grundfähigkeitsabsicherung',
 			url: '/grundfaehigkeitsabsicherung',
+		},
+		{
+			id: 'schwere-krankheitenversicherung',
+			parent: 'risikovorsorge-arbeitskraftabsicherung',
+			title: 'Schwere Krankheitenversicherung',
+			url: '/schwere-krankheitenversicherung',
 		},
 		{
 			id: 'krankentagegeld',
@@ -87,48 +87,126 @@ const navigation = [
 			title: 'Pflegeversicherung',
 			url: '/pflegeversicherung',
 		},
-		{
-			id: 'sterbegeldversicherung',
-			parent: 'risikovorsorge-arbeitskraftabsicherung',
-			title: 'Sterbegeldversicherung',
-			url: '/sterbegeldversicherung',
-		},
 //---------------------------------------------------------
 	{
-		id: 'haftpflicht-haus',
+		id: 'haftpflicht-haus-hof',
 		parent: 'versicherungen',
-		title: 'Haftpflicht & Haus',
+		title: 'Haftpflicht - Haus & Hof',
 	},
 		{
 			id: 'privathaftpflichtversicherung',
-			parent: 'haftpflicht-haus',
+			parent: 'haftpflicht-haus-hof',
 			title: 'Privathaftpflichtversicherung',
 			url: '/privathaftpflichtversicherung'
 		},
 		{
-			id: 'tierhalterhaftpflichtversicherung',
-			parent: 'haftpflicht-haus',
-			title: 'Tierhalterhaftpflichtversicherung',
-			url: '/tierhalterhaftpflichtversicherung'
-		},
-		{
 			id: 'haus-und-grundbesitzerhaftpflicht',
-			parent: 'haftpflicht-haus',
+			parent: 'haftpflicht-haus-hof',
 			title: 'Haus- und Grundbesitzerhaftpflichtversicherung',
 			url: '/haus-und-grundbesitzerhaftpflicht'
 		},
 		{
 			id: 'bauherrenhaftpflichtversicherung',
-			parent: 'haftpflicht-haus',
+			parent: 'haftpflicht-haus-hof',
 			title: 'Bauherrenhaftpflichtversicherung',
 			url: '/bauherrenhaftpflichtversicherung'
 		},
 		{
 			id: 'gewaesserschadenhaftpflichtversicherung',
-			parent: 'haftpflicht-haus',
+			parent: 'haftpflicht-haus-hof',
 			title: 'Gewässerschadenhaftpflichtversicherung',
 			url: '/gewaesserschadenhaftpflichtversicherung'
 		},
+		{
+			id: 'hausratversicherung',
+			parent: 'haftpflicht-haus-hof',
+			title: 'Hausratversicherung',
+			url: '/hausratversicherung'
+		},
+		{
+			id: 'wohngebaeudeversicherung',
+			parent: 'haftpflicht-haus-hof',
+			title: 'Wohngebäudeversicherung',
+			url: '/wohngebaeudeversicherung'
+		},
+		{
+			id: 'photovoltaikversicherung',
+			parent: 'haftpflicht-haus-hof',
+			title: 'Photovoltaikversicherung',
+			url: '/photovoltaikversicherung'
+		},
+		{
+			id: 'glasversicherung',
+			parent: 'haftpflicht-haus-hof',
+			title: 'Glasversicherung',
+			url: '/glasversicherung'
+		},
+		{
+			id: 'bauversicherungen',
+			parent: 'haftpflicht-haus-hof',
+			title: 'Bauversicherungen',
+			url: '/bauversicherungen'
+		},
+		{
+			id: 'handyversicherung',
+			parent: 'haftpflicht-haus-hof',
+			title: 'Handyversicherung',
+			url: '/handyversicherung'
+		},
+//---------------------------------------------------------
+{
+	id: 'tierversicherungen',
+	parent: 'versicherungen',
+	title: 'Tierversicherungen',
+},
+	{
+		id: 'hundehaftpflichtversicherung',
+		parent: 'tierversicherungen',
+		title: 'Hundehaftpflichtversicherung',
+		url: '/hundehaftpflichtversicherung'
+	},
+	{
+		id: 'pferdehaftpflichtversicherung',
+		parent: 'tierversicherungen',
+		title: 'Pferdehaftpflichtversicherung',
+		url: '/pferdehaftpflichtversicherung'
+	},
+	{
+		id: 'hunde-op-versicherung',
+		parent: 'tierversicherungen',
+		title: 'Hunde OP-Versicherung',
+		url: '/hunde-op-versicherung'
+	},
+	{
+		id: 'pferde-op-versicherung',
+		parent: 'tierversicherungen',
+		title: 'Pferde OP-Versicherung',
+		url: '/pferde-op-versicherung'
+	},
+	{
+		id: 'katzen-op-versicherung',
+		parent: 'tierversicherungen',
+		title: 'Katzen OP-Versicherung',
+		url: '/katzen-op-versicherung'
+	},
+	{
+		id: 'hundekrankenversicherung',
+		parent: 'tierversicherungen',
+		title: 'Hundekrankenversicherung',
+		url: '/hundekrankenversicherung'
+	},
+	{
+		id: 'pferdekrankenversicherung',
+		parent: 'tierversicherungen',
+		title: 'Pferdekrankenversicherung',
+		url: '/pferdekrankenversicherung'
+	},
+	{
+		id: 'katzenkrankenversicherung',
+		parent: 'tierversicherungen',
+		title: 'Katzenkrankenversicherung',
+		url: '/katzenkrankenversicherung'
+	},
 //---------------------------------------------------------
 	{
 		id: 'rechtsschutz-reisen',
@@ -136,46 +214,100 @@ const navigation = [
 		title: 'Rechtsschutz & Reisen',
 	},
 		{
-			id: 'test3',
+			id: 'rechtsschutzversicherung',
 			parent: 'rechtsschutz-reisen',
-			title: 'Test 3',
-			url: '/test'
+			title: 'Rechtsschutzversicherung',
+			url: '/rechtsschutzversicherung'
+		},
+		{
+			id: 'reiseversicherungen',
+			parent: 'rechtsschutz-reisen',
+			title: 'Reiseversicherungen',
+			url: '/reiseversicherungen'
 		},
 //---------------------------------------------------------
 	{
-		id: 'auto-fahrzeuge',
+		id: 'fahrzeugversicherungen',
 		parent: 'versicherungen',
-		title: 'Auto & Fahrzeuge',
+		title: 'Fahrzeugversicherungen',
 	},
 		{
-			id: 'test4',
-			parent: 'auto-fahrzeuge',
-			title: 'Test 4',
-			url: '/test'
+			id: 'autoversicherung',
+			parent: 'fahrzeugversicherungen',
+			title: 'Autoversicherung',
+			url: '/autoversicherung'
 		},
 		{
-			id: 'test7',
-			parent: 'auto-fahrzeuge',
-			title: 'Test 7',
-			url: '/test'
+			id: 'motorradversicherung',
+			parent: 'fahrzeugversicherungen',
+			title: 'Motorradversicherung',
+			url: '/motorradversicherung'
+		},
+		{
+			id: 'mopedversicherung',
+			parent: 'fahrzeugversicherungen',
+			title: 'Mopedversicherung',
+			url: '/mopedversicherung'
+		},
+		{
+			id: 'e-scooterversicherung',
+			parent: 'fahrzeugversicherungen',
+			title: 'E-Scooterversicherung',
+			url: '/e-scooterversicherung'
+		},
+		{
+			id: 'fahrradversicherung',
+			parent: 'fahrzeugversicherungen',
+			title: 'Fahrradversicherung',
+			url: '/fahrradversicherung'
+		},
+		{
+			id: 'schutzbrief',
+			parent: 'fahrzeugversicherungen',
+			title: 'Schutzbrief & Automobilclub',
+			url: '/schutzbrief'
 		},
 //---------------------------------------------------------
 	{
-		id: 'krankenzusatzversicherungen',
+		id: 'kranken-und-krankenzusatzversicherungen',
 		parent: 'versicherungen',
-		title: 'Risikovorsorge & Arbeitskraftabsicherung2',
+		title: 'Kranken- & Krankenzusatzversicherungen',
 	},
 		{
-			id: 'test5',
-			parent: 'krankenzusatzversicherungen',
-			title: 'Test 5',
-			url: '/test'
+			id: 'pkv-private-krankenversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'PKV - Private Krankenversicherung',
+			url: '/pkv-private-krankenversicherung'
 		},
 		{
-			id: 'test6',
-			parent: 'krankenzusatzversicherungen',
-			title: 'Test 6',
-			url: '/test'
+			id: 'gkv-gesetzliche-krankenkasse',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'GKV - Gesetzliche Krankenkasse',
+			url: '/gkv-gesetzliche-krankenkasse'
+		},
+		{
+			id: 'pflegeversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Pflegeversicherung',
+			url: '/pflegeversicherung'
+		},
+		{
+			id: 'zahnzusatzversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Zahnzusatzversicherung',
+			url: '/zahnzusatzversicherung'
+		},
+		{
+			id: 'brillenversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Brillenversicherung',
+			url: '/brillenversicherung'
+		},
+		{
+			id: 'krankenhauszusatzversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Krankenhauszusatzversicherung',
+			url: '/krankenhauszusatzversicherung'
 		},
 
 //#########################################################
