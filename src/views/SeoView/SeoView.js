@@ -7,6 +7,7 @@ import {
 	ContactAndCompareBox,
 	PageHero,
 	ProvenExpert,
+	AwardBox
 } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
@@ -100,6 +101,7 @@ const SeoView = (data) => {
 			<ContactAndCompareBox {...props} slug={slug} compare={compare} />
 		),
 		ProvenExpert,
+		AwardBox
 	};
 
 	return (

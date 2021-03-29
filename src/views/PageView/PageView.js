@@ -90,6 +90,7 @@ const PageView = (data) => {
 			<ContactAndCompareBox {...props} slug={slug} compare={compare} />
 		),
 		ProvenExpert,
+		AwardBox
 	};
 
 	return (
@@ -108,7 +109,6 @@ const PageView = (data) => {
 						<MDXProvider components={components}>
 							<MDXRenderer>{body}</MDXRenderer>
 						</MDXProvider>
-						<AwardBox />
 					</Grid>
 					<Grid item xs={12} md={4}>
 						<ContactPanel />
