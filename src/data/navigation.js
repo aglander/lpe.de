@@ -28,6 +28,18 @@ const navigation = [
 		title: 'Lebensversicherung',
 		url: '/lebensversicherung',
 	},
+	{
+		id: 'investmentanlagen',
+		parent: 'altersvorsorge',
+		title: 'Investmentanlagen',
+		url: '/investmentanlagen',
+	},
+	{
+		id: 'vermoegensverwaltung',
+		parent: 'altersvorsorge',
+		title: 'Vermögensverwaltung',
+		url: '/vermoegensverwaltung',
+	},
 //#########################################################
 {
 	id: 'versicherungen',
@@ -314,7 +326,49 @@ const navigation = [
 {
 	id: 'finanzierungen',
 	title: 'Finanzierungen',
+	url: '/finanzierungen'
 },
+	{
+		id: 'immobilienfinanzierung',
+		parent: 'Immobilienfinanzierung',
+		title: 'immobilienfinanzierung',
+	},
+		{
+			id: 'baufinanzierung-kaufen',
+			parent: 'immobilienfinanzierung',
+			title: 'Baufinanzierung & Kaufen',
+			url: '/baufinanzierung-kaufen'
+		},
+		{
+			id: 'anschlussfinanzierung',
+			parent: 'immobilienfinanzierung',
+			title: 'Anschlussfinanzierung',
+			url: '/anschlussfinanzierung'
+		},		
+		{
+			id: 'prolongation',
+			parent: 'immobilienfinanzierung',
+			title: 'Prolongation',
+			url: '/prolongation'
+		},		
+		{
+			id: 'modernisierung-sanierung',
+			parent: 'immobilienfinanzierung',
+			title: 'Modernisierung & Sanierung',
+			url: '/modernisierung-sanierung'
+		},		
+		{
+			id: 'bausparen',
+			parent: 'immobilienfinanzierung',
+			title: 'Bausparen',
+			url: '/bausparen'
+		},
+		{
+			id: 'foerdermittel',
+			parent: 'immobilienfinanzierung',
+			title: 'Fördermittel',
+			url: '/foerdermittel'
+		},		
 //#########################################################
 {
 	id: 'liebe-familie',
