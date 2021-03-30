@@ -326,11 +326,10 @@ const navigation = [
 {
 	id: 'finanzierungen',
 	title: 'Finanzierungen',
-	url: '/finanzierungen'
 },
 	{
 		id: 'immobilienfinanzierung',
-		parent: 'Immobilienfinanzierung',
+		parent: 'finanzierungen',
 		title: 'immobilienfinanzierung',
 	},
 		{
