@@ -26,3 +26,5 @@ export { default as PageHero } from './PageHero';
 export { default as ProvenExpert } from './ProvenExpert';
 export { default as SEO } from './SEO';
 export { default as AwardBox } from './AwardBox';
+export { default as ExamplesBox } from './ExamplesBox';
+export { default as Example } from './Example';
