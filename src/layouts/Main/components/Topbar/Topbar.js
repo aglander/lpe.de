@@ -99,13 +99,14 @@ const useStyles = makeStyles((theme) => ({
 	},
 	menu: {
 		display: 'flex',
-		justifyContent: 'space-between',
+		flexFlow: 'row wrap',
+		maxWidth: '1000px'
 	},
 	menuItem: {
 		marginRight: theme.spacing(5),
-		'&:last-child': {
-			marginRight: 0,
-		},
+		paddingBottom: theme.spacing(5),
+		flex: '1 10%',
+		width: '280px'
 	},
 	menuGroupItem: {
 		paddingTop: 0,
@@ -115,15 +116,10 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const Topbar = ({
-	onSidebarOpen,
-	className,
-	...rest
-}) => {
+const Topbar = ({ onSidebarOpen, className, ...rest }) => {
 	const classes = useStyles();
 
 	const Navigation = () => {
-
 		const [anchorEl, setAnchorEl] = useState(null);
 		const [openedPopoverId, setOpenedPopoverId] = useState(null);
 
@@ -164,28 +160,21 @@ const Topbar = ({
 						);
 					} else {
 						return (
-							<List disablePadding>
-								<ListItem disableGutters>
-									<Typography
-										variant="body2"
-										color="primary"
-										className={classes.menuGroupTitle}
-									>
-										{navItem.title}
-									</Typography>
-								</ListItem>
-								<div>{renderSubMenu(navItem.id)}</div>
-							</List>
+							<div className={classes.menuItem}>
+								<Typography
+									variant="body2"
+									color="primary"
+									className={classes.menuGroupTitle}
+								>
+									{navItem.title}
+								</Typography>
+
+								<List disablePadding>{renderSubMenu(navItem.id)}</List>
+							</div>
 						);
 					}
 				});
-			return (
-				<div className={classes.menu}>
-					<div className={classes.menuItem}>
-						<List disablePadding>{subMenu}</List>
-					</div>
-				</div>
-			);
+			return <div className={classes.menu}>{subMenu}</div>;
 		};
 
 		const menu = navigation
@@ -242,14 +231,12 @@ const Topbar = ({
 					return (
 						<ListItem
 							aria-describedby={navItem.id}
-							className={clsx(
-								classes.listItem
-							)}
+							className={clsx(classes.listItem)}
 						>
 							<Typography
 								variant="body1"
 								color="textPrimary"
-                component={'a'}
+								component={'a'}
 								href={navItem.url}
 								className={clsx(classes.listItemText, 'menu-item')}
 							>
@@ -277,9 +264,13 @@ const Topbar = ({
 			</List>
 		);
 	};
-	
+
 	return (
-		<Toolbar disableGutters className={clsx(classes.toolbar, className)} {...rest}>
+		<Toolbar
+			disableGutters
+			className={clsx(classes.toolbar, className)}
+			{...rest}
+		>
 			<div className={classes.logoContainer}>
 				<a href="/" title="LPE.de">
 					<Image
@@ -300,7 +291,7 @@ const Topbar = ({
 
 Topbar.propTypes = {
 	className: PropTypes.string,
-	onSidebarOpen: PropTypes.func
+	onSidebarOpen: PropTypes.func,
 };
 
 export default Topbar;

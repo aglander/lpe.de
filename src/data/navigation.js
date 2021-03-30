@@ -4,42 +4,48 @@ const navigation = [
 	id: 'altersvorsorge',
 	title: 'Altersvorsorge',
 },
+// --- Bitte überleg dir eine passende Unterüberschrift
 	{
-		id: 'riesterrente',
-		parent: 'altersvorsorge',
-		title: 'Riester-Rente',
-		url: '/riesterrente',
+		id: 'altersvorsorge-sub',
+		title: 'Unterüberschrift',
+		parent: 'altersvorsorge'
 	},
-	{
-		id: 'basisrente',
-		parent: 'altersvorsorge',
-		title: 'Basis-Rente',
-		url: '/basisrente',
-	},
-	{
-		id: 'rentenversicherung',
-		parent: 'altersvorsorge',
-		title: 'Rentenversicherung',
-		url: '/rentenversicherung',
-	},
-	{
-		id: 'lebensversicherung',
-		parent: 'altersvorsorge',
-		title: 'Lebensversicherung',
-		url: '/lebensversicherung',
-	},
-	{
-		id: 'investmentanlagen',
-		parent: 'altersvorsorge',
-		title: 'Investmentanlagen',
-		url: '/investmentanlagen',
-	},
-	{
-		id: 'vermoegensverwaltung',
-		parent: 'altersvorsorge',
-		title: 'Vermögensverwaltung',
-		url: '/vermoegensverwaltung',
-	},
+		{
+			id: 'riesterrente',
+			parent: 'altersvorsorge-sub',
+			title: 'Riester-Rente',
+			url: '/riesterrente',
+		},
+		{
+			id: 'basisrente',
+			parent: 'altersvorsorge-sub',
+			title: 'Basis-Rente',
+			url: '/basisrente',
+		},
+		{
+			id: 'rentenversicherung',
+			parent: 'altersvorsorge-sub',
+			title: 'Rentenversicherung',
+			url: '/rentenversicherung',
+		},
+		{
+			id: 'lebensversicherung',
+			parent: 'altersvorsorge-sub',
+			title: 'Lebensversicherung',
+			url: '/lebensversicherung',
+		},
+		{
+			id: 'investmentanlagen',
+			parent: 'altersvorsorge-sub',
+			title: 'Investmentanlagen',
+			url: '/investmentanlagen',
+		},
+		{
+			id: 'vermoegensverwaltung',
+			parent: 'altersvorsorge-sub',
+			title: 'Vermögensverwaltung',
+			url: '/vermoegensverwaltung',
+		},
 //#########################################################
 {
 	id: 'versicherungen',
