@@ -368,7 +368,70 @@ const navigation = [
 			parent: 'immobilienfinanzierung',
 			title: 'Fördermittel',
 			url: '/foerdermittel'
-		},		
+		},	
+	{
+		id: 'kredite-umschuldung',
+		parent: 'finanzierungen',
+		title: 'Kredite & Umschuldung',
+	},
+		{
+			id: 'privatkredit',
+			parent: 'kredite-umschuldung',
+			title: 'Privatkredit',
+			url: '/privatkredit'
+		},	
+		{
+			id: 'autokredit',
+			parent: 'kredite-umschuldung',
+			title: 'Autokredit',
+			url: '/autokredit'
+		},	
+		{
+			id: 'umschuldung',
+			parent: 'kredite-umschuldung',
+			title: 'Umschuldung',
+			url: '/umschuldung'
+		},	
+	{
+		id: 'konten-geldanlagen',
+		parent: 'finanzierungen',
+		title: 'Konten & Geldanlagen',
+	},
+		{
+			id: 'girokonto',
+			parent: 'konten-geldanlagen',
+			title: 'Girokonto',
+			url: '/girokonto'
+		},
+		{
+			id: 'kreditkarte',
+			parent: 'konten-geldanlagen',
+			title: 'Kreditkarte',
+			url: '/kreditkarte'
+		},
+		{
+			id: 'tagesgeld-festgeld',
+			parent: 'konten-geldanlagen',
+			title: 'Tages- / Festgeld',
+			url: '/tagesgeld-festgeld'
+		},
+	{
+		id: 'haushaltskosten-senken',
+		parent: 'finanzierungen',
+		title: 'haushaltskosten-senken',
+	},	
+		{
+			id: 'stromvergleich',
+			parent: 'haushaltskosten-senken',
+			title: 'Stromkosten senken',
+			url: '/stromvergleich'
+		},
+		{
+			id: 'gasvergleich',
+			parent: 'haushaltskosten-senken',
+			title: 'Gaskosten senken',
+			url: '/gasvergleich'
+		},							
 //#########################################################
 {
 	id: 'liebe-familie',
