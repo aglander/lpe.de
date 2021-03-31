@@ -6,39 +6,49 @@ const navigation = [
 },
 // --- Bitte überleg dir eine passende Unterüberschrift
 	{
-		id: 'altersvorsorge-schicht-1-bis-3',
-		title: 'Altersvorsorge Schicht 1 bis 3',
+		id: 'schicht-1-basisversorgung',
+		title: '1. Schicht: Basisversorgung',
+		parent: 'altersvorsorge'
+	},
+		{
+			id: 'basisrente',
+			parent: 'schicht-1-basisversorgung',
+			title: 'Basis-Rente | Rürup-Rente',
+			url: '/basisrente',
+		},
+	{
+		id: 'schicht-2-zusatzversorgung',
+		title: '2. Schicht: Zusatzversorgung',
 		parent: 'altersvorsorge'
 	},
 		{
 			id: 'riesterrente',
-			parent: 'altersvorsorge-sub',
+			parent: 'schicht-2-zusatzversorgung',
 			title: 'Riester-Rente',
 			url: '/riesterrente',
 		},
 		{
-			id: 'basisrente',
-			parent: 'altersvorsorge-sub',
-			title: 'Basis-Rente',
-			url: '/basisrente',
+			id: 'bav-betriebliche-altersvorsorge',
+			parent: 'schicht-2-zusatzversorgung',
+			title: 'bAV - betriebliche Altersvorsorge',
+			url: '/bav-betriebliche-altersvorsorge',
 		},
-		{
-			id: 'rentenversicherung',
-			parent: 'altersvorsorge-sub',
+	{
+		id: 'schicht-3-private-altersvorsorge',
+		title: '3. Schicht: Private Altersvorsorge',
+		parent: 'altersvorsorge'
+	},
+
+		{	id: 'rentenversicherung',
+			parent: 'schicht-3-private-altersvorsorge',
 			title: 'Rentenversicherung',
 			url: '/rentenversicherung',
 		},
 		{
-			id: 'lebensversicherung',
-			parent: 'altersvorsorge-sub',
-			title: 'Lebensversicherung',
-			url: '/lebensversicherung',
-		},
-		{
-			id: 'investmentanlagen',
-			parent: 'altersvorsorge-sub',
-			title: 'Investmentanlagen',
-			url: '/investmentanlagen',
+			id: 'investmentanlagen-vermoegensverwaltung',
+			parent: 'schicht-3-private-altersvorsorge',
+			title: 'Investment | Vermögensverwaltung',
+			url: '/investmentanlagen-vermoegensverwaltung',
 		},
 		{
 			id: 'vermoegensverwaltung',
@@ -114,7 +124,7 @@ const navigation = [
 		{
 			id: 'privathaftpflichtversicherung',
 			parent: 'haftpflicht-haus-hof',
-			title: 'Privathaftpflicht',
+			title: 'Privathaftpflichtversicherung',
 			url: '/privathaftpflichtversicherung'
 		},
 		{
