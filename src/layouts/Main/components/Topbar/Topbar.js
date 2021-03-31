@@ -15,7 +15,7 @@ import {
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Image } from 'components/atoms';
 import navigationData from 'data/navigation';
-
+import { Link } from 'gatsby';
 import logo from 'assets/images/LPE_Logo.svg';
 
 const useStyles = makeStyles((theme) => ({
@@ -148,8 +148,8 @@ const Topbar = ({ onSidebarOpen, className, ...rest }) => {
 							>
 								<Typography
 									variant="body1"
-									component={'a'}
-									href={navItem.url}
+									component={Link}
+									to={navItem.url}
 									className={clsx(classes.navLink, 'submenu-item')}
 									color="textSecondary"
 									onClick={handleClose}
@@ -254,8 +254,8 @@ const Topbar = ({ onSidebarOpen, className, ...rest }) => {
 					<Button
 						variant="contained"
 						color="primary"
-						component="a"
-						href="/kontakt"
+						component={Link}
+						to="/kontakt"
 						className={classes.listItemButton}
 					>
 						Kontakt
@@ -272,14 +272,14 @@ const Topbar = ({ onSidebarOpen, className, ...rest }) => {
 			{...rest}
 		>
 			<div className={classes.logoContainer}>
-				<a href="/" title="LPE.de">
+				<Link to="/" title="LPE.de">
 					<Image
 						className={classes.logoImage}
 						src={logo}
 						alt="LPE.de"
 						lazy={false}
 					/>
-				</a>
+				</Link>
 			</div>
 			<div className={classes.flexGrow} />
 			<Hidden smDown>

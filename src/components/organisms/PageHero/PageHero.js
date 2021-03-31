@@ -5,7 +5,8 @@ import { useTheme } from '@material-ui/core/styles';
 import { useMediaQuery, Button, Typography } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
 import { HeroShaped } from 'components/organisms';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
 
 const PageHero = (props) => {
 	const {
@@ -25,25 +26,28 @@ const PageHero = (props) => {
 	});
 
 	const ctas = [
-		<Button
-			variant="contained"
-			color="primary"
-			size={isMd ? 'large' : 'medium'}
-		>
-			Kontakt aufnehmen
-		</Button>,
-	];
-	
-	if (compare) {
-		ctas.push(
+		<Link to="/kontakt">
 			<Button
-				variant="outlined"
+				variant="contained"
 				color="primary"
 				size={isMd ? 'large' : 'medium'}
-				href={`/${slug}-vergleichen`}
 			>
-				Selber vergleichen
+				Kontakt aufnehmen
 			</Button>
+		</Link>,
+	];
+
+	if (compare) {
+		ctas.push(
+			<Link to={`/${slug}-vergleichen`}>
+				<Button
+					variant="outlined"
+					color="primary"
+					size={isMd ? 'large' : 'medium'}
+				>
+					Selber vergleichen
+				</Button>
+			</Link>
 		);
 	}
 
@@ -66,9 +70,7 @@ const PageHero = (props) => {
 						titleVariant="h3"
 					/>
 				}
-				rightSide={
-					<GatsbyImage image={getImage(image)} alt={title} />
-				}
+				rightSide={<GatsbyImage image={getImage(image)} alt={title} />}
 			/>
 		</div>
 	);
