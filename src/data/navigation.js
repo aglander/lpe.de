@@ -6,8 +6,8 @@ const navigation = [
 },
 // --- Bitte überleg dir eine passende Unterüberschrift
 	{
-		id: 'altersvorsorge-sub',
-		title: 'Unterüberschrift',
+		id: 'altersvorsorge-schicht-1-bis-3',
+		title: 'Altersvorsorge Schicht 1 bis 3',
 		parent: 'altersvorsorge'
 	},
 		{
@@ -114,25 +114,25 @@ const navigation = [
 		{
 			id: 'privathaftpflichtversicherung',
 			parent: 'haftpflicht-haus-hof',
-			title: 'Privathaftpflichtversicherung',
+			title: 'Privathaftpflicht',
 			url: '/privathaftpflichtversicherung'
 		},
 		{
-			id: 'haus-und-grundbesitzerhaftpflicht',
+			id: 'haus-und-grundbesitzerhaftpflichtversicherung',
 			parent: 'haftpflicht-haus-hof',
-			title: 'Haus- und Grundbesitzerhaftpflichtversicherung',
-			url: '/haus-und-grundbesitzerhaftpflicht'
+			title: 'Haus- u. Grundbesitzerhaftpflicht',
+			url: '/haus-und-grundbesitzerhaftpflichtversicherung'
 		},
 		{
 			id: 'bauherrenhaftpflichtversicherung',
 			parent: 'haftpflicht-haus-hof',
-			title: 'Bauherrenhaftpflichtversicherung',
+			title: 'Bauherrenhaftpflicht',
 			url: '/bauherrenhaftpflichtversicherung'
 		},
 		{
 			id: 'gewaesserschadenhaftpflichtversicherung',
 			parent: 'haftpflicht-haus-hof',
-			title: 'Gewässerschadenhaftpflichtversicherung',
+			title: 'Gewässerschadenhaftpflicht',
 			url: '/gewaesserschadenhaftpflichtversicherung'
 		},
 		{
