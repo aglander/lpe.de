@@ -411,7 +411,7 @@ const navigation = [
 		{
 			id: 'tagesgeld-festgeld',
 			parent: 'konten-geldanlagen',
-			title: 'Tages- / Festgeld',
+			title: 'Tagesgeld / Festgeld',
 			url: '/tagesgeld-festgeld'
 		},
 	{
