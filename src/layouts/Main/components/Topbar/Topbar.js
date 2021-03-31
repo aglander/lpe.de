@@ -1,20 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import {
 	Toolbar,
 	Hidden,
-	List,
-	ListItem,
-	ListItemIcon,
-	Popover,
-	Typography,
-	Button,
+	IconButton
 } from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import MenuIcon from '@material-ui/icons/Menu';
 import { Image } from 'components/atoms';
-import navigationData from 'data/navigation';
+import { Navigation } from 'components/organisms';
 import { Link } from 'gatsby';
 import logo from 'assets/images/LPE_Logo.svg';
 
@@ -119,153 +114,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Topbar = ({ onSidebarOpen, className, ...rest }) => {
 	const classes = useStyles();
-
-	const Navigation = () => {
-		const [anchorEl, setAnchorEl] = useState(null);
-		const [openedPopoverId, setOpenedPopoverId] = useState(null);
-
-		const handleClick = (event, popoverId) => {
-			setAnchorEl(event.target);
-			setOpenedPopoverId(popoverId);
-		};
-
-		const handleClose = () => {
-			setAnchorEl(null);
-			setOpenedPopoverId(null);
-		};
-
-		const navigation = navigationData;
-
-		const renderSubMenu = (id) => {
-			const subMenu = navigation
-				.filter((navItem) => navItem.parent === id)
-				.map((navItem) => {
-					if (navItem.url) {
-						return (
-							<ListItem
-								disableGutters
-								key={navItem.id}
-								className={classes.menuGroupItem}
-							>
-								<Typography
-									variant="body1"
-									component={Link}
-									to={navItem.url}
-									className={clsx(classes.navLink, 'submenu-item')}
-									color="textSecondary"
-									onClick={handleClose}
-								>
-									{navItem.title}
-								</Typography>
-							</ListItem>
-						);
-					} else {
-						return (
-							<div className={classes.menuItem}>
-								<Typography
-									variant="body2"
-									color="primary"
-									className={classes.menuGroupTitle}
-								>
-									{navItem.title}
-								</Typography>
-
-								<List disablePadding>{renderSubMenu(navItem.id)}</List>
-							</div>
-						);
-					}
-				});
-			return <div className={classes.menu}>{subMenu}</div>;
-		};
-
-		const menu = navigation
-			.filter((navItem) => navItem.parent == null)
-			.map((navItem) => {
-				if (!navItem.url) {
-					return (
-						<div key={navItem.id}>
-							<ListItem
-								aria-describedby={navItem.id}
-								onClick={(e) => handleClick(e, navItem.id)}
-								className={clsx(
-									classes.listItem,
-									openedPopoverId === navItem.id ? classes.listItemActive : ''
-								)}
-							>
-								<Typography
-									variant="body1"
-									color="textPrimary"
-									className={clsx(classes.listItemText, 'menu-item')}
-								>
-									{navItem.title}
-								</Typography>
-								<ListItemIcon className={classes.listItemIcon}>
-									<ExpandMoreIcon
-										className={
-											openedPopoverId === navItem.id ? classes.expandOpen : ''
-										}
-										fontSize="small"
-									/>
-								</ListItemIcon>
-							</ListItem>
-							<Popover
-								elevation={1}
-								id={navItem.id}
-								open={openedPopoverId === navItem.id}
-								anchorEl={anchorEl}
-								onClose={handleClose}
-								anchorOrigin={{
-									vertical: 'bottom',
-									horizontal: 'center',
-								}}
-								transformOrigin={{
-									vertical: 'top',
-									horizontal: 'center',
-								}}
-								classes={{ paper: classes.popover }}
-							>
-								<div>{renderSubMenu(navItem.id)}</div>
-							</Popover>
-						</div>
-					);
-				} else {
-					return (
-						<ListItem
-							aria-describedby={navItem.id}
-							className={clsx(classes.listItem)}
-						>
-							<Typography
-								variant="body1"
-								color="textPrimary"
-								component={'a'}
-								href={navItem.url}
-								className={clsx(classes.listItemText, 'menu-item')}
-							>
-								{navItem.title}
-							</Typography>
-						</ListItem>
-					);
-				}
-			});
-
-		return (
-			<List disablePadding className={classes.navigationContainer}>
-				{menu}
-				<ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
-					<Button
-						variant="contained"
-						color="primary"
-						component={Link}
-						to="/kontakt"
-						className={classes.listItemButton}
-					>
-						Kontakt
-					</Button>
-				</ListItem>
-			</List>
-		);
-	};
-
 	return (
 		<Toolbar
 			disableGutters
@@ -284,7 +132,16 @@ const Topbar = ({ onSidebarOpen, className, ...rest }) => {
 			</div>
 			<div className={classes.flexGrow} />
 			<Hidden smDown>
-				<Navigation classes={classes} />
+				<Navigation isHorizontal={true} />
+			</Hidden>
+			<Hidden mdUp>
+				<IconButton
+				className={classes.iconButton}
+				onClick={onSidebarOpen}
+				aria-label="Menu"
+				>
+				<MenuIcon />
+				</IconButton>
 			</Hidden>
 		</Toolbar>
 	);
