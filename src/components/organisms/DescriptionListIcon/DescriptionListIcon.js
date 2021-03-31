@@ -38,7 +38,7 @@ const DescriptionListIcon = props => {
   } else if (align === 'right') {
     gridJustify = 'flex-end';
   }
-
+  
   return (
     <Grid
       container

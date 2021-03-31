@@ -9,8 +9,8 @@ import { Section } from 'components/organisms';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		borderColor: theme.palette.alternate.dark,
-    borderWidth: '1px',
-    borderStyle: 'solid',
+		borderWidth: '1px',
+		borderStyle: 'solid',
 		borderRadius: theme.spacing(2),
 		marginBottom: '30px',
 	},
