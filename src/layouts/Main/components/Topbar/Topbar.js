@@ -113,6 +113,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	menuGroupTitle: {
 		textTransform: 'uppercase',
+		marginBottom: '10px',
 	},
 }));
 
