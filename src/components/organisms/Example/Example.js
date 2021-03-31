@@ -8,10 +8,10 @@ const useStyles = makeStyles((theme) => ({
 	example: {
 		'& .description-list-icon__icon-wrapper span': {
 			fontSize: '30px',
-			background: '#5B5B5B',
+			border: '2px solid #68B436',
 			borderRadius: '16px',
-			padding: '5px 10px',
-			color: 'white'
+			padding: '4px 10px',
+			color: '#68B436'
 		},
 	},
 }));

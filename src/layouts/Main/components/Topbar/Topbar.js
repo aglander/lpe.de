@@ -100,13 +100,13 @@ const useStyles = makeStyles((theme) => ({
 	menu: {
 		display: 'flex',
 		flexFlow: 'row wrap',
-		maxWidth: '1000px'
+		maxWidth: '1000px',
 	},
 	menuItem: {
-		marginRight: theme.spacing(5),
+		margin: '0 20px',
 		paddingBottom: theme.spacing(5),
 		flex: '1 10%',
-		width: '280px'
+		width: '280px',
 	},
 	menuGroupItem: {
 		paddingTop: 0,
