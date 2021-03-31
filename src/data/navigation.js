@@ -183,58 +183,47 @@ const navigation = [
 		},
 //---------------------------------------------------------
 {
-	id: 'tierversicherungen',
+	id: 'kranken-und-krankenzusatzversicherungen',
 	parent: 'versicherungen',
-	title: 'Tierversicherungen',
+	title: 'Kranken- & Krankenzusatzversicherungen',
 },
 	{
-		id: 'hundehaftpflichtversicherung',
-		parent: 'tierversicherungen',
-		title: 'Hundehaftpflichtversicherung',
-		url: '/hundehaftpflichtversicherung'
+		id: 'pkv-private-krankenversicherung',
+		parent: 'kranken-und-krankenzusatzversicherungen',
+		title: 'PKV - Private Krankenversicherung',
+		url: '/pkv-private-krankenversicherung'
 	},
 	{
-		id: 'pferdehaftpflichtversicherung',
-		parent: 'tierversicherungen',
-		title: 'Pferdehaftpflichtversicherung',
-		url: '/pferdehaftpflichtversicherung'
+		id: 'gkv-gesetzliche-krankenkasse',
+		parent: 'kranken-und-krankenzusatzversicherungen',
+		title: 'GKV - Gesetzliche Krankenkasse',
+		url: '/gkv-gesetzliche-krankenkasse'
 	},
 	{
-		id: 'hunde-op-versicherung',
-		parent: 'tierversicherungen',
-		title: 'Hunde OP-Versicherung',
-		url: '/hunde-op-versicherung'
+		id: 'pflegeversicherung',
+		parent: 'kranken-und-krankenzusatzversicherungen',
+		title: 'Pflegeversicherung',
+		url: '/pflegeversicherung'
 	},
 	{
-		id: 'pferde-op-versicherung',
-		parent: 'tierversicherungen',
-		title: 'Pferde OP-Versicherung',
-		url: '/pferde-op-versicherung'
+		id: 'zahnzusatzversicherung',
+		parent: 'kranken-und-krankenzusatzversicherungen',
+		title: 'Zahnzusatzversicherung',
+		url: '/zahnzusatzversicherung'
 	},
 	{
-		id: 'katzen-op-versicherung',
-		parent: 'tierversicherungen',
-		title: 'Katzen OP-Versicherung',
-		url: '/katzen-op-versicherung'
+		id: 'brillenversicherung',
+		parent: 'kranken-und-krankenzusatzversicherungen',
+		title: 'Brillenversicherung',
+		url: '/brillenversicherung'
 	},
 	{
-		id: 'hundekrankenversicherung',
-		parent: 'tierversicherungen',
-		title: 'Hundekrankenversicherung',
-		url: '/hundekrankenversicherung'
+		id: 'krankenhauszusatzversicherung',
+		parent: 'kranken-und-krankenzusatzversicherungen',
+		title: 'Krankenhauszusatzversicherung',
+		url: '/krankenhauszusatzversicherung'
 	},
-	{
-		id: 'pferdekrankenversicherung',
-		parent: 'tierversicherungen',
-		title: 'Pferdekrankenversicherung',
-		url: '/pferdekrankenversicherung'
-	},
-	{
-		id: 'katzenkrankenversicherung',
-		parent: 'tierversicherungen',
-		title: 'Katzenkrankenversicherung',
-		url: '/katzenkrankenversicherung'
-	},
+
 //---------------------------------------------------------
 	{
 		id: 'rechtsschutz-reisen',
@@ -296,47 +285,60 @@ const navigation = [
 			url: '/schutzbrief'
 		},
 //---------------------------------------------------------
+//---------------------------------------------------------
+{
+	id: 'tierversicherungen',
+	parent: 'versicherungen',
+	title: 'Tierversicherungen',
+},
 	{
-		id: 'kranken-und-krankenzusatzversicherungen',
-		parent: 'versicherungen',
-		title: 'Kranken- & Krankenzusatzversicherungen',
+		id: 'hundehaftpflichtversicherung',
+		parent: 'tierversicherungen',
+		title: 'Hundehaftpflichtversicherung',
+		url: '/hundehaftpflichtversicherung'
 	},
-		{
-			id: 'pkv-private-krankenversicherung',
-			parent: 'kranken-und-krankenzusatzversicherungen',
-			title: 'PKV - Private Krankenversicherung',
-			url: '/pkv-private-krankenversicherung'
-		},
-		{
-			id: 'gkv-gesetzliche-krankenkasse',
-			parent: 'kranken-und-krankenzusatzversicherungen',
-			title: 'GKV - Gesetzliche Krankenkasse',
-			url: '/gkv-gesetzliche-krankenkasse'
-		},
-		{
-			id: 'pflegeversicherung',
-			parent: 'kranken-und-krankenzusatzversicherungen',
-			title: 'Pflegeversicherung',
-			url: '/pflegeversicherung'
-		},
-		{
-			id: 'zahnzusatzversicherung',
-			parent: 'kranken-und-krankenzusatzversicherungen',
-			title: 'Zahnzusatzversicherung',
-			url: '/zahnzusatzversicherung'
-		},
-		{
-			id: 'brillenversicherung',
-			parent: 'kranken-und-krankenzusatzversicherungen',
-			title: 'Brillenversicherung',
-			url: '/brillenversicherung'
-		},
-		{
-			id: 'krankenhauszusatzversicherung',
-			parent: 'kranken-und-krankenzusatzversicherungen',
-			title: 'Krankenhauszusatzversicherung',
-			url: '/krankenhauszusatzversicherung'
-		},
+	{
+		id: 'pferdehaftpflichtversicherung',
+		parent: 'tierversicherungen',
+		title: 'Pferdehaftpflichtversicherung',
+		url: '/pferdehaftpflichtversicherung'
+	},
+	{
+		id: 'hunde-op-versicherung',
+		parent: 'tierversicherungen',
+		title: 'Hunde OP-Versicherung',
+		url: '/hunde-op-versicherung'
+	},
+	{
+		id: 'pferde-op-versicherung',
+		parent: 'tierversicherungen',
+		title: 'Pferde OP-Versicherung',
+		url: '/pferde-op-versicherung'
+	},
+	{
+		id: 'katzen-op-versicherung',
+		parent: 'tierversicherungen',
+		title: 'Katzen OP-Versicherung',
+		url: '/katzen-op-versicherung'
+	},
+	{
+		id: 'hundekrankenversicherung',
+		parent: 'tierversicherungen',
+		title: 'Hundekrankenversicherung',
+		url: '/hundekrankenversicherung'
+	},
+	{
+		id: 'pferdekrankenversicherung',
+		parent: 'tierversicherungen',
+		title: 'Pferdekrankenversicherung',
+		url: '/pferdekrankenversicherung'
+	},
+	{
+		id: 'katzenkrankenversicherung',
+		parent: 'tierversicherungen',
+		title: 'Katzenkrankenversicherung',
+		url: '/katzenkrankenversicherung'
+	},
 
 //#########################################################
 {
