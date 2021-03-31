@@ -4,7 +4,7 @@ const navigation = [
 	id: 'altersvorsorge',
 	title: 'Altersvorsorge',
 },
-// --- Bitte überleg dir eine passende Unterüberschrift
+//---------------------------------------------------------
 	{
 		id: 'schicht-1-basisversorgung',
 		title: '1. Schicht: Basisversorgung',
@@ -449,15 +449,16 @@ const navigation = [
 		},							
 //#########################################################
 {
-	id: 'liebe-familie',
-	title: 'Liebe Familie',
-	url: '/liebe-familie',
-},
-//#########################################################
-{
 	id: 'immobilien',
 	title: 'Immobilien',
 	url: '/immobilien',
+},
+
+//#########################################################
+{
+	id: 'liebe-familie',
+	title: 'Liebe Familie',
+	url: '/liebe-familie',
 },
 
 ];
