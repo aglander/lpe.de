@@ -93,6 +93,19 @@ const useStyles = makeStyles((theme) => ({
 	navLink: {
 		color: 'rgba(255,255,255,.6)',
 	},
+	iframe: {
+		height: '71px',
+		width: '100%',
+		border: 0,
+		overflow: 'hidden',
+		display: 'block',
+		position: 'fixed',
+		bottom: '0',
+		zIndex: '999',
+		[theme.breakpoints.down('sm')]: {
+			display: 'none'
+		},
+	}
 }));
 
 const Footer = (props) => {
@@ -127,6 +140,7 @@ const Footer = (props) => {
 
 	return (
 		<div {...rest} className={clsx(classes.root, className)}>
+			<iframe src="/whofinance-footer.html" className={classes.iframe} title="WhoFinance Footer" />
 			<div className={classes.footerContainer}>
 				<Grid container spacing={4}>
 					<Grid item xs={12} md={2}>
