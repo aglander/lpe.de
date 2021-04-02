@@ -93,6 +93,7 @@ const useStyles = makeStyles((theme) => ({
 	contactPanel: {
 		background: theme.palette.background.footer,
 		color: theme.palette.common.white,
+		position: 'sticky'
 	},
 	icon: {
 		color: 'rgba(255,255,255,1)',
