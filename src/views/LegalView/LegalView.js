@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {
 	useMediaQuery,
@@ -9,7 +8,7 @@ import {
 	Button,
 } from '@material-ui/core';
 import { DescriptionCta } from 'components/molecules';
-import { Section,  } from 'components/organisms';
+import { Section, ExpandBox } from 'components/organisms';
 import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
@@ -111,6 +110,7 @@ const LegalView = (data) => {
 			/>
 		),
 		ul: (props) => <ul {...props} className={classes.list} />,
+		ExpandBox
 	};
 
 	return (

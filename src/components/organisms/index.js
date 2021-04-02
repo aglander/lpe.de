@@ -29,3 +29,4 @@ export { default as AwardBox } from './AwardBox';
 export { default as ExamplesBox } from './ExamplesBox';
 export { default as Example } from './Example';
 export { default as Navigation } from './Navigation';
+export { default as ExpandBox } from './ExpandBox';
