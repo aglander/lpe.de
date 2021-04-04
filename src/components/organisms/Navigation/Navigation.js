@@ -42,6 +42,18 @@ const useStyles = makeStyles((theme) => ({
 			paddingRight: 0,
 		},
 	},
+	listItemVertical: {
+		borderBottom: '1px solid #ccc',
+		borderTop: '1px solid #ccc',
+    	margin: '20px 0',
+		cursor: 'pointer',
+		'&:hover > .menu-item, &:hover svg': {
+			color: theme.palette.primary.dark,
+		},
+		'&.menu-item--no-dropdown': {
+			paddingRight: 0,
+		},
+	},
 	listItemActive: {
 		'&> .menu-item': {
 			color: theme.palette.primary.dark,
@@ -80,6 +92,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		flexFlow: 'row wrap',
 		maxWidth: '1000px',
+		marginBottom: '-20px',
 	},
 	menuItem: {
 		margin: '0 20px',
@@ -166,25 +179,27 @@ const Navigation = ({ isHorizontal }) => {
 							aria-describedby={navItem.id}
 							onClick={(e) => handleClick(e, navItem.id)}
 							className={clsx(
-								classes.listItem,
+								isHorizontal ? classes.listItem : classes.listItemVertical,
 								openedPopoverId === navItem.id ? classes.listItemActive : ''
 							)}
 						>
 							<Typography
-								variant="body1"
+								variant={isHorizontal ? "body1" : "h6"}
 								color="textPrimary"
 								className={clsx(classes.listItemText, 'menu-item')}
 							>
 								{navItem.title}
 							</Typography>
-							<ListItemIcon className={classes.listItemIcon}>
-								<ExpandMoreIcon
-									className={
-										openedPopoverId === navItem.id ? classes.expandOpen : ''
-									}
-									fontSize="small"
-								/>
-							</ListItemIcon>
+							{isHorizontal && (
+								<ListItemIcon className={classes.listItemIcon}>
+									<ExpandMoreIcon
+										className={
+											openedPopoverId === navItem.id ? classes.expandOpen : ''
+										}
+										fontSize="small"
+									/>
+								</ListItemIcon>
+							)}
 						</ListItem>
 						{isHorizontal ? (
 							<Popover
@@ -214,7 +229,7 @@ const Navigation = ({ isHorizontal }) => {
 				return (
 					<ListItem
 						aria-describedby={navItem.id}
-						className={clsx(classes.listItem)}
+						className={clsx(isHorizontal ? classes.listItem : classes.listItemVertical)}
 					>
 						<Typography
 							variant="body1"

@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: theme.spacing(2),
 	},
 	iconButton: {
-		marginLeft: theme.spacing(2),
+		margin: theme.spacing(2),
 		padding: 0,
 		'&:hover': {
 			background: 'transparent',
