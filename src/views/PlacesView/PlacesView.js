@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import clsx from 'clsx';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { Section, ContactPanel } from 'components/organisms';
 import { Grid, Typography, List, ListItem } from '@material-ui/core';
@@ -16,6 +17,13 @@ const useStyles = makeStyles((theme) => ({
 		[theme.breakpoints.up('md')]: {
 			marginBottom: theme.spacing(4),
 		},
+	},
+	container: {
+		display: 'flex',
+		flexFlow: 'row wrap',
+	},
+	places: {
+		flex: '1 50%',
 	},
 }));
 
@@ -40,7 +48,9 @@ const SeoPages = (placeSlug) => {
 		const url = `/${slug}-${placeSlug.placeSlug}`;
 		return (
 			<ListItem>
-				<Link to={url}>{title}</Link>
+				<Typography component={Link} to={url} variant="body1" color="primary">
+					{title}
+				</Typography>
 			</ListItem>
 		);
 	});
@@ -51,19 +61,15 @@ const PlacesView = (data) => {
 	const classes = useStyles();
 	const placesList = places.map((place) => {
 		return (
-			<div>
-				<Typography
-					component="h2"
-					variant="h4"
-					color="textPrimary"
-					className={classes.section}
-				>
+			<div className={clsx(classes.places, classes.section)}>
+				<Typography component="h2" variant="h5" color="textPrimary">
 					{place.title}
 				</Typography>
 				<SeoPages placeSlug={place.slug} />
 			</div>
 		);
 	});
+
 	return (
 		<div className={classes.root}>
 			<Section>
@@ -77,7 +83,7 @@ const PlacesView = (data) => {
 						>
 							Ortsverzeichnis
 						</Typography>
-						{placesList}
+						<div className={classes.container}>{placesList}</div>
 					</Grid>
 					<Grid item xs={12} md={4}>
 						<ContactPanel />

@@ -234,8 +234,8 @@ const Navigation = ({ isHorizontal }) => {
 						<Typography
 							variant="body1"
 							color="textPrimary"
-							component={'a'}
-							href={navItem.url}
+							component={Link}
+							to={navItem.url}
 							className={clsx(classes.listItemText, 'menu-item')}
 						>
 							{navItem.title}

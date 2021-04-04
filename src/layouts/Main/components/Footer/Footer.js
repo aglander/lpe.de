@@ -14,6 +14,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 import { Link } from 'gatsby';
+import logo from 'assets/images/LPE_Logo.svg';
 
 import { Image } from 'components/atoms';
 
@@ -91,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
 		width: '100%',
 	},
 	navLink: {
-		color: 'rgba(255,255,255,.6)',
+		color: 'rgba(255,255,255,.8)',
 	},
 	iframe: {
 		height: '71px',
@@ -103,9 +104,9 @@ const useStyles = makeStyles((theme) => ({
 		bottom: '0',
 		zIndex: '999',
 		[theme.breakpoints.down('sm')]: {
-			display: 'none'
+			display: 'none',
 		},
-	}
+	},
 }));
 
 const Footer = (props) => {
@@ -140,18 +141,22 @@ const Footer = (props) => {
 
 	return (
 		<div {...rest} className={clsx(classes.root, className)}>
-			<iframe src="/whofinance-footer.html" className={classes.iframe} title="WhoFinance Footer" />
+			<iframe
+				src="/whofinance-footer.html"
+				className={classes.iframe}
+				title="WhoFinance Footer"
+			/>
 			<div className={classes.footerContainer}>
 				<Grid container spacing={4}>
 					<Grid item xs={12} md={2}>
 						<List disablePadding>
 							<ListItem disableGutters className={classes.logoContainerItem}>
 								<div className={classes.logoContainer}>
-									<a href="/" title="thefront">
+									<a href="/" title="LPE">
 										<Image
 											className={classes.logoImage}
-											src="https://assets.maccarianagency.com/the-front/logos/logo-negative.svg"
-											alt="thefront"
+											src={logo}
+											alt="LPE.de"
 											lazy={false}
 										/>
 									</a>
@@ -174,25 +179,112 @@ const Footer = (props) => {
 						</List>
 					</Grid>
 					<Grid item xs={12} md={10} className={classes.menuListContainer}>
-						<Grid container spacing={0}>
+						<Grid container spacing={10}>
 							<Grid item>
 								<ul>
 									<li>
-										<Link to="/ortsverzeichnis">Ortsverzeichnis</Link>
+										<Typography
+											variant="body1"
+											component={Link}
+											to="/impressum"
+											className={clsx(classes.navLink)}
+										>
+											Altersvorsorge
+										</Typography>
 									</li>
 									<li>
-										<Link to="/impressum">Impressum</Link>
+										<Typography
+											variant="body1"
+											component={Link}
+											to="/datenschutz"
+											className={clsx(classes.navLink)}
+										>
+											Versicherungen
+										</Typography>
 									</li>
 									<li>
-										<Link to="/datenschutz">Datenschutz</Link>
+										<Typography
+											variant="body1"
+											component={Link}
+											to="/kontakt"
+											className={clsx(classes.navLink)}
+										>
+											Finanzierungen
+										</Typography>
 									</li>
 									<li>
-										<Link to="/kontakt">Kontakt</Link>
+										<Typography
+											variant="body1"
+											component={Link}
+											to="/ortsverzeichnis"
+											className={clsx(classes.navLink)}
+										>
+											Immobilien
+										</Typography>
+									</li>
+									<li>
+										<Typography
+											variant="body1"
+											component={Link}
+											to="/ortsverzeichnis"
+											className={clsx(classes.navLink)}
+										>
+											Liebe Familie
+										</Typography>
 									</li>
 								</ul>
 							</Grid>
-							<Grid item></Grid>
-							<Grid item></Grid>
+							<Grid item>
+								<ul>
+									<li>
+										<Typography
+											variant="body1"
+											component={Link}
+											to="/impressum"
+											className={clsx(classes.navLink)}
+										>
+											Impressum
+										</Typography>
+									</li>
+									<li>
+										<Typography
+											variant="body1"
+											component={Link}
+											to="/datenschutz"
+											className={clsx(classes.navLink)}
+										>
+											Datenschutz
+										</Typography>
+									</li>
+									<li>
+										<Typography
+											variant="body1"
+											component={Link}
+											to="/kontakt"
+											className={clsx(classes.navLink)}
+										>
+											Kontakt
+										</Typography>
+									</li>
+									<li><Typography
+											variant="body1"
+											component="span"
+											className={clsx(classes.navLink)}
+										>
+											{' '}
+										</Typography></li>
+									<li>
+										<Typography
+											variant="body1"
+											component={Link}
+											to="/ortsverzeichnis"
+											className={clsx(classes.navLink)}
+										>
+											Ortsverzeichnis
+										</Typography>
+									</li>
+								</ul>
+							</Grid>
 						</Grid>
 					</Grid>
 				</Grid>
