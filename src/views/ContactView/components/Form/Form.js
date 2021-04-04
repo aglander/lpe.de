@@ -77,6 +77,7 @@ const Form = (props) => {
 											name="name"
 											fullWidth
 											type="text"
+                      required={true}
 										/>
 									</Grid>
 									<Grid item xs={12} data-aos="fade-up">
@@ -94,6 +95,7 @@ const Form = (props) => {
 											name="email"
 											fullWidth
 											type="email"
+                      required={true}
 										/>
 									</Grid>
 									<Grid item xs={12} data-aos="fade-up">
@@ -111,6 +113,7 @@ const Form = (props) => {
 											fullWidth
 											multiline
 											rows={4}
+                      required={true}
 										/>
 									</Grid>
 									<Grid item container justify="center" xs={12}>

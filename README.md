@@ -15,3 +15,5 @@
 - Logo
 - Performance
 - provenexpert google sterne
+- Videoberatung
+- Kontaktseite hübsch machen
