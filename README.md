@@ -5,12 +5,13 @@
 - Responsiveness
 - Hero Bilder
 
-# Epics
+# Todo
+- PDF Download für Datenschutzbestimmungen
 - Tracking
 - SEO
 - Startseite
 - Kontaktseite
     - Automatische Antwort
-- Impressum
 - Logo
 - Performance
+- provenexpert google sterne

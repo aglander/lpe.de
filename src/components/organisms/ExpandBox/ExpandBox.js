@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
 	title: {
 		fontWeight: 'bold',
 	},
-	accordionGrid: {
+	accordion: {
+    borderBottom: '1px solid #eee',
 		'& .accordion__item-wrapper': {
 			boxShadow: '0 1.5rem 4rem rgba(22,28,45,.05)',
 		},
@@ -53,7 +54,7 @@ const ExpandBox = (props) => {
 	const classes = useStyles();
 	const id = 'expand-' + makeid(5);
 	return (
-		<div className={clsx(className,classes.accordionGrid)} {...rest}>
+		<div className={clsx(classes.accordion, classes.root, className)} {...rest}>
 			<MuiAccordion
 				className={clsx('accordion__item-wrapper', classes.listItem)}
 				key={id}
