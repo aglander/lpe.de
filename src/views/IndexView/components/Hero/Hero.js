@@ -5,10 +5,12 @@ import { Button, Typography } from '@material-ui/core';
 import { SectionHeader, TypedText } from 'components/molecules';
 import { HeroShaped } from 'components/organisms';
 import { StaticImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
 
 const useStyles = makeStyles((theme) => ({
 	fontWeight900: {
 		fontWeight: 900,
+		fontSize: '0.92em'
 	},
 	leftSideContent: {
 		'& .section-header__cta-container': {
@@ -58,10 +60,10 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 				className={classes.fontWeight900}
 				typedProps={{
 					strings: [
-						'Versicherungsm',
+						'Versicherungsmakler',
 						'Finanzmakler',
-						'Vorsorgeb',
-						'Generationsb',
+						'Vorsorgeberater',
+						'Generationsberater',
 					],
 					typeSpeed: 50,
 					loop: true,
@@ -78,8 +80,8 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 			size="large"
 			variant="outlined"
 			color="primary"
-			component="a"
-			href="/documentation"
+			component={Link}
+			to="/ueber-uns"
 		>
 			Über uns
 		</Button>
@@ -90,8 +92,8 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 			size="large"
 			variant="contained"
 			color="primary"
-			component="a"
-			href="/home"
+			component={Link}
+			to="/kontakt"
 		>
 			Kontakt aufnehmen
 		</Button>
