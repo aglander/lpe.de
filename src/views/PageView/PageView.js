@@ -13,7 +13,7 @@ import {
 } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
-
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
@@ -94,7 +94,13 @@ const PageView = (data) => {
 		ProvenExpert,
 		AwardBox,
 		ExamplesBox,
-		Example
+		Example,
+		Link: (props) => (<Typography
+			{...props}
+			component={Link}
+			variant="h6"
+			color="primary"
+		/>),
 	};
 
 	return (

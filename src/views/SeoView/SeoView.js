@@ -11,7 +11,7 @@ import {
 } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
-
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 const { places } = require('../../data/places');
@@ -101,7 +101,13 @@ const SeoView = (data) => {
 			<ContactAndCompareBox {...props} slug={slug} compare={compare} />
 		),
 		ProvenExpert,
-		AwardBox
+		AwardBox,
+		Link: (props) => (<Typography
+			{...props}
+			component={Link}
+			variant="h6"
+			color="primary"
+		/>),
 	};
 
 	return (
