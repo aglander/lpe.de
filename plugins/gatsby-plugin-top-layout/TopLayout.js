@@ -50,10 +50,6 @@ export default function TopLayout(props) {
 					src="https://kit.fontawesome.com/4c273e6d43.js"
 					crossOrigin="anonymous"
 				></script>
-				<link
-					href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap"
-					rel="stylesheet"
-				/>
 			</Helmet>
 			{props.children}
 		</React.Fragment>

@@ -137,11 +137,11 @@ const ContactPanel = () => {
 						primaryTypographyProps={{
 							className: classes.title,
 							variant: 'h6',
-							align: isMd ? 'left' : 'center',
+							align: 'left',
 						}}
 						secondaryTypographyProps={{
 							color: theme.palette.common.white,
-							align: isMd ? 'left' : 'center',
+							align: 'left',
 						}}
 					/>
 				</ListItem>
@@ -155,7 +155,7 @@ const ContactPanel = () => {
 						secondaryTypographyProps={{
 							color: theme.palette.common.white,
 							variant: 'body1',
-							align: isMd ? 'left' : 'center',
+							align: 'left',
 						}}
 					/>
 				</ListItem>
