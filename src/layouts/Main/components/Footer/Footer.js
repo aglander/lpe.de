@@ -240,6 +240,16 @@ const Footer = (props) => {
 										<Typography
 											variant="body1"
 											component={Link}
+											to="/ueber-uns"
+											className={clsx(classes.navLink)}
+										>
+											Über uns
+										</Typography>
+									</li>
+									<li>
+										<Typography
+											variant="body1"
+											component={Link}
 											to="/impressum"
 											className={clsx(classes.navLink)}
 										>
@@ -266,13 +276,6 @@ const Footer = (props) => {
 											Kontakt
 										</Typography>
 									</li>
-									<li><Typography
-											variant="body1"
-											component="span"
-											className={clsx(classes.navLink)}
-										>
-											{' '}
-										</Typography></li>
 									<li>
 										<Typography
 											variant="body1"
