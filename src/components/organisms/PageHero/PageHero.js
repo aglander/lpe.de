@@ -39,7 +39,7 @@ const PageHero = (props) => {
 
 	if (compare) {
 		ctas.push(
-			<Link to={`/${slug}-vergleichen`}>
+			<Link to={compare}>
 				<Button
 					variant="outlined"
 					color="primary"

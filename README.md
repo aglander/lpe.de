@@ -38,7 +38,4 @@
 
 - Formularcenter / Downloadseite > Damit ich nicht immer die gleichen Dokumente per Mail senden muss, sondern den Leuten zum Download anbieten kann
 
-- Vergleichsrechner-Box / Compare-Logik ändern!
-    - Vergleichsrechner-Seiten: Was, wenn es keine Vergleichsseite gibt? Dafür aber z.B. zum Thema: Tierkrankenversicherungen die 2 bis 4 Versicherungsgesellschaften mit deren Links und Logos hinterlegt werden sollen?
-
 - Videoboxen für selbst gemachte Video (Verknüpfung zu YouTube / Vimeo)

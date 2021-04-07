@@ -30,3 +30,4 @@ export { default as ExamplesBox } from './ExamplesBox';
 export { default as Example } from './Example';
 export { default as Navigation } from './Navigation';
 export { default as ExpandBox } from './ExpandBox';
+export { default as CompareBox } from './CompareBox';

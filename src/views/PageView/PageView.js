@@ -10,6 +10,7 @@ import {
 	AwardBox,
 	ExamplesBox,
 	Example,
+	CompareBox,
 } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
@@ -101,6 +102,7 @@ const PageView = (data) => {
 			variant="h6"
 			color="primary"
 		/>),
+		CompareBox,
 	};
 
 	return (
