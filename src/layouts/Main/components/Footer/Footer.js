@@ -14,7 +14,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 import { Link } from 'gatsby';
-import logo from 'assets/images/LPE_Logo.svg';
+import logo from 'assets/images/LPE_Logo_single_weiss.svg';
 
 import { Image } from 'components/atoms';
 

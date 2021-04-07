@@ -11,7 +11,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Image } from 'components/atoms';
 import { Navigation } from 'components/organisms';
 import { Link } from 'gatsby';
-import logo from 'assets/images/LPE_Logo.svg';
+import logo from 'assets/images/LPE_Logo_single.svg';
 
 const useStyles = makeStyles((theme) => ({
 	flexGrow: {
