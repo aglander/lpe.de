@@ -63,7 +63,7 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 						'Versicherungsmakler',
 						'Finanzmakler',
 						'Vorsorgeberater',
-						'Generationsberater',
+						'Generationenberater',
 					],
 					typeSpeed: 50,
 					loop: true,
