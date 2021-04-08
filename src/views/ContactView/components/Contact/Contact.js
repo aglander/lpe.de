@@ -8,6 +8,7 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Grid,
+	Button,
 } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
 
@@ -15,6 +16,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import SmartphoneIcon from '@material-ui/icons/Smartphone';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
+import VideoCallIcon from '@material-ui/icons/VideoCall';
 
 function ListItemLink(props) {
 	return <ListItem button component="a" {...props} />;
@@ -39,6 +41,16 @@ const useStyles = makeStyles((theme) => ({
 		borderRadius: '50%',
 		padding: '10px',
 		fontSize: '3em',
+	},
+	video: {
+		textAlign: 'center'
+	},
+	videoIcon: {
+		color: 'grey',
+		padding: '10px',
+		fontSize: '20em',
+		display: 'block',
+		width: '100%'
 	},
 }));
 
@@ -81,7 +93,7 @@ const Contact = (props) => {
 								<ListItemIcon>
 									<SmartphoneIcon className={classes.icon} />
 								</ListItemIcon>
-								<ListItemText primary="(0172) 3 829 922" />
+								<ListItemText primary="0172 3829922" />
 							</ListItemLink>
 						</ListItem>
 						<ListItem className={classes.listItem}>
@@ -89,7 +101,7 @@ const Contact = (props) => {
 								<ListItemIcon>
 									<PhoneIcon className={classes.icon} />
 								</ListItemIcon>
-								<ListItemText primary="(0 33 62) 7000 251" />
+								<ListItemText primary="03362 7000-250" />
 							</ListItemLink>
 						</ListItem>
 						<ListItem className={classes.listItem}>
@@ -109,14 +121,25 @@ const Contact = (props) => {
 						data-aos="fade-up"
 						align={isMd ? 'center' : 'left'}
 					/>
-					<a
-						href="https://fondsfinanz.br-idge.de/public/room.a?key=LPE&skipCheck=true"
-						target="_blank"
-						rel="noreferrer"
-					>
-						Videoberatung
-					</a>
-				
+					<div className={classes.video}>
+						<a
+							href="https://fondsfinanz.br-idge.de/public/room.a?key=LPE&skipCheck=true"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<VideoCallIcon className={classes.videoIcon} />
+						</a>
+						<Button
+							variant="contained"
+							color="primary"
+							component="a"
+							href="https://fondsfinanz.br-idge.de/public/room.a?key=LPE&skipCheck=true"
+							target="_blank"
+							rel="noreferrer"
+						>
+							Jetzt Starten
+						</Button>
+					</div>
 				</Grid>
 			</Grid>
 		</div>

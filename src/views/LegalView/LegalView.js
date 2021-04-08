@@ -121,8 +121,8 @@ const LegalView = (data) => {
 					subtitle={date ? `Aktualisiert am ${date}` : ''}
 					primaryCta={
 						print ? (
-							<Button variant="outlined" color="primary" size="large">
-								Print
+							<Button variant="outlined" color="primary" size="large" href={print}>
+								Drucken
 							</Button>
 						) : (
 							''

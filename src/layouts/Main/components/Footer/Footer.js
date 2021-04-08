@@ -250,6 +250,16 @@ const Footer = (props) => {
 										<Typography
 											variant="body1"
 											component={Link}
+											to="/downloads"
+											className={clsx(classes.navLink)}
+										>
+											Downloads
+										</Typography>
+									</li>
+									<li>
+										<Typography
+											variant="body1"
+											component={Link}
 											to="/impressum"
 											className={clsx(classes.navLink)}
 										>

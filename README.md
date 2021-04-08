@@ -1,25 +1,7 @@
-# Bugs
-- Sidebar
-- Footer
-- Navigation flackert, beim klicken
-- Responsiveness
-- Hero Bilder
-
 # Todo
-- PDF Download für Datenschutzbestimmungen
 - Tracking
 - SEO
-- Startseite
-- Kontaktseite
-    - Automatische Antwort
-- Logo
-- Performance
 - provenexpert google sterne
-- Videoberatung 
-    -   Link für BRIDGE-Videoberatung: https://fondsfinanz.br-idge.de/public/room.a?key=LPE
-- Kontaktseite hübsch machen
-    -   Telefon - Formatierung:    (0 33 62) 7000 250 >>> statt -251 (251 ist das Fax)
-    -   Handy - Formatierung:      (01 72) 3 82 99 22
 
 - Startseite:
     -   Grüne Begriffe: Generationenberater statt Generationsberater
@@ -31,12 +13,7 @@
     -   Inhalt: Siehe Email v. 11.03.2021
     -   ProvenExpert-Widget
 
-- Header:   Logo- vielleicht doch in größer / umfangreicher?
-
 - Box   (2 x 3 oder 4 Auszeichnungssiegel [WhoFinance und ProvenExpert])
-- Box ? (Partner-Versicherungen/Banken ... - siehe: https://lpe.gatsbyjs.io/versicherungen-banken-bausparkassen) >>> (Einzelboxen für: Sachversicherungsgesellschaften | Lebensversicherungsgesellschaften | Krankenversicherungsgesellschaften | Gesetzliche Krankenkassen | Banken | Bausparkassen | Kooperationen & Maklerpools)
-
-- Formularcenter / Downloadseite > Damit ich nicht immer die gleichen Dokumente per Mail senden muss, sondern den Leuten zum Download anbieten kann
 
 - Vergleichsrechner-Box / Compare-Logik ändern!
     - Vergleichsrechner-Seiten: Was, wenn es keine Vergleichsseite gibt? Dafür aber z.B. zum Thema: Tierkrankenversicherungen die 2 bis 4 Versicherungsgesellschaften mit deren Links und Logos hinterlegt werden sollen?
