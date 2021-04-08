@@ -19,6 +19,11 @@ const insurances = [
 		data:
 			'AOK (...), BAHN-BKK, BARMER, BIG direkt gesund, BKK (...), BKK VBU, DAK, HEK - Hanseatische Krankenkasse, , IKK Brandenburg und Berlin, IKK classic, KKH Kaufmännische Krankenkasse, KNAPPSCHAFT, Salus BKK, SECURVITA Krankenkasse, TK - Techniker Krankenkasse',
 	},
+	{
+		title: 'Banken',
+		data:
+			'.................................',
+	},
     {
 		title: 'Bausparkassen',
 		data:
@@ -27,7 +32,7 @@ const insurances = [
     {
 		title: 'Kooperationen & Maklerpools',
 		data:
-			'Deutsche Vorsorgedatenbank AG, Procheck24 GmbH, Aruna GmbH, Kalckreuthstr. 11, 10777 Berlin | Fonds Finanz Maklerservice GmbH, Riesstraße 25, 80992 München | blau direkt GmbH & Co. KG, Kaninchenborn 31, 23560 Lübeck | Netfonds AG, Heidenkampsweg 73, 20097 Hamburg | VEMA Versicherungs-Makler-Genossenschaft eG, Unterkonnersreuth 29, 95500 Heinersreuth',
+			'Deutsche Vorsorgedatenbank AG | Procheck24 GmbH | Aruna GmbH, Kalckreuthstr. 11, 10777 Berlin | Fonds Finanz Maklerservice GmbH, Riesstraße 25, 80992 München | blau direkt GmbH & Co. KG, Kaninchenborn 31, 23560 Lübeck | Netfonds AG, Heidenkampsweg 73, 20097 Hamburg | VEMA Versicherungs-Makler-Genossenschaft eG, Unterkonnersreuth 29, 95500 Heinersreuth',
 	},
 ];
 
