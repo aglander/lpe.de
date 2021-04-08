@@ -164,7 +164,7 @@ const ContactPanel = () => {
 						<ListItemIcon>
 							<SmartphoneIcon className={classes.icon} />
 						</ListItemIcon>
-						<ListItemText primary="(0172) 3 829 922" />
+						<ListItemText primary="0172 3829922" />
 					</ListItemLink>
 				</ListItem>
 				<ListItem>
@@ -172,7 +172,7 @@ const ContactPanel = () => {
 						<ListItemIcon>
 							<PhoneIcon className={classes.icon} />
 						</ListItemIcon>
-						<ListItemText primary="(0 33 62) 7000 251" />
+						<ListItemText primary="03362 7000-250" />
 					</ListItemLink>
 				</ListItem>
 				<ListItem>
