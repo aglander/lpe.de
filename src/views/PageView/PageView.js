@@ -11,6 +11,7 @@ import {
 	ExamplesBox,
 	Example,
 	CompareBox,
+	InsurancesBox,
 } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
@@ -103,6 +104,7 @@ const PageView = (data) => {
 			color="primary"
 		/>),
 		CompareBox,
+		InsurancesBox,
 	};
 
 	return (
