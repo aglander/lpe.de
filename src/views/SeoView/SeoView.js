@@ -7,7 +7,11 @@ import {
 	ContactAndCompareBox,
 	PageHero,
 	ProvenExpert,
-	AwardBox
+	AwardBox,
+	ExamplesBox,
+	Example,
+	CompareBox,
+	InsurancesBox,
 } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
@@ -102,12 +106,16 @@ const SeoView = (data) => {
 		),
 		ProvenExpert,
 		AwardBox,
+		ExamplesBox,
+		Example,
 		Link: (props) => (<Typography
 			{...props}
 			component={Link}
 			variant="h6"
 			color="primary"
 		/>),
+		CompareBox,
+		InsurancesBox,
 	};
 
 	return (

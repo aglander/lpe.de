@@ -31,3 +31,4 @@ export { default as Example } from './Example';
 export { default as Navigation } from './Navigation';
 export { default as ExpandBox } from './ExpandBox';
 export { default as CompareBox } from './CompareBox';
+export { default as InsurancesBox } from './InsurancesBox';
