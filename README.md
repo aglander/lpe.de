@@ -6,7 +6,6 @@
 - Hero Bilder
 
 # Todo
-- PDF Download für Datenschutzbestimmungen
 - Tracking
 - SEO
 - Startseite
