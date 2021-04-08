@@ -7,6 +7,7 @@ import {
 	ContactAndCompareBox,
 	PageHero,
 	ProvenExpert,
+	ProvenExpertStars,
 	AwardBox,
 	ExamplesBox,
 	Example,
@@ -134,6 +135,7 @@ const SeoView = (data) => {
 						<MDXProvider components={components}>
 							<MDXRenderer>{body}</MDXRenderer>
 						</MDXProvider>
+						<ProvenExpertStars />
 					</Grid>
 					<Grid item xs={12} md={4}>
 						<ContactPanel />

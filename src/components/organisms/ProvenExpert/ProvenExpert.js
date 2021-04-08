@@ -26,7 +26,6 @@ const ProvenExpert = () => {
 	const isMd = useMediaQuery(theme.breakpoints.up('md'), {
 		defaultMatches: true,
 	});
-	console.log(theme.breakpoints.isMd, 'Breakpoint');
 
 	return (
 		<div className={classes.root}>
