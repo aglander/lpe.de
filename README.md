@@ -34,7 +34,6 @@
 - Header:   Logo- vielleicht doch in größer / umfangreicher?
 
 - Box   (2 x 3 oder 4 Auszeichnungssiegel [WhoFinance und ProvenExpert])
-- Box ? (Partner-Versicherungen/Banken ... - siehe: https://lpe.gatsbyjs.io/versicherungen-banken-bausparkassen) >>> (Einzelboxen für: Sachversicherungsgesellschaften | Lebensversicherungsgesellschaften | Krankenversicherungsgesellschaften | Gesetzliche Krankenkassen | Banken | Bausparkassen | Kooperationen & Maklerpools)
 
 - Formularcenter / Downloadseite > Damit ich nicht immer die gleichen Dokumente per Mail senden muss, sondern den Leuten zum Download anbieten kann
 
