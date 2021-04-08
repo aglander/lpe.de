@@ -1,24 +1,7 @@
-# Bugs
-- Sidebar
-- Footer
-- Navigation flackert, beim klicken
-- Responsiveness
-- Hero Bilder
-
 # Todo
 - Tracking
 - SEO
-- Startseite
-- Kontaktseite
-    - Automatische Antwort
-- Logo
-- Performance
 - provenexpert google sterne
-- Videoberatung 
-    -   Link für BRIDGE-Videoberatung: https://fondsfinanz.br-idge.de/public/room.a?key=LPE
-- Kontaktseite hübsch machen
-    -   Telefon - Formatierung:    (0 33 62) 7000 250 >>> statt -251 (251 ist das Fax)
-    -   Handy - Formatierung:      (01 72) 3 82 99 22
 
 - Startseite:
     -   Grüne Begriffe: Generationenberater statt Generationsberater
