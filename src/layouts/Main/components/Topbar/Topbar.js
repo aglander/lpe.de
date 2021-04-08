@@ -82,10 +82,10 @@ const useStyles = makeStyles((theme) => ({
 	},
 	logoContainer: {
 		width: 100,
-		height: 28,
+		height: 50,
 		[theme.breakpoints.up('md')]: {
 			width: 120,
-			height: 32,
+			height: 50,
 		},
 	},
 	logoImage: {
