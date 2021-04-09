@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 	heroShaped: {
 		'& .hero-shaped__image': {
 			backgroundColor: theme.palette.alternate.main,
-			display: 'flex',
+			display: 'grid',
         	justifyContent: 'flex-end'
 		},
 		[theme.breakpoints.down('sm')]: {

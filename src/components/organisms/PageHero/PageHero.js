@@ -1,12 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from '@material-ui/core/styles';
-
+import { useTheme, makeStyles } from '@material-ui/core/styles';
 import { useMediaQuery, Button, Typography } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
 import { HeroShaped } from 'components/organisms';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
+
+const useStyles = makeStyles((theme) => ({
+	heroShaped: {
+		'& .hero-shaped__image': {
+			backgroundColor: theme.palette.alternate.main,
+			display: 'grid',
+			justifyContent: 'flex-end',
+		},
+		[theme.breakpoints.down('sm')]: {
+			'& .hero-shaped__image': {
+				position: 'relative',
+			},
+			'& .hero-shaped__wrapper': {
+				flexDirection: 'column',
+			},
+		},
+	},
+}));
 
 const PageHero = (props) => {
 	const {
@@ -19,6 +36,8 @@ const PageHero = (props) => {
 		image,
 		...rest
 	} = props;
+
+	const classes = useStyles();
 
 	const theme = useTheme();
 	const isMd = useMediaQuery(theme.breakpoints.up('md'), {
@@ -54,6 +73,7 @@ const PageHero = (props) => {
 	return (
 		<div className={className} {...rest}>
 			<HeroShaped
+				className={classes.heroShaped}
 				leftSide={
 					<SectionHeader
 						title={
