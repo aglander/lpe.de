@@ -58,7 +58,7 @@ const Form = (props) => {
 						/>
 						<div className={classes.form}>
 							<form
-								action="https://formspree.io/f/xvodokzw"
+								action="https://form.taxi/s/yqwc7dz5"
 								method="POST"
 							>
 								<Grid container spacing={isMd ? 4 : 2}>
