@@ -9,14 +9,6 @@ module.exports = {
 		image: '/assets/images/icon.png', // Path to your image you placed in the 'static' folder
 	},
 	plugins: [
-		{
-			resolve: 'gatsby-plugin-matomo',
-			options: {
-				siteId: '1',
-				matomoUrl: 'https://www.elterninfoabend.de/matomo/',
-				siteUrl: 'https://www.lpe.de',
-			},
-		},
 		'gatsby-plugin-mdx',
 		{
 			resolve: 'gatsby-source-filesystem',

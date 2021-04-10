@@ -6,7 +6,6 @@ export { default as Map } from './Map';
 export { default as HeroBackground } from './HeroBackground';
 export { default as HeroSideImage } from './HeroSideImage';
 export { default as HeroSimpleBackground } from './HeroSimpleBackground';
-export { default as Parallax } from './Parallax';
 export { default as ContactForm } from './ContactForm';
 export { default as ContactPanel } from './ContactPanel';
 export { default as ContactAndCompareBox } from './ContactAndCompareBox';
