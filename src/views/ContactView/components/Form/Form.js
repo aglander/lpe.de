@@ -45,91 +45,103 @@ const Form = (props) => {
 		defaultMatches: true,
 	});
 
+	const showSuccessScreen = data.data;
+
 	return (
 		<div className={className} {...rest}>
 			<HeroShaped
 				leftSide={
 					<div className={classes.heroleftSide}>
-						<SectionHeader
-							title="Kontaktieren Sie uns"
-							subtitle="Wir werden Ihre Anfrage so schnell wie möglich bearbeiten!"
-							data-aos="fade-up"
-							align="left"
-						/>
-						<div className={classes.form}>
-							<form
-								action="https://form.taxi/s/yqwc7dz5"
-								method="POST"
-							>
-								<Grid container spacing={isMd ? 4 : 2}>
-									<Grid item xs={12} data-aos="fade-up">
-										<Typography
-											variant="subtitle1"
-											color="textPrimary"
-											className={classes.inputTitle}
-										>
-											Name
-										</Typography>
-										<TextField
-											placeholder="Ihr Name"
-											variant="outlined"
-											size="medium"
-											name="name"
-											fullWidth
-											type="text"
-                      required={true}
-										/>
-									</Grid>
-									<Grid item xs={12} data-aos="fade-up">
-										<Typography
-											variant="subtitle1"
-											color="textPrimary"
-											className={classes.inputTitle}
-										>
-											E-Mail
-										</Typography>
-										<TextField
-											placeholder="Ihre E-Mail-Adresse"
-											variant="outlined"
-											size="medium"
-											name="email"
-											fullWidth
-											type="email"
-                      required={true}
-										/>
-									</Grid>
-									<Grid item xs={12} data-aos="fade-up">
-										<Typography
-											variant="subtitle1"
-											color="textPrimary"
-											className={classes.inputTitle}
-										>
-											Nachricht
-										</Typography>
-										<TextField
-											placeholder="Wie können wir Ihnen weiterhelfen?"
-											variant="outlined"
-											name="message"
-											fullWidth
-											multiline
-											rows={4}
-                      required={true}
-										/>
-									</Grid>
-									<Grid item container justify="center" xs={12}>
-										<Button
-											variant="contained"
-											type="submit"
-											color="primary"
-											size="large"
-											fullWidth
-										>
-											submit
-										</Button>
-									</Grid>
-								</Grid>
-							</form>
-						</div>
+						{showSuccessScreen ? (
+							<div>
+								<SectionHeader
+									title="Erfolgreich abgeschickt"
+									subtitle="Wir werden Ihre Anfrage so schnell wie möglich bearbeiten!"
+									data-aos="fade-up"
+									align="left"
+								/>
+							</div>
+						) : (
+							<div>
+								<SectionHeader
+									title="Kontaktieren Sie uns"
+									subtitle="Wir werden Ihre Anfrage so schnell wie möglich bearbeiten!"
+									data-aos="fade-up"
+									align="left"
+								/>
+								<div className={classes.form}>
+									<form action="https://form.taxi/s/yqwc7dz5" method="POST">
+										<Grid container spacing={isMd ? 4 : 2}>
+											<Grid item xs={12} data-aos="fade-up">
+												<Typography
+													variant="subtitle1"
+													color="textPrimary"
+													className={classes.inputTitle}
+												>
+													Name
+												</Typography>
+												<TextField
+													placeholder="Ihr Name"
+													variant="outlined"
+													size="medium"
+													name="name"
+													fullWidth
+													type="text"
+													required={true}
+												/>
+											</Grid>
+											<Grid item xs={12} data-aos="fade-up">
+												<Typography
+													variant="subtitle1"
+													color="textPrimary"
+													className={classes.inputTitle}
+												>
+													E-Mail
+												</Typography>
+												<TextField
+													placeholder="Ihre E-Mail-Adresse"
+													variant="outlined"
+													size="medium"
+													name="email"
+													fullWidth
+													type="email"
+													required={true}
+												/>
+											</Grid>
+											<Grid item xs={12} data-aos="fade-up">
+												<Typography
+													variant="subtitle1"
+													color="textPrimary"
+													className={classes.inputTitle}
+												>
+													Nachricht
+												</Typography>
+												<TextField
+													placeholder="Wie können wir Ihnen weiterhelfen?"
+													variant="outlined"
+													name="message"
+													fullWidth
+													multiline
+													rows={4}
+													required={true}
+												/>
+											</Grid>
+											<Grid item container justify="center" xs={12}>
+												<Button
+													variant="contained"
+													type="submit"
+													color="primary"
+													size="large"
+													fullWidth
+												>
+													submit
+												</Button>
+											</Grid>
+										</Grid>
+									</form>
+								</div>
+							</div>
+						)}
 					</div>
 				}
 				rightSide={<Image src={ImageMap} />}
@@ -146,7 +158,7 @@ Form.propTypes = {
 	/**
 	 * data to be rendered
 	 */
-	data: PropTypes.array.isRequired,
+	data: PropTypes.bool.isRequired,
 };
 
 export default Form;

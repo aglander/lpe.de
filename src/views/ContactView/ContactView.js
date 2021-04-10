@@ -3,19 +3,10 @@ import { Divider } from '@material-ui/core';
 import { Section } from 'components/organisms';
 import { Form, Contact } from './components';
 
-const ContactView = () => {
-	const mapData = [
-		{
-			location: {
-				y: 45.453211,
-				x: 9.248383,
-				address: 'Via A.G. Alaimo 147, 55027',
-			},
-		},
-	];
+const ContactView = (data) => {
 	return (
 		<div>
-			<Form data={mapData} />
+			<Form data={data} />
 			<Section>
 				<Contact />
 			</Section>
