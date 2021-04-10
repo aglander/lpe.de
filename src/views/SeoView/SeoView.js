@@ -61,7 +61,7 @@ const SeoView = (data) => {
 				},
 				body,
 			},
-			file: { childImageSharp },
+			file,
 			place,
 		},
 	} = data;
@@ -69,8 +69,9 @@ const SeoView = (data) => {
 	const placeData = places.filter((placeItem) => placeItem.slug === place)[0];
 	if (placeData.title) heroClaim = placeData.title;
 
-	if (placeData.image) {
-		heroImage = childImageSharp;
+	if (placeData.image && file) {
+
+		heroImage = file.childImageSharp;
 	}
 
 	const components = {
