@@ -41,6 +41,7 @@ module.exports = {
 		'gatsby-plugin-resolve-src',
 		`gatsby-plugin-image`,
 		`gatsby-plugin-sharp`,
+		`gatsby-plugin-gatsby-cloud`,
 		`gatsby-transformer-sharp`, // Needed for dynamic images
 	],
 };
