@@ -1,7 +1,7 @@
 import React from 'react';
 import { Hero, MobileApp } from './components';
 
-import { Section, SectionAlternate } from 'components/organisms';
+import { Section } from 'components/organisms';
 
 const mobileapp = [
 	'Our sign up is dead simple. We only require your basic company information',

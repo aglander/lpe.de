@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { Typography, useMediaQuery } from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 import insurancesData from 'data/insurances';
 
@@ -18,8 +18,6 @@ const useStyles = makeStyles((theme) => ({
 
 const InsurancesBox = (props) => {
 	const { title, className, ...rest } = props;
-
-	const theme = useTheme();
 
 	const classes = useStyles();
 

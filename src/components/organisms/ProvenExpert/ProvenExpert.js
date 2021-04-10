@@ -1,7 +1,7 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { StaticImage } from 'gatsby-plugin-image';
-import { useMediaQuery, Hidden } from '@material-ui/core';
+import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -22,18 +22,13 @@ const useStyles = makeStyles((theme) => ({
 const ProvenExpert = () => {
 	const classes = useStyles();
 
-	const theme = useTheme();
-	const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-		defaultMatches: true,
-	});
-
 	return (
 		<div className={classes.root}>
 			<a
 				href="https://www.provenexpert.com/lars-peter-eckhardt/?utm_source=Widget&utm_medium=Widget&utm_campaign=Widget"
 				title="Kundenbewertungen &amp; Erfahrungen zu Lars-Peter Eckhardt. Mehr Infos anzeigen."
 				target="_blank"
-				rel="noopener"
+				rel="noreferrer"
 			>
 				<Hidden mdDown>
 					<StaticImage

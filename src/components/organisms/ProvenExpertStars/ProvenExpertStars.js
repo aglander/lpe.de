@@ -1,18 +1,12 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-	root: {
-		
-	},
+	root: {},
 }));
 
 const ProvenExpertStars = () => {
 	const classes = useStyles();
-
-	const theme = useTheme();
-
 	return (
 		<div className={classes.root}>
 			<div class="pe-richsnippets"></div>

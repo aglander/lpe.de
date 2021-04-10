@@ -114,31 +114,6 @@ const Footer = (props) => {
 
 	const classes = useStyles();
 
-	const MenuGroup = (props) => {
-		const { item } = props;
-		return (
-			<List disablePadding className={classes.menuItem}>
-				<ListItem disableGutters className={classes.menuGroupItem}>
-					<Typography variant="body2" className={classes.menuGroupTitle}>
-						{item.groupTitle}
-					</Typography>
-				</ListItem>
-				{item.pages.map((page, i) => (
-					<ListItem disableGutters key={i} className={classes.menuGroupItem}>
-						<Typography
-							variant="body2"
-							component={'a'}
-							href={page.href}
-							className={clsx(classes.navLink, 'submenu-item')}
-						>
-							{page.title}
-						</Typography>
-					</ListItem>
-				))}
-			</List>
-		);
-	};
-
 	return (
 		<div {...rest} className={clsx(classes.root, className)}>
 			<iframe

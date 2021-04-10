@@ -10,7 +10,6 @@ import {
 	ListItemIcon,
 	ListItemAvatar,
 	Avatar,
-	useMediaQuery,
 } from '@material-ui/core';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import SmartphoneIcon from '@material-ui/icons/Smartphone';
@@ -88,13 +87,13 @@ const useStyles = makeStyles((theme) => ({
 		right: '18px',
 		width: '60px',
 		height: '60px',
-		paddingTop: '20px'
+		paddingTop: '20px',
 	},
 	contactPanel: {
 		background: theme.palette.background.footer,
 		color: theme.palette.common.white,
 		position: 'sticky',
-		top: '100px'
+		top: '100px',
 	},
 	icon: {
 		color: 'rgba(255,255,255,1)',
@@ -109,10 +108,6 @@ const ContactPanel = () => {
 	const classes = useStyles();
 
 	const theme = useTheme();
-
-	const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-		defaultMatches: true,
-	});
 
 	return (
 		<div className={clsx(classes.root, classes.contactPanel)}>

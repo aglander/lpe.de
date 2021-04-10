@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Sidebar = (props) => {
-	const { pages, open, variant, onClose, className, ...rest } = props;
+	const { open, variant, onClose, className, ...rest } = props;
 
 	const classes = useStyles();
 

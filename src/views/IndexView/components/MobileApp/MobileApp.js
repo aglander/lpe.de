@@ -9,7 +9,6 @@ import {
 	Typography,
 	Avatar,
 } from '@material-ui/core';
-import { Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
