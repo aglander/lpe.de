@@ -208,7 +208,7 @@ exports.places = [
     {
         slug: '15566-schoeneiche-bei-berlin',
         title: '15566 Schöneiche bei Berlin',
-        image: 'schoeneiche.jpg',
+        image: 'assets/schoeneiche.jpg',
     },
     {
         slug: '15569-woltersdorf',

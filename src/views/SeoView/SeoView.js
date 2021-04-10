@@ -61,7 +61,7 @@ const SeoView = (data) => {
 				},
 				body,
 			},
-			imageSharp,
+			file: { childImageSharp },
 			place,
 		},
 	} = data;
@@ -70,7 +70,7 @@ const SeoView = (data) => {
 	if (placeData.title) heroClaim = placeData.title;
 
 	if (placeData.image) {
-		heroImage = imageSharp;
+		heroImage = childImageSharp;
 	}
 
 	const components = {
@@ -109,12 +109,9 @@ const SeoView = (data) => {
 		AwardBox,
 		ExamplesBox,
 		Example,
-		Link: (props) => (<Typography
-			{...props}
-			component={Link}
-			variant="h6"
-			color="primary"
-		/>),
+		Link: (props) => (
+			<Typography {...props} component={Link} variant="h6" color="primary" />
+		),
 		CompareBox,
 		InsurancesBox,
 	};
