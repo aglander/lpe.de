@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Footer = (props) => {
-	const { pages, className, ...rest } = props;
+	const { className, ...rest } = props;
 
 	const classes = useStyles();
 
@@ -283,7 +283,6 @@ const Footer = (props) => {
 
 Footer.propTypes = {
 	className: PropTypes.string,
-	pages: PropTypes.object.isRequired,
 };
 
 export default Footer;

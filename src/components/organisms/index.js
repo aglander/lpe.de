@@ -20,3 +20,7 @@ export { default as Navigation } from './Navigation';
 export { default as ExpandBox } from './ExpandBox';
 export { default as CompareBox } from './CompareBox';
 export { default as InsurancesBox } from './InsurancesBox';
+export { default as Reviews } from './Reviews';
+export { default as CardBase } from './CardBase';
+export { default as CardReview } from './CardReview';
+export { default as Advantages } from './Advantages';

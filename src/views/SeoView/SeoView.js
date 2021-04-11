@@ -70,7 +70,6 @@ const SeoView = (data) => {
 	if (placeData.title) heroClaim = placeData.title;
 
 	if (placeData.image && file) {
-
 		heroImage = file.childImageSharp;
 	}
 
