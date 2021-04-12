@@ -1,6 +1,6 @@
 name: Read ProvenExpert
 on:
-  push
+  push:
   schedule:
     - cron: '0 * * * *' # every hour
 jobs:
