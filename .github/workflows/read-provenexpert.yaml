@@ -1,0 +1,9 @@
+name: Read ProvenExpert
+on:
+  schedule:
+    - cron: '0 * * * *' # every hour
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -u 14Jp3xmphSUZ5RKZjWGBmVwZ48TA1LmA:NzA4M2Q5NTAxNWE0Mzc4OTRmYjBhNGE1YzZlMzA1NDA https://www.provenexpert.com/api_rating_v2.json
