@@ -2,27 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme, makeStyles } from '@material-ui/core/styles';
 
-import { Grid, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import { Icon } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 import { DescriptionListIcon } from 'components/organisms';
+import { Link } from 'gatsby';
 
 const useStyles = makeStyles((theme) => ({
+	container: {
+		display: 'flex',
+		flexDirection: 'row',
+		flexFlow: 'wrap',
+		justifyContent: 'space-around',
+	},
 
-
-  container : {
-    display: 'flex',
-    flexDirection: 'row',
-    flexFlow: 'wrap',
-    justifyContent: 'space-around'
-  },
-
-  box : {
-    display: 'flex',
-    maxWidth: '500px',
-    padding: '20px'
-  }
-
+	box: {
+		display: 'flex',
+		maxWidth: '500px',
+		padding: '20px',
+	},
 }));
 
 const Advantages = (props) => {
@@ -47,17 +45,19 @@ const Advantages = (props) => {
 			<div class={classes.container}>
 				{data.map((item, index) => (
 					<div class={classes.box} data-aos="fade-up">
-						<DescriptionListIcon
-							title={item.title}
-							subtitle={item.subtitle}
-							icon={
-								<Icon
-									fontIconClass={item.icon}
-									size="medium"
-									fontIconColor={theme.palette.primary.main}
-								/>
-							}
-						/>
+						<Link to={item.link}>
+							<DescriptionListIcon
+								title={item.title}
+								subtitle={item.subtitle}
+								icon={
+									<Icon
+										fontIconClass={item.icon}
+										size="medium"
+										fontIconColor={theme.palette.primary.main}
+									/>
+								}
+							/>
+						</Link>
 					</div>
 				))}
 			</div>

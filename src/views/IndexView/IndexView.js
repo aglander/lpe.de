@@ -1,7 +1,12 @@
 import React from 'react';
 import { Hero, MobileApp } from './components';
 
-import { Section, SectionAlternate, Reviews, Advantages } from 'components/organisms';
+import {
+	Section,
+	SectionAlternate,
+	Reviews,
+	Advantages,
+} from 'components/organisms';
 import { Divider } from '@material-ui/core';
 
 const mobileapp = [
@@ -13,7 +18,8 @@ const mobileapp = [
 
 export const reviews = [
 	{
-		authorPhoto: 'https://assets.maccarianagency.com/the-front/photos/people/veronica-adams.jpg',
+		authorPhoto:
+			'https://assets.maccarianagency.com/the-front/photos/people/veronica-adams.jpg',
 		authorName: 'Sarah Herbeler',
 		authorOccupation: 'Hausfinanzierung und Versicherungsvergleich mit Extras',
 		feedback:
@@ -27,7 +33,8 @@ export const reviews = [
 			'Seit 2 Jahrzehnten vertraue ich Lars-Peter Eckhardt wenn es um Versicherungen oder Finanzierungen geht. Er geht sehr gut auf meine Bedürfnisse ein und findet immer die richtige Lösung. Ich kann ihn uneingeschränkt und jederzeit weiterempfehlen.',
 	},
 	{
-		authorPhoto: 'https://assets.maccarianagency.com/the-front/photos/people/jack-smith.jpg',
+		authorPhoto:
+			'https://assets.maccarianagency.com/the-front/photos/people/jack-smith.jpg',
 		authorName: 'Ronny Reimer',
 		authorOccupation: 'Hauskauf',
 		feedback:
@@ -37,42 +44,47 @@ export const reviews = [
 
 const advantages = [
 	{
-	  icon: 'fas fa-users',
-	  title: 'Altersvorsorge',
-	  subtitle:
-		'Connect in spaces designed to bring incredible people together. Learn with them and take your project to new heights.',
+		icon: 'fas fa-piggy-bank',
+		title: 'Altersvorsorge',
+		subtitle:
+			'Connect in spaces designed to bring incredible people together. Learn with them and take your project to new heights.',
+		link: '/altersvorsorge',
 	},
 	{
-	  icon: 'far fa-address-book',
-	  title: 'Versicherungen',
-	  subtitle:
-		'Stay as little as 3 months with rolling contracts. Like it here? This is your space, so stay as long as you want.',
+		icon: 'fas fa-car-crash',
+		title: 'Versicherungen',
+		subtitle:
+			'Stay as little as 3 months with rolling contracts. Like it here? This is your space, so stay as long as you want.',
+		link: '/versicherungen',
 	},
 	{
-	  icon: 'fab fa-angellist',
-	  title: 'Finanzierungen',
-	  subtitle:
-		'Monthly fee covers everything you need hassle free. Keep cool and focus on what matters to you.',
+		icon: 'fas fa-euro-sign',
+		title: 'Finanzierungen',
+		subtitle:
+			'Monthly fee covers everything you need hassle free. Keep cool and focus on what matters to you.',
+		link: '/finanzierungen',
 	},
 	{
-	  icon: 'fas fa-phone-alt',
-	  title: 'Immobilien',
-	  subtitle:
-		'24/7 support. No more hidden prices. It is your workingplace, playground, relax room.',
+		icon: 'fas fa-home',
+		title: 'Immobilien',
+		subtitle:
+			'24/7 support. No more hidden prices. It is your workingplace, playground, relax room.',
+		link: '/immobilien',
 	},
 	{
-		icon: 'fas fa-phone-alt',
+		icon: 'fas fa-heart',
 		title: 'Liebe Familie',
 		subtitle:
-		  '24/7 support. No more hidden prices. It is your workingplace, playground, relax room.',
-	  },
-  ];
+			'24/7 support. No more hidden prices. It is your workingplace, playground, relax room.',
+		link: '/liebe-familie',
+	},
+];
 
 const IndexView = ({ themeMode }) => {
 	return (
 		<div>
 			<Hero themeMode={themeMode} />
-			
+
 			<SectionAlternate>
 				<Advantages data={advantages} />
 			</SectionAlternate>
