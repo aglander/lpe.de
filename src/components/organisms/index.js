@@ -24,3 +24,4 @@ export { default as Reviews } from './Reviews';
 export { default as CardBase } from './CardBase';
 export { default as CardReview } from './CardReview';
 export { default as Advantages } from './Advantages';
+export { default as Place } from './Place';
