@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
 			border: '2px solid #68B436',
 			borderRadius: '16px',
 			padding: '4px 10px',
-			color: '#68B436'
+			color: '#68B436',
+			hyphens: 'auto'
 		},
 	},
 }));

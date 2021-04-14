@@ -2,7 +2,6 @@ exports.places = [
 	{
 		slug: '12527-berlin-schmoeckwitz',
 		title: '12527 Berlin-Schmöckwitz',
-		placeNames: ['Schmöckwitz', 'Berlin Schmöckwitz'],
 	},
 	{
 		slug: '12557-berlin-wendenschloss',
@@ -49,7 +48,7 @@ exports.places = [
 		title: '15345 Eggersdorf-Petershagen',
 	},
 	{
-		slug: '15345 garzau-garzin',
+		slug: '15345-garzau-garzin',
 		title: '15345 Garzau-Garzin',
 	},
 	{
