@@ -10,23 +10,29 @@ const useStyles = makeStyles((theme) => ({
 		width: 'auto',
 		paddingRight: '10px',
 	},
+	root: {
+		marginBottom: '40px'
+	}
 }));
 
 const AwardBox = () => {
 	const classes = useStyles();
 
 	return (
-		<div>
+		<div className={classes.root}>
 			<Typography component="p" variant="h6">
 				Meine Mandanten wissen unsere Dienstleistungen zu schätzen und bewerten
 				das ausgesprochen positiv. Seit 2011 wird LPE | Lars-Peter Eckhardt
 				ununterbrochen durch die unabhängige Bewertungsplattform{' '}
-				<Link
+				<Typography
+					component="a"
+					variant="h6"
+					color="primary"
 					href="https://www.whofinance.de/berater/lars-peter-eckhardt/"
 					target="_blank"
 				>
-					WhoFinance.de
-				</Link>{' '}
+					WhoFinance.de 
+				</Typography>{' '}
 				als einer der Top Berater in Deutschland ausgezeichnet. Eine Ehre und
 				Verpflichtung zugleich!
 			</Typography>

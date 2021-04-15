@@ -3,13 +3,13 @@ on:
   schedule:
     - cron: '0 * * * *' # every hour
 jobs:
-  Explore-GitHub-Actions:
+  ReadProvenExpert:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Call ProvenExpert and store response in file
-        run: curl -u 14Jp3xmphSUZ5RKZjWGBmVwZ48TA1LmA:NzA4M2Q5NTAxNWE0Mzc4OTRmYjBhNGE1YzZlMzA1NDA https://www.provenexpert.com/api_rating_v2.json > static/provenexpert.json
+        run: curl -u 14Jp3xmphSUZ5RKZjWGBmVwZ48TA1LmA:NzA4M2Q5NTAxNWE0Mzc4OTRmYjBhNGE1YzZlMzA1NDA https://www.provenexpert.com/api_rating_v2.json > /home/runner/work/lpe.de/lpe.de/static/provenexpert.json
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:

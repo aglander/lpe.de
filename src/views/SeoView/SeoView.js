@@ -13,7 +13,8 @@ import {
 	Example,
 	CompareBox,
 	InsurancesBox,
-	Place
+	Place,
+	Reviews,
 } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
@@ -115,9 +116,8 @@ const SeoView = (data) => {
 		),
 		CompareBox,
 		InsurancesBox,
-		Place: (props) => (
-			<Place {...props} placeData={placeData} />
-		),
+		Place: (props) => <Place {...props} placeData={placeData} />,
+		Reviews,
 	};
 
 	return (
@@ -131,17 +131,10 @@ const SeoView = (data) => {
 				image={heroImage}
 			/>
 			<Section>
-				<Grid container spacing={4}>
-					<Grid item xs={12} md={8}>
-						<MDXProvider components={components}>
-							<MDXRenderer>{body}</MDXRenderer>
-						</MDXProvider>
-						<ProvenExpertStars />
-					</Grid>
-					<Grid item xs={12} md={4}>
-						<ContactPanel />
-					</Grid>
-				</Grid>
+				<MDXProvider components={components}>
+					<MDXRenderer>{body}</MDXRenderer>
+				</MDXProvider>
+				<ProvenExpertStars />
 			</Section>
 		</div>
 	);

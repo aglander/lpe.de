@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
 			borderRadius: '16px',
 			padding: '4px 10px',
 			color: '#68B436',
-			hyphens: 'auto'
 		},
+		hyphens: 'auto'
 	},
 }));
 
