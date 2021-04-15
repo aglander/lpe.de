@@ -28,6 +28,7 @@
         -   Place2 = Zufallsvarianten innerhalb des Textes (Was heißt Zufall?: Einmalige zufällige dauerhafte Befüllung des Textes oder bei jeder Öffnung der Seite steht an der gleichen Stelle eine neue Variante?)
         -   Place3 = Ortsteile (für Hausrat, Wohngebäude und deren unterschiedliche Preisgestaltung)
     -   Bilderkarussell im Hero (Google-Beratungsbild und 1 bis 3 Ortsbilder im Wechsel)
+    -   Ortsbezeichnungen: Woltersdorf oder Woltersdorf b. Erkner oder Woltersdorf b. Berlin? > Gibt tatsächlich Unterschiede in den PLZ-Datenbanken!
 
 - Optik:
     -   Silbentrennung - z.B. in den Example-Boxen
