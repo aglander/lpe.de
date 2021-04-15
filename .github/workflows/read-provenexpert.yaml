@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '0 * * * *' # every hour
 jobs:
-  Read ProvenExpert:
+  ReadProvenExpert:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
