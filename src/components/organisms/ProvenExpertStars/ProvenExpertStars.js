@@ -1,21 +1,14 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-	root: {},
-}));
+import provenExpertData from '../../../../static/provenexpert.json';
 
 const ProvenExpertStars = () => {
-	const classes = useStyles();
+	console.log(provenExpertData);
+	const test = { arian: 'ist doof' };
 	return (
-		<div className={classes.root}>
-			<div class="pe-richsnippets"></div>
-			<script
-				type="text/javascript"
-				src="https://www.provenexpert.com/widget/richsnippet.js?u=14Jp3xmphSUZ5RKZjWGBmVwZ48TA1LmA&v=2"
-				async
-			></script>
-		</div>
+		<script
+			type="application/ld+json"
+			dangerouslySetInnerHTML={{ __html: JSON.stringify(provenExpertData) }}
+		></script>
 	);
 };
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
+
 const Seo = ({ title, description, image, article }) => {
 	const { pathname } = useLocation();
 	const { site } = useStaticQuery(query);
@@ -19,6 +20,7 @@ const Seo = ({ title, description, image, article }) => {
 		image: `${siteUrl}${image || defaultImage}`,
 		url: `${siteUrl}${pathname}`,
 	};
+
 	return (
 		<Helmet
 			title={seo.title}
