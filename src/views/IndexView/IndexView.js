@@ -25,7 +25,7 @@ const advantages = [
 		link: '/altersvorsorge',
 	},
 	{
-		icon: 'fas fa-car-crash',
+		icon: 'fas fa-file-contract',
 		title: 'Versicherungen',
 		subtitle:
 			'Stay as little as 3 months with rolling contracts. Like it here? This is your space, so stay as long as you want.',
