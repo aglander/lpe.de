@@ -1,7 +1,20 @@
 # Todos Arian
-- Tracking
-- SEO
-- provenexpert google sterne
+- Tracking -> matomo oder google
+- SEO -> Description mit PLZ und Ort für SEO Seiten
+- Ortsverzeichnis aufsplitten (PLZ, Ortsname kurz, Ortsname lang)
+- SEO Description in Metadaten mit Platzhaltern
+- provenexpert google sterne -> geprüft werden
+
+- Responsiveness:
+    - kleines Logo zwischen 1280 und 960 ansonsten großes Logo
+    - Abstände Logo
+    - ab 2000px breite Hero Bild Fixen (z.B. Hintergrundfarbe)
+    - Hero Text startseite: LPE in einer Zeile
+
+
+- contact button rechts
+- vergleichsrechner zurück links
+
 
 - Startseite:
     -   Test-Wording: 
