@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'gatsby';
 
 const useStyles = makeStyles((theme) => ({
 	root: {},
@@ -19,6 +20,7 @@ const CompareBox = (props) => {
 
 	return (
 		<div className={clsx(classes.root, className)} data-aos="fade-up" {...rest}>
+			<p>Mit Benutzung des Vergleichrechners bestätige ich, dass ich die <Link to="/erstinformation">Erstinformation</Link> gelesen und gespeichert habe.</p>
 			<iframe src={url} className={classes.iframe} title="Vergleichsrechner" />
 		</div>
 	);

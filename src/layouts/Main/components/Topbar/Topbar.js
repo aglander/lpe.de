@@ -11,7 +11,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Image } from 'components/atoms';
 import { Navigation } from 'components/organisms';
 import { Link } from 'gatsby';
-import logo from 'assets/images/LPE_Logo_single.svg';
+import logo from 'assets/images/LPE_Logo_full.png';
 
 const useStyles = makeStyles((theme) => ({
 	flexGrow: {
@@ -81,10 +81,10 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.primary.dark,
 	},
 	logoContainer: {
-		width: 100,
+		width: 225,
 		height: 50,
 		[theme.breakpoints.up('md')]: {
-			width: 120,
+			width: 225,
 			height: 50,
 		},
 	},
