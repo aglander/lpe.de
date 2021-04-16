@@ -24,10 +24,10 @@ const useStyles = makeStyles(() => ({
     hyphens: "auto",
   },
   headline: {
-	  maxWidth: '880px',
-	  marginRight: 'auto',
-	  marginLeft: 'auto',
-  }
+    maxWidth: "880px",
+    marginRight: "auto",
+    marginLeft: "auto",
+  },
 }));
 
 const data = [
@@ -86,7 +86,7 @@ const Reviews = (props) => {
         }
         subtitle="Wir haben auf allen gängigen Bewertungsportalen ausnahmslos positive Rückmeldungen erhalten. Dies ist für uns Ehre und Anspruch zugleich."
         fadeUp
-		className={classes.headline}
+        className={classes.headline}
       />
       <Grid container spacing={isMd ? 4 : 2}>
         {data.map((review, index) => (
@@ -117,33 +117,39 @@ const Reviews = (props) => {
           </Grid>
         ))}
         <Grid item container xs={12} justify="center">
-          <StaticImage
-            src="../../../assets/images/provenexpert-logo.png"
-            alt="ProvenExpert"
-            placeholder="tracedSVG"
-            layout="fixed"
-            width={131}
-            height={36}
-            className={classes.logo}
-          />
-          <StaticImage
-            src="../../../assets/images/whofinance-logo.jpg"
-            alt="WhoFinance"
-            placeholder="tracedSVG"
-            layout="fixed"
-            width={118}
-            height={36}
-            className={classes.logo}
-          />
-          <StaticImage
-            src="../../../assets/images/google-logo.png"
-            alt="WhoFinance"
-            placeholder="tracedSVG"
-            layout="fixed"
-            width={106}
-            height={36}
-            className={classes.logo}
-          />
+          <a href="" target="_blank">
+            <StaticImage
+              src="../../../assets/images/provenexpert-logo.png"
+              alt="ProvenExpert"
+              placeholder="tracedSVG"
+              layout="fixed"
+              width={131}
+              height={36}
+              className={classes.logo}
+            />
+          </a>
+          <a href="" target="_blank">
+            <StaticImage
+              src="../../../assets/images/whofinance-logo.jpg"
+              alt="WhoFinance"
+              placeholder="tracedSVG"
+              layout="fixed"
+              width={118}
+              height={36}
+              className={classes.logo}
+            />
+          </a>
+          <a href="" target="_blank">
+            <StaticImage
+              src="../../../assets/images/google-logo.png"
+              alt="WhoFinance"
+              placeholder="tracedSVG"
+              layout="fixed"
+              width={106}
+              height={36}
+              className={classes.logo}
+            />
+          </a>
         </Grid>
       </Grid>
     </div>
