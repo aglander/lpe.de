@@ -11,8 +11,15 @@ const useStyles = makeStyles((theme) => ({
 		paddingRight: '10px',
 	},
 	root: {
-		marginBottom: '40px'
-	}
+		borderColor: theme.palette.alternate.dark,
+		borderWidth: '1px',
+		borderStyle: 'solid',
+		borderRadius: theme.spacing(2),
+		background: theme.palette.alternate.main,
+		marginBottom: '30px',
+		padding: '40px',
+		textAlign: 'center'
+	},
 }));
 
 const AwardBox = () => {
@@ -21,8 +28,7 @@ const AwardBox = () => {
 	return (
 		<div className={classes.root}>
 			<Typography component="p" variant="h6">
-				Meine Mandanten wissen unsere Dienstleistungen zu schätzen und bewerten
-				das ausgesprochen positiv. Seit 2011 wird LPE | Lars-Peter Eckhardt
+				Seit 2011 wird LPE | Lars-Peter Eckhardt
 				ununterbrochen durch die unabhängige Bewertungsplattform{' '}
 				<Typography
 					component="a"
@@ -33,8 +39,7 @@ const AwardBox = () => {
 				>
 					WhoFinance.de 
 				</Typography>{' '}
-				als einer der Top Berater in Deutschland ausgezeichnet. Eine Ehre und
-				Verpflichtung zugleich!
+				als einer der Top Berater in Deutschland ausgezeichnet.
 			</Typography>
 			<List>
 				<ListItem disableGutters="true" className={classes.award}>
@@ -47,8 +52,8 @@ const AwardBox = () => {
 							alt="Auszeichnung 1"
 							placeholder="blurred"
 							layout="fixed"
-							width={250}
-							height={115}
+							width={200}
+							height={92}
 						/>
 					</Link>
 				</ListItem>
@@ -62,8 +67,8 @@ const AwardBox = () => {
 							alt="Auszeichnung 2"
 							placeholder="blurred"
 							layout="fixed"
-							width={250}
-							height={115}
+							width={200}
+							height={92}
 						/>
 					</Link>
 				</ListItem>
@@ -77,8 +82,8 @@ const AwardBox = () => {
 							alt="Auszeichnung 3"
 							placeholder="blurred"
 							layout="fixed"
-							width={250}
-							height={115}
+							width={200}
+							height={92}
 						/>
 					</Link>
 				</ListItem>
@@ -92,8 +97,8 @@ const AwardBox = () => {
 							alt="Auszeichnung 4"
 							placeholder="blurred"
 							layout="fixed"
-							width={250}
-							height={115}
+							width={200}
+							height={92}
 						/>
 					</Link>
 				</ListItem>
@@ -107,8 +112,8 @@ const AwardBox = () => {
 							alt="Auszeichnung 5"
 							placeholder="blurred"
 							layout="fixed"
-							width={250}
-							height={115}
+							width={200}
+							height={92}
 						/>
 					</Link>
 				</ListItem>
@@ -122,8 +127,8 @@ const AwardBox = () => {
 							alt="Auszeichnung 6"
 							placeholder="blurred"
 							layout="fixed"
-							width={250}
-							height={115}
+							width={200}
+							height={92}
 						/>
 					</Link>
 				</ListItem>

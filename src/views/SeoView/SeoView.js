@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography, Divider } from '@material-ui/core';
 import {
 	Section,
 	ContactPanel,
@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100%',
 		width: '100%',
+	},
+	divider: {
+	  marginBottom: '30px',
 	},
 	list: {
 		marginBottom: theme.spacing(2),
@@ -118,6 +121,7 @@ const SeoView = (data) => {
 		InsurancesBox,
 		Place: (props) => <Place {...props} placeData={placeData} />,
 		Reviews,
+		hr: (props) => <Divider {...props} className={classes.divider} />,
 	};
 
 	return (
