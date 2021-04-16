@@ -10,7 +10,7 @@ import { Link } from 'gatsby';
 const useStyles = makeStyles((theme) => ({
 	fontWeight900: {
 		fontWeight: 900,
-		fontSize: '0.92em'
+		fontSize: '0.9em'
 	},
 	leftSideContent: {
 		'& .section-header__cta-container': {
@@ -51,7 +51,7 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 
 	const title = (
 		<Typography variant="h2" component="span" className={classes.fontWeight900}>
-			Willkommen bei Ihrem unabhängigen
+			Willkommen bei Lars-Peter Eckhardt, Ihrem unabhängigen
 			<br />
 			<TypedText
 				component="span"
@@ -73,7 +73,7 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 	);
 
 	const subtitle =
-		'Ich berate Sie gerne persönlich, bei uns im Büro, bei Ihnen vor Ort und selbstverständlich, für Sie besonders bequem, auch per Telefon und Videoberatung.';
+		'Ich berate Sie gerne persönlich, bei uns im Büro, vor Ort und selbstverständlich, für Sie besonders bequem, auch per Telefon und Videoberatung.';
 
 	const docsButton = (
 		<Button
@@ -108,7 +108,7 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 				variant: 'h2',
 				color: 'textPrimary',
 			}}
-			ctaGroup={[docsButton, buyButton]}
+			ctaGroup={[buyButton]}
 			data-aos="fade-right"
 			disableGutter
 			className={classes.leftSideContent}
