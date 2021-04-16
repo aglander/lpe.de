@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   divider: {
-	marginBottom: '30px',
+    marginBottom: "30px",
   },
   list: {
     marginBottom: theme.spacing(2),
@@ -34,6 +34,16 @@ const useStyles = makeStyles((theme) => ({
     },
     fontSize: "1.5em",
     marginLeft: "40px",
+  },
+  headline2: {
+    borderColor: theme.palette.alternate.dark,
+    borderWidth: "0 0 1px 0",
+    borderStyle: "solid",
+	paddingBottom: '10px',
+    marginBottom: theme.spacing(2),
+    [theme.breakpoints.up("md")]: {
+      marginBottom: theme.spacing(4),
+    },
   },
   section: {
     marginBottom: theme.spacing(2),
@@ -90,7 +100,7 @@ const PageView = (data) => {
         component="h2"
         variant="h4"
         color="textPrimary"
-        className={classes.section}
+        className={classes.headline2}
       />
     ),
     ul: (props) => <ul {...props} className={classes.list} />,
