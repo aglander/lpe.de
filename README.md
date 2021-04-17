@@ -11,9 +11,9 @@
     - ab 2000px breite Hero Bild Fixen (z.B. Hintergrundfarbe)
     - Hero Text startseite: LPE in einer Zeile
 
-
-- contact button rechts
-- vergleichsrechner zurück links
+- listen schriftgröße zu groß
+- schatten für outline button
+- youtube integration (performance)
 
 - Einwilligung zu Cookies & Daten (vielleicht über https://www.consentmanager.net/ | Alternativen?) -> idealerweise kein Cookie Consent nötig
 
@@ -22,7 +22,6 @@
 
 - Übersichtsseiten Orte, Versicherungen, Altersvorsorge und Finanzierungen
 - Modul für Navigation
-- erstinformation in den footer
 - FB, LinkedIn, XING, Youtube
 
 # Todos Lars

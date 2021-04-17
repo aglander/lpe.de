@@ -44,17 +44,7 @@ const PageHero = (props) => {
 		defaultMatches: true,
 	});
 
-	const ctas = [
-		<Link to="/kontakt">
-			<Button
-				variant="contained"
-				color="primary"
-				size={isMd ? 'large' : 'medium'}
-			>
-				Kontakt aufnehmen
-			</Button>
-		</Link>,
-	];
+	const ctas = [];
 
 	if (compare) {
 		ctas.push(
@@ -69,6 +59,33 @@ const PageHero = (props) => {
 			</Link>
 		);
 	}
+
+	if (slug.endsWith('-vergleichen')) {
+		const backUrl = '/' + slug.split('-vergleichen')[0];
+		ctas.push(
+			<Link to={backUrl}>
+				<Button
+					variant="outlined"
+					color="primary"
+					size={isMd ? 'large' : 'medium'}
+				>
+					&larr; zurück
+				</Button>
+			</Link>
+		);
+	}
+
+	ctas.push(
+		<Link to="/kontakt">
+			<Button
+				variant="contained"
+				color="primary"
+				size={isMd ? 'large' : 'medium'}
+			>
+				Kontakt aufnehmen
+			</Button>
+		</Link>
+	);
 
 	return (
 		<div className={className} {...rest}>

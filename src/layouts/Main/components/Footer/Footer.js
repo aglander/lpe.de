@@ -235,6 +235,30 @@ const Footer = (props) => {
 										<Typography
 											variant="body1"
 											component={Link}
+											to="/kontakt"
+											className={clsx(classes.navLink)}
+										>
+											Kontakt
+										</Typography>
+									</li>
+									<li>
+										<Typography
+											variant="body1"
+											component={Link}
+											to="/ortsverzeichnis"
+											className={clsx(classes.navLink)}
+										>
+											Ortsverzeichnis
+										</Typography>
+									</li>
+								</ul>
+							</Grid>
+							<Grid item>
+								<ul>
+									<li>
+										<Typography
+											variant="body1"
+											component={Link}
 											to="/impressum"
 											className={clsx(classes.navLink)}
 										>
@@ -255,20 +279,10 @@ const Footer = (props) => {
 										<Typography
 											variant="body1"
 											component={Link}
-											to="/kontakt"
+											to="/erstinformation"
 											className={clsx(classes.navLink)}
 										>
-											Kontakt
-										</Typography>
-									</li>
-									<li>
-										<Typography
-											variant="body1"
-											component={Link}
-											to="/ortsverzeichnis"
-											className={clsx(classes.navLink)}
-										>
-											Ortsverzeichnis
+											Erstinformation
 										</Typography>
 									</li>
 								</ul>
