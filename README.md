@@ -19,7 +19,6 @@
 
 - Übersichtsseiten Orte, Versicherungen, Altersvorsorge und Finanzierungen
 - Modul für Navigation
-- erstinformation in den footer
 - FB, LinkedIn, XING, Youtube
 
 # Todos Lars
