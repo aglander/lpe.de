@@ -14,6 +14,9 @@
 
 - contact button rechts
 - vergleichsrechner zurück links
+- listen schriftgröße zu groß
+- schatten für outline button
+- youtube integration (performance)
 
 
 - Startseite:
