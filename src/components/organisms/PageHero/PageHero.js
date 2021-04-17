@@ -11,9 +11,15 @@ const useStyles = makeStyles((theme) => ({
 	heroShaped: {
 		'& .hero-shaped__image': {
 			backgroundColor: 'white',
-			display: 'grid',
-			justifyContent: 'flex-end',
+			[theme.breakpoints.up('md')]: {
+				display: 'grid',
+				justifyContent: 'flex-end',
+				'& .gatsby-image-wrapper': {
+					width: '1000px'
+				}
+			},
 		},
+		
 		[theme.breakpoints.down('sm')]: {
 			'& .hero-shaped__image': {
 				position: 'relative',

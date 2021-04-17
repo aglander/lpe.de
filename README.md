@@ -5,10 +5,6 @@
 - SEO Description in Metadaten mit Platzhaltern
 - provenexpert google sterne -> geprüft werden
 
-- Responsiveness:
-    - ab 2000px breite Hero Bild Fixen (z.B. Hintergrundfarbe)
-    - Hero Text startseite: LPE in einer Zeile
-
 - listen schriftgröße zu groß
 - schatten für outline button
 

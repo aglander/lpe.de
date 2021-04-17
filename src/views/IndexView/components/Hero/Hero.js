@@ -10,7 +10,13 @@ import { Link } from 'gatsby';
 const useStyles = makeStyles((theme) => ({
 	fontWeight900: {
 		fontWeight: 900,
-		fontSize: '0.9em'
+		fontSize: '50px',
+		[theme.breakpoints.down('md')]: {
+			fontSize: '35px',
+		},
+		[theme.breakpoints.down('xs')]: {
+			fontSize: '30px',
+		}
 	},
 	leftSideContent: {
 		'& .section-header__cta-container': {
@@ -32,9 +38,15 @@ const useStyles = makeStyles((theme) => ({
 	heroShaped: {
 		'& .hero-shaped__image': {
 			backgroundColor: 'white',
-			display: 'grid',
-        	justifyContent: 'flex-end'
+			[theme.breakpoints.up('md')]: {
+				display: 'grid',
+				justifyContent: 'flex-end',
+				'& .gatsby-image-wrapper': {
+					width: '1000px'
+				}
+			},
 		},
+		
 		[theme.breakpoints.down('sm')]: {
 			'& .hero-shaped__image': {
 				position: 'relative',
@@ -51,7 +63,8 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 
 	const title = (
 		<Typography variant="h2" component="span" className={classes.fontWeight900}>
-			Willkommen bei Lars-Peter Eckhardt, Ihrem unabhängigen
+			Willkommen bei <br />
+			Lars-Peter Eckhardt, Ihrem unabhängigen
 			<br />
 			<TypedText
 				component="span"
@@ -124,7 +137,7 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 						src="../../../../assets/images/LPE_Start.jpg"
 						alt="Lars-Peter Eckhardt"
 						placeholder="blurred"
-						layout="fixed"
+						layout="fullWidth"
 						width={1000}
 						height={667}
 					/>
