@@ -6,14 +6,11 @@
 - provenexpert google sterne -> geprüft werden
 
 - Responsiveness:
-    - kleines Logo zwischen 1280 und 960 ansonsten großes Logo
-    - Abstände Logo
     - ab 2000px breite Hero Bild Fixen (z.B. Hintergrundfarbe)
     - Hero Text startseite: LPE in einer Zeile
 
 - listen schriftgröße zu groß
 - schatten für outline button
-- youtube integration (performance)
 
 - Einwilligung zu Cookies & Daten (vielleicht über https://www.consentmanager.net/ | Alternativen?) -> idealerweise kein Cookie Consent nötig
 
