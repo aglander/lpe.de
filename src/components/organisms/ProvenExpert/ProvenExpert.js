@@ -5,8 +5,14 @@ import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
+		borderColor: theme.palette.alternate.dark,
+		borderWidth: '1px',
+		borderStyle: 'solid',
+		borderRadius: theme.spacing(2),
+		background: theme.palette.alternate.main,
 		marginBottom: '30px',
-		textAlign: 'center',
+		padding: '40px',
+		textAlign: 'center'
 	},
 	lpe: {
 		display: 'inline-block',

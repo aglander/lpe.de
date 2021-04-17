@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
 		marginBottom: '30px',
 	},
 	title: {
-		marginBottom: '30px',
+		marginBottom: '10px',
 	},
 }));
 
@@ -30,7 +30,7 @@ const InsurancesBox = (props) => {
 				.map((insurance) => {
 					return (
 						<div className={classes.insurance}>
-							<Typography variant="h4" component="h2" className={classes.title}>
+							<Typography variant="h5" component="h3" className={classes.title}>
 								{insurance.title}
 							</Typography>
 							<Typography
