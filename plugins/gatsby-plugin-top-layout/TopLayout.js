@@ -6,7 +6,7 @@ import 'react-lazy-load-image-component/src/effects/opacity.css';
 import 'assets/css/index.css';
 
 //import 'swiper/css/swiper.min.css';
-//import 'aos/dist/aos.css';
+import 'aos/dist/aos.css';
 
 export default function TopLayout(props) {
 	return (
