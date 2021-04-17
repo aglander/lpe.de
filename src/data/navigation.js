@@ -104,12 +104,6 @@ const navigation = [
 			url: '/schwere-krankheitenversicherung',
 		},
 		{
-			id: 'krankentagegeld',
-			parent: 'risikovorsorge-arbeitskraftabsicherung',
-			title: 'Krankentagegeld',
-			url: '/krankentagegeld',
-		},	
-		{
 			id: 'pflegeversicherung',
 			parent: 'risikovorsorge-arbeitskraftabsicherung',
 			title: 'Pflegeversicherung',
@@ -128,22 +122,10 @@ const navigation = [
 			url: '/privathaftpflichtversicherung'
 		},
 		{
-			id: 'haus-und-grundbesitzerhaftpflichtversicherung',
+			id: 'weitere-haftpflichtversicherungen',
 			parent: 'haftpflicht-haus-hof',
-			title: 'Haus- u. Grundbesitzerhaftpflicht',
-			url: '/haus-und-grundbesitzerhaftpflichtversicherung'
-		},
-		{
-			id: 'bauherrenhaftpflichtversicherung',
-			parent: 'haftpflicht-haus-hof',
-			title: 'Bauherrenhaftpflicht',
-			url: '/bauherrenhaftpflichtversicherung'
-		},
-		{
-			id: 'gewaesserschadenhaftpflichtversicherung',
-			parent: 'haftpflicht-haus-hof',
-			title: 'Gewässerschadenhaftpflicht',
-			url: '/gewaesserschadenhaftpflichtversicherung'
+			title: 'Weitere Haftpflichtversicherungen',
+			url: '/weitere-haftpflichtversicherungen'
 		},
 		{
 			id: 'hausratversicherung',
@@ -200,6 +182,12 @@ const navigation = [
 		url: '/gkv-gesetzliche-krankenkasse'
 	},
 	{
+		id: 'krankentagegeld',
+		parent: 'kranken-und-krankenzusatzversicherungen',
+		title: 'Krankentagegeld',
+		url: '/krankentagegeld',
+	},
+	{
 		id: 'pflegeversicherung',
 		parent: 'kranken-und-krankenzusatzversicherungen',
 		title: 'Pflegeversicherung',
@@ -218,10 +206,10 @@ const navigation = [
 		url: '/brillenversicherung'
 	},
 	{
-		id: 'krankenhauszusatzversicherung',
+		id: 'krankenzusatzversicherung',
 		parent: 'kranken-und-krankenzusatzversicherungen',
-		title: 'Krankenhauszusatzversicherung',
-		url: '/krankenhauszusatzversicherung'
+		title: 'Krankenzusatzversicherung',
+		url: '/krankenzusatzversicherung'
 	},
 
 //---------------------------------------------------------
@@ -242,6 +230,45 @@ const navigation = [
 			title: 'Reiseversicherungen',
 			url: '/reiseversicherungen'
 		},
+
+//---------------------------------------------------------
+	{	
+		id: 'gewerbeversicherungen',
+		parent: 'versicherungen',
+		title: 'Gewerbeversicherungen',
+		url: '/gewerbeversicherungen',
+	},
+		{
+			id: 'betriebshaftpflichtversicherung',
+			parent: 'gewerbeversicherungen',
+			title: 'Betriebshaftpflichtversicherung',
+			url: '/betriebshaftpflichtversicherung',
+		},
+		{
+			id: 'weitere-gewerbeversicherungen',
+			parent: 'gewerbeversicherungen',
+			title: 'Weitere Gewerbeversicherungen',
+			url: '/weitere-gewerbeversicherungen',
+		},
+//---------------------------------------------------------
+	{	
+		id: 'bauversicherungen',
+		parent: 'versicherungen',
+		title: 'Bauversicherungen',
+		url: '/bauversicherungen',
+	},
+		{
+			id: 'betriebshaftpflichtversicherung',
+			parent: 'gewerbeversicherungen',
+			title: 'Betriebshaftpflichtversicherung',
+			url: '/betriebshaftpflichtversicherung',
+		},
+		{
+			id: 'weitere-gewerbeversicherungen',
+			parent: 'gewerbeversicherungen',
+			title: 'Weitere Gewerbeversicherungen',
+			url: '/weitere-gewerbeversicherungen',
+		},
 //---------------------------------------------------------
 	{
 		id: 'fahrzeugversicherungen',
@@ -261,16 +288,10 @@ const navigation = [
 			url: '/motorradversicherung'
 		},
 		{
-			id: 'mopedversicherung',
+			id: 'moped-e-scooterversicherung',
 			parent: 'fahrzeugversicherungen',
-			title: 'Mopedversicherung',
-			url: '/mopedversicherung'
-		},
-		{
-			id: 'e-scooterversicherung',
-			parent: 'fahrzeugversicherungen',
-			title: 'E-Scooterversicherung',
-			url: '/e-scooterversicherung'
+			title: 'Moped- & E-Scooterversicherung',
+			url: '/moped-e-scooterversicherung'
 		},
 		{
 			id: 'fahrradversicherung',
@@ -298,46 +319,28 @@ const navigation = [
 		url: '/hundehaftpflichtversicherung'
 	},
 	{
+		id: 'hunde-op-krankenversicherung',
+		parent: 'tierversicherungen',
+		title: 'Hunde OP- und Krankenversicherung',
+		url: '/hunde-op-krankenversicherung'
+	},
+	{
 		id: 'pferdehaftpflichtversicherung',
 		parent: 'tierversicherungen',
 		title: 'Pferdehaftpflichtversicherung',
 		url: '/pferdehaftpflichtversicherung'
 	},
 	{
-		id: 'hunde-op-versicherung',
+		id: 'pferde-op-krankenversicherung',
 		parent: 'tierversicherungen',
-		title: 'Hunde OP-Versicherung',
-		url: '/hunde-op-versicherung'
+		title: 'Pferde OP- und Krankenversicherung',
+		url: '/pferde-op-krankenversicherung'
 	},
 	{
-		id: 'pferde-op-versicherung',
+		id: 'katzen-op-krankenversicherung',
 		parent: 'tierversicherungen',
-		title: 'Pferde OP-Versicherung',
-		url: '/pferde-op-versicherung'
-	},
-	{
-		id: 'katzen-op-versicherung',
-		parent: 'tierversicherungen',
-		title: 'Katzen OP-Versicherung',
-		url: '/katzen-op-versicherung'
-	},
-	{
-		id: 'hundekrankenversicherung',
-		parent: 'tierversicherungen',
-		title: 'Hundekrankenversicherung',
-		url: '/hundekrankenversicherung'
-	},
-	{
-		id: 'pferdekrankenversicherung',
-		parent: 'tierversicherungen',
-		title: 'Pferdekrankenversicherung',
-		url: '/pferdekrankenversicherung'
-	},
-	{
-		id: 'katzenkrankenversicherung',
-		parent: 'tierversicherungen',
-		title: 'Katzenkrankenversicherung',
-		url: '/katzenkrankenversicherung'
+		title: 'Katzen OP- und Krankenversicherung',
+		url: '/katzen-op-krankenversicherung'
 	},
 
 //#########################################################
