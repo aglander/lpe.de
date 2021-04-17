@@ -11,9 +11,6 @@
     - ab 2000px breite Hero Bild Fixen (z.B. Hintergrundfarbe)
     - Hero Text startseite: LPE in einer Zeile
 
-
-- contact button rechts
-- vergleichsrechner zurück links
 - listen schriftgröße zu groß
 - schatten für outline button
 - youtube integration (performance)
