@@ -15,6 +15,7 @@ import {
   InsurancesBox,
   Place,
   Reviews,
+  Video,
 } from "components/organisms";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
