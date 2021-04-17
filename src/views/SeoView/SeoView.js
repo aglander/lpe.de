@@ -132,6 +132,7 @@ const SeoView = (data) => {
     Place: (props) => <Place {...props} placeData={placeData} />,
     Reviews,
     hr: (props) => <Divider {...props} className={classes.divider} />,
+    Video,
   };
 
   return (
