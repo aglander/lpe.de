@@ -15,6 +15,7 @@ import {
   InsurancesBox,
   Place,
   Reviews,
+  Video,
 } from "components/organisms";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
@@ -132,6 +133,7 @@ const SeoView = (data) => {
     Place: (props) => <Place {...props} placeData={placeData} />,
     Reviews,
     hr: (props) => <Divider {...props} className={classes.divider} />,
+    Video,
   };
 
   return (

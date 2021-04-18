@@ -21,7 +21,7 @@ export const query = graphql`
 				slug
 				heroImage {
 					childImageSharp {
-						gatsbyImageData(width: 1000, placeholder: BLURRED, layout: FIXED)
+						gatsbyImageData(width: 1000, placeholder: BLURRED, layout: FULL_WIDTH)
 					}
 				}
 			}
@@ -29,7 +29,7 @@ export const query = graphql`
 		}
 		file(relativePath: { eq: $image }) {
 			childImageSharp {
-				gatsbyImageData(width: 1000, placeholder: BLURRED, layout: FIXED)
+				gatsbyImageData(width: 1000, placeholder: BLURRED, layout: FULL_WIDTH)
 			}
 		}
 	}

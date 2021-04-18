@@ -2,16 +2,11 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import {
-	Toolbar,
-	Hidden,
-	IconButton
-} from '@material-ui/core';
+import { Toolbar, Hidden, IconButton } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Image } from 'components/atoms';
 import { Navigation } from 'components/organisms';
 import { Link } from 'gatsby';
-import logo from 'assets/images/LPE_Logo_full.png';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const useStyles = makeStyles((theme) => ({
 	flexGrow: {
@@ -81,16 +76,7 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.primary.dark,
 	},
 	logoContainer: {
-		width: 225,
-		height: 50,
-		[theme.breakpoints.up('md')]: {
-			width: 225,
-			height: 50,
-		},
-	},
-	logoImage: {
-		width: '100%',
-		height: '100%',
+		padding: '0 7px'
 	},
 	menu: {
 		display: 'flex',
@@ -122,12 +108,26 @@ const Topbar = ({ onSidebarOpen, className, ...rest }) => {
 		>
 			<div className={classes.logoContainer}>
 				<Link to="/" title="LPE.de">
-					<Image
-						className={classes.logoImage}
-						src={logo}
-						alt="LPE.de"
-						lazy={false}
-					/>
+					<Hidden only="md">
+						<StaticImage
+							src="../../../../assets/images/LPE_Logo_full.png"
+							alt="LPE Logo"
+							placeholder="blurred"
+							layout="fixed"
+							width={225}
+							height={50}
+						/>
+					</Hidden>
+					<Hidden smDown lgUp>
+						<StaticImage
+							src="../../../../assets/images/LPE_Logo_small.png"
+							alt="LPE Logo"
+							placeholder="blurred"
+							layout="fixed"
+							width={63}
+							height={50}
+						/>
+					</Hidden>
 				</Link>
 			</div>
 			<div className={classes.flexGrow} />
@@ -136,11 +136,11 @@ const Topbar = ({ onSidebarOpen, className, ...rest }) => {
 			</Hidden>
 			<Hidden mdUp>
 				<IconButton
-				className={classes.iconButton}
-				onClick={onSidebarOpen}
-				aria-label="Menu"
+					className={classes.iconButton}
+					onClick={onSidebarOpen}
+					aria-label="Menu"
 				>
-				<MenuIcon />
+					<MenuIcon />
 				</IconButton>
 			</Hidden>
 		</Toolbar>
