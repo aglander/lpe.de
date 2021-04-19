@@ -337,6 +337,18 @@ const navigation = [
 		title: 'Freizeitversicherungen',
 		url: '/freizeitversicherungen'
 	},
+	{
+		id: 'veranstaltungsversicherungen',
+		parent: 'online-spezialvergleiche',
+		title: 'Veranstaltungsversicherungen',
+		url: '/veranstaltungsversicherungen'
+	},
+	{
+		id: 'spezial-reiseversicherungen',
+		parent: 'online-spezialvergleiche',
+		title: 'Spezial-Reiseversicherungen',
+		url: '/spezial-reiseversicherungen'
+	},
 //#########################################################
 {
 	id: 'finanzierungen',
