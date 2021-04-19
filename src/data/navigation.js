@@ -128,16 +128,22 @@ const navigation = [
 			url: '/gkv-gesetzliche-krankenkasse'
 		},
 		{
-			id: 'krankentagegeld',
-			parent: 'kranken-und-krankenzusatzversicherungen',
-			title: 'Krankentagegeld',
-			url: '/krankentagegeld',
-		},	
-		{
 			id: 'pflegeversicherung',
 			parent: 'kranken-und-krankenzusatzversicherungen',
 			title: 'Pflegeversicherung',
 			url: '/pflegeversicherung'
+		},
+		{
+			id: 'krankentagegeld',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Krankentagegeld',
+			url: '/krankentagegeld',
+		},
+		{
+			id: 'krankenzusatzversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Krankenzusatzversicherung',
+			url: '/krankenzusatzversicherung'
 		},
 		{
 			id: 'zahnzusatzversicherung',
@@ -151,12 +157,7 @@ const navigation = [
 			title: 'Brillenversicherung',
 			url: '/brillenversicherung'
 		},
-		{
-			id: 'krankenzusatzversicherung',
-			parent: 'kranken-und-krankenzusatzversicherungen',
-			title: 'Krankenzusatzversicherung',
-			url: '/krankenzusatzversicherung'
-		},
+
 //---------------------------------------------------------
 	{
 		id: 'haftpflicht-haus-hof',
@@ -170,10 +171,10 @@ const navigation = [
 			url: '/privathaftpflichtversicherung'
 		},
 		{
-			id: 'weitere-haftpflichtversicherungen',
+			id: 'zusatzhaftpflichtversicherungen',
 			parent: 'haftpflicht-haus-hof',
-			title: 'Weitere Haftpflichtversicherungen',
-			url: '/weitere-haftpflichtversicherungen'
+			title: 'Zusatzhaftpflichtversicherungen',
+			url: '/zusatzhaftpflichtversicherungen'
 		},
 		{
 			id: 'hausratversicherung',
@@ -187,23 +188,23 @@ const navigation = [
 			title: 'Wohngebäudeversicherung',
 			url: '/wohngebaeudeversicherung'
 		},
+//---------------------------------------------------------	
+	{
+		id: 'rechtsschutz-reisen',
+		parent: 'versicherungen',
+		title: 'Rechtsschutz & Reisen',
+}	,
 		{
-			id: 'photovoltaikversicherung',
-			parent: 'haftpflicht-haus-hof',
-			title: 'Photovoltaikversicherung',
-			url: '/photovoltaikversicherung'
-		},
+			id: 'rechtsschutzversicherung',
+			parent: 'rechtsschutz-reisen',
+			title: 'Rechtsschutzversicherung',
+			url: '/rechtsschutzversicherung'
+		}		,
 		{
-			id: 'glasversicherung',
-			parent: 'haftpflicht-haus-hof',
-			title: 'Glasversicherung',
-			url: '/glasversicherung'
-		},
-		{
-			id: 'handyversicherung',
-			parent: 'haftpflicht-haus-hof',
-			title: 'Handyversicherung',
-			url: '/handyversicherung'
+			id: 'reiseversicherungen',
+			parent: 'rechtsschutz-reisen',
+			title: 'Reiseversicherungen',
+			url: '/reiseversicherungen'
 		},
 //---------------------------------------------------------
 	{
@@ -242,48 +243,6 @@ const navigation = [
 			url: '/schutzbrief'
 		},
 //---------------------------------------------------------
-	{	
-		id: 'rund-um-konzepte',
-		parent: 'versicherungen',
-		title: 'rund um - Konzepte',
-	},
-		{
-			id: 'bauversicherung',
-			parent: 'rund-um-konzepte',
-			title: 'Rund um Ihren Hausbau',
-			url: '/bauversicherungen',
-		},
-		{
-			id: 'familienversicherungen',
-			parent: 'rund-um-konzepte',
-			title: 'Rund um Ihre Familie',
-			url: '/weitere-gewerbeversicherungen',
-		},
-		{
-			id: 'gewerbeversicherungen',
-			parent: 'rund-um-konzepte',
-			title: 'Rund um Ihre Firma',
-			url: '/gewerbeversicherungen',
-		},
-//---------------------------------------------------------	
-	{
-		id: 'rechtsschutz-reisen',
-		parent: 'versicherungen',
-		title: 'Rechtsschutz & Reisen',
-	},
-		{
-			id: 'rechtsschutzversicherung',
-			parent: 'rechtsschutz-reisen',
-			title: 'Rechtsschutzversicherung',
-			url: '/rechtsschutzversicherung'
-		},
-		{
-			id: 'reiseversicherungen',
-			parent: 'rechtsschutz-reisen',
-			title: 'Reiseversicherungen',
-			url: '/reiseversicherungen'
-		},
-//---------------------------------------------------------
 {
 	id: 'tierversicherungen',
 	parent: 'versicherungen',
@@ -319,17 +278,41 @@ const navigation = [
 		title: 'Katzen OP- und Krankenversicherung',
 		url: '/katzen-op-krankenversicherung'
 	},
-	//---------------------------------------------------------	
-{
+//---------------------------------------------------------
+{	
+	id: 'rund-um-konzepte',
+	parent: 'versicherungen',
+	title: 'rund um - Konzepte',
+},
+	{
+		id: 'bauversicherung',
+		parent: 'rund-um-konzepte',
+		title: 'Rund um Ihren Hausbau',
+		url: '/bauversicherungen',
+	},
+	{
+		id: 'familienversicherungen',
+		parent: 'rund-um-konzepte',
+		title: 'Rund um Ihre Familie',
+		url: '/weitere-gewerbeversicherungen',
+	},
+	{
+		id: 'gewerbeversicherungen',
+		parent: 'rund-um-konzepte',
+		title: 'Rund um Ihre Firma',
+		url: '/gewerbeversicherungen',
+	},
+//---------------------------------------------------------	
+	{
 	id: 'online-spezialvergleiche',
 	parent: 'versicherungen',
 	title: 'Online-Spezialvergleiche',
 },
 	{
-		id: 'elektronikversicherungen',
+		id: 'technik-elektronikversicherungen',
 		parent: 'online-spezialvergleiche',
-		title: 'Elektronikversicherungen',
-		url: '/elektronikversicherungen'
+		title: 'Technik-/ Elektronikversicherungen',
+		url: '/technik-elektronikversicherungen'
 	},
 	{
 		id: 'freizeitversicherungen',
@@ -342,12 +325,6 @@ const navigation = [
 		parent: 'online-spezialvergleiche',
 		title: 'Veranstaltungsversicherungen',
 		url: '/veranstaltungsversicherungen'
-	},
-	{
-		id: 'spezial-reiseversicherungen',
-		parent: 'online-spezialvergleiche',
-		title: 'Spezial-Reiseversicherungen',
-		url: '/spezial-reiseversicherungen'
 	},
 //#########################################################
 {
