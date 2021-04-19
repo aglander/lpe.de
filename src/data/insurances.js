@@ -30,9 +30,9 @@ const insurances = [
 			'Alte Leipziger Bausparkasse, BHW – Bausparkasse, BKM – Bausparkasse Mainz, Signal Iduna Bausparkasse, Wüstenrot Bausparkasse AG',
 	},
     {
-		title: 'Kooperationen & Maklerpools',
+		title: 'Maklerpools & Kooperationen',
 		data:
-			'Deutsche Vorsorgedatenbank AG | Procheck24 GmbH | Aruna GmbH, Kalckreuthstr. 11, 10777 Berlin | Fonds Finanz Maklerservice GmbH, Riesstraße 25, 80992 München | blau direkt GmbH & Co. KG, Kaninchenborn 31, 23560 Lübeck | Netfonds AG, Heidenkampsweg 73, 20097 Hamburg | VEMA Versicherungs-Makler-Genossenschaft eG, Unterkonnersreuth 29, 95500 Heinersreuth',
+			'Aruna GmbH, Kalckreuthstr. 11, 10777 Berlin | Fonds Finanz Maklerservice GmbH, Riesstraße 25, 80992 München | blau direkt GmbH & Co. KG, Kaninchenborn 31, 23560 Lübeck | Netfonds AG, Heidenkampsweg 73, 20097 Hamburg | VEMA Versicherungs-Makler-Genossenschaft eG, Unterkonnersreuth 29, 95500 Heinersreuth| Covomo Versicherungsvergleich GmbH, Rotfeder-Ring 5, 60327 Frankfurt am Main | Deutsche Vorsorgedatenbank AG, Zwickauer Str. 25, 08393 Meerane | Procheck24 GmbH, Landshuter Allee 8, 80637 München'
 	},
 ];
 
