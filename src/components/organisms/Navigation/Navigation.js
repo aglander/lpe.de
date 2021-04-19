@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
 	listItemVertical: {
 		borderBottom: '1px solid #ccc',
 		borderTop: '1px solid #ccc',
-    	margin: '20px 0',
+		margin: '20px 0',
 		cursor: 'pointer',
 		'&:hover > .menu-item, &:hover svg': {
 			color: theme.palette.primary.dark,
@@ -109,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const Navigation = ({ isHorizontal }) => {
+const Navigation = ({ id, isHorizontal }) => {
 	const classes = useStyles();
 
 	const [anchorEl, setAnchorEl] = useState(null);
@@ -169,81 +169,85 @@ const Navigation = ({ isHorizontal }) => {
 		return <div className={classes.menu}>{subMenu}</div>;
 	};
 
-	const menu = navigation
-		.filter((navItem) => navItem.parent == null)
-		.map((navItem) => {
-			if (!navItem.url) {
-				return (
-					<div key={navItem.id}>
+	const renderMenu = (id) => {
+		return navigation
+			.filter((navItem) => id ? navItem.parent == id : navItem.parent == null)
+			.map((navItem) => {
+				if (!navItem.url) {
+					return (
+						<div key={navItem.id}>
+							<ListItem
+								aria-describedby={navItem.id}
+								onClick={(e) => handleClick(e, navItem.id)}
+								className={clsx(
+									isHorizontal ? classes.listItem : classes.listItemVertical,
+									openedPopoverId === navItem.id ? classes.listItemActive : ''
+								)}
+							>
+								<Typography
+									variant={isHorizontal ? 'body1' : 'h6'}
+									color="textPrimary"
+									className={clsx(classes.listItemText, 'menu-item')}
+								>
+									{navItem.title}
+								</Typography>
+								{isHorizontal && (
+									<ListItemIcon className={classes.listItemIcon}>
+										<ExpandMoreIcon
+											className={
+												openedPopoverId === navItem.id ? classes.expandOpen : ''
+											}
+											fontSize="small"
+										/>
+									</ListItemIcon>
+								)}
+							</ListItem>
+							{isHorizontal ? (
+								<Popover
+									elevation={1}
+									id={navItem.id}
+									open={openedPopoverId === navItem.id}
+									anchorEl={anchorEl}
+									onClose={handleClose}
+									anchorOrigin={{
+										vertical: 'bottom',
+										horizontal: 'center',
+									}}
+									transformOrigin={{
+										vertical: 'top',
+										horizontal: 'center',
+									}}
+									classes={{ paper: classes.popover }}
+								>
+									<div>{renderSubMenu(navItem.id)}</div>
+								</Popover>
+							) : (
+								<div>{renderSubMenu(navItem.id)}</div>
+							)}
+						</div>
+					);
+				} else {
+					return (
 						<ListItem
 							aria-describedby={navItem.id}
-							onClick={(e) => handleClick(e, navItem.id)}
 							className={clsx(
-								isHorizontal ? classes.listItem : classes.listItemVertical,
-								openedPopoverId === navItem.id ? classes.listItemActive : ''
+								isHorizontal ? classes.listItem : classes.listItemVertical
 							)}
 						>
 							<Typography
-								variant={isHorizontal ? "body1" : "h6"}
+								variant="body1"
 								color="textPrimary"
+								component={Link}
+								to={navItem.url}
 								className={clsx(classes.listItemText, 'menu-item')}
 							>
 								{navItem.title}
 							</Typography>
-							{isHorizontal && (
-								<ListItemIcon className={classes.listItemIcon}>
-									<ExpandMoreIcon
-										className={
-											openedPopoverId === navItem.id ? classes.expandOpen : ''
-										}
-										fontSize="small"
-									/>
-								</ListItemIcon>
-							)}
 						</ListItem>
-						{isHorizontal ? (
-							<Popover
-								elevation={1}
-								id={navItem.id}
-								open={openedPopoverId === navItem.id}
-								anchorEl={anchorEl}
-								onClose={handleClose}
-								anchorOrigin={{
-									vertical: 'bottom',
-									horizontal: 'center',
-								}}
-								transformOrigin={{
-									vertical: 'top',
-									horizontal: 'center',
-								}}
-								classes={{ paper: classes.popover }}
-							>
-								<div>{renderSubMenu(navItem.id)}</div>
-							</Popover>
-						) : (
-							<div>{renderSubMenu(navItem.id)}</div>
-						)}
-					</div>
-				);
-			} else {
-				return (
-					<ListItem
-						aria-describedby={navItem.id}
-						className={clsx(isHorizontal ? classes.listItem : classes.listItemVertical)}
-					>
-						<Typography
-							variant="body1"
-							color="textPrimary"
-							component={Link}
-							to={navItem.url}
-							className={clsx(classes.listItemText, 'menu-item')}
-						>
-							{navItem.title}
-						</Typography>
-					</ListItem>
-				);
-			}
-		});
+					);
+				}
+			});
+	};
 
 	return (
 		<List
@@ -254,18 +258,20 @@ const Navigation = ({ isHorizontal }) => {
 					: classes.navigationContainer
 			}
 		>
-			{menu}
-			<ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
-				<Button
-					variant="contained"
-					color="primary"
-					component={Link}
-					to="/kontakt"
-					className={classes.listItemButton}
-				>
-					Kontakt
-				</Button>
-			</ListItem>
+			{renderMenu(id)}
+			{id ? null : (
+				<ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
+					<Button
+						variant="contained"
+						color="primary"
+						component={Link}
+						to="/kontakt"
+						className={classes.listItemButton}
+					>
+						Kontakt
+					</Button>
+				</ListItem>
+			)}
 		</List>
 	);
 };

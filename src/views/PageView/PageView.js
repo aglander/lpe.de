@@ -14,6 +14,7 @@ import {
 	CompareBox,
 	InsurancesBox,
 	Video,
+  Navigation,
 } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
@@ -119,6 +120,7 @@ const PageView = (data) => {
 		InsurancesBox,
 		hr: (props) => <Divider {...props} className={classes.divider} />,
 		Video,
+    Navigation,
 	};
 
 	return (
