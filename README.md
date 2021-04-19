@@ -2,7 +2,6 @@
 - Tracking -> matomo oder google
 - provenexpert google sterne -> geprüft werden
 
-- listen schriftgröße zu groß
 - schatten für outline button
 
 - Einwilligung zu Cookies & Daten (vielleicht über https://www.consentmanager.net/ | Alternativen?) -> idealerweise kein Cookie Consent nötig
