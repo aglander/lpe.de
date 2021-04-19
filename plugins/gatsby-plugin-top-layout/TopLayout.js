@@ -27,7 +27,7 @@ export default function TopLayout(props) {
 					name="robots"
 					content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
 				/>
-				<meta property="og:locale" content="en_US" />
+				<meta property="og:locale" content="de_DE" />
 				<meta property="og:type" content="website" />
 				<meta
 					property="og:image"

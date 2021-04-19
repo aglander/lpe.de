@@ -112,7 +112,7 @@ const Topbar = ({ onSidebarOpen, className, ...rest }) => {
 						<StaticImage
 							src="../../../../assets/images/LPE_Logo_full.png"
 							alt="LPE Logo"
-							placeholder="blurred"
+							placeholder="tracedSVG"
 							layout="fixed"
 							width={225}
 							height={50}
@@ -122,7 +122,7 @@ const Topbar = ({ onSidebarOpen, className, ...rest }) => {
 						<StaticImage
 							src="../../../../assets/images/LPE_Logo_small.png"
 							alt="LPE Logo"
-							placeholder="blurred"
+							placeholder="tracedSVG"
 							layout="fixed"
 							width={63}
 							height={50}
