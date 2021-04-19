@@ -111,6 +111,54 @@ const navigation = [
 		},
 //---------------------------------------------------------
 	{
+		id: 'kranken-und-krankenzusatzversicherungen',
+		parent: 'versicherungen',
+		title: 'Kranken- & Krankenzusatzversicherungen',
+	},
+		{
+			id: 'pkv-private-krankenversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'PKV - Private Krankenversicherung',
+			url: '/pkv-private-krankenversicherung'
+		},
+		{
+			id: 'gkv-gesetzliche-krankenkasse',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'GKV - Gesetzliche Krankenkasse',
+			url: '/gkv-gesetzliche-krankenkasse'
+		},
+		{
+			id: 'krankentagegeld',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Krankentagegeld',
+			url: '/krankentagegeld',
+		},	
+		{
+			id: 'pflegeversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Pflegeversicherung',
+			url: '/pflegeversicherung'
+		},
+		{
+			id: 'zahnzusatzversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Zahnzusatzversicherung',
+			url: '/zahnzusatzversicherung'
+		},
+		{
+			id: 'brillenversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Brillenversicherung',
+			url: '/brillenversicherung'
+		},
+		{
+			id: 'krankenzusatzversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Krankenzusatzversicherung',
+			url: '/krankenzusatzversicherung'
+		},
+//---------------------------------------------------------
+	{
 		id: 'haftpflicht-haus-hof',
 		parent: 'versicherungen',
 		title: 'Haftpflicht - Haus & Hof',
@@ -152,122 +200,10 @@ const navigation = [
 			url: '/glasversicherung'
 		},
 		{
-			id: 'bauversicherungen',
-			parent: 'haftpflicht-haus-hof',
-			title: 'Bauversicherungen',
-			url: '/bauversicherungen'
-		},
-		{
 			id: 'handyversicherung',
 			parent: 'haftpflicht-haus-hof',
 			title: 'Handyversicherung',
 			url: '/handyversicherung'
-		},
-//---------------------------------------------------------
-{
-	id: 'kranken-und-krankenzusatzversicherungen',
-	parent: 'versicherungen',
-	title: 'Kranken- & Krankenzusatzversicherungen',
-},
-	{
-		id: 'pkv-private-krankenversicherung',
-		parent: 'kranken-und-krankenzusatzversicherungen',
-		title: 'PKV - Private Krankenversicherung',
-		url: '/pkv-private-krankenversicherung'
-	},
-	{
-		id: 'gkv-gesetzliche-krankenkasse',
-		parent: 'kranken-und-krankenzusatzversicherungen',
-		title: 'GKV - Gesetzliche Krankenkasse',
-		url: '/gkv-gesetzliche-krankenkasse'
-	},
-	{
-		id: 'krankentagegeld',
-		parent: 'kranken-und-krankenzusatzversicherungen',
-		title: 'Krankentagegeld',
-		url: '/krankentagegeld',
-	},
-	{
-		id: 'pflegeversicherung',
-		parent: 'kranken-und-krankenzusatzversicherungen',
-		title: 'Pflegeversicherung',
-		url: '/pflegeversicherung'
-	},
-	{
-		id: 'zahnzusatzversicherung',
-		parent: 'kranken-und-krankenzusatzversicherungen',
-		title: 'Zahnzusatzversicherung',
-		url: '/zahnzusatzversicherung'
-	},
-	{
-		id: 'brillenversicherung',
-		parent: 'kranken-und-krankenzusatzversicherungen',
-		title: 'Brillenversicherung',
-		url: '/brillenversicherung'
-	},
-	{
-		id: 'krankenzusatzversicherung',
-		parent: 'kranken-und-krankenzusatzversicherungen',
-		title: 'Krankenzusatzversicherung',
-		url: '/krankenzusatzversicherung'
-	},
-
-//---------------------------------------------------------
-	{
-		id: 'rechtsschutz-reisen',
-		parent: 'versicherungen',
-		title: 'Rechtsschutz & Reisen',
-	},
-		{
-			id: 'rechtsschutzversicherung',
-			parent: 'rechtsschutz-reisen',
-			title: 'Rechtsschutzversicherung',
-			url: '/rechtsschutzversicherung'
-		},
-		{
-			id: 'reiseversicherungen',
-			parent: 'rechtsschutz-reisen',
-			title: 'Reiseversicherungen',
-			url: '/reiseversicherungen'
-		},
-
-//---------------------------------------------------------
-	{	
-		id: 'gewerbeversicherungen',
-		parent: 'versicherungen',
-		title: 'Gewerbeversicherungen',
-		url: '/gewerbeversicherungen',
-	},
-		{
-			id: 'betriebshaftpflichtversicherung',
-			parent: 'gewerbeversicherungen',
-			title: 'Betriebshaftpflichtversicherung',
-			url: '/betriebshaftpflichtversicherung',
-		},
-		{
-			id: 'weitere-gewerbeversicherungen',
-			parent: 'gewerbeversicherungen',
-			title: 'Weitere Gewerbeversicherungen',
-			url: '/weitere-gewerbeversicherungen',
-		},
-//---------------------------------------------------------
-	{	
-		id: 'bauversicherungen',
-		parent: 'versicherungen',
-		title: 'Bauversicherungen',
-		url: '/bauversicherungen',
-	},
-		{
-			id: 'betriebshaftpflichtversicherung',
-			parent: 'gewerbeversicherungen',
-			title: 'Betriebshaftpflichtversicherung',
-			url: '/betriebshaftpflichtversicherung',
-		},
-		{
-			id: 'weitere-gewerbeversicherungen',
-			parent: 'gewerbeversicherungen',
-			title: 'Weitere Gewerbeversicherungen',
-			url: '/weitere-gewerbeversicherungen',
 		},
 //---------------------------------------------------------
 	{
@@ -306,6 +242,47 @@ const navigation = [
 			url: '/schutzbrief'
 		},
 //---------------------------------------------------------
+	{	
+		id: 'rund-um-konzepte',
+		parent: 'versicherungen',
+		title: 'rund um - Konzepte',
+	},
+		{
+			id: 'bauversicherung',
+			parent: 'rund-um-konzepte',
+			title: 'Rund um Ihren Hausbau',
+			url: '/bauversicherungen',
+		},
+		{
+			id: 'familienversicherungen',
+			parent: 'rund-um-konzepte',
+			title: 'Rund um Ihre Familie',
+			url: '/weitere-gewerbeversicherungen',
+		},
+		{
+			id: 'gewerbeversicherungen',
+			parent: 'rund-um-konzepte',
+			title: 'Rund um Ihre Firma',
+			url: '/gewerbeversicherungen',
+		},
+//---------------------------------------------------------	
+	{
+		id: 'rechtsschutz-reisen',
+		parent: 'versicherungen',
+		title: 'Rechtsschutz & Reisen',
+	},
+		{
+			id: 'rechtsschutzversicherung',
+			parent: 'rechtsschutz-reisen',
+			title: 'Rechtsschutzversicherung',
+			url: '/rechtsschutzversicherung'
+		},
+		{
+			id: 'reiseversicherungen',
+			parent: 'rechtsschutz-reisen',
+			title: 'Reiseversicherungen',
+			url: '/reiseversicherungen'
+		},
 //---------------------------------------------------------
 {
 	id: 'tierversicherungen',
@@ -342,7 +319,6 @@ const navigation = [
 		title: 'Katzen OP- und Krankenversicherung',
 		url: '/katzen-op-krankenversicherung'
 	},
-
 //#########################################################
 {
 	id: 'finanzierungen',
