@@ -29,6 +29,15 @@ const useStyles = makeStyles((theme) => ({
 			},
 		},
 	},
+	buttonContained: {
+		margin: '0 5px',
+	},
+	buttonOutline: {
+		margin: '0 5px',
+		background: 'white',
+		boxShadow:
+			'0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)',
+	},
 }));
 
 const PageHero = (props) => {
@@ -59,6 +68,7 @@ const PageHero = (props) => {
 					variant="outlined"
 					color="primary"
 					size={isMd ? 'large' : 'medium'}
+					className={classes.buttonOutline}
 				>
 					Selber vergleichen
 				</Button>
@@ -74,6 +84,7 @@ const PageHero = (props) => {
 					variant="outlined"
 					color="primary"
 					size={isMd ? 'large' : 'medium'}
+					className={classes.buttonOutline}
 				>
 					&larr; zurück
 				</Button>
@@ -87,6 +98,7 @@ const PageHero = (props) => {
 				variant="contained"
 				color="primary"
 				size={isMd ? 'large' : 'medium'}
+				className={classes.buttonContained}
 			>
 				Kontakt aufnehmen
 			</Button>
