@@ -167,7 +167,7 @@ const Footer = (props) => {
 										<Typography
 											variant="body1"
 											component={Link}
-											to="/impressum"
+											to="/altersvorsorge"
 											className={clsx(classes.navLink)}
 										>
 											Altersvorsorge
@@ -177,7 +177,7 @@ const Footer = (props) => {
 										<Typography
 											variant="body1"
 											component={Link}
-											to="/datenschutz"
+											to="/versicherungen"
 											className={clsx(classes.navLink)}
 										>
 											Versicherungen
@@ -187,7 +187,7 @@ const Footer = (props) => {
 										<Typography
 											variant="body1"
 											component={Link}
-											to="/kontakt"
+											to="/finanzierungen"
 											className={clsx(classes.navLink)}
 										>
 											Finanzierungen
@@ -197,7 +197,7 @@ const Footer = (props) => {
 										<Typography
 											variant="body1"
 											component={Link}
-											to="/ortsverzeichnis"
+											to="/immobilien"
 											className={clsx(classes.navLink)}
 										>
 											Immobilien
@@ -207,7 +207,7 @@ const Footer = (props) => {
 										<Typography
 											variant="body1"
 											component={Link}
-											to="/ortsverzeichnis"
+											to="/liebe-familie"
 											className={clsx(classes.navLink)}
 										>
 											Liebe Familie
