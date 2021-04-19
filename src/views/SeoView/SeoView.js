@@ -16,6 +16,7 @@ import {
   Place,
   Reviews,
   Video,
+  Seo,
 } from "components/organisms";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
@@ -74,6 +75,7 @@ const SeoView = (data) => {
           slug,
           compare,
           heroImage,
+          seoDescription,
         },
         body,
       },
@@ -87,6 +89,15 @@ const SeoView = (data) => {
 
   if (placeData.image && file) {
     heroImage = file.childImageSharp;
+  }
+
+  if (seoDescription) {
+    let placeName = '';
+    if (placeData.zipcode) {
+      placeName += placeData.zipcode + ' ';
+    }
+    placeName += placeData.short;
+    seoDescription = seoDescription.replace(/<Place \/>/, placeName);
   }
 
   const components = {
@@ -138,6 +149,7 @@ const SeoView = (data) => {
 
   return (
     <div className={classes.root}>
+      <Seo description={seoDescription} />
       <PageHero
         title={heroTitle}
         claim={heroClaim}

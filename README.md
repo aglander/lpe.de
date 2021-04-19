@@ -1,8 +1,5 @@
 # Todos Arian
 - Tracking -> matomo oder google
-- SEO -> Description mit PLZ und Ort für SEO Seiten
-- Ortsverzeichnis aufsplitten (PLZ, Ortsname kurz, Ortsname lang)
-- SEO Description in Metadaten mit Platzhaltern
 - provenexpert google sterne -> geprüft werden
 
 - listen schriftgröße zu groß
