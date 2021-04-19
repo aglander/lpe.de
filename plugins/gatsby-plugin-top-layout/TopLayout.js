@@ -6,7 +6,7 @@ import 'react-lazy-load-image-component/src/effects/opacity.css';
 import 'assets/css/index.css';
 
 //import 'swiper/css/swiper.min.css';
-import 'aos/dist/aos.css';
+//import 'aos/dist/aos.css';
 
 export default function TopLayout(props) {
 	return (
@@ -27,7 +27,7 @@ export default function TopLayout(props) {
 					name="robots"
 					content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
 				/>
-				<meta property="og:locale" content="en_US" />
+				<meta property="og:locale" content="de_DE" />
 				<meta property="og:type" content="website" />
 				<meta
 					property="og:image"
