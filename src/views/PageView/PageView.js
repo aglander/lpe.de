@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 		[theme.breakpoints.up('md')]: {
 			marginBottom: theme.spacing(4),
 		},
-		fontSize: '1.5em',
+		fontSize: '1.4em',
 		marginLeft: '40px',
 	},
 	headline2: {
