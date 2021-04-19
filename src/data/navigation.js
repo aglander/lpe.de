@@ -319,6 +319,24 @@ const navigation = [
 		title: 'Katzen OP- und Krankenversicherung',
 		url: '/katzen-op-krankenversicherung'
 	},
+	//---------------------------------------------------------	
+{
+	id: 'online-spezialvergleiche',
+	parent: 'versicherungen',
+	title: 'Online-Spezialvergleiche',
+},
+	{
+		id: 'elektronikversicherungen',
+		parent: 'online-spezialvergleiche',
+		title: 'Elektronikversicherungen',
+		url: '/elektronikversicherungen'
+	},
+	{
+		id: 'freizeitversicherungen',
+		parent: 'online-spezialvergleiche',
+		title: 'Freizeitversicherungen',
+		url: '/freizeitversicherungen'
+	},
 //#########################################################
 {
 	id: 'finanzierungen',
