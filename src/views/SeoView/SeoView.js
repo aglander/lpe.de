@@ -17,6 +17,7 @@ import {
   Reviews,
   Video,
   Seo,
+  ContactForm,
 } from "components/organisms";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
@@ -145,6 +146,7 @@ const SeoView = (data) => {
     Reviews,
     hr: (props) => <Divider {...props} className={classes.divider} />,
     Video,
+    ContactForm,
   };
 
   return (

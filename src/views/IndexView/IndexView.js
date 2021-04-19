@@ -6,6 +6,7 @@ import {
 	SectionAlternate,
 	Reviews,
 	Advantages,
+	ContactForm,
 } from 'components/organisms';
 import { Divider } from '@material-ui/core';
 
@@ -70,6 +71,10 @@ const IndexView = ({ themeMode }) => {
 			<SectionAlternate>
 				<MobileApp data={mobileapp} />
 			</SectionAlternate>
+			<Divider />
+			<Section>
+				<ContactForm />
+			</Section>
 		</div>
 	);
 };
