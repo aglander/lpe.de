@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {
 	Typography,
 	IconButton,
@@ -9,14 +9,10 @@ import {
 	List,
 	ListItem,
 } from '@material-ui/core';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import PinterestIcon from '@material-ui/icons/Pinterest';
 import { Link } from 'gatsby';
 import logo from 'assets/images/LPE_Logo_single_weiss.svg';
 
-import { Image } from 'components/atoms';
+import { Image, Icon } from 'components/atoms';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -39,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
 		paddingTop: 0,
 	},
 	logoContainer: {
-		width: 120,
-		height: 32,
+		width: 90,
+		height: 70,
 	},
 	logoImage: {
 		width: '100%',
@@ -61,9 +57,6 @@ const useStyles = makeStyles((theme) => ({
 		'&:last-child': {
 			marginRight: 0,
 		},
-	},
-	icon: {
-		fontSize: 24,
 	},
 	menuListContainer: {
 		padding: '0 !important',
@@ -113,6 +106,7 @@ const Footer = (props) => {
 	const { className, ...rest } = props;
 
 	const classes = useStyles();
+	const theme = useTheme();
 
 	return (
 		<div {...rest} className={clsx(classes.root, className)}>
@@ -122,7 +116,7 @@ const Footer = (props) => {
 				title="WhoFinance Footer"
 			/>
 			<div className={classes.footerContainer}>
-				<Grid container spacing={4}>
+				<Grid container>
 					<Grid item xs={12} md={2}>
 						<List disablePadding>
 							<ListItem disableGutters className={classes.logoContainerItem}>
@@ -138,17 +132,29 @@ const Footer = (props) => {
 								</div>
 							</ListItem>
 							<ListItem disableGutters>
-								<IconButton className={classes.socialIcon}>
-									<FacebookIcon className={classes.icon} />
+								<IconButton className={classes.socialIcon} href="https://www.facebook.com/LPE99" target="_blank">
+									<Icon
+										fontIconClass="fab fa-facebook"
+										size="medium"
+									/>
 								</IconButton>
-								<IconButton className={classes.socialIcon}>
-									<InstagramIcon className={classes.icon} />
+								<IconButton className={classes.socialIcon} href="https://www.youtube.com/channel/UCF95OM65f3Z4U2PLyTBsDrw" target="_blank">
+									<Icon
+										fontIconClass="fab fa-youtube"
+										size="medium"
+									/>
 								</IconButton>
-								<IconButton className={classes.socialIcon}>
-									<TwitterIcon className={classes.icon} />
+								<IconButton className={classes.socialIcon} href="https://www.linkedin.com/in/lars-peter-eckhardt-75a6a9132" target="_blank">
+									<Icon
+										fontIconClass="fab fa-linkedin-in"
+										size="medium"
+									/>
 								</IconButton>
-								<IconButton className={classes.socialIcon}>
-									<PinterestIcon className={classes.icon} />
+								<IconButton className={classes.socialIcon} href="https://www.xing.com/profile/LarsPeter_Eckhardt" target="_blank">
+									<Icon
+										fontIconClass="fab fa-xing"
+										size="medium"
+									/>
 								</IconButton>
 							</ListItem>
 						</List>
