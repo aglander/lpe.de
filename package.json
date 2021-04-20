@@ -22,7 +22,7 @@
     "aos": "^2.3.4",
     "babel-eslint": "^10.1.0",
     "gatsby": "^3.0.1",
-    "gatsby-plugin-gatsby-cloud": "^2.2.0",
+    "gatsby-plugin-gatsby-cloud": "^2.3.0",
     "gatsby-plugin-image": "^1.1.1",
     "gatsby-plugin-material-ui": "^2.1.10",
     "gatsby-plugin-mdx": "^2.0.1",
