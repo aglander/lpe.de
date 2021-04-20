@@ -22,7 +22,7 @@ export const query = graphql`
 				seoDescription
 				heroImage {
 					childImageSharp {
-						gatsbyImageData(width: 1000, placeholder: BLURRED, layout: FULL_WIDTH)
+						gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
 					}
 				}
 			}
@@ -30,7 +30,7 @@ export const query = graphql`
 		}
 		file(relativePath: { eq: $image }) {
 			childImageSharp {
-				gatsbyImageData(width: 1000, placeholder: BLURRED, layout: FULL_WIDTH)
+				gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
 			}
 		}
 	}

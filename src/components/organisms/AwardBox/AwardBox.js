@@ -55,7 +55,7 @@ const AwardBox = () => {
               <StaticImage
                 src="../../../data/assets/Auszeichnung_aktuell_1.png"
                 alt="Auszeichnung 1"
-                placeholder="blurred"
+                placeholder="tracedSVG"
                 layout="fixed"
                 width={200}
                 height={92}
@@ -70,7 +70,7 @@ const AwardBox = () => {
               <StaticImage
                 src="../../../data/assets/Auszeichnung_aktuell_2.png"
                 alt="Auszeichnung 2"
-                placeholder="blurred"
+                placeholder="tracedSVG"
                 layout="fixed"
                 width={200}
                 height={92}
@@ -85,7 +85,7 @@ const AwardBox = () => {
               <StaticImage
                 src="../../../data/assets/Auszeichnung_aktuell_3.png"
                 alt="Auszeichnung 3"
-                placeholder="blurred"
+                placeholder="tracedSVG"
                 layout="fixed"
                 width={200}
                 height={92}
@@ -100,7 +100,7 @@ const AwardBox = () => {
               <StaticImage
                 src="../../../data/assets/Auszeichnung_aktuell_4.png"
                 alt="Auszeichnung 4"
-                placeholder="blurred"
+                placeholder="tracedSVG"
                 layout="fixed"
                 width={200}
                 height={92}
@@ -115,7 +115,7 @@ const AwardBox = () => {
               <StaticImage
                 src="../../../data/assets/Auszeichnung_aktuell_5.png"
                 alt="Auszeichnung 5"
-                placeholder="blurred"
+                placeholder="tracedSVG"
                 layout="fixed"
                 width={200}
                 height={92}
@@ -130,7 +130,7 @@ const AwardBox = () => {
               <StaticImage
                 src="../../../data/assets/Auszeichnung_aktuell_6.png"
                 alt="Auszeichnung 6"
-                placeholder="blurred"
+                placeholder="tracedSVG"
                 layout="fixed"
                 width={200}
                 height={92}

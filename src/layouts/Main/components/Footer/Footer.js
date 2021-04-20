@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import {
 	Typography,
 	IconButton,
@@ -106,7 +106,6 @@ const Footer = (props) => {
 	const { className, ...rest } = props;
 
 	const classes = useStyles();
-	const theme = useTheme();
 
 	return (
 		<div {...rest} className={clsx(classes.root, className)}>

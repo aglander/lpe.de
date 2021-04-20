@@ -1,9 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Typography, Divider } from "@material-ui/core";
+import { Typography, Divider } from "@material-ui/core";
 import {
   Section,
-  ContactPanel,
   ContactAndCompareBox,
   PageHero,
   ProvenExpert,

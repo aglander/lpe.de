@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Video = (props) => {
-	const { id, width, height, title, ...rest } = props;
+	const { id, width, height, title } = props;
 
 	const classes = useStyles();
 
@@ -44,7 +44,7 @@ const Video = (props) => {
 	const styleObj = { width: width + 'px', height: height + 'px' };
 
 	return (
-		<div className={classes.root} style={styleObj} onClick={onClick}>
+		<div className={classes.root} style={styleObj} onClick={onClick} onKeyDown={onClick} role="button" tabIndex={0}>
 			{showVideo ? (
 				<iframe
 					width={width}

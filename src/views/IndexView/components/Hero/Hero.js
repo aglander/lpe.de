@@ -88,18 +88,6 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 	const subtitle =
 		'Ich berate Sie gerne persönlich, bei uns im Büro, vor Ort und selbstverständlich, für Sie besonders bequem, auch per Telefon und Videoberatung.';
 
-	const docsButton = (
-		<Button
-			size="large"
-			variant="outlined"
-			color="primary"
-			component={Link}
-			to="/ueber-uns"
-		>
-			Über uns
-		</Button>
-	);
-
 	const buyButton = (
 		<Button
 			size="large"
@@ -138,8 +126,6 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 						alt="Lars-Peter Eckhardt"
 						placeholder="blurred"
 						layout="fullWidth"
-						width={1000}
-						height={667}
 					/>
 				}
 			/>
