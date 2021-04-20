@@ -171,7 +171,7 @@ const Navigation = ({ id, isHorizontal }) => {
 
 	const renderMenu = (id) => {
 		return navigation
-			.filter((navItem) => id ? navItem.parent == id : navItem.parent == null)
+			.filter((navItem) => id ? navItem.parent === id : navItem.parent === null)
 			.map((navItem) => {
 				if (!navItem.url) {
 					return (

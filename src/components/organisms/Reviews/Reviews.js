@@ -120,6 +120,7 @@ const Reviews = (props) => {
 					<a
 						href="https://www.provenexpert.com/de-de/lars-peter-eckhardt"
 						target="_blank"
+						rel="noreferrer"
 					>
 						<StaticImage
 							src="../../../assets/images/provenexpert-logo.png"
@@ -134,6 +135,7 @@ const Reviews = (props) => {
 					<a
 						href="https://www.whofinance.de/berater/lars-peter-eckhardt"
 						target="_blank"
+						rel="noreferrer"
 					>
 						<StaticImage
 							src="../../../assets/images/whofinance-logo.jpg"
@@ -145,7 +147,7 @@ const Reviews = (props) => {
 							className={classes.logo}
 						/>
 					</a>
-					<a href="https://g.page/LPE99?share" target="_blank">
+					<a href="https://g.page/LPE99?share" target="_blank" rel="noreferrer">
 						<StaticImage
 							src="../../../assets/images/google-logo.png"
 							alt="Google"
@@ -159,6 +161,7 @@ const Reviews = (props) => {
 					<a
 						href="https://www.kennstdueinen.de/finanzdienstleistungen-woltersdorf-lars-peter-eckhardt-versicherungsmakler-finanzmakler-d150186.html"
 						target="_blank"
+						rel="noreferrer"
 					>
 						<StaticImage
 							src="../../../assets/images/kennstdueinen-logo.png"

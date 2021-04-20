@@ -1,14 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import {
-	useMediaQuery,
-	Grid,
-	Typography,
-	TextField,
-	Button,
-} from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+import { makeStyles } from '@material-ui/core/styles';
+
 import { HeroShaped, ContactForm } from 'components/organisms';
 import { Image } from 'components/atoms';
 import ImageMap from 'assets/images/kontakt-karte.png';
@@ -39,13 +32,6 @@ const useStyles = makeStyles((theme) => ({
 const Form = (props) => {
 	const { data, className, ...rest } = props;
 	const classes = useStyles();
-
-	const theme = useTheme();
-	const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-		defaultMatches: true,
-	});
-
-	const showSuccessScreen = data.data;
 
 	return (
 		<div className={className} {...rest}>
