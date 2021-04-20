@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
 		background: theme.palette.alternate.main,
 		marginBottom: '30px',
 		padding: '40px',
-		textAlign: 'center'
+		textAlign: 'center',
 	},
 	lpe: {
 		display: 'inline-block',
@@ -23,53 +23,67 @@ const useStyles = makeStyles((theme) => ({
 	provenExpert: {
 		display: 'inline-block',
 	},
+	iframe: {
+		width: '1000px',
+		height: '234px',
+		border: 0,
+	},
 }));
 
-const ProvenExpert = () => {
+const ProvenExpert = (props) => {
+	const { wide } = props;
 	const classes = useStyles();
 
 	return (
 		<div className={classes.root}>
-			<a
-				href="https://www.provenexpert.com/lars-peter-eckhardt/?utm_source=Widget&utm_medium=Widget&utm_campaign=Widget"
-				title="Kundenbewertungen &amp; Erfahrungen zu Lars-Peter Eckhardt. Mehr Infos anzeigen."
-				target="_blank"
-				rel="noreferrer"
-			>
-				<Hidden mdDown>
-					<StaticImage
-						src="../../../assets/images/LPE_HP.jpg"
-						alt="Kundenbewertungen &amp; Erfahrungen zu Lars-Peter Eckhardt. Mehr Infos anzeigen."
-						placeholder="blurred"
-						layout="fixed"
-						width={176}
-						height={234}
-						className={classes.lpe}
-					/>
-				</Hidden>
-				<Hidden xsDown>
-					<StaticImage
-						src="https://images.provenexpert.com/75/85/c0fdf5733a2767d5d7634b36fd88/widget_recommendation_465_0.png?t=1617907167857"
-						alt="Kundenbewertungen &amp; Erfahrungen zu Lars-Peter Eckhardt. Mehr Infos anzeigen."
-						placeholder="blurred"
-						layout="fixed"
-						width={465}
-						height={234}
-						className={classes.provenExpert}
-					/>
-				</Hidden>
-				<Hidden smUp>
-					<StaticImage
-						src="https://images.provenexpert.com/75/85/c0fdf5733a2767d5d7634b36fd88/widget_landscape_280_de_0.png"
-						alt="Kundenbewertungen &amp; Erfahrungen zu Lars-Peter Eckhardt. Mehr Infos anzeigen."
-						placeholder="blurred"
-						layout="fixed"
-						width={280}
-						height={233}
-						className={classes.provenExpert}
-					/>
-				</Hidden>
-			</a>
+			{wide ? (
+				<iframe
+					src="/provenexpert.html"
+					className={classes.iframe}
+					title="ProvenExpert"
+				/>
+			) : (
+				<a
+					href="https://www.provenexpert.com/lars-peter-eckhardt/?utm_source=Widget&utm_medium=Widget&utm_campaign=Widget"
+					title="Kundenbewertungen &amp; Erfahrungen zu Lars-Peter Eckhardt. Mehr Infos anzeigen."
+					target="_blank"
+					rel="noreferrer"
+				>
+					<Hidden mdDown>
+						<StaticImage
+							src="../../../assets/images/LPE_HP.jpg"
+							alt="Kundenbewertungen &amp; Erfahrungen zu Lars-Peter Eckhardt. Mehr Infos anzeigen."
+							placeholder="blurred"
+							layout="fixed"
+							width={176}
+							height={234}
+							className={classes.lpe}
+						/>
+					</Hidden>
+					<Hidden xsDown>
+						<StaticImage
+							src="https://images.provenexpert.com/75/85/c0fdf5733a2767d5d7634b36fd88/widget_recommendation_465_0.png?t=1617907167857"
+							alt="Kundenbewertungen &amp; Erfahrungen zu Lars-Peter Eckhardt. Mehr Infos anzeigen."
+							placeholder="blurred"
+							layout="fixed"
+							width={465}
+							height={234}
+							className={classes.provenExpert}
+						/>
+					</Hidden>
+					<Hidden smUp>
+						<StaticImage
+							src="https://images.provenexpert.com/75/85/c0fdf5733a2767d5d7634b36fd88/widget_landscape_280_de_0.png"
+							alt="Kundenbewertungen &amp; Erfahrungen zu Lars-Peter Eckhardt. Mehr Infos anzeigen."
+							placeholder="blurred"
+							layout="fixed"
+							width={280}
+							height={233}
+							className={classes.provenExpert}
+						/>
+					</Hidden>
+				</a>
+			)}
 		</div>
 	);
 };

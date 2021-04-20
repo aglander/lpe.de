@@ -132,7 +132,9 @@ const SeoView = (data) => {
     ContactAndCompareBox: (props) => (
       <ContactAndCompareBox {...props} slug={slug} compare={compare} />
     ),
-    ProvenExpert,
+    ProvenExpert: (props) => (
+      <ProvenExpert {...props} wide={true} />
+    ),
     AwardBox,
     ExamplesBox,
     Example,
