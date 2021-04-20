@@ -104,10 +104,10 @@ const navigation = [
 			url: '/schwere-krankheitenversicherung',
 		},
 		{
-			id: 'pflegeversicherung',
+			id: 'pflegezusatzversicherung',		
 			parent: 'risikovorsorge-arbeitskraftabsicherung',
-			title: 'Pflegeversicherung',
-			url: '/pflegeversicherung',
+			title: 'Pflegezusatzversicherung',
+			url: '/pflegezusatzversicherung',
 		},
 //---------------------------------------------------------
 	{
@@ -171,10 +171,10 @@ const navigation = [
 			url: '/privathaftpflichtversicherung'
 		},
 		{
-			id: 'zusatzhaftpflichtversicherungen',
+			id: 'weitere-haftpflichtversicherungen',
 			parent: 'haftpflicht-haus-hof',
-			title: 'Zusatzhaftpflichtversicherungen',
-			url: '/zusatzhaftpflichtversicherungen'
+			title: 'Weitere Haftpflichtversicherungen',
+			url: '/weitere-haftpflichtversicherungen'
 		},
 		{
 			id: 'hausratversicherung',
