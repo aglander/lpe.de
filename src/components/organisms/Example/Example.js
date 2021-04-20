@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
 			padding: '4px 10px',
 			color: '#68B436',
 		},
+		'& a' : {
+			fontSize: '1em',
+		},
 		hyphens: 'auto'
 	},
 }));
