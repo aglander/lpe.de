@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Example = (props) => {
-	const { title, description, number } = props;
+	const { title, children, number } = props;
 
 	const classes = useStyles();
 
@@ -37,7 +37,7 @@ const Example = (props) => {
 			<DescriptionListIcon
 				icon={<span>{number}</span>}
 				title={title}
-				subtitle={description}
+				subtitle={children}
 				className={classes.example}
 				align="left"
 			/>
