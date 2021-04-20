@@ -282,7 +282,7 @@ const navigation = [
 {	
 	id: 'rund-um-konzepte',
 	parent: 'versicherungen',
-	title: 'rund um - Konzepte',
+	title: 'Rund um - Konzepte',
 },
 	{
 		id: 'bauversicherung',
@@ -334,7 +334,7 @@ const navigation = [
 	{
 		id: 'immobilienfinanzierung',
 		parent: 'finanzierungen',
-		title: 'immobilienfinanzierung',
+		title: 'Immobilienfinanzierung',
 	},
 		{
 			id: 'baufinanzierung-kaufen',
@@ -421,7 +421,7 @@ const navigation = [
 	{
 		id: 'haushaltskosten-senken',
 		parent: 'finanzierungen',
-		title: 'haushaltskosten-senken',
+		title: 'Haushaltskosten Senken',
 	},	
 		{
 			id: 'stromvergleich',
