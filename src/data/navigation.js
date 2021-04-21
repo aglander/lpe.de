@@ -183,10 +183,10 @@ const navigation = [
 			url: '/hausratversicherung'
 		},
 		{
-			id: 'wohngebaeudeversicherung',
+			id: 'gebaeudeversicherung',
 			parent: 'haftpflicht-haus-hof',
-			title: 'Wohngebäudeversicherung',
-			url: '/wohngebaeudeversicherung'
+			title: 'Gebäudeversicherung',
+			url: '/gebaeudeversicherung'
 		},
 //---------------------------------------------------------	
 	{
