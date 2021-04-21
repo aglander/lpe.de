@@ -110,7 +110,10 @@ const LegalView = (data) => {
 			/>
 		),
 		ul: (props) => <ul {...props} className={classes.list} />,
-		ExpandBox
+		ExpandBox,
+		a: (props) => (
+			<Typography {...props} component="a" variant="h6" color="primary" />
+		),
 	};
 
 	return (
@@ -121,7 +124,12 @@ const LegalView = (data) => {
 					subtitle={date ? `Aktualisiert am ${date}` : ''}
 					primaryCta={
 						print ? (
-							<Button variant="outlined" color="primary" size="large" href={print}>
+							<Button
+								variant="outlined"
+								color="primary"
+								size="large"
+								href={print}
+							>
 								Drucken
 							</Button>
 						) : (
