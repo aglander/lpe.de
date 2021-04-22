@@ -146,63 +146,68 @@ const navigation = [
 			url: '/krankenzusatzversicherung'
 		},
 		{
-			id: 'zahnzusatzversicherung',
-			parent: 'kranken-und-krankenzusatzversicherungen',
-			title: 'Zahnzusatzversicherung',
-			url: '/zahnzusatzversicherung'
-		},
-		{
 			id: 'brillenversicherung',
 			parent: 'kranken-und-krankenzusatzversicherungen',
 			title: 'Brillenversicherung',
 			url: '/brillenversicherung'
 		},
-
+		{
+			id: 'zahnzusatzversicherung',
+			parent: 'kranken-und-krankenzusatzversicherungen',
+			title: 'Zahnzusatzversicherung',
+			url: '/zahnzusatzversicherung'
+		},
 //---------------------------------------------------------
 	{
-		id: 'haftpflicht-haus-hof',
+		id: 'haftpflicht-haus-hof-rechtsschutz-reisen',
 		parent: 'versicherungen',
-		title: 'Haftpflicht - Haus & Hof',
+		title: 'Haftpflicht - Haus & Hof | Rechtsschutz & Reisen',
 	},
 		{
 			id: 'privathaftpflichtversicherung',
-			parent: 'haftpflicht-haus-hof',
+			parent: 'haftpflicht-haus-hof-rechtsschutz-reisen',
 			title: 'Privathaftpflichtversicherung',
 			url: '/privathaftpflichtversicherung'
 		},
 		{
+			id: 'tierhalterhaftpflichtversicherungen',
+			parent: 'haftpflicht-haus-hof-rechtsschutz-reisen',
+			title: 'Tierhalterhaftpflichtversicherungen',
+			url: '/tierhalterhaftpflichtversicherungen'
+		},
+		{
 			id: 'weitere-haftpflichtversicherungen',
-			parent: 'haftpflicht-haus-hof',
+			parent: 'haftpflicht-haus-hof-rechtsschutz-reisen',
 			title: 'Weitere Haftpflichtversicherungen',
 			url: '/weitere-haftpflichtversicherungen'
 		},
 		{
 			id: 'hausratversicherung',
-			parent: 'haftpflicht-haus-hof',
+			parent: 'hhaftpflicht-haus-hof-rechtsschutz-reisen',
 			title: 'Hausratversicherung',
 			url: '/hausratversicherung'
 		},
 		{
 			id: 'gebaeudeversicherung',
-			parent: 'haftpflicht-haus-hof',
+			parent: 'haftpflicht-haus-hof-rechtsschutz-reisen',
 			title: 'Gebäudeversicherung',
 			url: '/gebaeudeversicherung'
 		},
-//---------------------------------------------------------	
-	{
-		id: 'rechtsschutz-reisen',
-		parent: 'versicherungen',
-		title: 'Rechtsschutz & Reisen',
-}	,
+		{
+			id: 'neubauversicherungen',
+			parent: 'haftpflicht-haus-hof-rechtsschutz-reisen',
+			title: 'Neubauversicherungen',
+			url: '/neubauversicherungen'
+		},
 		{
 			id: 'rechtsschutzversicherung',
-			parent: 'rechtsschutz-reisen',
+			parent: 'haftpflicht-haus-hof-rechtsschutz-reisen',
 			title: 'Rechtsschutzversicherung',
 			url: '/rechtsschutzversicherung'
 		}		,
 		{
 			id: 'reiseversicherungen',
-			parent: 'rechtsschutz-reisen',
+			parent: 'haftpflicht-haus-hof-rechtsschutz-reisen',
 			title: 'Reiseversicherungen',
 			url: '/reiseversicherungen'
 		},
@@ -213,34 +218,22 @@ const navigation = [
 		title: 'Fahrzeugversicherungen',
 	},
 		{
-			id: 'autoversicherung',
+			id: 'kfz-versicherungen',
 			parent: 'fahrzeugversicherungen',
-			title: 'Autoversicherung',
-			url: '/autoversicherung'
+			title: 'KfZ-Versicherungen',
+			url: '/kfz-versicherungen'
 		},
 		{
-			id: 'motorradversicherung',
+			id: 'moped-e-scooter',
 			parent: 'fahrzeugversicherungen',
-			title: 'Motorradversicherung',
-			url: '/motorradversicherung'
-		},
-		{
-			id: 'moped-e-scooterversicherung',
-			parent: 'fahrzeugversicherungen',
-			title: 'Moped- & E-Scooterversicherung',
-			url: '/moped-e-scooterversicherung'
+			title: 'Moped- & E-Scooter',
+			url: '/moped-e-scooter'
 		},
 		{
 			id: 'fahrradversicherung',
 			parent: 'fahrzeugversicherungen',
 			title: 'Fahrradversicherung',
 			url: '/fahrradversicherung'
-		},
-		{
-			id: 'schutzbrief',
-			parent: 'fahrzeugversicherungen',
-			title: 'Schutzbrief & Automobilclub',
-			url: '/schutzbrief'
 		},
 //---------------------------------------------------------
 {
@@ -249,34 +242,22 @@ const navigation = [
 	title: 'Tierversicherungen',
 },
 	{
-		id: 'hundehaftpflichtversicherung',
+		id: 'hundeversicherungen',
 		parent: 'tierversicherungen',
-		title: 'Hundehaftpflichtversicherung',
-		url: '/hundehaftpflichtversicherung'
+		title: 'Hundeversicherungen',
+		url: '/hundeversicherungen'
 	},
 	{
-		id: 'hunde-op-krankenversicherung',
+		id: 'katzenversicherungen',
 		parent: 'tierversicherungen',
-		title: 'Hunde OP- und Krankenversicherung',
-		url: '/hunde-op-krankenversicherung'
+		title: 'Katzenversicherungen',
+		url: '/katzenversicherungen'
 	},
 	{
-		id: 'pferdehaftpflichtversicherung',
+		id: 'pferdeversicherungen',
 		parent: 'tierversicherungen',
-		title: 'Pferdehaftpflichtversicherung',
-		url: '/pferdehaftpflichtversicherung'
-	},
-	{
-		id: 'pferde-op-krankenversicherung',
-		parent: 'tierversicherungen',
-		title: 'Pferde OP- und Krankenversicherung',
-		url: '/pferde-op-krankenversicherung'
-	},
-	{
-		id: 'katzen-op-krankenversicherung',
-		parent: 'tierversicherungen',
-		title: 'Katzen OP- und Krankenversicherung',
-		url: '/katzen-op-krankenversicherung'
+		title: 'Pferdeversicherungen',
+		url: '/pferdeversicherungen'
 	},
 //---------------------------------------------------------
 {	
@@ -285,21 +266,21 @@ const navigation = [
 	title: 'Rund um - Konzepte',
 },
 	{
-		id: 'bauversicherung',
-		parent: 'rund-um-konzepte',
-		title: 'Rund um Ihren Hausbau',
-		url: '/bauversicherungen',
-	},
-	{
 		id: 'familienversicherungen',
 		parent: 'rund-um-konzepte',
 		title: 'Rund um Ihre Familie',
 		url: '/weitere-gewerbeversicherungen',
 	},
 	{
+		id: 'bauversicherung',
+		parent: 'rund-um-konzepte',
+		title: 'Rund um Ihren Hausbau',
+		url: '/bauversicherungen',
+	},
+	{
 		id: 'gewerbeversicherungen',
 		parent: 'rund-um-konzepte',
-		title: 'Rund um Ihre Firma',
+		title: 'Rund um Ihr Gewerbe',
 		url: '/gewerbeversicherungen',
 	},
 //---------------------------------------------------------	
@@ -311,7 +292,7 @@ const navigation = [
 	{
 		id: 'technik-elektronikversicherungen',
 		parent: 'online-spezialvergleiche',
-		title: 'Technik-/ Elektronikversicherungen',
+		title: 'Technikversicherungen',
 		url: '/technik-elektronikversicherungen'
 	},
 	{
