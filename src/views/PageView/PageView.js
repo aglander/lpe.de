@@ -16,6 +16,7 @@ import {
 	Video,
 	Navigation,
 	ContactForm,
+	Seo,
 } from 'components/organisms';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
@@ -72,6 +73,7 @@ const PageView = (data) => {
 					slug,
 					compare,
 					heroImage,
+					seoDescription,
 				},
 				body,
 			},
@@ -127,6 +129,7 @@ const PageView = (data) => {
 
 	return (
 		<div className={classes.root}>
+			<Seo description={seoDescription} />
 			<PageHero
 				title={heroTitle}
 				claim={heroClaim}

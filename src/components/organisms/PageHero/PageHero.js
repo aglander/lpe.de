@@ -112,8 +112,8 @@ const PageHero = (props) => {
 				leftSide={
 					<SectionHeader
 						title={
-							<span>
-								{title}{' '}
+							<span className={classes.title}>
+								{title}<br />
 								<Typography component="span" variant="inherit" color="primary">
 									{claim}
 								</Typography>

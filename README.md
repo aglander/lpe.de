@@ -5,8 +5,6 @@
 
 - Einwilligung zu Cookies & Daten (vielleicht über https://www.consentmanager.net/ | Alternativen?) -> idealerweise kein Cookie Consent nötig
 
-- Formatierungen:
-    -   HERO-Titel: z.B. GKV - Gesetzliche Krankenkasse (SCHWARZ) Selber vergleichen (GRÜN). Schwarz und gründe Schrift in Zeilen trennen! Ist auch auf anderen Seiten so!
 
 
 

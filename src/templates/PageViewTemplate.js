@@ -19,6 +19,7 @@ export const query = graphql`
 				heroTitle
 				compare
 				slug
+				seoDescription
 				heroImage {
 					childImageSharp {
 						gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
