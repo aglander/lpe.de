@@ -39,10 +39,10 @@ const navigation = [
 		parent: 'altersvorsorge'
 	},
 
-		{	id: 'rentenversicherung',
+		{	id: 'private-rentenversicherung',
 			parent: 'schicht-3-private-altersvorsorge',
 			title: 'Rentenversicherung',
-			url: '/rentenversicherung',
+			url: '/private-rentenversicherung',
 		},
 		{
 			id: 'investmentanlagen-vermoegensverwaltung',
@@ -220,7 +220,7 @@ const navigation = [
 		{
 			id: 'kfz-versicherungen',
 			parent: 'fahrzeugversicherungen',
-			title: 'KfZ-Versicherungen',
+			title: 'KFZ-Versicherungen',
 			url: '/kfz-versicherungen'
 		},
 		{
