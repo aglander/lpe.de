@@ -224,10 +224,10 @@ const navigation = [
 			url: '/kfz-versicherungen'
 		},
 		{
-			id: 'moped-e-scooter',
+			id: 'moped-e-scooter-kennzeichen',
 			parent: 'fahrzeugversicherungen',
 			title: 'Moped- & E-Scooter',
-			url: '/moped-e-scooter'
+			url: '/moped-e-scooter-kennzeichen'
 		},
 		{
 			id: 'fahrradversicherung',
