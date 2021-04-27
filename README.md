@@ -5,8 +5,9 @@
 
 - Einwilligung zu Cookies & Daten (vielleicht über https://www.consentmanager.net/ | Alternativen?) -> idealerweise kein Cookie Consent nötig
 
-
-
+- externes bild auf startseite entfernen
+- success-seite für kontakt
+- navigation und orte per graphql laden
 
 # Todos Lars
 

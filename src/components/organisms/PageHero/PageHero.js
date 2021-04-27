@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
 		},
 		
 		[theme.breakpoints.down('sm')]: {
+			hyphens: 'auto',
 			'& .hero-shaped__image': {
 				position: 'relative',
 			},
