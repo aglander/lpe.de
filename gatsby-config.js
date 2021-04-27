@@ -35,5 +35,11 @@ module.exports = {
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-gatsby-cloud`,
 		`gatsby-transformer-sharp`, // Needed for dynamic images
+		{
+			resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+			options: {
+				devMode: false,
+			},
+		},
 	],
 };

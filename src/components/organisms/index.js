@@ -2,7 +2,6 @@ export { default as Section } from './Section';
 export { default as SectionAlternate } from './SectionAlternate';
 export { default as DescriptionListIcon } from './DescriptionListIcon';
 export { default as HeroShaped } from './HeroShaped';
-export { default as Map } from './Map';
 export { default as HeroBackground } from './HeroBackground';
 export { default as HeroSideImage } from './HeroSideImage';
 export { default as HeroSimpleBackground } from './HeroSimpleBackground';
