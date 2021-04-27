@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { HeroShaped, ContactForm } from 'components/organisms';
+import { SectionHeader } from 'components/molecules';
 import { Image } from 'components/atoms';
 import ImageMap from 'assets/images/kontakt-karte.png';
 
@@ -33,12 +34,25 @@ const Form = (props) => {
 	const { data, className, ...rest } = props;
 	const classes = useStyles();
 
+	const showSuccessScreen = data.data;
+
 	return (
 		<div className={className} {...rest}>
 			<HeroShaped
 				leftSide={
 					<div className={classes.heroleftSide}>
-						<ContactForm />
+						{showSuccessScreen ? (
+							<div>
+								<SectionHeader
+									title="Erfolgreich abgeschickt"
+									subtitle="Wir werden Ihre Anfrage so schnell wie möglich bearbeiten!"
+									data-aos="fade-up"
+									align="left"
+								/>
+							</div>
+						) : (
+							<ContactForm />
+						)}
 					</div>
 				}
 				rightSide={<Image src={ImageMap} />}
