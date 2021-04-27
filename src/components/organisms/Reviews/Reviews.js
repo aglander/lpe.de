@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { useMediaQuery } from '@material-ui/core';
 import { Grid, Typography, colors } from '@material-ui/core';
-import { Image } from 'components/atoms';
+import { Icon } from 'components/atoms';
 import { SectionHeader, IconAlternate } from 'components/molecules';
 import { CardReview } from 'components/organisms';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -28,6 +28,12 @@ const useStyles = makeStyles(() => ({
 		marginRight: 'auto',
 		marginLeft: 'auto',
 	},
+	stars: {
+		color: '#ffbb00',
+		'& i': {
+			fontSize: '2em'
+		}
+	}
 }));
 
 const data = [
@@ -69,12 +75,13 @@ const Reviews = (props) => {
 		<div className={classes.root} data-aos="fade-up" {...rest}>
 			<SectionHeader
 				overline={
-					<Image
-						src="https://assets.maccarianagency.com/the-front/illustrations/rated-by-our-customer.png"
-						alt="rating"
-						className={classes.sectionHeadlineStars}
-						width="auto"
-					/>
+					<div className={classes.stars}>
+						<Icon fontIconClass="fas fa-star" />
+						<Icon fontIconClass="fas fa-star" />
+						<Icon fontIconClass="fas fa-star" />
+						<Icon fontIconClass="fas fa-star" />
+						<Icon fontIconClass="fas fa-star" />
+					</div>
 				}
 				title={
 					<span>
