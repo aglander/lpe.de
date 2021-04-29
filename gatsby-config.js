@@ -36,10 +36,14 @@ module.exports = {
 		`gatsby-plugin-gatsby-cloud`,
 		`gatsby-transformer-sharp`, // Needed for dynamic images
 		{
-			resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+			resolve: `gatsby-plugin-gdpr-cookies`,
 			options: {
-				devMode: false,
+			  googleAnalytics: {
+				trackingId: 'UA-114309100-1', // leave empty if you want to disable the tracker
+			  },
+			  // defines the environments where the tracking should be available  - default is ["production"]
+			  environments: ['production', 'development']
 			},
-		},
+		  },
 	],
 };

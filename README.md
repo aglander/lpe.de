@@ -7,6 +7,7 @@
 
 - externes bild auf startseite entfernen
 - navigation und orte per graphql laden
+- favicon und dergleichen
 
 # Todos Lars
 
