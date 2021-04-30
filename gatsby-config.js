@@ -33,17 +33,17 @@ module.exports = {
 		'gatsby-plugin-resolve-src',
 		`gatsby-plugin-image`,
 		`gatsby-plugin-sharp`,
-		`gatsby-plugin-gatsby-cloud`,
 		`gatsby-transformer-sharp`, // Needed for dynamic images
 		{
 			resolve: `gatsby-plugin-gdpr-cookies`,
 			options: {
-			  googleAnalytics: {
-				trackingId: 'UA-114309100-1', // leave empty if you want to disable the tracker
-			  },
-			  // defines the environments where the tracking should be available  - default is ["production"]
-			  environments: ['production', 'development']
+				googleAnalytics: {
+					trackingId: 'UA-114309100-1', // leave empty if you want to disable the tracker
+				},
+				// defines the environments where the tracking should be available  - default is ["production"]
+				environments: ['production', 'development'],
 			},
-		  },
+		},
+		`gatsby-plugin-netlify`,
 	],
 };
