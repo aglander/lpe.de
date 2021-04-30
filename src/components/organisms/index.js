@@ -25,3 +25,4 @@ export { default as CardReview } from './CardReview';
 export { default as Advantages } from './Advantages';
 export { default as Place } from './Place';
 export { default as Video } from './Video';
+export { default as CookieConsent } from './CookieConsent';
