@@ -45,5 +45,17 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-netlify`,
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Lars-Peter Eckhardt`,
+				short_name: `LPE.de`,
+				start_url: `/`,
+				background_color: `#ffffff`,
+				theme_color: `#68B436`,
+				display: `standalone`,
+				icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
+			},
+		},
 	],
 };
