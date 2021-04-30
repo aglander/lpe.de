@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import {
 	Button,
 	Dialog,
@@ -8,23 +7,18 @@ import {
 	DialogContentText,
 	DialogTitle,
 } from '@material-ui/core';
-
-const useStyles = makeStyles((theme) => ({}));
+import Cookies from 'js-cookie';
 
 const CookieConsent = () => {
-	const classes = useStyles();
-
 	const [open, setOpen] = useState(
-		!document.cookie
-			.split(';')
-			.some((item) => item.trim().startsWith('gatsby-gdpr-google-analytics='))
+		!Cookies.get('gatsby-gdpr-google-analytics')
 	);
 
 	const enableTracking = (doIt) => {
 		if (doIt) {
-			document.cookie = 'gatsby-gdpr-google-analytics=true;max-age=31536000';
+			Cookies.set('gatsby-gdpr-google-analytics', 'true', { expires: 365 });
 		} else {
-			document.cookie = 'gatsby-gdpr-google-analytics=false;max-age=604800';
+			Cookies.set('gatsby-gdpr-google-analytics', 'false', { expires: 7 });
 		}
 	};
 
@@ -43,39 +37,37 @@ const CookieConsent = () => {
 	};
 
 	return (
-		<div className={classes.root}>
-			<Dialog
-				open={open}
-				onClose={handleClose}
-				aria-labelledby="alert-dialog-title"
-				aria-describedby="alert-dialog-description"
-				disableBackdropClick={true}
-				disableEscapeKeyDown={true}
-			>
-				<DialogTitle id="alert-dialog-title">{'Cookie'}</DialogTitle>
-				<DialogContent>
-					<DialogContentText id="alert-dialog-description">
-						Wir verwenden Google Analytics, um die Benutzung dieser Website zu
-						messen und die Website für Sie kontinuierlich zu optimieren. Google
-						nutzt dafür Cookies.
-					</DialogContentText>
-				</DialogContent>
-				<DialogActions>
-					<Button onClick={deny} color="secondary">
-						Nein, danke
-					</Button>
-					<Button
-						onClick={accept}
-						color="primary"
-						autoFocus
-						variant="contained"
-						id="cookie.accept"
-					>
-						Einverstanden
-					</Button>
-				</DialogActions>
-			</Dialog>
-		</div>
+		<Dialog
+			open={open}
+			onClose={handleClose}
+			aria-labelledby="alert-dialog-title"
+			aria-describedby="alert-dialog-description"
+			disableBackdropClick={true}
+			disableEscapeKeyDown={true}
+		>
+			<DialogTitle id="alert-dialog-title">{'Cookie'}</DialogTitle>
+			<DialogContent>
+				<DialogContentText id="alert-dialog-description">
+					Wir verwenden Google Analytics, um die Benutzung dieser Website zu
+					messen und die Website für Sie kontinuierlich zu optimieren. Google
+					nutzt dafür Cookies.
+				</DialogContentText>
+			</DialogContent>
+			<DialogActions>
+				<Button onClick={deny} color="secondary">
+					Nein, danke
+				</Button>
+				<Button
+					onClick={accept}
+					color="primary"
+					autoFocus
+					variant="contained"
+					id="cookie.accept"
+				>
+					Einverstanden
+				</Button>
+			</DialogActions>
+		</Dialog>
 	);
 };
 
