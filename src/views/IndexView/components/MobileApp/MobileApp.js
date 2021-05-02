@@ -55,9 +55,9 @@ const MobileApp = (props) => {
 						direction="column"
 					>
 						<SectionHeader
-							label="Über Mich"
-							title="Schön, dass Sie da sind"
-							subtitle="Als mehrfach ausgezeichneter, unabhängiger Versicherungsmakler & Finanzmakler ist es mein Anspruch, Sie gut zu beraten, gut zu betreuen und möglichst sehr, sehr lange mit Ihnen zusammenzuarbeiten."
+							label="Über LPE"
+							title="Lars-Peter Eckhardt"
+							subtitle="Als mehrfach ausgezeichneter, unabhängiger Versicherungsmakler & Finanzmakler ist es mein Anspruch, Sie gut zu beraten, gut zu betreuen und möglichst sehr, sehr lange mit Ihnen zusammenzuarbeiten. Mein Team und ich stehen dafür an Ihrer Seite."
 							align="left"
 							disableGutter
 						/>
