@@ -5,7 +5,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { useMediaQuery } from '@material-ui/core';
 import { Topbar, Footer, Sidebar } from './components';
 
-import { Seo} from 'components/organisms';
+import { Seo, CookieConsent } from 'components/organisms';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -49,6 +49,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
 				[classes.root]: true,
 			})}
 		>
+			<CookieConsent />
 			<Seo />
 			<div className={classes.topBar}>
 				<Topbar onSidebarOpen={handleSidebarOpen} />

@@ -33,12 +33,28 @@ module.exports = {
 		'gatsby-plugin-resolve-src',
 		`gatsby-plugin-image`,
 		`gatsby-plugin-sharp`,
-		`gatsby-plugin-gatsby-cloud`,
 		`gatsby-transformer-sharp`, // Needed for dynamic images
 		{
-			resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+			resolve: `gatsby-plugin-gdpr-cookies`,
 			options: {
-				devMode: false,
+				googleAnalytics: {
+					trackingId: 'UA-114309100-1', // leave empty if you want to disable the tracker
+				},
+				// defines the environments where the tracking should be available  - default is ["production"]
+				environments: ['production', 'development'],
+			},
+		},
+		`gatsby-plugin-netlify`,
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Lars-Peter Eckhardt`,
+				short_name: `LPE.de`,
+				start_url: `/`,
+				background_color: `#ffffff`,
+				theme_color: `#68B436`,
+				display: `standalone`,
+				icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
 			},
 		},
 	],
