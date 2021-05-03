@@ -54,7 +54,7 @@ const About = () => {
 				/>
 			</Grid>
 			<SectionHeader
-				title="Lars-Peter Eckhardt"
+				title="LPE | Lars-Peter Eckhardt"
 				subtitle="Als mehrfach ausgezeichneter, unabhängiger Versicherungsmakler & Finanzmakler ist es mein Anspruch, Sie gut zu beraten, gut zu betreuen und möglichst sehr, sehr lange mit Ihnen zusammenzuarbeiten. Mein Team und ich stehen dafür an Ihrer Seite."
 				fadeUp
 			/>

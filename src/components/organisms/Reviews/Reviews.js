@@ -5,7 +5,7 @@ import { useMediaQuery } from '@material-ui/core';
 import { Grid, Typography, colors } from '@material-ui/core';
 import { Icon } from 'components/atoms';
 import { SectionHeader, IconAlternate } from 'components/molecules';
-import { CardReview } from 'components/organisms';
+import { CardReview, ProvenExpert } from 'components/organisms';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const useStyles = makeStyles(() => ({
@@ -95,6 +95,7 @@ const Reviews = (props) => {
 				fadeUp
 				className={classes.headline}
 			/>
+			<ProvenExpert wide />
 			<Grid container spacing={isMd ? 4 : 2}>
 				{data.map((review, index) => (
 					<Grid

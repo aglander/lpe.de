@@ -8,7 +8,6 @@ import {
 	Advantages,
 	ContactForm,
 	About,
-	ProvenExpert
 } from 'components/organisms';
 import { Divider } from '@material-ui/core';
 
@@ -61,7 +60,6 @@ const IndexView = ({ themeMode }) => {
 			<Divider />
 			<Section>
 				<Reviews />
-				<ProvenExpert wide />
 			</Section>
 			<Divider />
 			<SectionAlternate>
