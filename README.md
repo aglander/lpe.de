@@ -9,6 +9,8 @@
 - navigation und orte per graphql laden
 - favicon und dergleichen
 
+- Emailaccounts bei welchem Provider?
+
 # Todos Lars
 
 - Datenschutz Inhalte finalisieren
