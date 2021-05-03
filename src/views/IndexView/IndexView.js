@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero, MobileApp } from './components';
+import { Hero } from './components';
 
 import {
 	Section,
@@ -7,15 +7,9 @@ import {
 	Reviews,
 	Advantages,
 	ContactForm,
+	About
 } from 'components/organisms';
 import { Divider } from '@material-ui/core';
-
-const mobileapp = [
-	'Unabhängigkeit: Als Versicherungsmakler nach §34d GewO bin ich sogar gesetzlich dazu verpflichtet, die Interessen unserer Kunden wahrzunehmen.',
-	'Kompetenz: Die Ausbildung als Fachwirt für Finanzberatung (IHK), Baufinanzierungsberater (IHK) und Generationenberater (IHK) gewährleiste eine ganzheitliche Beratung.',
-	'Erfahrung: Nach ersten Erfahrungen bei einer Versicherungsgesellschaft, stieg mein eigener Anspruch an zufriedene Kunden. 1999 gab es den Startschuss für LPE.',
-	'Vertrauen: Versicherungen sind (keine) Vertrauenssache. Seien Sie gerne kritisch, prüfen und fordern Sie uns. Viele hundert Kunden vertrauen uns seit vielen Jahren!',
-];
 
 const advantages = [
 	{
@@ -69,7 +63,7 @@ const IndexView = ({ themeMode }) => {
 			</Section>
 			<Divider />
 			<SectionAlternate>
-				<MobileApp data={mobileapp} />
+				<About />
 			</SectionAlternate>
 			<Divider />
 			<Section>
