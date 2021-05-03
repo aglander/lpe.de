@@ -33,13 +33,13 @@ const Advantages = (props) => {
 			<SectionHeader
 				title={
 					<span>
-						We are reimagining renting to help you{' '}
+						Sie haben Fragen und suchen Antworten?{' '}
 						<Typography component="span" variant="inherit" color="primary">
-							achieve your dreams
+							Wir bieten Ihnen Lösungen!
 						</Typography>
 					</span>
 				}
-				subtitle="Our mission is to help you grow your business, meet and connect with people who share your passions. We help you fulfill your best potential through an engaging lifestyle experience."
+				subtitle="Wenn Sie erlauben, möchten wir Sie am liebsten möglichst lange begleiten. Daher sind unsere Beratungen langfristig und unsere Lösungen individuell an alle Ihre Lebensphasen angelehnt. Dabei verbinden wir im Optimalfall die folgenden 5 Bereiche in unserem „Liebe-Familie-Rezept“ mit einem funktionierendem Notfallplan!"
 				fadeUp
 			/>
 			<div class={classes.container}>

@@ -5,7 +5,6 @@
 
 - Einwilligung zu Cookies & Daten (vielleicht über https://www.consentmanager.net/ | Alternativen?) -> idealerweise kein Cookie Consent nötig
 
-- externes bild auf startseite entfernen
 - navigation und orte per graphql laden
 - favicon und dergleichen
 
