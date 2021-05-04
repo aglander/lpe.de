@@ -1,11 +1,21 @@
 import React from 'react';
+import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { useMediaQuery } from '@material-ui/core';
-import { Grid, Typography, colors } from '@material-ui/core';
+import {
+	Grid,
+	Typography,
+	colors,
+	List,
+	ListItem,
+	ListItemAvatar,
+	Avatar,
+	ListItemText,
+} from '@material-ui/core';
 import { Icon } from 'components/atoms';
 import { SectionHeader, IconAlternate } from 'components/molecules';
-import { CardReview, ProvenExpert } from 'components/organisms';
+import { CardBase, ProvenExpert } from 'components/organisms';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const useStyles = makeStyles(() => ({
@@ -31,36 +41,10 @@ const useStyles = makeStyles(() => ({
 	stars: {
 		color: '#ffbb00',
 		'& i': {
-			fontSize: '2em'
-		}
-	}
+			fontSize: '2em',
+		},
+	},
 }));
-
-const data = [
-	{
-		authorPhoto:
-			'https://assets.maccarianagency.com/the-front/photos/people/veronica-adams.jpg',
-		authorName: 'Sarah Herbeler',
-		authorOccupation: 'Hausfinanzierung und Versicherungsvergleich mit Extras',
-		feedback:
-			'Wir haben über Herrn Eckhardt unser Haus finanziert und auch die vorhandenen Versicherungen an die neue Situation angepasst. Die Vorsorgevollmacht und Patientenverfügung geben uns ein gutes Gefühl.',
-	},
-	{
-		authorPhoto: '../../../assets/images/Review2.jpg',
-		authorName: 'Arian Glander',
-		authorOccupation: 'Versicherungen und Finanzierung',
-		feedback:
-			'Seit 2 Jahrzehnten vertraue ich Lars-Peter Eckhardt wenn es um Versicherungen oder Finanzierungen geht. Er geht sehr gut auf meine Bedürfnisse ein und findet immer die richtige Lösung. Ich kann ihn uneingeschränkt und jederzeit weiterempfehlen.',
-	},
-	{
-		authorPhoto:
-			'https://assets.maccarianagency.com/the-front/photos/people/jack-smith.jpg',
-		authorName: 'Ronny Reimer',
-		authorOccupation: 'Hauskauf',
-		feedback:
-			'Individuelle, fachlich kompetente Beratung. Nimmt sich viel Zeit und geht auf die speziellen Bedürfnisse ein. Endlich mal ein Berater, der einen nicht nur mit Fachbegriffen verunsichert. Fragen wurden ausführlich und verständlich beantwortet. Gern wieder.',
-	},
-];
 
 const Reviews = (props) => {
 	const { className, ...rest } = props;
@@ -70,6 +54,13 @@ const Reviews = (props) => {
 	const isMd = useMediaQuery(theme.breakpoints.up('md'), {
 		defaultMatches: true,
 	});
+	let align = 'center';
+	let justifyGrid = 'center';
+	if (align === 'left') {
+		justifyGrid = 'flex-start';
+	} else if (align === 'right') {
+		justifyGrid = 'flex-end';
+	}
 
 	return (
 		<div className={classes.root} data-aos="fade-up" {...rest}>
@@ -97,33 +88,205 @@ const Reviews = (props) => {
 			/>
 			<ProvenExpert wide />
 			<Grid container spacing={isMd ? 4 : 2}>
-				{data.map((review, index) => (
-					<Grid
-						key={index}
-						item
-						container
-						alignItems="center"
-						direction="column"
-						xs={12}
-						sm={12}
-						md={4}
-						data-aos="fade-up"
-					>
-						<CardReview
-							variant="outlined"
-							text={review.feedback}
-							icon={
+				<Grid
+					key={0}
+					item
+					container
+					alignItems="center"
+					direction="column"
+					xs={12}
+					sm={12}
+					md={4}
+					data-aos="fade-up"
+				>
+					<CardBase className={clsx('card-review')} variant="outlined" liftUp>
+						<Grid container spacing={2} className="card-review__wrapper">
+							<Grid
+								item
+								container
+								justify={justifyGrid}
+								xs={12}
+								className="card-review__icon-wrapper"
+							>
 								<IconAlternate
 									color={colors.green}
 									fontIconClass="fas fa-quote-right"
 								/>
-							}
-							authorName={review.authorName}
-							authorTitle={review.authorOccupation}
-							authorPhoto={review.authorPhoto}
-						/>
-					</Grid>
-				))}
+							</Grid>
+							<Grid item xs={12} className="card-review__text-wrapper">
+								<Typography variant="h6" align={align} component="p">
+									Wir haben über Herrn Eckhardt unser Haus finanziert und auch
+									die vorhandenen Versicherungen an die neue Situation
+									angepasst. Die Vorsorgevollmacht und Patientenverfügung geben
+									uns ein gutes Gefühl.
+								</Typography>
+							</Grid>
+							<Grid item xs={12} className="card-review__lits-container">
+								<Grid
+									container
+									justify={justifyGrid}
+									className="card-review__list-wrapper"
+								>
+									<List disablePadding className="card-review__list">
+										<ListItem className="card-review__list-item">
+											<ListItemAvatar className="card-review__list-item-avatar">
+												<Avatar className="card-review__avatar">
+													<StaticImage
+														alt="Steffi Richter"
+														src="../../../assets/images/Review1.png"
+														placeholder="blurred"
+														layout="fixed"
+														width={40}
+														height={40}
+													/>
+												</Avatar>
+											</ListItemAvatar>
+											<ListItemText
+												className="card-review__list-item-text"
+												primary="Steffi Richter"
+												secondary="Hausbau"
+											/>
+										</ListItem>
+									</List>
+								</Grid>
+							</Grid>
+						</Grid>
+					</CardBase>
+				</Grid>
+
+				<Grid
+					key={0}
+					item
+					container
+					alignItems="center"
+					direction="column"
+					xs={12}
+					sm={12}
+					md={4}
+					data-aos="fade-up"
+				>
+					<CardBase className={clsx('card-review')} variant="outlined" liftUp>
+						<Grid container spacing={2} className="card-review__wrapper">
+							<Grid
+								item
+								container
+								justify={justifyGrid}
+								xs={12}
+								className="card-review__icon-wrapper"
+							>
+								<IconAlternate
+									color={colors.green}
+									fontIconClass="fas fa-quote-right"
+								/>
+							</Grid>
+							<Grid item xs={12} className="card-review__text-wrapper">
+								<Typography variant="h6" align={align} component="p">
+									Seit 2 Jahrzehnten vertraue ich Lars-Peter Eckhardt wenn es um
+									Versicherungen oder Finanzierungen geht. Er geht sehr gut auf
+									meine Bedürfnisse ein und findet immer die richtige Lösung.
+									Ich kann ihn uneingeschränkt und jederzeit weiterempfehlen.
+								</Typography>
+							</Grid>
+							<Grid item xs={12} className="card-review__lits-container">
+								<Grid
+									container
+									justify={justifyGrid}
+									className="card-review__list-wrapper"
+								>
+									<List disablePadding className="card-review__list">
+										<ListItem className="card-review__list-item">
+											<ListItemAvatar className="card-review__list-item-avatar">
+												<Avatar className="card-review__avatar">
+													<StaticImage
+														alt="Arian Glander"
+														src="../../../assets/images/Review2.jpg"
+														placeholder="blurred"
+														layout="fixed"
+														width={40}
+														height={40}
+													/>
+												</Avatar>
+											</ListItemAvatar>
+											<ListItemText
+												className="card-review__list-item-text"
+												primary="Arian Glander"
+												secondary="Versicherungen und Finanzierung"
+											/>
+										</ListItem>
+									</List>
+								</Grid>
+							</Grid>
+						</Grid>
+					</CardBase>
+				</Grid>
+
+				<Grid
+					key={0}
+					item
+					container
+					alignItems="center"
+					direction="column"
+					xs={12}
+					sm={12}
+					md={4}
+					data-aos="fade-up"
+				>
+					<CardBase className={clsx('card-review')} variant="outlined" liftUp>
+						<Grid container spacing={2} className="card-review__wrapper">
+							<Grid
+								item
+								container
+								justify={justifyGrid}
+								xs={12}
+								className="card-review__icon-wrapper"
+							>
+								<IconAlternate
+									color={colors.green}
+									fontIconClass="fas fa-quote-right"
+								/>
+							</Grid>
+							<Grid item xs={12} className="card-review__text-wrapper">
+								<Typography variant="h6" align={align} component="p">
+									Individuelle, fachlich kompetente Beratung. Nimmt sich viel
+									Zeit und geht auf die speziellen Bedürfnisse ein. Endlich mal
+									ein Berater, der einen nicht nur mit Fachbegriffen
+									verunsichert. Fragen wurden ausführlich und verständlich
+									beantwortet. Gern wieder.
+								</Typography>
+							</Grid>
+							<Grid item xs={12} className="card-review__lits-container">
+								<Grid
+									container
+									justify={justifyGrid}
+									className="card-review__list-wrapper"
+								>
+									<List disablePadding className="card-review__list">
+										<ListItem className="card-review__list-item">
+											<ListItemAvatar className="card-review__list-item-avatar">
+												<Avatar className="card-review__avatar">
+													<StaticImage
+														alt="Steffi Richter"
+														src="../../../assets/images/Review1.png"
+														placeholder="blurred"
+														layout="fixed"
+														width={40}
+														height={40}
+													/>
+												</Avatar>
+											</ListItemAvatar>
+											<ListItemText
+												className="card-review__list-item-text"
+												primary="Steffi Richter"
+												secondary="Hausbau"
+											/>
+										</ListItem>
+									</List>
+								</Grid>
+							</Grid>
+						</Grid>
+					</CardBase>
+				</Grid>
+
 				<Grid item container xs={12} justify="center">
 					<a
 						href="https://www.provenexpert.com/de-de/lars-peter-eckhardt"
