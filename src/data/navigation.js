@@ -318,10 +318,10 @@ const navigation = [
 		title: 'Immobilienfinanzierung',
 	},
 		{
-			id: 'baufinanzierung-kaufen',
+			id: 'bauen-kaufen',
 			parent: 'immobilienfinanzierung',
-			title: 'Baufinanzierung & Kaufen',
-			url: '/baufinanzierung-kaufen'
+			title: 'Bauen & Kaufen',
+			url: '/bauen-kaufen'
 		},
 		{
 			id: 'anschlussfinanzierung',
@@ -420,9 +420,36 @@ const navigation = [
 {
 	id: 'immobilien',
 	title: 'Immobilien',
-	url: '/immobilien',
 },
-
+//---------------------------------------------------------
+	{
+		id: 'immobilienkauf',
+		parent: 'immobilien',
+		title: 'Immobilienkauf',
+	},
+		{
+			id: 'immobilie-eigennutzung-kaufen',
+			parent: 'immobilienkauf',
+			title: 'Immobilie zur Eigennutzung kaufen',
+			url: '/immobilie-eigennutzung-kaufen',
+		},
+		{
+			id: 'immobilie-kapitalanlage-kaufen',
+			parent: 'immobilienkauf',
+			title: 'Immobilie als Kapitalanlage kaufen',
+			url: '/immobilie-kapitalanlage-kaufen',
+		},
+	{
+		id: 'immobilienverkauf',
+		parent: 'immobilien',
+		title: 'Immobilienverkauf',
+	},
+		{
+			id: 'immobilie-verkaufen',
+			parent: 'immobilienverkauf',
+			title: 'Wir verkaufen Ihre Immobilie',
+			url: '/immobilie-verkaufen',
+		},
 //#########################################################
 {
 	id: 'liebe-familie',
