@@ -330,23 +330,11 @@ const navigation = [
 			url: '/anschlussfinanzierung'
 		},		
 		{
-			id: 'prolongation',
-			parent: 'immobilienfinanzierung',
-			title: 'Prolongation',
-			url: '/prolongation'
-		},		
-		{
 			id: 'modernisierung-sanierung',
 			parent: 'immobilienfinanzierung',
 			title: 'Modernisierung & Sanierung',
 			url: '/modernisierung-sanierung'
 		},		
-		{
-			id: 'bausparen',
-			parent: 'immobilienfinanzierung',
-			title: 'Bausparen',
-			url: '/bausparen'
-		},
 		{
 			id: 'foerdermittel',
 			parent: 'immobilienfinanzierung',
