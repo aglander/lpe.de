@@ -8,6 +8,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     height: '100%',
     width: '100%',
+    borderRadius: '16px',
   },
   withShadow: {
     boxShadow: `0 2px 10px 0 ${theme.palette.cardShadow}`,
