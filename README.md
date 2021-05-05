@@ -9,7 +9,7 @@
 - favicon und dergleichen
 - Kontaktseite rund machen!
 - Welche Snipped werden bei den beiden SEO-Seiten genau angezeigt?
-- Bilder in den Award-Boxen verbessern!
+- Bilder in den Award-Boxen verbessern! .PNG oder .JPG?
 
 - Emailaccounts bei welchem Provider?
 
