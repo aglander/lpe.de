@@ -23,11 +23,10 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.primary.main,
 		fontSize: '2.5em',
 	},
-	photo: {
-        borderRadius: '100%',
-    },
+	photoWrapper: { borderRadius: '100%', height: '100px', width: '100px', display: 'inline-block', overflow: 'hidden', maskImage: 'radial-gradient(white, black)' },
 	photoContainer: {
 		justifyContent: 'center',
+		marginBottom: '10px'
 	},
 }));
 
@@ -42,16 +41,17 @@ const About = () => {
 	return (
 		<div className="root">
 			<Grid container className={classes.photoContainer}>
-				<StaticImage
-					src="../../../assets/images/LPE_HP.jpg"
-					alt="Lars-Peter Eckhardt"
-					placeholder="blurred"
-					layout="fixed"
-					width={100}
-					height={100}
-                    objectPosition="center top"
-					className={classes.photo}
-				/>
+				<div className={classes.photoWrapper}>
+					<StaticImage
+						src="../../../assets/images/LPE_HP.jpg"
+						alt="Lars-Peter Eckhardt"
+						placeholder="blurred"
+						layout="constrained"
+						width={100}
+						height={133}
+						className={classes.photo}
+					/>
+				</div>
 			</Grid>
 			<SectionHeader
 				title="LPE | Lars-Peter Eckhardt"
