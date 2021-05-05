@@ -7,6 +7,9 @@
 
 - navigation und orte per graphql laden
 - favicon und dergleichen
+- Kontaktseite rund machen!
+- Welche Snipped werden bei den beiden SEO-Seiten genau angezeigt?
+- Bilder in den Award-Boxen verbessern!
 
 - Emailaccounts bei welchem Provider?
 
