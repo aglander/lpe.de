@@ -5,6 +5,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { useMediaQuery, Button } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
 import { Section } from 'components/organisms';
+import { Link } from 'gatsby';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -54,20 +55,25 @@ const ContactAndCompareBox = (props) => {
 				variant="outlined"
 				color="primary"
 				size={isMd ? 'large' : 'medium'}
-				href={`/${slug}-vergleichen`}
 				className={classes.buttonOutline}
+				component={compare.startsWith('http') ? 'a' : Link}
+				target={compare.startsWith('http') && '_blank' }
+				to={compare}
+				href={compare}
 			>
 				Selber vergleichen
 			</Button>
 		);
 	}
-	
+
 	ctas.push(
 		<Button
 			variant="contained"
 			color="primary"
 			size={isMd ? 'large' : 'medium'}
 			className={classes.buttonContained}
+			component={Link}
+			to="/kontakt"
 		>
 			Kontakt aufnehmen
 		</Button>

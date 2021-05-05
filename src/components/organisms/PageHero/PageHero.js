@@ -15,11 +15,11 @@ const useStyles = makeStyles((theme) => ({
 				display: 'grid',
 				justifyContent: 'flex-end',
 				'& .gatsby-image-wrapper': {
-					width: '1000px'
-				}
+					width: '1000px',
+				},
 			},
 		},
-		
+
 		[theme.breakpoints.down('sm')]: {
 			hyphens: 'auto',
 			'& .hero-shaped__image': {
@@ -64,46 +64,48 @@ const PageHero = (props) => {
 
 	if (compare) {
 		ctas.push(
-			<Link to={compare}>
-				<Button
-					variant="outlined"
-					color="primary"
-					size={isMd ? 'large' : 'medium'}
-					className={classes.buttonOutline}
-				>
-					Selber vergleichen
-				</Button>
-			</Link>
+			<Button
+				variant="outlined"
+				color="primary"
+				size={isMd ? 'large' : 'medium'}
+				className={classes.buttonOutline}
+				component={compare.startsWith('http') ? 'a' : Link}
+				target={compare.startsWith('http') && '_blank' }
+				to={compare}
+				href={compare}
+			>
+				Selber vergleichen
+			</Button>
 		);
 	}
 
 	if (slug.endsWith('-vergleichen')) {
 		const backUrl = '/' + slug.split('-vergleichen')[0];
 		ctas.push(
-			<Link to={backUrl}>
-				<Button
-					variant="outlined"
-					color="primary"
-					size={isMd ? 'large' : 'medium'}
-					className={classes.buttonOutline}
-				>
-					&larr; zurück
-				</Button>
-			</Link>
+			<Button
+				variant="outlined"
+				color="primary"
+				size={isMd ? 'large' : 'medium'}
+				className={classes.buttonOutline}
+				component={Link}
+				to={backUrl}
+			>
+				&larr; zurück
+			</Button>
 		);
 	}
 
 	ctas.push(
-		<Link to="/kontakt">
-			<Button
-				variant="contained"
-				color="primary"
-				size={isMd ? 'large' : 'medium'}
-				className={classes.buttonContained}
-			>
-				Kontakt aufnehmen
-			</Button>
-		</Link>
+		<Button
+			variant="contained"
+			color="primary"
+			size={isMd ? 'large' : 'medium'}
+			className={classes.buttonContained}
+			component={Link}
+			to="/kontakt"
+		>
+			Kontakt aufnehmen
+		</Button>
 	);
 
 	return (
@@ -114,7 +116,8 @@ const PageHero = (props) => {
 					<SectionHeader
 						title={
 							<span className={classes.title}>
-								{title}<br />
+								{title}
+								<br />
 								<Typography component="span" variant="inherit" color="primary">
 									{claim}
 								</Typography>

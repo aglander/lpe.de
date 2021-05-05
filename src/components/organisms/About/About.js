@@ -99,7 +99,7 @@ const About = () => {
 									</ListItemAvatar>
 									<ListItemText
 										primary="Kompetenz"
-										secondary="Die Ausbildung als Fachwirt für Finanzberatung (IHK), Baufinanzierungsberater (IHK) und Generationenberater (IHK) gewährleiste eine ganzheitliche Beratung."
+										secondary="Die Ausbildung als Fachwirt für Finanzberatung (IHK), Baufinanzierungsberater (IHK) und Generationenberater (IHK) gewährleistet eine ganzheitliche Beratung."
 									/>
 								</ListItem>
 								<Divider variant="inset" component="li" />
