@@ -1,33 +1,5 @@
 exports.places = [
 	{
-		slug: '12527-berlin-schmoeckwitz',
-		title: '12527 Berlin-Schmöckwitz',
-		zipcode: 12527,
-		short: 'Schmöckwitz',
-		long: 'Berlin-Schmöckwitz',
-	},
-	{
-		slug: '12557-berlin-wendenschloss',
-		title: '12557 Berlin-Wendenschloss',
-		zipcode: 12557,
-		short: 'Wendenschloss',
-		long: 'Berlin-Wendenschloss',
-	},
-	{
-		slug: '12559-berlin-mueggelheim',
-		title: '12559 Berlin-Müggelheim',
-		zipcode: 12559,
-		short: 'Müggelheim',
-		long: 'Berlin-Müggelheim',
-	},
-	{
-		slug: '12587-berlin-elsengrund',
-		title: '12587 Berlin-Elsengrund',
-		zipcode: 12587,
-		short: 'Elsengrund',
-		long: 'Berlin-Elsengrund',
-	},
-	{
 		slug: '12589-berlin-rahnsdorf',
 		title: '12589 Berlin-Rahnsdorf',
 		zipcode: 12589,

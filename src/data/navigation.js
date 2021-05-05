@@ -183,21 +183,15 @@ const navigation = [
 		},
 		{
 			id: 'hausratversicherung',
-			parent: 'hhaftpflicht-haus-hof-rechtsschutz-reisen',
+			parent: 'haftpflicht-haus-hof-rechtsschutz-reisen',
 			title: 'Hausratversicherung',
 			url: '/hausratversicherung'
 		},
 		{
 			id: 'gebaeudeversicherung',
 			parent: 'haftpflicht-haus-hof-rechtsschutz-reisen',
-			title: 'Gebäudeversicherung',
+			title: 'Gebäudeversicherung & Neubau',
 			url: '/gebaeudeversicherung'
-		},
-		{
-			id: 'neubauversicherungen',
-			parent: 'haftpflicht-haus-hof-rechtsschutz-reisen',
-			title: 'Neubauversicherungen',
-			url: '/neubauversicherungen'
 		},
 		{
 			id: 'rechtsschutzversicherung',
