@@ -364,22 +364,22 @@ const navigation = [
 		title: 'Konten & Geldanlagen',
 	},
 		{
-			id: 'girokonto',
+			id: 'girokonto-kreditkarte',
 			parent: 'konten-geldanlagen',
-			title: 'Girokonto',
-			url: '/girokonto'
-		},
-		{
-			id: 'kreditkarte',
-			parent: 'konten-geldanlagen',
-			title: 'Kreditkarte',
-			url: '/kreditkarte'
+			title: 'Girokonto & Kreditkarte',
+			url: '/girokonto-kreditkarte'
 		},
 		{
 			id: 'tagesgeld-festgeld',
 			parent: 'konten-geldanlagen',
-			title: 'Tagesgeld / Festgeld',
+			title: 'Tagesgeld & Festgeld',
 			url: '/tagesgeld-festgeld'
+		},
+		{
+			id: 'investmentanlagen-vermoegensverwaltung',
+			parent: 'konten-geldanlagen',
+			title: 'Vermögensverwaltung',
+			url: '/investmentanlagen-vermoegensverwaltung',
 		},
 	{
 		id: 'haushaltskosten-senken',
