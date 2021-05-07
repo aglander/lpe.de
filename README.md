@@ -11,6 +11,9 @@
 - Welche Snipped werden bei den beiden SEO-Seiten genau angezeigt?
 - Bilder in den Award-Boxen verbessern! .PNG oder .JPG?
 
+- Silbentrennungen in HERO
+- Verlinkungen und Schriftarten / Formatierung (fett/kursiv) in Texten und Überschriften (siehe Beispiel HAUSRAT [unten: Gebäude])
+
 - Emailaccounts bei welchem Provider?
 
 # Todos Lars
