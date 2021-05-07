@@ -86,7 +86,7 @@ const ContactForm = () => {
 							<strong>Kontakt</strong>
 						</Typography>
 						<Typography variant="h6" color="textSecondary" align="center">
-							Wir beantworten alle E-Mails.
+							Wir freuen uns auf Ihre Nachricht.
 						</Typography>
 					</Grid>
 					<Grid item xs={12} sm={6}>

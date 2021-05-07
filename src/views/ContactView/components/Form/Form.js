@@ -45,7 +45,7 @@ const Form = (props) => {
 							<div>
 								<SectionHeader
 									title="Erfolgreich abgeschickt"
-									subtitle="Wir werden Ihre Anfrage so schnell wie möglich bearbeiten!"
+									subtitle="Vielen Dank für Ihre Nachricht. Wir werden Ihre Anfrage so schnell wie möglich bearbeiten!"
 									data-aos="fade-up"
 									align="left"
 								/>
