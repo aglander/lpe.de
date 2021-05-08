@@ -1,9 +1,6 @@
 # Todos Arian
 - title = seoTitle
 - JB für Review (rechts)
-- openstreetmap lizenz erwähnen
-- headphones + tv icon (kontaktseite)
-- laptop-house
 - über uns aus dem footer raus
 - downloads entfernen -> downloads linkfarbe
 - 2 spalten footer
@@ -24,7 +21,7 @@ nach launch
 
 - Emailaccounts bei welchem Provider?
 - kontaktformular lokalisierung fehlermeldungen (fullname wird benötigt)
-
+- openstreetmap lizenz erwähnen
 
 
 - place2/3 logik für seo seiten

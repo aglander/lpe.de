@@ -10,13 +10,14 @@ import {
 	Grid,
 	Button,
 } from '@material-ui/core';
+import clsx from 'clsx';
+import { Icon } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import SmartphoneIcon from '@material-ui/icons/Smartphone';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
-import VideoCallIcon from '@material-ui/icons/VideoCall';
 
 function ListItemLink(props) {
 	return <ListItem button component="a" {...props} />;
@@ -43,14 +44,14 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: '3em',
 	},
 	video: {
-		textAlign: 'center'
+		textAlign: 'center',
 	},
 	videoIcon: {
-		color: 'grey',
-		padding: '10px',
-		fontSize: '20em',
+		color: theme.palette.primary.main,
+		padding: '50px',
+		fontSize: '12em',
 		display: 'block',
-		width: '100%'
+		width: '100%',
 	},
 }));
 
@@ -127,7 +128,7 @@ const Contact = (props) => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<VideoCallIcon className={classes.videoIcon} />
+							<Icon className={clsx('fa fa-laptop-house', classes.videoIcon)} />
 						</a>
 						<Button
 							variant="contained"
