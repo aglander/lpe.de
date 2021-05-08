@@ -45,17 +45,21 @@ const CookieConsent = () => {
 			disableBackdropClick={true}
 			disableEscapeKeyDown={true}
 		>
-			<DialogTitle id="alert-dialog-title">{'Cookie'}</DialogTitle>
+			<DialogTitle id="alert-dialog-title">
+				Wir benötigen Ihre Zustimmung
+			</DialogTitle>
 			<DialogContent>
 				<DialogContentText id="alert-dialog-description">
-					Wir verwenden Google Analytics, um die Benutzung dieser Website zu
-					messen und die Website für Sie kontinuierlich zu optimieren. Google
-					nutzt dafür Cookies.
+					Diese Website benutzt Google Analytics, um die Erfahrung von Benutzern
+					zu verbessern. Sie können die Erfassung Ihrer Daten durch Google
+					Analytics verhindern, indem Sie auf "Ablehnen" klicken. Es wird
+					ein Cookie gesetzt, dass die Erfassung Ihrer Daten bei Besuchen dieser
+					Website verhindert.
 				</DialogContentText>
 			</DialogContent>
 			<DialogActions>
 				<Button onClick={deny} color="secondary">
-					Nein, danke
+					Ablehnen
 				</Button>
 				<Button
 					onClick={accept}
@@ -64,7 +68,7 @@ const CookieConsent = () => {
 					variant="contained"
 					id="cookie.accept"
 				>
-					Einverstanden
+					Akzeptieren
 				</Button>
 			</DialogActions>
 		</Dialog>

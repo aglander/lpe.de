@@ -23,10 +23,17 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.primary.main,
 		fontSize: '2.5em',
 	},
-	photoWrapper: { borderRadius: '100%', height: '100px', width: '100px', display: 'inline-block', overflow: 'hidden', maskImage: 'radial-gradient(white, black)' },
+	photoWrapper: {
+		borderRadius: '100%',
+		height: '100px',
+		width: '100px',
+		display: 'inline-block',
+		overflow: 'hidden',
+		maskImage: 'radial-gradient(white, black)',
+	},
 	photoContainer: {
 		justifyContent: 'center',
-		marginBottom: '10px'
+		marginBottom: '10px',
 	},
 }));
 
