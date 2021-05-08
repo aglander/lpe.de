@@ -131,29 +131,33 @@ const Footer = (props) => {
 								</div>
 							</ListItem>
 							<ListItem disableGutters>
-								<IconButton className={classes.socialIcon} href="https://www.facebook.com/LPE99" target="_blank">
-									<Icon
-										fontIconClass="fab fa-facebook"
-										size="medium"
-									/>
+								<IconButton
+									className={classes.socialIcon}
+									href="https://www.facebook.com/LPE99"
+									target="_blank"
+								>
+									<Icon fontIconClass="fab fa-facebook" size="medium" />
 								</IconButton>
-								<IconButton className={classes.socialIcon} href="https://www.youtube.com/channel/UCF95OM65f3Z4U2PLyTBsDrw" target="_blank">
-									<Icon
-										fontIconClass="fab fa-youtube"
-										size="medium"
-									/>
+								<IconButton
+									className={classes.socialIcon}
+									href="https://www.youtube.com/channel/UCF95OM65f3Z4U2PLyTBsDrw"
+									target="_blank"
+								>
+									<Icon fontIconClass="fab fa-youtube" size="medium" />
 								</IconButton>
-								<IconButton className={classes.socialIcon} href="https://www.linkedin.com/in/lars-peter-eckhardt-75a6a9132" target="_blank">
-									<Icon
-										fontIconClass="fab fa-linkedin-in"
-										size="medium"
-									/>
+								<IconButton
+									className={classes.socialIcon}
+									href="https://www.linkedin.com/in/lars-peter-eckhardt-75a6a9132"
+									target="_blank"
+								>
+									<Icon fontIconClass="fab fa-linkedin-in" size="medium" />
 								</IconButton>
-								<IconButton className={classes.socialIcon} href="https://www.xing.com/profile/LarsPeter_Eckhardt" target="_blank">
-									<Icon
-										fontIconClass="fab fa-xing"
-										size="medium"
-									/>
+								<IconButton
+									className={classes.socialIcon}
+									href="https://www.xing.com/profile/LarsPeter_Eckhardt"
+									target="_blank"
+								>
+									<Icon fontIconClass="fab fa-xing" size="medium" />
 								</IconButton>
 							</ListItem>
 						</List>
@@ -220,46 +224,12 @@ const Footer = (props) => {
 										<Typography
 											variant="body1"
 											component={Link}
-											to="/ueber-uns"
-											className={clsx(classes.navLink)}
-										>
-											Über uns
-										</Typography>
-									</li>
-									<li>
-										<Typography
-											variant="body1"
-											component={Link}
-											to="/downloads"
-											className={clsx(classes.navLink)}
-										>
-											Downloads
-										</Typography>
-									</li>
-									<li>
-										<Typography
-											variant="body1"
-											component={Link}
 											to="/kontakt"
 											className={clsx(classes.navLink)}
 										>
 											Kontakt
 										</Typography>
 									</li>
-									<li>
-										<Typography
-											variant="body1"
-											component={Link}
-											to="/ortsverzeichnis"
-											className={clsx(classes.navLink)}
-										>
-											Ortsverzeichnis
-										</Typography>
-									</li>
-								</ul>
-							</Grid>
-							<Grid item>
-								<ul>
 									<li>
 										<Typography
 											variant="body1"
@@ -288,6 +258,16 @@ const Footer = (props) => {
 											className={clsx(classes.navLink)}
 										>
 											Erstinformation
+										</Typography>
+									</li>
+									<li>
+										<Typography
+											variant="body1"
+											component={Link}
+											to="/ortsverzeichnis"
+											className={clsx(classes.navLink)}
+										>
+											Ortsverzeichnis
 										</Typography>
 									</li>
 								</ul>
