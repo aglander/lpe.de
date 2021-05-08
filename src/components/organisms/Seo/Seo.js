@@ -9,7 +9,6 @@ const Seo = ({ title, description, image, article }) => {
 	const { site } = useStaticQuery(query);
 	const {
 		defaultTitle,
-		titleTemplate,
 		defaultDescription,
 		siteUrl,
 		defaultImage,
@@ -24,7 +23,6 @@ const Seo = ({ title, description, image, article }) => {
 	return (
 		<Helmet
 			title={seo.title}
-			titleTemplate={titleTemplate}
 			htmlAttributes={{ lang: 'de' }}
 		>
 			<meta name="description" content={seo.description} />
@@ -64,7 +62,6 @@ const query = graphql`
 		site {
 			siteMetadata {
 				defaultTitle: title
-				titleTemplate
 				defaultDescription: description
 				siteUrl: url
 				defaultImage: image

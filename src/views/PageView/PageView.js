@@ -73,6 +73,7 @@ const PageView = (data) => {
 					slug,
 					compare,
 					heroImage,
+					seoTitle,
 					seoDescription,
 				},
 				body,
@@ -129,7 +130,7 @@ const PageView = (data) => {
 
 	return (
 		<div className={classes.root}>
-			<Seo description={seoDescription} />
+			<Seo title={seoTitle} description={seoDescription} />
 			<PageHero
 				title={heroTitle}
 				claim={heroClaim}

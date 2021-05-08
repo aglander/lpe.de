@@ -1,14 +1,10 @@
 # Todos Arian
-- title = seoTitle
-
-----
 
 nach launch
+
 - provenexpert google sterne -> geprüft werden
 
 - navigation und orte per graphql laden
-- favicon und dergleichen
-- Kontaktseite rund machen!
 - Welche Snipped werden bei den beiden SEO-Seiten genau angezeigt?
 
 - Silbentrennungen in HERO

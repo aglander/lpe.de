@@ -33,7 +33,7 @@ const SeoPages = (placeSlug) => {
 			allMdx(filter: { fileAbsolutePath: { regex: "./data/seo./" } }) {
 				nodes {
 					frontmatter {
-						title
+						heroTitle
 						slug
 					}
 				}
@@ -43,13 +43,13 @@ const SeoPages = (placeSlug) => {
 
 	const seoPages = data.allMdx.nodes.map((node) => {
 		const {
-			frontmatter: { title, slug },
+			frontmatter: { heroTitle, slug },
 		} = node;
 		const url = `/${slug}-${placeSlug.placeSlug}`;
 		return (
 			<ListItem>
 				<Typography component={Link} to={url} variant="body1" color="primary">
-					{title}
+					{heroTitle}
 				</Typography>
 			</ListItem>
 		);

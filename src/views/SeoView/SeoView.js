@@ -75,6 +75,7 @@ const SeoView = (data) => {
           slug,
           compare,
           heroImage,
+          seoTitle,
           seoDescription,
         },
         body,
@@ -91,13 +92,14 @@ const SeoView = (data) => {
     heroImage = file.childImageSharp;
   }
 
-  if (seoDescription) {
+  if (seoDescription || seoTitle) {
     let placeName = '';
     if (placeData.zipcode) {
       placeName += placeData.zipcode + ' ';
     }
     placeName += placeData.short;
-    seoDescription = seoDescription.replace(/<Place \/>/, placeName);
+    seoTitle = seoTitle && seoTitle.replace(/<Place \/>/, placeName);
+    seoDescription = seoDescription && seoDescription.replace(/<Place \/>/, placeName);
   }
 
   const components = {
@@ -152,7 +154,7 @@ const SeoView = (data) => {
 
   return (
     <div className={classes.root}>
-      <Seo description={seoDescription} />
+      <Seo title={seoTitle} description={seoDescription} />
       <PageHero
         title={heroTitle}
         claim={heroClaim}

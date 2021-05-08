@@ -19,6 +19,7 @@ export const query = graphql`
 				heroTitle
 				compare
 				slug
+				seoTitle
 				seoDescription
 				heroImage {
 					childImageSharp {
