@@ -1,10 +1,5 @@
 # Todos Arian
 - title = seoTitle
-- JB für Review (rechts)
-- über uns aus dem footer raus
-- downloads entfernen -> downloads linkfarbe
-- 2 spalten footer
-- google analytics -> durchlesen
 
 ----
 
@@ -26,6 +21,8 @@ nach launch
 
 - place2/3 logik für seo seiten
 - vimeo
+- downloads linkfarbe
+- google analytics -> durchlesen
 
 
 # Todos Lars

@@ -264,14 +264,7 @@ const Reviews = (props) => {
 										<ListItem className="card-review__list-item">
 											<ListItemAvatar className="card-review__list-item-avatar">
 												<Avatar className="card-review__avatar">
-													<StaticImage
-														alt="Josefina Bils"
-														src="../../../assets/images/Review1.png"
-														placeholder="blurred"
-														layout="fixed"
-														width={40}
-														height={40}
-													/>
+													JB
 												</Avatar>
 											</ListItemAvatar>
 											<ListItemText
