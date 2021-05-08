@@ -6,8 +6,8 @@ import validate from 'validate.js';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		width: '100%',
-    maxWidth: '800px',
-    margin: '0 auto',
+		maxWidth: '800px',
+		margin: '0 auto',
 	},
 }));
 
@@ -119,6 +119,36 @@ const ContactForm = () => {
 							onChange={handleChange}
 							type="email"
 							value={formState.values.email || ''}
+						/>
+					</Grid>
+					<Grid item xs={12} sm={6}>
+						<TextField
+							placeholder="Telefon (optional)"
+							label="Telefon (optional)"
+							variant="outlined"
+							size="medium"
+							name="phone"
+							fullWidth
+							helperText={
+								hasError('phone') ? formState.errors.phone[0] : null
+							}
+							onChange={handleChange}
+							type="text"
+							value={formState.values.phone || ''}
+						/>
+					</Grid>
+					<Grid item xs={12} sm={6}>
+						<TextField
+							placeholder="Anschrift (optional)"
+							label="Anschrift (optional)"
+							variant="outlined"
+							size="medium"
+							name="address"
+							fullWidth
+							helperText={hasError('address') ? formState.errors.address[0] : null}
+							onChange={handleChange}
+							type="address"
+							value={formState.values.address || ''}
 						/>
 					</Grid>
 					<Grid item xs={12}>
