@@ -1,9 +1,5 @@
 # Todos Arian
 - title = seoTitle
-- Kontaktformular (Telefonnummer optional)
-- fullname wird benötigt
-- adresse freiwillig
-- erfolgreich abgeschickt in grün (Kontaktformular)
 - JB für Review (rechts)
 - openstreetmap lizenz erwähnen
 - headphones + tv icon (kontaktseite)
@@ -12,6 +8,8 @@
 - downloads entfernen -> downloads linkfarbe
 - 2 spalten footer
 - google analytics -> durchlesen
+
+----
 
 nach launch
 - provenexpert google sterne -> geprüft werden
@@ -25,7 +23,7 @@ nach launch
 - Verlinkungen und Schriftarten / Formatierung (fett/kursiv) in Texten und Überschriften (siehe Beispiel HAUSRAT [unten: Gebäude])
 
 - Emailaccounts bei welchem Provider?
-
+- kontaktformular lokalisierung fehlermeldungen (fullname wird benötigt)
 
 
 

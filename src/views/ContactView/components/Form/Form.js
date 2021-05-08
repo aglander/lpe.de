@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import { HeroShaped, ContactForm } from 'components/organisms';
 import { SectionHeader } from 'components/molecules';
-import { Image } from 'components/atoms';
-import ImageMap from 'assets/images/kontakt-karte.png';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const useStyles = makeStyles((theme) => ({
 	map: {
@@ -19,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
 			background: theme.palette.background.paper,
 		},
 	},
+	success: {
+		color: theme.palette.primary.main
+	},
 	inputTitle: {
 		fontWeight: 700,
 		marginBottom: theme.spacing(1),
@@ -28,17 +30,40 @@ const useStyles = makeStyles((theme) => ({
 			marginRight: theme.spacing(6),
 		},
 	},
+	heroShaped: {
+		'& .hero-shaped__image': {
+			backgroundColor: 'white',
+			[theme.breakpoints.up('md')]: {
+				display: 'grid',
+				justifyContent: 'flex-end',
+				'& .gatsby-image-wrapper': {
+					width: '1000px',
+				},
+			},
+		},
+
+		[theme.breakpoints.down('sm')]: {
+			'& .hero-shaped__image': {
+				position: 'relative',
+			},
+			'& .hero-shaped__wrapper': {
+				flexDirection: 'column',
+			},
+		},
+	},
 }));
 
 const Form = (props) => {
 	const { data, className, ...rest } = props;
 	const classes = useStyles();
+	const theme = useTheme();
 
 	const showSuccessScreen = data.data;
 
 	return (
 		<div className={className} {...rest}>
 			<HeroShaped
+				className={classes.heroShaped}
 				leftSide={
 					<div className={classes.heroleftSide}>
 						{showSuccessScreen ? (
@@ -48,6 +73,7 @@ const Form = (props) => {
 									subtitle="Vielen Dank für Ihre Nachricht. Wir werden Ihre Anfrage so schnell wie möglich bearbeiten!"
 									data-aos="fade-up"
 									align="left"
+									titleClasses={classes.success}
 								/>
 							</div>
 						) : (
@@ -55,7 +81,14 @@ const Form = (props) => {
 						)}
 					</div>
 				}
-				rightSide={<Image src={ImageMap} />}
+				rightSide={
+					<StaticImage
+						src="../../../../assets/images/kontakt-karte.png"
+						alt="Karte"
+						placeholder="blurred"
+						layout="fullWidth"
+					/>
+				}
 			/>
 		</div>
 	);
