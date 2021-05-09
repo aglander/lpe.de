@@ -70,7 +70,7 @@ const Contact = (props) => {
 				<Grid item xs={isMd ? 6 : 12} data-aos="fade-up">
 					<SectionHeader
 						title="Kontaktdaten"
-						subtitle="Our contact details. We carefully read and answer to all your questions."
+						subtitle="Zögern Sie bitte nicht mit Ihrer Kontaktaufnahme. Wir freuen uns darüber und kümmern uns gerne so schnell wie möglich um die Lösung Ihrer Anliegen:"
 						data-aos="fade-up"
 						align={isMd ? 'center' : 'left'}
 					/>
@@ -118,7 +118,7 @@ const Contact = (props) => {
 				<Grid item xs={6} data-aos="fade-up">
 					<SectionHeader
 						title="Videoberatung"
-						subtitle="Wie ist die eigentlich genau gedacht Lars?"
+						subtitle="Für unsere Videoberatung mit BRIDGE benötigen Sie keine Downloads oder Installationen. Ein PC, Laptop, Tablet (Handy ist in der Regel zu klein) mit Internetzugang und schon gehts los:"
 						data-aos="fade-up"
 						align={isMd ? 'center' : 'left'}
 					/>
