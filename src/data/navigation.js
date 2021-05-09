@@ -255,26 +255,26 @@ const navigation = [
 	},
 //---------------------------------------------------------
 {	
-	id: 'rund-um-konzepte',
+	id: 'rundumschutz-konzepte',
 	parent: 'versicherungen',
-	title: 'Rund um - Konzepte',
+	title: 'Rundumschutz - Konzepte',
 },
 	{
 		id: 'familienversicherungen',
-		parent: 'rund-um-konzepte',
-		title: 'Rund um Ihre Familie',
+		parent: 'rundumschutz-konzepte',
+		title: 'Rundumschutz: Familie',
 		url: '/weitere-gewerbeversicherungen',
 	},
 	{
-		id: 'bauversicherung',
-		parent: 'rund-um-konzepte',
-		title: 'Rund um Ihren Hausbau',
-		url: '/bauversicherungen',
+		id: 'hausbauversicherung',
+		parent: 'rundumschutz-konzepte',
+		title: 'Rundumschutz: Hausbau',
+		url: '/hausbauversicherungen',
 	},
 	{
 		id: 'gewerbeversicherungen',
-		parent: 'rund-um-konzepte',
-		title: 'Rund um Ihr Gewerbe',
+		parent: 'rundumschutz-konzepte',
+		title: 'Rundumschutz: Gewerbe',
 		url: '/gewerbeversicherungen',
 	},
 //---------------------------------------------------------	
