@@ -115,10 +115,7 @@ const Reviews = (props) => {
 							</Grid>
 							<Grid item xs={12} className="card-review__text-wrapper">
 								<Typography variant="h6" align={align} component="p">
-									Wir haben über Herrn Eckhardt unser Haus finanziert und auch
-									die vorhandenen Versicherungen an die neue Situation
-									angepasst. Die Vorsorgevollmacht und Patientenverfügung geben
-									uns ein gutes Gefühl.
+								Seit Jahren mein persönlicher Ansprechpartner Nr. 1 für Versicherungen und Altersvorsorge ... . Gerade bei meiner Existenzgründung hat Lars-Peter Eckhardt mir ein tolles Paket geschnürt. Als Alleinerziehende und Selbständige sind mir Sicherheit und Vorsorge wichtig.
 								</Typography>
 							</Grid>
 							<Grid item xs={12} className="card-review__lits-container">
@@ -144,7 +141,7 @@ const Reviews = (props) => {
 											<ListItemText
 												className="card-review__list-item-text"
 												primary="Steffi Richter"
-												secondary="Hausbau"
+												secondary="Altersvorsorge & Versicherungen"
 											/>
 										</ListItem>
 									</List>
@@ -247,11 +244,8 @@ const Reviews = (props) => {
 							</Grid>
 							<Grid item xs={12} className="card-review__text-wrapper">
 								<Typography variant="h6" align={align} component="p">
-									Individuelle, fachlich kompetente Beratung. Nimmt sich viel
-									Zeit und geht auf die speziellen Bedürfnisse ein. Endlich mal
-									ein Berater, der einen nicht nur mit Fachbegriffen
-									verunsichert. Fragen wurden ausführlich und verständlich
-									beantwortet. Gern wieder.
+								LPE hat uns zu unserer Traumimmobilie verholfen. Mit viel Geduld und einem Dauer positiven Denken auch wenn es mal schwer wurde.
+Es war eine ehrliche und vertrauensvolle Zusammenarbeit. Wir sind sehr froh, als Familie, so einen Versicherungs- und Finanzmakler an unserer Seite zu haben.
 								</Typography>
 							</Grid>
 							<Grid item xs={12} className="card-review__lits-container">
@@ -270,7 +264,7 @@ const Reviews = (props) => {
 											<ListItemText
 												className="card-review__list-item-text"
 												primary="Josefina Bils"
-												secondary="Hausbau"
+												secondary="Finanzierung & Absicherung"
 											/>
 										</ListItem>
 									</List>

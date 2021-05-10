@@ -94,7 +94,7 @@ const About = () => {
 									</ListItemAvatar>
 									<ListItemText
 										primary="Unabhängigkeit"
-										secondary="Als Versicherungsmakler nach §34d GewO bin ich sogar gesetzlich dazu verpflichtet, die Interessen unserer Kunden wahrzunehmen."
+										secondary="Als Versicherungsmakler nach §34d GewO bin ich sogar gesetzlich dazu verpflichtet, die Interessen unserer Kunden unabhängig wahrzunehmen."
 									/>
 								</ListItem>
 								<Divider variant="inset" component="li" />
