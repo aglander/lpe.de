@@ -11,10 +11,10 @@ const navigation = [
 		parent: 'altersvorsorge'
 	},
 		{
-			id: 'basisrente',
+			id: 'basis-rente',
 			parent: 'schicht-1-basisversorgung',
 			title: 'Basis-Rente | Rürup-Rente',
-			url: '/basisrente',
+			url: '/basis-rente',
 		},
 	{
 		id: 'schicht-2-zusatzversorgung',
@@ -22,10 +22,10 @@ const navigation = [
 		parent: 'altersvorsorge'
 	},
 		{
-			id: 'riesterrente',
+			id: 'riester-rente',
 			parent: 'schicht-2-zusatzversorgung',
 			title: 'Riester-Rente',
-			url: '/riesterrente',
+			url: '/riester-rente',
 		},
 		{
 			id: 'bav-betriebliche-altersvorsorge',
@@ -126,12 +126,6 @@ const navigation = [
 			parent: 'kranken-und-krankenzusatzversicherungen',
 			title: 'GKV - Gesetzliche Krankenkasse',
 			url: '/gkv-gesetzliche-krankenkasse'
-		},
-		{
-			id: 'pflegeversicherung',
-			parent: 'kranken-und-krankenzusatzversicherungen',
-			title: 'Pflegeversicherung',
-			url: '/pflegeversicherung'
 		},
 		{
 			id: 'krankentagegeld',
