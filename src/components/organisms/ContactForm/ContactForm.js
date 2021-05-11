@@ -13,20 +13,22 @@ const useStyles = makeStyles((theme) => ({
 
 const schema = {
 	fullname: {
-		presence: { allowEmpty: false, message: 'wird benötigt' },
+		presence: { allowEmpty: false, message: 'Bitte geben Sie Ihren vollständigen Namen an' },
 		length: {
 			maximum: 128,
 		},
 	},
 	email: {
-		presence: { allowEmpty: false, message: 'wird benötigt' },
-		email: true,
+		presence: { allowEmpty: false, message: 'Bitte geben Sie eine gültige E-Mail-Adresse an' },
+		email: {
+			message: 'Bitte geben Sie eine gültige E-Mail-Adresse an',
+		},
 		length: {
 			maximum: 300,
 		},
 	},
 	message: {
-		presence: { allowEmpty: false, message: 'wird benötigt' },
+		presence: { allowEmpty: false, message: 'Bitte tippen Sie Ihre Nachricht ein' },
 	},
 };
 
@@ -41,7 +43,7 @@ const ContactForm = () => {
 	});
 
 	React.useEffect(() => {
-		const errors = validate(formState.values, schema);
+		const errors = validate(formState.values, schema, { fullMessages: false });
 
 		setFormState((formState) => ({
 			...formState,
@@ -129,9 +131,7 @@ const ContactForm = () => {
 							size="medium"
 							name="phone"
 							fullWidth
-							helperText={
-								hasError('phone') ? formState.errors.phone[0] : null
-							}
+							helperText={hasError('phone') ? formState.errors.phone[0] : null}
 							onChange={handleChange}
 							type="text"
 							value={formState.values.phone || ''}
@@ -145,7 +145,9 @@ const ContactForm = () => {
 							size="medium"
 							name="address"
 							fullWidth
-							helperText={hasError('address') ? formState.errors.address[0] : null}
+							helperText={
+								hasError('address') ? formState.errors.address[0] : null
+							}
 							onChange={handleChange}
 							type="address"
 							value={formState.values.address || ''}

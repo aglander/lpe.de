@@ -9,8 +9,6 @@ nach launch
 - Silbentrennung auch in den normalen Texten?
 - Silbentrennungen in HERO
 
-- Emailaccounts bei welchem Provider?
-- kontaktformular lokalisierung fehlermeldungen (fullname wird benötigt)
 - openstreetmap lizenz erwähnen
 - contact panel optimieren
 
