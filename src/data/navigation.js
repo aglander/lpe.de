@@ -254,10 +254,10 @@ const navigation = [
 	title: 'Rundumschutz - Konzepte',
 },
 	{
-		id: 'familienversicherungen',
+		id: 'familienabsicherungen',
 		parent: 'rundumschutz-konzepte',
 		title: 'Rundumschutz: Familie',
-		url: '/weitere-gewerbeversicherungen',
+		url: '/familienabsicherungen',
 	},
 	{
 		id: 'hausbauversicherung',
@@ -270,30 +270,6 @@ const navigation = [
 		parent: 'rundumschutz-konzepte',
 		title: 'Rundumschutz: Gewerbe',
 		url: '/gewerbeversicherungen',
-	},
-//---------------------------------------------------------	
-	{
-	id: 'online-spezialvergleiche',
-	parent: 'versicherungen',
-	title: 'Online-Spezialvergleiche',
-},
-	{
-		id: 'technik-elektronikversicherungen',
-		parent: 'online-spezialvergleiche',
-		title: 'Technikversicherungen',
-		url: '/technik-elektronikversicherungen'
-	},
-	{
-		id: 'freizeitversicherungen',
-		parent: 'online-spezialvergleiche',
-		title: 'Freizeitversicherungen',
-		url: '/freizeitversicherungen'
-	},
-	{
-		id: 'veranstaltungsversicherungen',
-		parent: 'online-spezialvergleiche',
-		title: 'Veranstaltungsversicherungen',
-		url: '/veranstaltungsversicherungen'
 	},
 //#########################################################
 {
