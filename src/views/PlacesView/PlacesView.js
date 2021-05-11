@@ -5,8 +5,6 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import { Section, ContactPanel } from 'components/organisms';
 import { Grid, Typography, List, ListItem } from '@material-ui/core';
 
-const { places } = require('../../data/places');
-
 const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100%',
@@ -27,8 +25,13 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const SeoPages = (placeSlug) => {
-	const data = useStaticQuery(graphql`
+const PlacesView = (data) => {
+	const classes = useStyles();
+
+	const {
+		allMdx: { nodes: pages },
+		allPlacesJson: { nodes: places },
+	} = useStaticQuery(graphql`
 		{
 			allMdx(filter: { fileAbsolutePath: { regex: "./data/seo./" } }) {
 				nodes {
@@ -38,34 +41,48 @@ const SeoPages = (placeSlug) => {
 					}
 				}
 			}
+			allPlacesJson {
+				nodes {
+					short
+					slug
+					title
+					zipcode
+					long
+				}
+			}
 		}
 	`);
 
-	const seoPages = data.allMdx.nodes.map((node) => {
-		const {
-			frontmatter: { heroTitle, slug },
-		} = node;
-		const url = `/${slug}-${placeSlug.placeSlug}`;
-		return (
-			<ListItem>
-				<Typography component={Link} to={url} variant="body1" color="primary">
-					{heroTitle}
-				</Typography>
-			</ListItem>
-		);
-	});
-	return <List>{seoPages}</List>;
-};
-
-const PlacesView = (data) => {
-	const classes = useStyles();
 	const placesList = places.map((place) => {
+
+		const renderSeoPages = (placeSlug, pages) => {
+			const seoPages = pages.map((node) => {
+				const {
+					frontmatter: { heroTitle, slug },
+				} = node;
+				const url = `/${slug}-${placeSlug}`;
+				return (
+					<ListItem>
+						<Typography
+							component={Link}
+							to={url}
+							variant="body1"
+							color="primary"
+						>
+							{heroTitle}
+						</Typography>
+					</ListItem>
+				);
+			});
+			return <List>{seoPages}</List>;
+		};
+
 		return (
 			<div className={clsx(classes.places, classes.section)}>
 				<Typography component="h2" variant="h5" color="textPrimary">
 					{place.title}
 				</Typography>
-				<SeoPages placeSlug={place.slug} />
+				{renderSeoPages(place.slug, pages)}
 			</div>
 		);
 	});

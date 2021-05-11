@@ -1,5 +1,5 @@
 const path = require('path');
-const { places } = require('./src/data/places');
+const places = require('./src/data/places.json');
 
 // create pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
