@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
-import insurancesData from 'data/insurances';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const useStyles = makeStyles((theme) => ({
 	root: {},
@@ -20,6 +19,19 @@ const InsurancesBox = (props) => {
 	const { title, className, ...rest } = props;
 
 	const classes = useStyles();
+
+	const {
+		allInsurancesJson: { nodes: insurancesData },
+	} = useStaticQuery(graphql`
+		{
+			allInsurancesJson {
+				nodes {
+					title
+					data
+				}
+			}
+		}
+	`);
 
 	return (
 		<div className={clsx(classes.root, className)} data-aos="fade-up" {...rest}>
