@@ -4,7 +4,6 @@ nach launch
 
 - provenexpert google sterne -> geprüft werden
 
-- navigation und orte per graphql laden
 - Welche Snipped werden bei den beiden SEO-Seiten genau angezeigt?
 - Silbentrennung auch in den normalen Texten?
 - Silbentrennungen in HERO
