@@ -47,7 +47,7 @@ module.exports = {
 			options: {
 				headers: {
 					'/*': [
-						'X-Frame-Options = "SAMEORIGIN"',
+						'X-Frame-Options = sameorigin',
 					],
 				}, // option to add more headers. `Link` headers are transformed by the below criteria
 			},
