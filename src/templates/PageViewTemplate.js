@@ -18,6 +18,7 @@ export const query = graphql`
 				heroDescription
 				heroTitle
 				compare
+				compareLabel
 				slug
 				seoTitle
 				seoDescription

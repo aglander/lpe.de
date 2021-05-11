@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ContactAndCompareBox = (props) => {
-	const { slug, compare, className, ...rest } = props;
+	const { slug, compare, compareLabel, className, ...rest } = props;
 
 	const theme = useTheme();
 	const isMd = useMediaQuery(theme.breakpoints.up('md'), {
@@ -61,7 +61,7 @@ const ContactAndCompareBox = (props) => {
 				to={compare}
 				href={compare}
 			>
-				Selber vergleichen
+				{compareLabel ? compareLabel : 'Selber vergleichen'}
 			</Button>
 		);
 	}

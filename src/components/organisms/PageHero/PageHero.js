@@ -49,6 +49,7 @@ const PageHero = (props) => {
 		description,
 		slug,
 		compare,
+		compareLabel,
 		image,
 		...rest
 	} = props;
@@ -59,7 +60,7 @@ const PageHero = (props) => {
 	const isMd = useMediaQuery(theme.breakpoints.up('md'), {
 		defaultMatches: true,
 	});
-
+	
 	const ctas = [];
 
 	if (compare) {
@@ -74,7 +75,7 @@ const PageHero = (props) => {
 				to={compare}
 				href={compare}
 			>
-				Selber vergleichen
+				{compareLabel ? compareLabel : 'Selber vergleichen'}
 			</Button>
 		);
 	}

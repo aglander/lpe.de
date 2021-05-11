@@ -72,6 +72,7 @@ const PageView = (data) => {
 					heroDescription,
 					slug,
 					compare,
+					compareLabel,
 					heroImage,
 					seoTitle,
 					seoDescription,
@@ -111,7 +112,7 @@ const PageView = (data) => {
 		),
 		ul: (props) => <ul {...props} className={classes.list} />,
 		ContactAndCompareBox: (props) => (
-			<ContactAndCompareBox {...props} slug={slug} compare={compare} />
+			<ContactAndCompareBox {...props} slug={slug} compare={compare} compareLabel={compareLabel} />
 		),
 		ProvenExpert,
 		AwardBox,
@@ -137,6 +138,7 @@ const PageView = (data) => {
 				description={heroDescription}
 				slug={slug}
 				compare={compare}
+				compareLabel={compareLabel}
 				image={heroImage}
 			/>
 			<Section>

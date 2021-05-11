@@ -74,6 +74,7 @@ const SeoView = (data) => {
           heroDescription,
           slug,
           compare,
+          compareLabel,
           heroImage,
           seoTitle,
           seoDescription,
@@ -132,7 +133,7 @@ const SeoView = (data) => {
     ),
     ul: (props) => <ul {...props} className={classes.list} />,
     ContactAndCompareBox: (props) => (
-      <ContactAndCompareBox {...props} slug={slug} compare={compare} />
+      <ContactAndCompareBox {...props} slug={slug} compare={compare} compareLabel={compareLabel} />
     ),
     ProvenExpert: (props) => (
       <ProvenExpert {...props} wide={true} />
@@ -161,6 +162,7 @@ const SeoView = (data) => {
         description={heroDescription}
         slug={slug}
         compare={compare}
+        compareLabel={compareLabel}
         image={heroImage}
       />
       <Section>
