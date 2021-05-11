@@ -8,6 +8,7 @@ module.exports = {
 	},
 	plugins: [
 		'gatsby-plugin-mdx',
+		`gatsby-transformer-json`,
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {

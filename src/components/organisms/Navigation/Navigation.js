@@ -11,9 +11,7 @@ import {
 } from '@material-ui/core';
 import clsx from 'clsx';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Link } from 'gatsby';
-
-import navigationData from 'data/navigation';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
 const useStyles = makeStyles((theme) => ({
 	navigationContainer: {
@@ -125,11 +123,24 @@ const Navigation = ({ id, isHorizontal }) => {
 		setOpenedPopoverId(null);
 	};
 
-	const navigation = navigationData;
+	const {
+		allNavigationJson: { nodes: navigation },
+	} = useStaticQuery(graphql`
+		{
+			allNavigationJson {
+				nodes {
+					id
+					title
+					url
+					parentId
+				}
+			}
+		}
+	`);
 
 	const renderSubMenu = (id) => {
 		const subMenu = navigation
-			.filter((navItem) => navItem.parent === id)
+			.filter((navItem) => navItem.parentId === id)
 			.map((navItem) => {
 				if (navItem.url) {
 					return (
@@ -171,7 +182,7 @@ const Navigation = ({ id, isHorizontal }) => {
 
 	const renderMenu = (id) => {
 		return navigation
-			.filter((navItem) => id ? navItem.parent === id : !navItem.parent)
+			.filter((navItem) => (id ? navItem.parentId === id : !navItem.parentId))
 			.map((navItem) => {
 				if (!navItem.url) {
 					return (
