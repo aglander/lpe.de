@@ -42,7 +42,16 @@ module.exports = {
 				environments: ['production', 'development'],
 			},
 		},
-		`gatsby-plugin-netlify`,
+		{
+			resolve: `gatsby-plugin-netlify`,
+			options: {
+				headers: {
+					'/*': [
+						'X-Frame-Options = "SAMEORIGIN"',
+					],
+				}, // option to add more headers. `Link` headers are transformed by the below criteria
+			},
+		},
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
