@@ -8,7 +8,6 @@ nach launch
 - Welche Snipped werden bei den beiden SEO-Seiten genau angezeigt?
 - Silbentrennung auch in den normalen Texten?
 - Silbentrennungen in HERO
-- Verlinkungen und Schriftarten / Formatierung (fett/kursiv) in Texten und Überschriften (siehe Beispiel HAUSRAT [unten: Gebäude])
 
 - Emailaccounts bei welchem Provider?
 - kontaktformular lokalisierung fehlermeldungen (fullname wird benötigt)
