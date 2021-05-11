@@ -364,10 +364,16 @@ const navigation = [
 			url: '/girokonto-kreditkarte'
 		},
 		{
-			id: 'tagesgeld-festgeld',
+			id: 'tagesgeld',
 			parent: 'konten-geldanlagen',
-			title: 'Tagesgeld & Festgeld',
-			url: '/tagesgeld-festgeld'
+			title: 'WeltSparen: Tagesgeld',
+			url: '/tagesgeld'
+		},
+		{
+			id: 'festgeld',
+			parent: 'konten-geldanlagen',
+			title: 'WeltSparen: Festgeld',
+			url: '/festgeld'
 		},
 		{
 			id: 'investmentanlagen-vermoegensverwaltung',
@@ -381,16 +387,16 @@ const navigation = [
 		title: 'Haushaltskosten Senken',
 	},	
 		{
-			id: 'stromvergleich',
+			id: 'stromvkosten',
 			parent: 'haushaltskosten-senken',
 			title: 'Stromkosten senken',
-			url: '/stromvergleich'
+			url: '/stromkosten'
 		},
 		{
-			id: 'gasvergleich',
+			id: 'gaskosten',
 			parent: 'haushaltskosten-senken',
 			title: 'Gaskosten senken',
-			url: '/gasvergleich'
+			url: '/gaskosten'
 		},							
 //#########################################################
 {
