@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import 'react-lazy-load-image-component/src/effects/opacity.css';
+//import 'react-lazy-load-image-component/src/effects/opacity.css';
 //import 'leaflet/dist/leaflet.css';
 import 'assets/css/index.css';
 
