@@ -32,8 +32,8 @@ const ProvenExpertStars = () => {
 		}
 	`);
 
-	provenExpertData.aggregateRating.ratingValue = dynamicValues.ratingValue;
-	provenExpertData.aggregateRating.ratingCount = dynamicValues.reviewCount;
+	provenExpertData.ratingValue = dynamicValues.ratingValue;
+	provenExpertData.ratingCount = dynamicValues.reviewCount;
 
 	return (
 		<script
