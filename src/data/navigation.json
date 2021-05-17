@@ -43,7 +43,7 @@
 		"url": "/private-rentenversicherung"
 	},
 	{
-		"id": "investmentanlagen-vermoegensverwaltung",
+		"id": "investmentanlagen-altersvorsorge",
 		"parentId": "schicht-3-private-altersvorsorge",
 		"title": "Investment | Vermögensverwaltung",
 		"url": "/investmentanlagen-vermoegensverwaltung"
