@@ -10,9 +10,9 @@ import {
 	ListItem,
 } from '@material-ui/core';
 import { Link } from 'gatsby';
-import logo from 'assets/images/LPE_Logo_single_weiss.svg';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import { Image, Icon } from 'components/atoms';
+import { Icon } from 'components/atoms';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -121,11 +121,13 @@ const Footer = (props) => {
 							<ListItem disableGutters className={classes.logoContainerItem}>
 								<div className={classes.logoContainer}>
 									<a href="/" title="LPE">
-										<Image
-											className={classes.logoImage}
-											src={logo}
-											alt="LPE.de"
-											lazy={false}
+										<StaticImage
+											src="../../../../assets/images/LPE_Logo_single_weiss.png"
+											alt="LPE Logo"
+											placeholder="tracedSVG"
+											layout="fixed"
+											width={88}
+											height={70}
 										/>
 									</a>
 								</div>
