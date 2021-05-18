@@ -35,9 +35,7 @@ const useStyles = makeStyles(theme => ({
     flex: '0 0 50%',
     position: 'relative',
     [theme.breakpoints.down('sm')]: {
-      maxWidth: '100%',
-      flex: '0 0 100%',
-      height: '300px',
+      display: 'none'
     },
   },
   heroCover: {
