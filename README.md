@@ -12,7 +12,12 @@ nach launch
 - contact panel optimieren
 
 
-- place2/3 logik für seo seiten
+- place-logik für seo seiten
+    -   Place       - in den Texten     (nur Ort)
+    -   Place_long  - z.B. für Hero     (PLZ+Ort+bei Berlin)
+    -   Place_2     - z.B. für H1       (PLZ+Ort)
+    -   Place_3     - Stadt-/Ortsteile  (Aufzählung)
+    -   Place_4     - Ortslagen         (Aufzählung)
 - vimeo
 - downloads linkfarbe
 - google analytics -> durchlesen
