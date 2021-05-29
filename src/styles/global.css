@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .provenexpert {
+    width: 1000px;
+    height: 234px;
+  }
+  .whofinance {
+    height: 71px;
+    width: 100%;
+    border: 0;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+  }
+
+  .hyphens {
+    hyphens: auto;
+  }
+
+  .no-hyphens {
+    hyphens: none;
+  }
+
+  .compare {
+    height: 1100px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-image {
+    clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
+    shape-outside: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
+    display: grid;
+    justify-content: flex-end;
+  }
+
+  .hero-image > .gatsby-image-wrapper {
+    width: 1000px;
+  }
+}
