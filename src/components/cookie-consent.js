@@ -33,7 +33,7 @@ const CookieConsent = () => {
     <div
       class={
         (open ? "block" : "hidden") +
-        " fixed inset-0 bg-footer bg-opacity-75 z-50 overflow-y-auto"
+        " fixed inset-0 bg-footer bg-opacity-75 z-50 overflow-hidden"
       }
     >
       {open && <Helmet htmlAttributes={{ class: "overflow-hidden" }}></Helmet>}
