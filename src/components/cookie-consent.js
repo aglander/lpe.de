@@ -30,6 +30,7 @@ const CookieConsent = () => {
   }
 
   return (
+    /*
     <div
       class={
         (open ? "block" : "hidden") +
@@ -55,7 +56,8 @@ const CookieConsent = () => {
           </div>
         </Box>
       </div>
-    </div>
+    </div>*/
+    <></>
   )
 }
 
