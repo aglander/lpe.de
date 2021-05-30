@@ -30,14 +30,6 @@ const CookieConsent = () => {
   }
 
   return (
-    <div>
-      <ul>
-        <li>{Cookies.get("gatsby-gdpr-google-analytics")}</li>
-        <li>{JSON.stringify(Cookies.get())}</li>
-        <li>{open.toString()}</li>
-      </ul>
-    </div>
-    /*
     <div
       class={
         (open ? "block" : "hidden") +
@@ -57,13 +49,16 @@ const CookieConsent = () => {
               Ablehnen
             </Button>
             {"   "}
-            <Button onClick={accept}>
-              Akzeptieren
-            </Button>
+            <Button onClick={accept}>Akzeptieren</Button>
+            <ul>
+              <li>{Cookies.get("gatsby-gdpr-google-analytics")}</li>
+              <li>{JSON.stringify(Cookies.get())}</li>
+              <li>{open.toString()}</li>
+            </ul>
           </div>
         </Box>
       </div>
-    </div>*/
+    </div>
   )
 }
 
