@@ -23,7 +23,7 @@ const ContactForm = () => {
   
 
   return (
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-5xl mx-auto text-center">
       <SectionHeader
         title="Kontakt"
         description="Wir freuen uns auf Ihre Nachricht und melden uns umgehend bei Ihnen zurück."

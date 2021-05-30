@@ -23,7 +23,7 @@ const KontaktPage = ({ location }) => {
           />
         }
       >
-        <div class="mt-10">
+        <div class="mt-10 mb-5 lg:mb-0">
           {showSuccessScreen ? (
             <SectionHeader
               preTitle={
