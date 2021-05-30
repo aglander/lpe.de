@@ -36,7 +36,7 @@ const CookieConsent = () => {
         " fixed inset-0 bg-footer bg-opacity-75 z-50 overflow-hidden"
       }
     >
-      {open && <Helmet htmlAttributes={{ class: "overflow-hidden" }}></Helmet>}
+      
       <div class="absolute bottom-0 left-0 right-0 -mb-5 lg:mb-0 lg:inset-80 lg:max-w-3xl lg:mx-auto">
         <Box title="Wir benötigen Ihre Zustimmung">
           Diese Website benutzt Google Analytics, um die Erfahrung von Benutzern
