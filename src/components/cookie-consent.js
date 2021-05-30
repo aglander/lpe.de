@@ -14,7 +14,7 @@ const CookieConsent = () => {
     if (doIt) {
       Cookies.set("gatsby-gdpr-google-analytics", "true", { expires: 365 })
     } else {
-      Cookies.set("gatsby-gdpr-google-analytics", "false", { expires: 365 })
+      Cookies.set("gatsby-gdpr-google-analytics", "false", { expires: 7 })
     }
   }
 
@@ -55,12 +55,6 @@ const CookieConsent = () => {
             </Button>
             {"   "}
             <Button onClick={accept}>Akzeptieren</Button>
-            <ul>
-              <li>{count}</li>
-              <li>{open}</li>
-              <li>{Cookies.get("gatsby-gdpr-google-analytics")}</li>
-              <li>{JSON.stringify(Cookies.get())}</li>
-            </ul>
           </div>
         </Box>
       </div>
