@@ -29,7 +29,14 @@ const CookieConsent = () => {
     setOpen(false)
   }
 
-  return (/*
+  return (
+    <div>
+      <ul>
+        <li>{Cookies.get("gatsby-gdpr-google-analytics").toString()}</li>
+        <li>{JSON.stringify(Cookies.get())}</li>
+      </ul>
+    </div>
+    /*
     <div
       class={
         (open ? "block" : "hidden") +
@@ -56,7 +63,6 @@ const CookieConsent = () => {
         </Box>
       </div>
     </div>*/
-    <></>
   )
 }
 
