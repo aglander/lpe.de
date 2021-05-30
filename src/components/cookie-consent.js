@@ -6,6 +6,7 @@ import Cookies from "js-cookie"
 
 const CookieConsent = () => {
   const [open, setOpen] = useState(!Cookies.get("gatsby-gdpr-google-analytics"))
+  const [count, setCount] = useState(0)
 
   const enableTracking = doIt => {
     if (doIt) {
@@ -16,11 +17,13 @@ const CookieConsent = () => {
   }
 
   const accept = () => {
+    setCount(count + 1)
     enableTracking(true)
     handleClose()
   }
 
   const deny = () => {
+    setCount(count + 1)
     enableTracking(false)
     handleClose()
   }
@@ -36,7 +39,7 @@ const CookieConsent = () => {
         " fixed inset-0 bg-footer bg-opacity-75 z-50 overflow-hidden"
       }
     >
-      
+      {open && <Helmet htmlAttributes={{ class: "overflow-hidden" }}></Helmet>}
       <div class="absolute bottom-0 left-0 right-0 -mb-5 lg:mb-0 lg:inset-80 lg:max-w-3xl lg:mx-auto">
         <Box title="Wir benötigen Ihre Zustimmung">
           Diese Website benutzt Google Analytics, um die Erfahrung von Benutzern
@@ -51,6 +54,7 @@ const CookieConsent = () => {
             {"   "}
             <Button onClick={accept}>Akzeptieren</Button>
             <ul>
+              <li>{count}</li>
               <li>{Cookies.get("gatsby-gdpr-google-analytics")}</li>
               <li>{JSON.stringify(Cookies.get())}</li>
               <li>{open.toString()}</li>
