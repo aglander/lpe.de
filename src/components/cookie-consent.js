@@ -45,13 +45,13 @@ const CookieConsent = () => {
           Cookie gesetzt, dass die Erfassung Ihrer Daten bei Besuchen dieser
           Website verhindert.
           <div class="mt-5">
-            <button onClick={deny} outline>
+            <div onClick={deny} outline role="button">
               Ablehnen
-            </button>
+            </div>
             {"   "}
-            <button onClick={accept}>
+            <div onClick={accept} role="button">
               Akzeptieren
-            </button>
+            </div>
           </div>
         </Box>
       </div>
