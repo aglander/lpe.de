@@ -23,17 +23,19 @@ const KontaktPage = ({ location }) => {
           />
         }
       >
-        {showSuccessScreen ? (
-          <>
+        <div class="mt-10">
+          {showSuccessScreen ? (
             <SectionHeader
-            preTitle={<i class="fa fa-check-circle text-green text-8xl mt-5"></i>}
+              preTitle={
+                <i class="fa fa-check-circle text-green text-8xl mt-5"></i>
+              }
               title="Erfolgreich abgeschickt"
               description="Vielen Dank für Ihre Nachricht. Wir werden Ihre Anfrage so schnell wie möglich bearbeiten!"
             />
-          </>
-        ) : (
-          <div class="mt-10"><ContactForm /></div>
-        )}
+          ) : (
+            <ContactForm />
+          )}
+        </div>
       </Hero>
       <Divider />
       <Section>

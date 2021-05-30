@@ -30,7 +30,6 @@ const CookieConsent = () => {
   }
 
   return (
-    /*
     <div
       class={
         (open ? "block" : "hidden") +
@@ -46,18 +45,17 @@ const CookieConsent = () => {
           Cookie gesetzt, dass die Erfassung Ihrer Daten bei Besuchen dieser
           Website verhindert.
           <div class="mt-5">
-            <Button onClick={deny} outline>
+            <button onClick={deny} outline>
               Ablehnen
-            </Button>
+            </button>
             {"   "}
-            <Button onClick={accept} id="cookie.accept">
+            <button onClick={accept}>
               Akzeptieren
-            </Button>
+            </button>
           </div>
         </Box>
       </div>
-    </div>*/
-    <></>
+    </div>
   )
 }
 
