@@ -32,8 +32,9 @@ const CookieConsent = () => {
   return (
     <div>
       <ul>
-        <li>{Cookies.get("gatsby-gdpr-google-analytics").toString()}</li>
+        <li>{Cookies.get("gatsby-gdpr-google-analytics")}</li>
         <li>{JSON.stringify(Cookies.get())}</li>
+        <li>{open.toString()}</li>
       </ul>
     </div>
     /*
