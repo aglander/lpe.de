@@ -79,9 +79,9 @@ const IndexPage = () => (
             begleiten. Daher sind unsere Beratungen langfristig und unsere
             Lösungen individuell an alle Ihre Lebensphasen angelehnt. Wir
             verbinden dabei im Optimalfall die folgenden 5 Bereiche in unserem{" "}
-            <em>
+            <strong>
               „Liebe-Familie-Rezept“ mit einem funktionierenden Notfallplan!
-            </em>
+            </strong>
           </>
         }
       />
