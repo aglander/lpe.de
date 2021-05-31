@@ -74,7 +74,7 @@ const Reviews = () => {
           }
           topic="Versicherungen & Finanzierung"
         >
-          Seit 2 Jahrzehnten vertraue ich Lars-Peter Eckhardt wenn es um
+          Seit zwei Jahrzehnten vertraue ich Lars-Peter Eckhardt wenn es um
           Versicherungen oder Finanzierungen geht. Er geht sehr gut auf meine
           Bedürfnisse ein und findet immer die richtige Lösung. Ich kann ihn
           uneingeschränkt und jederzeit weiterempfehlen.

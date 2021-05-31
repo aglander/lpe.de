@@ -69,10 +69,10 @@ const IndexPage = () => (
       <SectionHeader
         title={
           <>
-            Sie haben Fragen und suchen Antworten?{" "}
-            <span class="text-green">Wir bieten Ihnen Lösungen!</span>
+            Das Wichtigste geregelt haben: Das „Liebe-Familie-Rezept“{" "}
+            <span class="text-green"> mit einem funktionierendem Notfallplan!</span>
           </>
-        }
+          }
         description={
           <>
             Wenn Sie es erlauben, möchten wir Sie am liebsten möglichst lange
@@ -175,9 +175,9 @@ const IndexPage = () => (
               wahrzunehmen.
             </Advantage>
             <Advantage title="Kompetenz">
-              Die Ausbildung als Fachwirt für Finanzberatung (IHK),
-              Baufinanzierungsberater (IHK) und Generationenberater (IHK)
-              gewährleistet eine ganzheitliche Beratung.
+              Meine IHK-Ausbildungen zum Fachwirt für Finanzberatung,
+              Baufinanzierungsberater und Generationenberater
+              gewährleistet die ganzheitliche Beratung.
             </Advantage>
             <Advantage title="Erfahrung">
               Nach ersten Erfahrungen bei einer Versicherungsgesellschaft, stieg
@@ -205,8 +205,8 @@ const IndexPage = () => (
               sichert Ihnen ein breites Angebot!
             </Advantage>
             <Advantage title="Ganzheitlich">
-              Eine vernünftige Analyse Ihrer aktuellen Lebenssituation, die
-              Erfassung von Zielen und Wünschen ermöglicht uns die individuelle
+              Eine saubere Analyse Ihrer aktuellen Lebenssituation, die
+              Erfassung von Zielen / Wünschen ermöglicht uns die individuelle
               Gestaltung Ihrer Lösungen!
             </Advantage>
             <Advantage title="Die „Extrameile“">
