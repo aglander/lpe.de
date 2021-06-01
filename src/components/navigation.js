@@ -163,7 +163,7 @@ const HorizontalNavigation = ({ data }) => {
   return (
     <ul class="flex">
       {navItems}
-      <li class="ml-4">
+      <li class="ml-4 -mb-3">
         <Button url="/kontakt">Kontakt</Button>
       </li>
     </ul>
