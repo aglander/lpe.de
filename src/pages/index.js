@@ -70,7 +70,7 @@ const IndexPage = () => (
         title={
           <>
             Das Wichtigste geregelt haben: Das „Liebe-Familie-Rezept“{" "}
-            <span class="text-green"> mit einem funktionierendem Notfallplan!</span>
+            <span class="text-green"> mit einem funktionierenden Notfallplan!</span>
           </>
           }
         description={
