@@ -201,19 +201,19 @@
 	{
 		"id": "kfz-versicherungen",
 		"parentId": "fahrzeugversicherungen",
-		"title": "KFZ-Versicherungen",
+		"title": "Auto - Motorrad - LKW",
 		"url": "/kfz-versicherungen"
 	},
 	{
 		"id": "moped-e-scooter-kennzeichen",
 		"parentId": "fahrzeugversicherungen",
-		"title": "Moped- & E-Scooter",
+		"title": "Moped - Roller - E-Scooter",
 		"url": "/moped-e-scooter-kennzeichen"
 	},
 	{
 		"id": "fahrradversicherung",
 		"parentId": "fahrzeugversicherungen",
-		"title": "Fahrradversicherung",
+		"title": "E-Bike - Fahrrad - Pedelec",
 		"url": "/fahrradversicherung"
 	},
 	{
