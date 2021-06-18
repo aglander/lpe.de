@@ -41,7 +41,7 @@ const DropDown = ({ id, data, open }) => {
     <div
       class={
         (open ? "block" : "hidden") +
-        " absolute w-2/3 bg-white p-10 shadow-2xl top-16 left-1/2 transform -translate-x-1/2"
+        " absolute w-2/3 max-w-5xl bg-white p-10 shadow-2xl top-16 left-1/2 transform -translate-x-1/2"
       }
     >
       <ul class="flex flex-wrap">
