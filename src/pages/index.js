@@ -120,11 +120,9 @@ const IndexPage = () => (
           behalten jederzeit die Kontrolle.
         </Solution>
         <Solution link="/immobilien" title="Immobilien" icon="fas fa-home">
-          Immobilien als Kapitalanlage oder der Wunsch Ihre Immobilie zu
-          verkaufen! Wir stellen Ihnen ein großes Portfolio attraktiver
+          Immobilien als Kapitalanlage! Wir stellen Ihnen ein großes Portfolio attraktiver
           Immobilienangebote an verschiedenen Standorten in Deutschland zur
-          Verfügung. Sie wollen oder müssen Ihre Immobilie verkaufen? Wir
-          stellen den Kontakt zu ausgewählten Interessenten her!
+          Verfügung. Sie wollen oder müssen Ihre Immobilie verkaufen? Gerne helfen Ihnen kompetente Immobilienmakler aus unserem Netzwerk beim optimalen Verkauf!
         </Solution>
         <Solution
           link="/liebe-familie"
