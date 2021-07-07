@@ -51,5 +51,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-postcss",
+    `gatsby-plugin-advanced-sitemap`,
   ],
 }
