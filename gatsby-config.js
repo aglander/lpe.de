@@ -3,6 +3,7 @@ module.exports = {
     title: `Lars-Peter Eckhardt | LPE Versicherungsmakler & Finanzmakler`,
     description: `5★ Top-Empfehlung: Lars-Peter Eckhardt | LPE Versicherungsmakler & Finanzmakler ► Altersvorsorge ✔ | Versicherungen ✔ | Finanzierungen ✔ | Immobilien ✔ | ★★★★★ |`,
     url: 'https://www.lpe.de',
+    siteUrl: 'https://www.lpe.de', // sitemap plugin needs this field
     image: '/src/images/icon.png'
   },
   plugins: [
