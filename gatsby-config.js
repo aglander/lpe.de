@@ -53,5 +53,11 @@ module.exports = {
     },
     "gatsby-plugin-postcss",
     `gatsby-plugin-advanced-sitemap`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.lpe.de`,
+      },
+    },
   ],
 }
