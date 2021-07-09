@@ -4,7 +4,8 @@
 		"title": "12589 Berlin-Rahnsdorf",
 		"zipcode": 12589,
 		"short": "Rahnsdorf",
-		"long": "Berlin-Rahnsdorf"
+		"long": "Berlin-Rahnsdorf",
+		"heroImage": "assets/standard.jpg"
 	},
 	{
 		"slug": "12589-berlin-wilhelmshagen",

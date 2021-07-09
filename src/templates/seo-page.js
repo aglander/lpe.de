@@ -22,7 +22,7 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export const query = graphql`
-  query GetSeoPage($slug: String, $image: String) {
+  query GetSeoPage($slug: String) {
     mdx(slug: { eq: $slug }) {
       id
       frontmatter {
@@ -42,11 +42,6 @@ export const query = graphql`
       }
       body
     }
-    file(relativePath: { eq: $image }) {
-      childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-      }
-    }
     allPlacesJson {
       nodes {
         short
@@ -54,6 +49,11 @@ export const query = graphql`
         title
         zipcode
         long
+        heroImage {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+          }
+        }
       }
     }
   }
@@ -79,7 +79,6 @@ const SeoPage = ({ data, pageContext }) => {
       },
       body,
     },
-    file,
     allPlacesJson: { nodes: places },
   } = data
 
@@ -88,8 +87,8 @@ const SeoPage = ({ data, pageContext }) => {
   const placeData = places.filter(placeItem => placeItem.slug === place)[0]
   if (placeData.title) heroClaim = placeData.title
 
-  if (placeData.image && file) {
-    heroImage = file.childImageSharp
+  if (placeData.heroImage) {
+    heroImage = placeData.heroImage
   }
 
   if (seoDescription || seoTitle) {
