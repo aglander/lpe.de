@@ -75,14 +75,16 @@
 		"title": "15345 Lichtenow",
 		"zipcode": 15345,
 		"short": "Lichtenow",
-		"long": "Lichtenow"
+		"long": "Lichtenow",
+		"heroImage": "assets/15345_Lichtenow_2_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15345-rehfelde",
 		"title": "15345 Rehfelde",
 		"zipcode": 15345,
 		"short": "Rehfelde",
-		"long": "Rehfelde"
+		"long": "Rehfelde",
+		"heroImage": "assets/15345_Rehfelde_Bahnhof_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15345-wegendorf",
@@ -96,14 +98,16 @@
 		"title": "15345 Werder",
 		"zipcode": 15345,
 		"short": "Werder",
-		"long": "Werder"
+		"long": "Werder",
+		"heroImage": "assets/15345_Werder_Kirche_2_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15345-zinndorf",
 		"title": "15345 Zinndorf",
 		"zipcode": 15345,
 		"short": "Zinndorf",
-		"long": "Zinndorf"
+		"long": "Zinndorf",
+		"heroImage": "assets/15345_Zinndorf_Kirche_2_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15366-birkenstein",
@@ -187,14 +191,16 @@
 		"title": "15378 Hennickendorf",
 		"zipcode": 15378,
 		"short": "Hennickendorf",
-		"long": "Hennickendorf"
+		"long": "Hennickendorf",
+		"heroImage": "assets/15378_Hennickendorf_Kirche_2_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15378-herzfelde",
 		"title": "15378 Herzfelde",
 		"zipcode": 15378,
 		"short": "Herzfelde",
-		"long": "Herzfelde"
+		"long": "Herzfelde",
+		"heroImage": "assets/15378_Herzfelde_Kirche_2_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15517-fuerstenwalde",
@@ -222,7 +228,8 @@
 		"title": "15537 Alt Buchhorst",
 		"zipcode": 15537,
 		"short": "Alt Buchhorst",
-		"long": "Alt Buchhorst"
+		"long": "Alt Buchhorst",
+		"heroImage": "assets/15537_Alt_Buchhorst_3_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15537-burig",
@@ -236,7 +243,8 @@
 		"title": "15537 Erkner",
 		"zipcode": 15537,
 		"short": "Erkner",
-		"long": "Erkner"
+		"long": "Erkner",
+		"heroImage": "assets/15537_Erkner_Rathaus_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15537-fangschleuse",
@@ -264,7 +272,8 @@
 		"title": "15537 Grünheide (Mark)",
 		"zipcode": 15537,
 		"short": "Grünheide",
-		"long": "Grünheide (Mark)"
+		"long": "Grünheide (Mark)",
+		"heroImage": "assets/15537_Grünheide_Rathaus_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15537-hangelsberg",
@@ -292,7 +301,8 @@
 		"title": "15537 Kienbaum",
 		"zipcode": 15537,
 		"short": "Kienbaum",
-		"long": "Kienbaum"
+		"long": "Kienbaum",
+		"heroImage": "assets/15537_Kienbaum_Bürgerhaus_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15537-moellensee",
@@ -335,14 +345,16 @@
 		"zipcode": 15566,
 		"short": "Schöneiche",
 		"long": "Schöneiche bei Berlin",
-		"image": "assets/schoeneiche.jpg"
+		"image": "assets/schoeneiche.jpg",
+		"heroImage": "assets/15566_Schöneiche_Rathaus_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15569-woltersdorf",
 		"title": "15569 Woltersdorf",
 		"zipcode": 15569,
 		"short": "Woltersdorf",
-		"long": "Woltersdorf"
+		"long": "Woltersdorf",
+		"heroImage": "assets/15569_Woltersdorf_Rathaus_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15711-diepensee",
