@@ -337,7 +337,8 @@
 		"title": "15562 Rüdersdorf bei Berlin",
 		"zipcode": 15562,
 		"short": "Rüdersdorf",
-		"long": "Rüdersdorf bei Berlin"
+		"long": "Rüdersdorf bei Berlin"		,
+		"heroImage": "assets/15562_Rüdersdorf_Rathaus_2_LPE_Lars-Peter_Eckhardt.jpg"
 	},
 	{
 		"slug": "15566-schoeneiche-bei-berlin",
