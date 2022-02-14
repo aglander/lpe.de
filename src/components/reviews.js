@@ -29,8 +29,7 @@ const Reviews = () => {
         }
         title={
           <>
-            <span class="text-green">Wir beraten besser</span> – finden unsere
-            Kunden
+            <span class="text-green">Wir beraten Sie sehr gut, sagen unsere Kunden!</span>
           </>
         }
         description="Wir haben auf allen gängigen Bewertungsportalen ausnahmslos positive
