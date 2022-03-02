@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 
 const Mdx = ({ components, children }) => {
   const mdxComponents = {
-    hr: () => <Divider class="mb-7" />,
+    hr: () => <Divider />,
     p: props => <p class="text-base lg:text-lg mb-6 lg:leading-7" {...props} />,
     h1: props => (
       <h2 class="text-3xl lg:text-4xl mb-10 hyphens" {...props}>
