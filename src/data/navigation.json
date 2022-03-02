@@ -1,376 +1,376 @@
 [
 	{
-		"id": "altersvorsorge",
+		"navId": "altersvorsorge",
 		"title": "Altersvorsorge"
 	},
 	{
-		"id": "schicht-1-basisversorgung",
+		"navId": "schicht-1-basisversorgung",
 		"title": "1. Schicht: Basisversorgung",
 		"parentId": "altersvorsorge"
 	},
 	{
-		"id": "basis-rente",
+		"navId": "basis-rente",
 		"parentId": "schicht-1-basisversorgung",
 		"title": "Basis-Rente | Rürup-Rente",
 		"url": "/basis-rente"
 	},
 	{
-		"id": "schicht-2-zusatzversorgung",
+		"navId": "schicht-2-zusatzversorgung",
 		"title": "2. Schicht: Zusatzversorgung",
 		"parentId": "altersvorsorge"
 	},
 	{
-		"id": "riester-rente",
+		"navId": "riester-rente",
 		"parentId": "schicht-2-zusatzversorgung",
 		"title": "Riester-Rente",
 		"url": "/riester-rente"
 	},
 	{
-		"id": "bav-betriebliche-altersvorsorge",
+		"navId": "bav-betriebliche-altersvorsorge",
 		"parentId": "schicht-2-zusatzversorgung",
 		"title": "bAV - betriebliche Altersvorsorge",
 		"url": "/bav-betriebliche-altersvorsorge"
 	},
 	{
-		"id": "schicht-3-private-altersvorsorge",
+		"navId": "schicht-3-private-altersvorsorge",
 		"title": "3. Schicht: Private Altersvorsorge",
 		"parentId": "altersvorsorge"
 	},
 	{
-		"id": "private-rentenversicherung",
+		"navId": "private-rentenversicherung",
 		"parentId": "schicht-3-private-altersvorsorge",
 		"title": "Rentenversicherung",
 		"url": "/private-rentenversicherung"
 	},
 	{
-		"id": "investmentanlagen-altersvorsorge",
+		"navId": "investmentanlagen-altersvorsorge",
 		"parentId": "schicht-3-private-altersvorsorge",
 		"title": "Investment | Vermögensverwaltung",
 		"url": "/investmentanlagen-vermoegensverwaltung"
 	},
 	{
-		"id": "vermoegensverwaltung",
+		"navId": "vermoegensverwaltung",
 		"parentId": "altersvorsorge-sub",
 		"title": "Vermögensverwaltung",
 		"url": "/vermoegensverwaltung"
 	},
 	{
-		"id": "versicherungen",
+		"navId": "versicherungen",
 		"title": "Versicherungen"
 	},
 	{
-		"id": "risikovorsorge-arbeitskraftabsicherung",
+		"navId": "risikovorsorge-arbeitskraftabsicherung",
 		"parentId": "versicherungen",
 		"title": "Risikovorsorge & Arbeitskraftabsicherung"
 	},
 	{
-		"id": "risikolebensversicherung",
+		"navId": "risikolebensversicherung",
 		"parentId": "risikovorsorge-arbeitskraftabsicherung",
 		"title": "Risikolebensversicherung",
 		"url": "/risikolebensversicherung"
 	},
 	{
-		"id": "sterbegeldversicherung",
+		"navId": "sterbegeldversicherung",
 		"parentId": "risikovorsorge-arbeitskraftabsicherung",
 		"title": "Sterbegeldversicherung",
 		"url": "/sterbegeldversicherung"
 	},
 	{
-		"id": "berufsunfaehigkeitsversicherung",
+		"navId": "berufsunfaehigkeitsversicherung",
 		"parentId": "risikovorsorge-arbeitskraftabsicherung",
 		"title": "Berufsunfähigkeitsversicherung",
 		"url": "/berufsunfaehigkeitsversicherung"
 	},
 	{
-		"id": "unfallversicherung",
+		"navId": "unfallversicherung",
 		"parentId": "risikovorsorge-arbeitskraftabsicherung",
 		"title": "Unfallversicherung",
 		"url": "/unfallversicherung"
 	},
 	{
-		"id": "grundfaehigkeitsabsicherung",
+		"navId": "grundfaehigkeitsabsicherung",
 		"parentId": "risikovorsorge-arbeitskraftabsicherung",
 		"title": "Grundfähigkeitsabsicherung",
 		"url": "/grundfaehigkeitsabsicherung"
 	},
 	{
-		"id": "schwere-krankheitenversicherung",
+		"navId": "schwere-krankheitenversicherung",
 		"parentId": "risikovorsorge-arbeitskraftabsicherung",
 		"title": "Schwere Krankheitenversicherung",
 		"url": "/schwere-krankheitenversicherung"
 	},
 	{
-		"id": "pflegezusatzversicherung",
+		"navId": "pflegezusatzversicherung",
 		"parentId": "risikovorsorge-arbeitskraftabsicherung",
 		"title": "Pflegezusatzversicherung",
 		"url": "/pflegezusatzversicherung"
 	},
 	{
-		"id": "kranken-und-krankenzusatzversicherungen",
+		"navId": "kranken-und-krankenzusatzversicherungen",
 		"parentId": "versicherungen",
 		"title": "Kranken- & Krankenzusatzversicherungen"
 	},
 	{
-		"id": "pkv-private-krankenversicherung",
+		"navId": "pkv-private-krankenversicherung",
 		"parentId": "kranken-und-krankenzusatzversicherungen",
 		"title": "PKV - Private Krankenversicherung",
 		"url": "/pkv-private-krankenversicherung"
 	},
 	{
-		"id": "gkv-gesetzliche-krankenkasse",
+		"navId": "gkv-gesetzliche-krankenkasse",
 		"parentId": "kranken-und-krankenzusatzversicherungen",
 		"title": "GKV - Gesetzliche Krankenkasse",
 		"url": "/gkv-gesetzliche-krankenkasse"
 	},
 	{
-		"id": "krankentagegeld",
+		"navId": "krankentagegeld",
 		"parentId": "kranken-und-krankenzusatzversicherungen",
 		"title": "Krankentagegeld",
 		"url": "/krankentagegeld"
 	},
 	{
-		"id": "krankenzusatzversicherung",
+		"navId": "krankenzusatzversicherung",
 		"parentId": "kranken-und-krankenzusatzversicherungen",
 		"title": "Krankenzusatzversicherung",
 		"url": "/krankenzusatzversicherung"
 	},
 	{
-		"id": "brillenversicherung",
+		"navId": "brillenversicherung",
 		"parentId": "kranken-und-krankenzusatzversicherungen",
 		"title": "Brillenversicherung",
 		"url": "/brillenversicherung"
 	},
 	{
-		"id": "zahnzusatzversicherung",
+		"navId": "zahnzusatzversicherung",
 		"parentId": "kranken-und-krankenzusatzversicherungen",
 		"title": "Zahnzusatzversicherung",
 		"url": "/zahnzusatzversicherung"
 	},
 	{
-		"id": "haftpflicht-haus-hof-rechtsschutz-reisen",
+		"navId": "haftpflicht-haus-hof-rechtsschutz-reisen",
 		"parentId": "versicherungen",
 		"title": "Haftpflicht - Haus & Hof | Rechtsschutz & Reisen"
 	},
 	{
-		"id": "privathaftpflichtversicherung",
+		"navId": "privathaftpflichtversicherung",
 		"parentId": "haftpflicht-haus-hof-rechtsschutz-reisen",
 		"title": "Privathaftpflichtversicherung",
 		"url": "/privathaftpflichtversicherung"
 	},
 	{
-		"id": "tierhalterhaftpflichtversicherungen",
+		"navId": "tierhalterhaftpflichtversicherungen",
 		"parentId": "haftpflicht-haus-hof-rechtsschutz-reisen",
 		"title": "Tierhalterhaftpflichtversicherungen",
 		"url": "/tierhalterhaftpflichtversicherungen"
 	},
 	{
-		"id": "weitere-haftpflichtversicherungen",
+		"navId": "weitere-haftpflichtversicherungen",
 		"parentId": "haftpflicht-haus-hof-rechtsschutz-reisen",
 		"title": "Weitere Haftpflichtversicherungen",
 		"url": "/weitere-haftpflichtversicherungen"
 	},
 	{
-		"id": "hausratversicherung",
+		"navId": "hausratversicherung",
 		"parentId": "haftpflicht-haus-hof-rechtsschutz-reisen",
 		"title": "Hausratversicherung",
 		"url": "/hausratversicherung"
 	},
 	{
-		"id": "gebaeudeversicherung",
+		"navId": "gebaeudeversicherung",
 		"parentId": "haftpflicht-haus-hof-rechtsschutz-reisen",
 		"title": "Gebäudeversicherung & Neubau",
 		"url": "/gebaeudeversicherung"
 	},
 	{
-		"id": "rechtsschutzversicherung",
+		"navId": "rechtsschutzversicherung",
 		"parentId": "haftpflicht-haus-hof-rechtsschutz-reisen",
 		"title": "Rechtsschutzversicherung",
 		"url": "/rechtsschutzversicherung"
 	},
 	{
-		"id": "reiseversicherungen",
+		"navId": "reiseversicherungen",
 		"parentId": "haftpflicht-haus-hof-rechtsschutz-reisen",
 		"title": "Reiseversicherungen",
 		"url": "/reiseversicherungen"
 	},
 	{
-		"id": "fahrzeugversicherungen",
+		"navId": "fahrzeugversicherungen",
 		"parentId": "versicherungen",
 		"title": "Fahrzeugversicherungen"
 	},
 	{
-		"id": "kfz-versicherungen",
+		"navId": "kfz-versicherungen",
 		"parentId": "fahrzeugversicherungen",
 		"title": "Auto - Motorrad - LKW",
 		"url": "/kfz-versicherungen"
 	},
 	{
-		"id": "moped-e-scooter-kennzeichen",
+		"navId": "moped-e-scooter-kennzeichen",
 		"parentId": "fahrzeugversicherungen",
 		"title": "Moped - Roller - E-Scooter",
 		"url": "/moped-e-scooter-kennzeichen"
 	},
 	{
-		"id": "fahrradversicherung",
+		"navId": "fahrradversicherung",
 		"parentId": "fahrzeugversicherungen",
 		"title": "E-Bike - Fahrrad - Pedelec",
 		"url": "/fahrradversicherung"
 	},
 	{
-		"id": "tierversicherungen",
+		"navId": "tierversicherungen",
 		"parentId": "versicherungen",
 		"title": "Tierversicherungen"
 	},
 	{
-		"id": "hundeversicherungen",
+		"navId": "hundeversicherungen",
 		"parentId": "tierversicherungen",
 		"title": "Hundeversicherungen",
 		"url": "/hundeversicherungen"
 	},
 	{
-		"id": "katzenversicherungen",
+		"navId": "katzenversicherungen",
 		"parentId": "tierversicherungen",
 		"title": "Katzenversicherungen",
 		"url": "/katzenversicherungen"
 	},
 	{
-		"id": "pferdeversicherungen",
+		"navId": "pferdeversicherungen",
 		"parentId": "tierversicherungen",
 		"title": "Pferdeversicherungen",
 		"url": "/pferdeversicherungen"
 	},
 	{
-		"id": "rundumschutz-konzepte",
+		"navId": "rundumschutz-konzepte",
 		"parentId": "versicherungen",
 		"title": "Rundumschutz - Konzepte"
 	},
 	{
-		"id": "familienabsicherungen",
+		"navId": "familienabsicherungen",
 		"parentId": "rundumschutz-konzepte",
 		"title": "Rundumschutz: Familie",
 		"url": "/familienabsicherungen"
 	},
 	{
-		"id": "hausbauversicherung",
+		"navId": "hausbauversicherung",
 		"parentId": "rundumschutz-konzepte",
 		"title": "Rundumschutz: Hausbau",
 		"url": "/hausbauversicherungen"
 	},
 	{
-		"id": "gewerbeversicherungen",
+		"navId": "gewerbeversicherungen",
 		"parentId": "rundumschutz-konzepte",
 		"title": "Rundumschutz: Gewerbe",
 		"url": "/gewerbeversicherungen"
 	},
 	{
-		"id": "finanzierungen",
+		"navId": "finanzierungen",
 		"title": "Finanzierungen"
 	},
 	{
-		"id": "immobilienfinanzierung",
+		"navId": "immobilienfinanzierung",
 		"parentId": "finanzierungen",
 		"title": "Immobilienfinanzierung"
 	},
 	{
-		"id": "bauen-kaufen",
+		"navId": "bauen-kaufen",
 		"parentId": "immobilienfinanzierung",
 		"title": "Bauen & Kaufen",
 		"url": "/bauen-kaufen"
 	},
 	{
-		"id": "anschlussfinanzierung",
+		"navId": "anschlussfinanzierung",
 		"parentId": "immobilienfinanzierung",
 		"title": "Anschlussfinanzierung",
 		"url": "/anschlussfinanzierung"
 	},
 	{
-		"id": "modernisierung-sanierung",
+		"navId": "modernisierung-sanierung",
 		"parentId": "immobilienfinanzierung",
 		"title": "Modernisierung & Sanierung",
 		"url": "/modernisierung-sanierung"
 	},
 	{
-		"id": "foerdermittel",
+		"navId": "foerdermittel",
 		"parentId": "immobilienfinanzierung",
 		"title": "Fördermittel",
 		"url": "/foerdermittel"
 	},
 	{
-		"id": "kredite-umschuldung",
+		"navId": "kredite-umschuldung",
 		"parentId": "finanzierungen",
 		"title": "Kredite & Umschuldung"
 	},
 	{
-		"id": "privatkredit",
+		"navId": "privatkredit",
 		"parentId": "kredite-umschuldung",
 		"title": "Privatkredit",
 		"url": "/privatkredit"
 	},
 	{
-		"id": "autokredit",
+		"navId": "autokredit",
 		"parentId": "kredite-umschuldung",
 		"title": "Autokredit",
 		"url": "/autokredit"
 	},
 	{
-		"id": "umschuldung",
+		"navId": "umschuldung",
 		"parentId": "kredite-umschuldung",
 		"title": "Umschuldung",
 		"url": "/umschuldung"
 	},
 	{
-		"id": "konten-geldanlagen",
+		"navId": "konten-geldanlagen",
 		"parentId": "finanzierungen",
 		"title": "Konten & Geldanlagen"
 	},
 	{
-		"id": "girokonto-kreditkarte",
+		"navId": "girokonto-kreditkarte",
 		"parentId": "konten-geldanlagen",
 		"title": "Girokonto & Kreditkarte",
 		"url": "/girokonto-kreditkarte"
 	},
 	{
-		"id": "tagesgeld",
+		"navId": "tagesgeld",
 		"parentId": "konten-geldanlagen",
 		"title": "WeltSparen: Tagesgeld",
 		"url": "/tagesgeld"
 	},
 	{
-		"id": "festgeld",
+		"navId": "festgeld",
 		"parentId": "konten-geldanlagen",
 		"title": "WeltSparen: Festgeld",
 		"url": "/festgeld"
 	},
 	{
-		"id": "investmentanlagen-vermoegensverwaltung",
+		"navId": "investmentanlagen-vermoegensverwaltung",
 		"parentId": "konten-geldanlagen",
 		"title": "Vermögensverwaltung",
 		"url": "/investmentanlagen-vermoegensverwaltung"
 	},
 	{
-		"id": "haushaltskosten-senken",
+		"navId": "haushaltskosten-senken",
 		"parentId": "finanzierungen",
 		"title": "Haushaltskosten Senken"
 	},
 	{
-		"id": "stromvkosten",
+		"navId": "stromkosten",
 		"parentId": "haushaltskosten-senken",
 		"title": "Stromkosten senken",
 		"url": "/stromkosten"
 	},
 	{
-		"id": "gaskosten",
+		"navId": "gaskosten",
 		"parentId": "haushaltskosten-senken",
 		"title": "Gaskosten senken",
 		"url": "/gaskosten"
 	},
 	{
-		"id": "immobilien",
+		"navId": "immobilien",
 		"title": "Immobilien",
 		"url": "/immobilien"
 	},
 	{
-		"id": "liebe-familie",
+		"navId": "liebe-familie",
 		"title": "Liebe Familie",
 		"url": "/liebe-familie"
 	}

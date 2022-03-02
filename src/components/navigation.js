@@ -18,7 +18,7 @@ const VerticalNavigation = ({ data, id }) => {
             )}
           </h1>
           <ul>
-            <SubNavigationItems id={navItem.id} data={data} />
+            <SubNavigationItems id={navItem.navId} data={data} />
           </ul>
         </li>
       )
@@ -64,7 +64,7 @@ const SubNavigationItems = ({ id, data }) => {
               {navItem.title}
             </h2>
             <ul>
-              <SubNavigationItems id={navItem.id} data={data} />
+              <SubNavigationItems id={navItem.navId} data={data} />
             </ul>
           </li>
         )
@@ -114,11 +114,11 @@ const HorizontalNavigation = ({ data }) => {
               {navItem.url ? (
                 <Link to={navItem.url}>{navItem.title}</Link>
               ) : (
-                <span onClick={e => handleClick(e, navItem.id)} role="button" aria-hidden="true">
+                <span onClick={e => handleClick(e, navItem.navId)} role="button" aria-hidden="true">
                   {navItem.title}{" "}
                   <i
                     class={
-                      openedPopoverId === navItem.id
+                      openedPopoverId === navItem.navId
                         ? "fas fa-angle-up"
                         : "fas fa-angle-down"
                     }
@@ -127,9 +127,9 @@ const HorizontalNavigation = ({ data }) => {
               )}
             </h1>
             <DropDown
-              id={navItem.id}
+              id={navItem.navId}
               data={data}
-              open={openedPopoverId === navItem.id}
+              open={openedPopoverId === navItem.navId}
             />
           </li>
         )
@@ -171,13 +171,14 @@ const HorizontalNavigation = ({ data }) => {
 }
 
 const Navigation = ({ horizontal, id }) => {
+
   const {
     allNavigationJson: { nodes: navigationData },
   } = useStaticQuery(graphql`
     {
       allNavigationJson {
         nodes {
-          id
+          navId
           title
           url
           parentId
