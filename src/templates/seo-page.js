@@ -49,6 +49,7 @@ export const query = graphql`
         title
         zipcode
         long
+        description
         heroImage {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
@@ -59,9 +60,15 @@ export const query = graphql`
   }
 `
 
-const Place = ({ placeData, long }) => (
-  <span>{long ? placeData.title : placeData.short} </span>
-)
+const Place = ({ placeData, long, description }) => {
+  if (long) {
+    return <>{placeData.title}</>
+  }
+  if (description) {
+    return <p dangerouslySetInnerHTML={{__html: placeData.description}} class="text-base lg:text-lg mb-6 lg:leading-7"></p>
+  }
+  return <>{placeData.short}</>
+}
 
 const SeoPage = ({ data, pageContext }) => {
   let {
@@ -123,7 +130,7 @@ const SeoPage = ({ data, pageContext }) => {
     ProvenExpert,
     AwardBox,
     Example,
-    Box: (props) => <Box alternate  {...props} />,
+    Box: props => <Box alternate {...props} />,
     CompareBox,
     InsurancesBox,
     Video,
