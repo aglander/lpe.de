@@ -70,7 +70,7 @@ const IndexPage = () => (
         title={
           <>
             Das Wichtigste geregelt haben: Das „Liebe-Familie-Rezept“{" "}
-            <span class="text-green"> mit einem funktionierenden Notfallplan!</span>
+            <span class="text-green"> mit einem bewährten Notfallplan!</span>
           </>
           }
         description={
@@ -80,7 +80,7 @@ const IndexPage = () => (
             Lösungen individuell an alle Ihre Lebensphasen angelehnt. Wir
             verbinden dabei im Optimalfall die folgenden 5 Bereiche in unserem{" "}
             <strong>
-              „Liebe-Familie-Rezept“ mit einem funktionierenden Notfallplan!
+              „Liebe-Familie-Rezept“ mit einem bewährten Notfallplan!
             </strong>
           </>
         }
