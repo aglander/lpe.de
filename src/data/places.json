@@ -533,5 +533,40 @@
 		"title": "Berlin-Marzahn",
 		"short": "Marzahn",
 		"long": "Berlin-Marzahn"
+	},	
+	{
+		"slug": "15320-Neuhardenberg",
+		"title": "15320 Neuhardenberg",
+		"zipcode": 15320,
+		"short": "Neuhardenberg",
+		"long": "Neuhardenberg"
+	},
+	{
+		"slug": "15518-Heinersdorf",
+		"title": "15518 Heinersdorf",
+		"zipcode": 15518,
+		"short": "Heinersdorf",
+		"long": "Heinersdorf"
+	},
+	{
+		"slug": "15306-Vierlinden",
+		"title": "15306 Vierlinden",
+		"zipcode": 15306,
+		"short": "Vierlinden",
+		"long": "Vierlinden"
+	},
+	{
+		"slug": "15306-Seelow",
+		"title": "15306 Seelow",
+		"zipcode": 15306,
+		"short": "Seelow",
+		"long": "Seelow"
+	},
+	{
+		"slug": "15306-Falkenhagen",
+		"title": "15306 Falkenhagen",
+		"zipcode": 15306,
+		"short": "Falkenhagen",
+		"long": "Falkenhagen"
 	}
-]
+	]
