@@ -81,7 +81,15 @@ const Reviews = () => {
         <Review
           authorName="Josefina Bils"
           authorPhoto={
-            <span class="rounded-full bg-divider w-10 h-10 flex items-center justify-center">JB</span>
+            <StaticImage
+              alt="Josefina Bils"
+              src="../images/Review3.jpeg"
+              placeholder="blurred"
+              layout="fixed"
+              width={40}
+              height={40}
+              class="rounded-full"
+            />
           }
           topic="Finanzierung & Absicherung"
         >
