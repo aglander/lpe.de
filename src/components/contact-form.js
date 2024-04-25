@@ -53,7 +53,8 @@ const ContactForm = () => {
             <TextInput
               type="tel"
               name="phone"
-              label="Telefonnummer (optional)"
+              label="Telefonnummer"
+              required={true}
             />
             <TextInput
               type="text"
