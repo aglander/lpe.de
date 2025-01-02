@@ -45,34 +45,27 @@ const KontaktPage = ({ location }) => {
               title="Kontaktdaten"
               description="Zögern Sie bitte nicht mit Ihrer Kontaktaufnahme. Wir freuen uns darüber und kümmern uns gerne so schnell wie möglich um die Lösung Ihrer Anliegen:"
             />
-            <ul class="w-80 text-lg text-textlight mx-auto pl-20">
-              <li class="mt-5">
-                <i class="fas fa-map-marker-alt absolute -ml-14 mt-2 text-white bg-green w-10 h-10 flex text-center pt-2 text-2xl rounded-full"></i>
-                <p>
-                  Lerchenstraße 40
-                  <br />
-                  15569 Woltersdorf
-                </p>
-              </li>
-              <li class="mt-5">
-                <i class="fas fa-mobile-alt absolute -ml-14 -mt-1 text-white bg-green w-10 h-10 flex text-center pt-2 text-2xl rounded-full"></i>
-                <p>
-                  <a href="tel:01723829922">0172 3829922</a>
-                </p>
-              </li>
-              <li class="mt-8">
-                <i class="fas fa-phone absolute -ml-14 -mt-1 text-white bg-green w-10 h-10 flex text-center pt-2 text-2xl rounded-full"></i>
-                <p>
-                  <a href="tel:033627000250">03362 7000-250</a>
-                </p>
-              </li>
-              <li class="mt-8">
-                <i class="fas fa-at absolute -ml-14 -mt-1 text-white bg-green w-10 h-10 flex text-center pt-2 text-2xl rounded-full"></i>
-                <p>
-                  <a href="mailto:LPE@LPE.de">LPE@LPE.de</a>
-                </p>
-              </li>
-            </ul>
+            <p>
+              <br />
+              Grey Versicherungsmakler GmbH & Co. KG<br />
+              Lars-Peter Eckhardt<br />
+              E-Mail: LPE (at) LPE.de<br />
+              Webseite: <a href="https://www.lpe.de">www.LPE.de</a><br /><br />
+            </p>
+            <p>
+              Zentrale:<br />
+              Wasserstraße 2<br />
+              15374 Müncheberg<br />
+              Telefon: +49 (33432) 89101<br />
+              Telefax: +49 (33432) 89104<br /><br />
+            </p>
+            <p>
+              Büro Woltersdorf:<br />
+              Lerchenstr. 40<br />
+              15569 Woltersdorf<br />
+              Telefon: +49 (3362) 7000250<br />
+              Telefax: +49 (3362) 7000251<br />
+            </p>
           </div>
           <div class="mt-10 md:mt-0">
             <SectionHeader
