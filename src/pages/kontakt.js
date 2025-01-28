@@ -53,14 +53,14 @@ const KontaktPage = ({ location }) => {
               Webseite: <a href="https://www.lpe.de">www.LPE.de</a><br /><br />
             </p>
             <p>
-              Postanschrift & Zentrale:<br />
+              Postanschrift & Sitz:<br />
               Wasserstraße 2<br />
               15374 Müncheberg<br />
               Telefon: +49 (33432) 89101<br />
               Telefax: +49 (33432) 89104<br /><br />
             </p>
             <p>
-              Büro Woltersdorf:<br />
+              Niederlassung:<br />
               Lerchenstr. 40<br />
               15569 Woltersdorf<br />
               Telefon: +49 (3362) 7000250<br />
