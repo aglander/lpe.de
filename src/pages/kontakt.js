@@ -47,13 +47,13 @@ const KontaktPage = ({ location }) => {
             />
             <p>
               <br />
-              Grey Versicherungsmakler GmbH & Co. KG<br />
+              <b>Grey Versicherungsmakler GmbH & Co. KG</b><br />
               Lars-Peter Eckhardt<br />
               E-Mail: LPE (at) LPE.de<br />
               Webseite: <a href="https://www.lpe.de">www.LPE.de</a><br /><br />
             </p>
             <p>
-              Postanschrift & Sitz Müncheberg:<br />
+              <b>Postanschrift & Sitz Müncheberg:</b><br />
               Wasserstraße 2<br />
               15374 Müncheberg<br />
               Telefon: +49 (33432) 89101<br />
