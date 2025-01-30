@@ -60,7 +60,7 @@ const KontaktPage = ({ location }) => {
               Telefax: +49 (33432) 89104<br /><br />
             </p>
             <p>
-              Niederlassung Woltersdorf bei Berlin:<br />
+              <b>Niederlassung Woltersdorf bei Berlin:</b><br />
               Lerchenstr. 40<br />
               15569 Woltersdorf bei Berlin<br />
               Telefon: +49 (3362) 7000250<br />
