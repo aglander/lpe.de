@@ -42,7 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `lpe.de`,
         short_name: `LPE.de`,
         start_url: `/`,
         background_color: `#ffffff`,

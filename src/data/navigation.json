@@ -365,11 +365,6 @@
 		"url": "/gaskosten"
 	},
 	{
-		"navId": "immobilien",
-		"title": "Immobilien",
-		"url": "/immobilien"
-	},
-	{
 		"navId": "liebe-familie",
 		"title": "Liebe Familie",
 		"url": "/liebe-familie"

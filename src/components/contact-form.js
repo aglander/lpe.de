@@ -20,7 +20,7 @@ const TextInput = ({ type, label, name, required }) =>
   )
 
 const ContactForm = () => {
-  
+
 
   return (
     <div class="max-w-5xl mx-auto text-center">
@@ -39,26 +39,28 @@ const ContactForm = () => {
             <TextInput
               type="text"
               name="fullname"
-              label="Ihr Name"
+              label="Name"
               required={true}
             />
             <TextInput
-              type="tel"
-              name="phone"
-              label="Ihre Telefonnummer (optional)"
+              type="email"
+              name="email"
+              label="E-Mail-Adresse"
+              required={true}
             />
           </div>
           <div>
             <TextInput
-              type="email"
-              name="email"
-              label="Ihre E-Mail-Adresse"
+              type="tel"
+              name="phone"
+              label="Telefonnummer"
               required={true}
             />
             <TextInput
               type="text"
               name="address"
-              label="Ihre Anschrift (optional)"
+              label="Straße & Hausnr., PLZ & Ort"
+              required={true}
             />
           </div>
         </div>
@@ -66,7 +68,7 @@ const ContactForm = () => {
           <TextInput
             type="textarea"
             name="message"
-            label="Ihre Nachricht"
+            label="Nachricht"
             required={true}
           />
           <button

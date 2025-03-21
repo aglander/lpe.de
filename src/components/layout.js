@@ -130,9 +130,6 @@ const Layout = ({ children }) => {
                 <Link to="/finanzierungen">Finanzierungen</Link>
               </li>
               <li>
-                <Link to="/immobilien">Immobilien</Link>
-              </li>
-              <li>
                 <Link to="/liebe-familie">Liebe Familie</Link>
               </li>
             </ul>
