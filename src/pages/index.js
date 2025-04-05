@@ -70,7 +70,7 @@ const IndexPage = () => (
       <SectionHeader
         title={
           <>
-            Das Wichtigste geregelt haben: Das „Liebe-Familie-Konzept“{" "}
+            Das Wichtigste geregelt haben: Unser „Liebe-Familie-Konzept“{" "}
             <span class="text-green"> mit einem bewährten Notfallplan!</span>
           </>
           }
@@ -115,7 +115,7 @@ const IndexPage = () => (
           icon="fas fa-euro-sign"
         >
           Leben Sie Ihren Traum! Die Planung für Ihren ersten Hausbau oder
-          der Kauf einer Immobilie (Haus oder Wohnung), die anstehende Anschlussfinanzierung oder
+          der Kauf einer Immobilie (Haus oder Wohnung) dür die Eigennutzung oder als Kapitalanlage, die anstehende Anschlussfinanzierung oder
           eine Sanierung / Modernisierung - mit individuell auf Sie
           ausgerichteten Finanzierungslösungen erreichen Sie Ihren Traum und
           behalten jederzeit die Kontrolle.
