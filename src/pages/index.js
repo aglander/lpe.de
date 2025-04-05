@@ -174,7 +174,7 @@ const IndexPage = () => (
               gewährleisten die ganzheitliche Beratung.
             </Advantage>
             <Advantage title="Erfahrung">
-              Die 1990 (GREY) und 1999 (LPE) gegründete Versicherungsmaklerunternehmen wurden 2023 zu LPE & GREY vereinigt.
+              Die 1990 (GREY) und 1999 (LPE) gegründete Versicherungs- & Finanzmaklerunternehmen wurden 2023 zu LPE & GREY vereinigt.
             </Advantage>
             <Advantage title="Vertrauen">
               Versicherungen sind (keine) Vertrauenssache. Seien Sie gerne
