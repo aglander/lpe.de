@@ -152,9 +152,9 @@ const IndexPage = () => (
             />
           </div>
         }
-        title="LPE | Lars-Peter Eckhardt"
-        description="Als mehrfach ausgezeichneter, unabhängiger Versicherungsmakler &
-      Finanzmakler ist es mein Anspruch, Sie gut zu beraten, gut zu betreuen
+        title="Lars-Peter Eckhardt und das LPE & GREY-Team"
+        description="Als mehrfach ausgezeichnete, unabhängige Versicherungsmakler &
+      Finanzmakler ist es unser Anspruch, Sie gut zu beraten, gut zu betreuen
       und möglichst sehr, sehr lange mit Ihnen zusammenzuarbeiten. Mein Team
       und ich stehen dafür an Ihrer Seite."
       />
