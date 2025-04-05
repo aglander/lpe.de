@@ -39,7 +39,7 @@ const IndexPage = () => (
       title={
         <>
           Willkommen bei <br /> Lars-Peter Eckhardt und
-          dem LPE & GREY-Team, <br />
+          dem LPE & GREY-Team,
           <br /> Ihrem unabhängigen <br />
           <TypedText
             strings={[
