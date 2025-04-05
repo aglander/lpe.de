@@ -38,8 +38,8 @@ const IndexPage = () => (
     <Hero
       title={
         <>
-          Willkommen bei <br /> Lars-Peter Eckhardt
-          <br /> und dem LPE & GREY-Team, <br />
+          Willkommen bei <br /> Lars-Peter Eckhardt und
+          <br /> dem LPE & GREY-Team, <br />
           <br /> Ihrem unabhängigen <br />
           <TypedText
             strings={[
