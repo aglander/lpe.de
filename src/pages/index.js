@@ -115,7 +115,7 @@ const IndexPage = () => (
           icon="fas fa-euro-sign"
         >
           Leben Sie Ihren Traum! Die Planung für Ihren ersten Hausbau oder
-          der Kauf einer Immobilie (Haus oder Wohnung) dür die Eigennutzung oder als Kapitalanlage, die anstehende Anschlussfinanzierung oder
+          der Kauf einer Immobilie (Haus oder Wohnung) für die Eigennutzung oder als Kapitalanlage, die anstehende Anschlussfinanzierung oder
           eine Sanierung / Modernisierung - mit individuell auf Sie
           ausgerichteten Finanzierungslösungen erreichen Sie Ihren Traum und
           behalten jederzeit die Kontrolle.
