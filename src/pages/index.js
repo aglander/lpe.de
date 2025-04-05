@@ -40,13 +40,13 @@ const IndexPage = () => (
         <>
           Willkommen bei <br /> Lars-Peter Eckhardt und
           dem LPE & GREY-Team,
-          <br /> Ihrem unabhängigen <br />
+          <br /> Ihren unabhängigen <br />
           <TypedText
             strings={[
-              "Versicherungsmakler",
-              "Finanzmakler",
-              "Vorsorgeberater",
-              "Generationenberater",
+              "Versicherungsmaklern",
+              "Finanzmaklern",
+              "Vorsorgeberatern",
+              "Generationenberatern",
             ]}
             className="text-green"
           />
@@ -129,7 +129,7 @@ const IndexPage = () => (
           und Niemandem zur Last fallen! Patientenverfügung und
           Vorsorgevollmacht, Sorgerechtsverfügungen für Ihre Kinder, die Pflege
           der Eltern und deren Unterhalt, sowie der letzte Wille. Einmal geklärt
-          und bei Bedarf angepasst, gibt es Ihnen ein rund um gutes Gefühl!
+          und bei Bedarf angepasst, gibt es Ihnen und Ihrer Familie ein rund um gutes Gefühl!
         </Solution>
       </div>
     </Section>
