@@ -129,7 +129,7 @@ const IndexPage = () => (
           und Niemandem zur Last fallen! Patientenverfügung und
           Vorsorgevollmacht, Sorgerechtsverfügungen für Ihre Kinder, die Pflege
           der Eltern und deren Unterhalt, sowie der letzte Wille. Einmal geklärt
-          und bei Bedarf angepasst, gibt es Ihnen und Ihrer Familie ein rund um gutes Gefühl!
+          und bei Bedarf angepasst, gibt es Ihnen und Ihrer Familie dauerhaft ein rund um gutes Gefühl!
         </Solution>
       </div>
     </Section>
