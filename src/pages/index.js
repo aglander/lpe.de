@@ -164,19 +164,17 @@ const IndexPage = () => (
           <h3 class="text-2xl mb-5">Unsere Kriterien</h3>
           <ul class="text-left ml-12">
             <Advantage title="Unabhängigkeit">
-              Als Versicherungsmakler nach §34d GewO bin ich sogar gesetzlich
+              Als Versicherungsmakler nach §34d GewO sind wir sogar gesetzlich
               dazu verpflichtet, die Interessen unserer Kunden unabhängig
               wahrzunehmen.
             </Advantage>
             <Advantage title="Kompetenz">
-              Meine IHK-Ausbildungen zum Fachwirt für Finanzberatung,
+              Die IHK-Ausbildungen zum Fachwirt für Finanzberatung,
               Baufinanzierungsberater und Generationenberater
-              gewährleistet die ganzheitliche Beratung.
+              gewährleisten die ganzheitliche Beratung.
             </Advantage>
             <Advantage title="Erfahrung">
-              Nach ersten Erfahrungen bei einer Versicherungsgesellschaft, stieg
-              mein eigener Anspruch an zufriedene Kunden. 1999 gab es den
-              Startschuss für LPE.
+              Die 1990 (GREY) und 1999 (LPE) gegründete Versicherungsmaklerunternehmen wurden 2023 zu LPE & GREY vereinigt.
             </Advantage>
             <Advantage title="Vertrauen">
               Versicherungen sind (keine) Vertrauenssache. Seien Sie gerne
@@ -204,9 +202,9 @@ const IndexPage = () => (
               Gestaltung Ihrer Lösungen!
             </Advantage>
             <Advantage title="Die „Extrameile“">
-              Ist unser „Liebe-Familie-Rezept“. Wir sind von der Notwendigkeit
+              Ist unser „Liebe-Familie-Konzept“. Wir sind von der Notwendigkeit
               überzeugt und eröffnen Ihnen Lösungsmöglichkeiten die Sie
-              begeistern!
+              beruhigen werden!
             </Advantage>
           </ul>
         </Box>
