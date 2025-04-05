@@ -39,7 +39,7 @@ const IndexPage = () => (
       title={
         <>
           Willkommen bei <br /> Lars-Peter Eckhardt und
-          <br /> dem LPE & GREY-Team, <br />
+          dem LPE & GREY-Team, <br />
           <br /> Ihrem unabhängigen <br />
           <TypedText
             strings={[
@@ -70,7 +70,7 @@ const IndexPage = () => (
       <SectionHeader
         title={
           <>
-            Das Wichtigste geregelt haben: Das „Liebe-Familie-Rezept“{" "}
+            Das Wichtigste geregelt haben: Das „Liebe-Familie-Knzept“{" "}
             <span class="text-green"> mit einem bewährten Notfallplan!</span>
           </>
           }
@@ -79,9 +79,9 @@ const IndexPage = () => (
             Wenn Sie es erlauben, möchten wir Sie am liebsten möglichst lange
             begleiten. Daher sind unsere Beratungen langfristig und unsere
             Lösungen individuell an alle Ihre Lebensphasen angelehnt. Wir
-            verbinden dabei im Optimalfall die folgenden 5 Bereiche in unserem{" "}
+            verbinden dabei im Optimalfall die vier folgenden Bereiche in unserem{" "}
             <strong>
-              „Liebe-Familie-Rezept“ mit einem bewährten Notfallplan!
+              „Liebe-Familie-Konzept“ mit einem bewährten Notfallplan!
             </strong>
           </>
         }
@@ -103,8 +103,8 @@ const IndexPage = () => (
           title="Versicherungen"
           icon="fas fa-file-contract"
         >
-          Risiken richtig absichern! Von A - wie Arbeitskraftabsicherung, über F
-          - wie Familienvorsorge und H - wie Heim- & Haus richtig schützen bis Z
+          Risiken richtig absichern! Von A - wie Arbeitskraftabsicherung, über B - wie Betriebsversicherungen
+          und F - wie Familienvorsorge, sowie H - wie Heim- & Haus schützen bis Z
           - wie Zusatzversicherungen. Viele Anbieter, viele Tarife – der
           Versicherungsdschungel undurchschaubar? Wir sorgen für die richtigen
           Absicherungen, zur richtigen Zeit!
