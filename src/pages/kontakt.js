@@ -48,7 +48,7 @@ const KontaktPage = ({ location }) => {
             <p>
               <br />
               <b>Grey Versicherungsmakler GmbH & Co. KG</b><br />
-              Lars-Peter Eckhardt<br />
+              Geschäftsführung: Lars-Peter Eckhardt<br />
               E-Mail: LPE (at) LPE.de<br />
               Webseite: <a href="https://www.lpe.de">www.LPE.de</a><br /><br />
             </p>
@@ -56,15 +56,15 @@ const KontaktPage = ({ location }) => {
               <b>Postanschrift & Sitz Müncheberg:</b><br />
               Wasserstraße 2<br />
               15374 Müncheberg<br />
-              Telefon: +49 (33432) 89101<br />
-              Telefax: +49 (33432) 89104<br /><br />
+              Telefon: (033432) 89101<br />
+              Telefax: (033432) 89104<br /><br />
             </p>
             <p>
-              <b>Niederlassung Woltersdorf bei Berlin:</b><br />
+              <b>Zweigstelle Woltersdorf bei Berlin:</b><br />
               Lerchenstr. 40<br />
               15569 Woltersdorf bei Berlin<br />
-              Telefon: +49 (3362) 7000250<br />
-              Telefax: +49 (3362) 7000251<br />
+              Telefon: (03362) 7000250<br />
+              Telefax: (03362) 7000251<br />
             </p>
           </div>
           <div class="mt-10 md:mt-0">
