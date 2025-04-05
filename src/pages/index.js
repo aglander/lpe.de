@@ -52,7 +52,7 @@ const IndexPage = () => (
           />
         </>
       }
-      description="Wir beraten Sie sehr gerne persönlich, bei uns im Büro, vor Ort und
+      description="Wir beraten Sie sehr gerne persönlich, in unseren Büros, vor Ort und
     selbstverständlich, für Sie besonders bequem, auch per Telefonberatung
     und Videoberatung."
       ctas={<Button url="/kontakt">Kontakt aufnehmen</Button>}
