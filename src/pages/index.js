@@ -103,8 +103,8 @@ const IndexPage = () => (
           title="Versicherungen"
           icon="fas fa-file-contract"
         >
-          Risiken richtig absichern! Von A - wie Arbeitskraftabsicherung, über B - wie Betriebsversicherungen
-          und F - wie Familienvorsorge, sowie H - wie Heim- & Haus schützen bis Z
+          Risiken richtig absichern! Von A - wie Arbeitskraftabsicherung, über B - wie Betriebsversicherungen,
+          F - wie Familienvorsorge und H - wie Heim- & Haus schützen bis Z
           - wie Zusatzversicherungen. Viele Anbieter, viele Tarife – der
           Versicherungsdschungel undurchschaubar? Wir sorgen für die richtigen
           Absicherungen, zur richtigen Zeit!
