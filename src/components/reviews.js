@@ -32,7 +32,7 @@ const Reviews = () => {
             <span class="text-green">Wir beraten Sie sehr gut, sagen unsere Kunden!</span>
           </>
         }
-        description="Viele positive Bewertungen und Rückmeldung sind uns eine große Ehre und dauerhafter Anspruch zugleich!"/>
+        description="Die vielen positiven Bewertungen und Rückmeldungen sind uns eine große Ehre und dauerhafter Anspruch zugleich."/>
       <ProvenExpert />
       <div class="grid lg:grid-cols-3 lg:gap-5">
         <Review
