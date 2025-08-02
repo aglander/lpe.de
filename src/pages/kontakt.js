@@ -47,7 +47,8 @@ const KontaktPage = ({ location }) => {
             />
             <p>
               <br />
-              <b>LPE & GREY Versicherungsmakler & Finanzmakler GmbH & Co. KG</b><br />
+              <b>LPE & GREY</b><br />
+              <b>Versicherungsmakler & Finanzmakler GmbH & Co. KG</b><br />
               Geschäftsführung: Lars-Peter Eckhardt<br />
               E-Mail: LPE (at) LPE.de<br />
               Webseite: <a href="https://www.lpe.de">www.LPE.de</a><br /><br />
