@@ -53,7 +53,7 @@ const KontaktPage = ({ location }) => {
               Webseite: <a href="https://www.lpe.de">www.LPE.de</a><br /><br />
             </p>
             <p>
-              <b>Postanschrift & Sitz Müncheberg:</b><br />
+              <b>Zentrale / Postanschrift Müncheberg:</b><br />
               Wasserstraße 2<br />
               15374 Müncheberg<br />
               Telefon: (033432) 89101<br />
