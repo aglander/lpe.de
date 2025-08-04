@@ -7,6 +7,7 @@ import Button from "../components/button"
 import Section from "../components/section"
 import AwardBox from "../components/award-box"
 import Example from "../components/example"
+import ExpandBox from "../components/expand-box"
 import Box from "../components/box"
 import CompareBox from "../components/compare-box"
 import InsurancesBox from "../components/insurances-box"
@@ -89,6 +90,7 @@ const Page = ({ data }) => {
     InsurancesBox,
     Video,
     Navigation,
+    ExpandBox,
   }
 
   return (
