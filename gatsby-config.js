@@ -7,7 +7,6 @@ module.exports = {
     image: '/src/images/icon.png'
   },
   plugins: [
-    `gatsby-plugin-preact`,
     "gatsby-plugin-mdx",
     `gatsby-transformer-json`,
     `gatsby-plugin-react-helmet`,

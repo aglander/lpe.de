@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Helmet } from "react-helmet"
 import Box from "./box"
 import Button from "./button"
@@ -7,7 +7,9 @@ import Cookies from "js-cookie"
 const CookieConsent = () => {
   const [open, setOpen] = useState(false)
 
-  setOpen(!Cookies.get("gatsby-gdpr-google-analytics"))
+  useEffect(() => {
+    setOpen(!Cookies.get("gatsby-gdpr-google-analytics"))
+  }, [])
 
   const enableTracking = doIt => {
     if (doIt) {
