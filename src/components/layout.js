@@ -78,12 +78,12 @@ const Layout = ({ children }) => {
           <div class="mt-2 px-10">
             <a href="/" title="LPE">
               <StaticImage
-                src="../images/LPE_Logo_single_weiss.png"
+                src="../images/LPE_Logo_full.png"
                 alt="LPE Logo"
                 placeholder="tracedSVG"
                 layout="fixed"
-                width={88}
-                height={70}
+                width={147}
+                height={50}
               />
             </a>
             <div class="mt-5">
