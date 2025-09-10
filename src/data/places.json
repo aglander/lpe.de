@@ -563,10 +563,59 @@
 		"long": "Seelow"
 	},
 	{
-		"slug": "15306-Falkenhagen",
-		"title": "15306 Falkenhagen",
+		"slug": "15306-Falkenhagen-Mark",
+		"title": "15306 Falkenhagen (Mark)",
 		"zipcode": 15306,
 		"short": "Falkenhagen",
 		"long": "Falkenhagen"
+	},
+	{
+		"slug": "15518-Steinhoefel",
+		"title": "15518 Steinhöfel",
+		"zipcode": 15518,
+		"short": "Steinhöfel",
+		"long": "Steinhöfel"
+	},
+	{
+		"slug": "15306-Lindendorf",
+		"title": "15306 Lindendorf",
+		"zipcode": 15306,
+		"short": "Lindendorf",
+		"long": "Lindendorf"
+	},
+		{
+		"slug": "15328-Kuestriner-Vorland",
+		"title": "15328 Küstriner Vorland",
+		"zipcode": 15328,
+		"short": "Küstriner Vorland",
+		"long": "Küstriner Vorland"
+	},
+	{
+		"slug": "15306-Gusow-Platkow",
+		"title": "15306 Gusow-Platkow",
+		"zipcode": 15306,
+		"short": "Gusow-Platkow",
+		"long": "Gusow-Platkow"
+	},
+	{
+		"slug": "15324-Letschin",
+		"title": "15324 Letschin",
+		"zipcode": 15324,
+		"short": "Letschin",
+		"long": "Letschin"
+	},
+	{
+		"slug": "15377-Maerkische-Hoehe",
+		"title": "15377 Märkische Höhe",
+		"zipcode": 15377,
+		"short": "Märkische Höhe",
+		"long": "Märkische Höhe"
+	},
+	{
+		"slug": "15345-Proetzel",
+		"title": "15345 Prötzel",
+		"zipcode": 15345,
+		"short": "Prötzel",
+		"long": "Prötzel"
 	}
 	]
