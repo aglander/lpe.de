@@ -12,16 +12,16 @@ const TopBar = ({ children, onSidebarOpen }) => (
             alt="LPE Logo"
             placeholder="tracedSVG"
             layout="fixed"
-            width={225}
+            width={147}
             height={50}
             class="lg:hidden xl:block"
           />
           <StaticImage
-            src="../images/LPE_Logo_small.png"
+            src="../images/LPE_Logo_full.png"
             alt="LPE Logo"
             placeholder="tracedSVG"
             layout="fixed"
-            width={63}
+            width={147}
             height={50}
             class="hidden lg:block xl:hidden"
           />
