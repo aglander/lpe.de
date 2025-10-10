@@ -1,4 +1,5 @@
 module.exports = {
+  trailingSlash: "always",
   siteMetadata: {
     title: `Lars-Peter Eckhardt | LPE Versicherungsmakler & Finanzmakler`,
     description: `5★ Top-Empfehlung: Lars-Peter Eckhardt | LPE Versicherungsmakler & Finanzmakler ► Altersvorsorge ✔ | Versicherungen ✔ | Finanzierungen ✔ | Immobilien ✔ | ★★★★★ |`,
@@ -33,7 +34,12 @@ module.exports = {
       options: {
         headers: {
           "/*": ["X-Frame-Options: sameorigin"],
-        }, // option to add more headers. `Link` headers are transformed by the below criteria
+        },
+        redirects: [
+          // non-www → www (http & https)
+          { fromPath: "http://lpe.de/*",  toPath: "https://www.lpe.de/:splat", statusCode: 301, force: true },
+          { fromPath: "https://lpe.de/*", toPath: "https://www.lpe.de/:splat", statusCode: 301, force: true },
+        ],
       },
     },
     `gatsby-transformer-sharp`,

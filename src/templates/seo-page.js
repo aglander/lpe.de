@@ -16,7 +16,6 @@ import ContactAndCompareBox from "../components/contact-and-compare-box"
 import Video from "../components/video"
 import Reviews from "../components/reviews"
 import Mdx from "../components/mdx"
-import ProvenExpertStars from "../components/proven-expert-stars"
 
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -155,7 +154,6 @@ const SeoPage = ({ data, pageContext }) => {
       <Divider />
       <Section>
         <Mdx components={components}>{body}</Mdx>
-        <ProvenExpertStars />
       </Section>
     </Layout>
   )
