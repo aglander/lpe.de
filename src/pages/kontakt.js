@@ -58,6 +58,7 @@ const KontaktPage = ({ location }) => {
               Wasserstraße 2<br />
               15374 Müncheberg<br />
               Telefon: (033432) 89101<br />
+              WhatsApp: (033432) 89103<br />
               Telefax: (033432) 89104<br /><br />
             </p>
             <p>
@@ -65,6 +66,7 @@ const KontaktPage = ({ location }) => {
               Lerchenstr. 40<br />
               15569 Woltersdorf bei Berlin<br />
               Telefon: (03362) 7000250<br />
+              WhatsApp: (033432) 89103<br />
               Telefax: (03362) 7000251<br />
             </p>
           </div>
