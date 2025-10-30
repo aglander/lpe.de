@@ -59,17 +59,32 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap.xml`,           // eine saubere Sitemap an /sitemap.xml
-        excludes: [                       // optional: Unwichtiges raus
+        // schreibe direkt in /public/sitemap.xml
+        output: `/sitemap.xml`,
+        resolveSiteUrl: () => `https://www.lpe.de`,
+    
+        // explizit alle Seiten einsammeln (robust bei MDX & programmatic pages)
+        query: `
+          {
+            allSitePage {
+              nodes { path }
+            }
+          }
+        `,
+        resolvePages: ({ allSitePage }) =>
+          allSitePage.nodes.map(p => ({ path: p.path })),
+    
+        serialize: ({ path }) => ({
+          url: `https://www.lpe.de${path}`,
+          changefreq: `weekly`,
+          priority: 0.7,
+        }),
+    
+        excludes: [
           `/downloads/`,
           `/legal/*`,
         ],
-        // Optional: nur indexierbare Seiten (falls du so ein Flag im pageContext nutzt)
-        // resolvePages: ({ allSitePage }) =>
-        //   allSitePage.nodes
-        //     .filter(p => p.context?.indexable !== false)
-        //     .map(p => ({ path: p.path })),
       },
-    },
+    },    
   ],
 }
