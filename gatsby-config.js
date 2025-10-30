@@ -35,11 +35,6 @@ module.exports = {
         headers: {
           "/*": ["X-Frame-Options: sameorigin"],
         },
-        redirects: [
-          // non-www → www (http & https)
-          { fromPath: "http://lpe.de/*",  toPath: "https://www.lpe.de/:splat", statusCode: 301, force: true },
-          { fromPath: "https://lpe.de/*", toPath: "https://www.lpe.de/:splat", statusCode: 301, force: true },
-        ],
       },
     },
     `gatsby-transformer-sharp`,
