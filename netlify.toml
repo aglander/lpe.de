@@ -1,9 +1,8 @@
 # netlify.toml
 
-# Datei unverändert aus dem CDN ausliefern (bypasst Routing/Functions)
 [[redirects]]
   from = "/sitemap.xml"
-  to = "/sitemap.xml"
+  to   = "/sitemap/sitemap-index.xml"
   status = 200
 
 [[redirects]]

@@ -59,31 +59,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        // schreibe direkt in /public/sitemap.xml
-        output: `/sitemap.xml`,
+        // KEIN .xml hier – nur ein Pfadpräfix oder ganz weglassen
+        // output: `/sitemap.xml`,    // <- raus
         resolveSiteUrl: () => `https://www.lpe.de`,
-    
-        // explizit alle Seiten einsammeln (robust bei MDX & programmatic pages)
         query: `
-          {
-            allSitePage {
-              nodes { path }
-            }
-          }
+          { allSitePage { nodes { path } } }
         `,
         resolvePages: ({ allSitePage }) =>
           allSitePage.nodes.map(p => ({ path: p.path })),
-    
         serialize: ({ path }) => ({
           url: `https://www.lpe.de${path}`,
           changefreq: `weekly`,
           priority: 0.7,
         }),
-    
-        excludes: [
-          `/downloads/`,
-          `/legal/*`,
-        ],
+        excludes: [ `/downloads/`, `/legal/*` ],
       },
     },    
   ],
