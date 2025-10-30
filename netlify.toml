@@ -1,4 +1,11 @@
 # netlify.toml
+
+# Datei unverändert aus dem CDN ausliefern (bypasst Routing/Functions)
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "https://www.lpe.de/:splat"
@@ -13,3 +20,10 @@
 #   to = "/:splat/"
 #   status = 301
 #   force = true
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=0, must-revalidate"
+

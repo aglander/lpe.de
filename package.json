@@ -49,6 +49,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
+    "postbuild": "echo '--- SITEMAP CHECK ---' && (ls -lh public/sitemap.xml || true) && (find public -maxdepth 2 -type f -name 'sitemap*' -ls || true) && echo '--- END ---'",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
