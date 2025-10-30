@@ -60,11 +60,15 @@ export const query = graphql`
 `
 
 const Place = ({ placeData, long, description }) => {
-  if (long) {
-    return <>{placeData.title}</>
-  }
+  if (!placeData) return null
+  if (long) return <>{placeData.title}</>
   if (description) {
-    return <p dangerouslySetInnerHTML={{__html: placeData.description}} class="text-base lg:text-lg mb-6 lg:leading-7"></p>
+    return (
+      <p
+        dangerouslySetInnerHTML={{ __html: placeData.description }}
+        className="text-base lg:text-lg mb-6 lg:leading-7"
+      />
+    )
   }
   return <>{placeData.short}</>
 }
@@ -88,26 +92,31 @@ const SeoPage = ({ data, pageContext }) => {
     allPlacesJson: { nodes: places },
   } = data
 
-  const place = pageContext.place
+  // 1) Primary source: pageContext.placeData (kommt aus gatsby-node.js, bereits normalisiert)
+  let placeData = pageContext?.placeData
 
-  const placeData = places.filter(placeItem => placeItem.slug === place)[0]
-  if (placeData.title) heroClaim = placeData.title
-
-  if (placeData.heroImage) {
-    heroImage = placeData.heroImage
+  // 2) Fallback: suche case-insensitiv in der Query, falls placeData fehlt
+  if (!placeData) {
+    const key = String(pageContext?.place || "").toLowerCase()
+    placeData = places.find(
+      (p) => String(p.slug || "").toLowerCase() === key
+    )
   }
 
+  // 3) Guards & Defaults – Build darf nie crashen
+  const safeTitle = placeData?.title || heroClaim || "LPE vor Ort"
+  const safeHeroImage = placeData?.heroImage || heroImage
+
+  // 4) SEO-Title/Description um <Place /> ersetzen (falls vorhanden)
   if (seoDescription || seoTitle) {
     let placeName = ""
-    if (placeData.zipcode) {
-      placeName += placeData.zipcode + " "
-    }
-    placeName += placeData.short
-    seoTitle = seoTitle && seoTitle.replace(/<Place \/>/, placeName)
-    seoDescription =
-      seoDescription && seoDescription.replace(/<Place \/>/, placeName)
+    if (placeData?.zipcode) placeName += `${placeData.zipcode} `
+    placeName += placeData?.short || placeData?.title || ""
+    if (seoTitle) seoTitle = seoTitle.replace(/<Place \/>/, placeName)
+    if (seoDescription) seoDescription = seoDescription.replace(/<Place \/>/, placeName)
   }
 
+  // 5) CTAs
   const ctas = (
     <>
       {compare && (
@@ -115,7 +124,7 @@ const SeoPage = ({ data, pageContext }) => {
           {compareLabel ? compareLabel : "Selber vergleichen"}
         </Button>
       )}{" "}
-      {slug.endsWith("-vergleichen") && (
+      {slug?.endsWith?.("-vergleichen") && (
         <Button outline url={"/" + slug.split("-vergleichen")[0]}>
           &larr; zurück
         </Button>
@@ -129,11 +138,11 @@ const SeoPage = ({ data, pageContext }) => {
     ProvenExpert,
     AwardBox,
     Example,
-    Box: props => <Box alternate {...props} />,
+    Box: (props) => <Box alternate {...props} />,
     CompareBox,
     InsurancesBox,
     Video,
-    Place: props => <Place {...props} placeData={placeData} />,
+    Place: (props) => <Place {...props} placeData={placeData} />,
     Reviews,
   }
 
@@ -144,11 +153,15 @@ const SeoPage = ({ data, pageContext }) => {
         title={
           <>
             {heroTitle}
-            <br /> <span class="text-green">{heroClaim}</span>
+            <br /> <span className="text-green">{safeTitle}</span>
           </>
         }
         description={heroDescription}
-        image={<GatsbyImage image={getImage(heroImage)} alt={heroTitle} />}
+        image={
+          safeHeroImage ? (
+            <GatsbyImage image={getImage(safeHeroImage)} alt={heroTitle || safeTitle} />
+          ) : undefined
+        }
         ctas={ctas}
       />
       <Divider />

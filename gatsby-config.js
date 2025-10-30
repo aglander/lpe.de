@@ -57,11 +57,23 @@ module.exports = {
       },
     },
     "gatsby-plugin-postcss",
-    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
+      options: { siteUrl: `https://www.lpe.de` },
+    },    
+    {
+      resolve: `gatsby-plugin-sitemap`,
       options: {
-        siteUrl: `https://www.lpe.de`,
+        output: `/sitemap.xml`,           // eine saubere Sitemap an /sitemap.xml
+        excludes: [                       // optional: Unwichtiges raus
+          `/downloads/`,
+          `/legal/*`,
+        ],
+        // Optional: nur indexierbare Seiten (falls du so ein Flag im pageContext nutzt)
+        // resolvePages: ({ allSitePage }) =>
+        //   allSitePage.nodes
+        //     .filter(p => p.context?.indexable !== false)
+        //     .map(p => ({ path: p.path })),
       },
     },
   ],
