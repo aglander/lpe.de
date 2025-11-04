@@ -35,11 +35,6 @@ module.exports = {
         headers: {
           "/*": ["X-Frame-Options: sameorigin"],
         },
-        redirects: [
-          // non-www → www (http & https)
-          { fromPath: "http://lpe.de/*",  toPath: "https://www.lpe.de/:splat", statusCode: 301, force: true },
-          { fromPath: "https://lpe.de/*", toPath: "https://www.lpe.de/:splat", statusCode: 301, force: true },
-        ],
       },
     },
     `gatsby-transformer-sharp`,
@@ -57,12 +52,28 @@ module.exports = {
       },
     },
     "gatsby-plugin-postcss",
-    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
+      options: { siteUrl: `https://www.lpe.de` },
+    },    
+    {
+      resolve: `gatsby-plugin-sitemap`,
       options: {
-        siteUrl: `https://www.lpe.de`,
+        // KEIN .xml hier – nur ein Pfadpräfix oder ganz weglassen
+        // output: `/sitemap.xml`,    // <- raus
+        resolveSiteUrl: () => `https://www.lpe.de`,
+        query: `
+          { allSitePage { nodes { path } } }
+        `,
+        resolvePages: ({ allSitePage }) =>
+          allSitePage.nodes.map(p => ({ path: p.path })),
+        serialize: ({ path }) => ({
+          url: `https://www.lpe.de${path}`,
+          changefreq: `weekly`,
+          priority: 0.7,
+        }),
+        excludes: [ `/downloads/`, `/legal/*` ],
       },
-    },
+    },    
   ],
 }

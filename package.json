@@ -10,7 +10,6 @@
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.4.0",
     "gatsby": "^4.9.0",
-    "gatsby-plugin-advanced-sitemap": "^2.0.0",
     "gatsby-plugin-canonical-urls": "^4.9.0",
     "gatsby-plugin-gdpr-cookies": "^2.0.8",
     "gatsby-plugin-image": "^2.9.0",
@@ -20,6 +19,7 @@
     "gatsby-plugin-react-helmet": "^5.9.0",
     "gatsby-plugin-resolve-src": "^2.1.0",
     "gatsby-plugin-sharp": "^4.9.0",
+    "gatsby-plugin-sitemap": "^5.25.0",
     "gatsby-source-filesystem": "^4.9.0",
     "gatsby-transformer-json": "^4.9.0",
     "gatsby-transformer-sharp": "^4.9.0",
@@ -49,6 +49,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
+    "postbuild": "echo '--- SITEMAP CHECK ---' && (ls -lh public/sitemap.xml || true) && (find public -maxdepth 2 -type f -name 'sitemap*' -ls || true) && echo '--- END ---'",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
