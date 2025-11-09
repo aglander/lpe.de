@@ -51,7 +51,6 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "postbuild": "node scripts/prewarm.js",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
