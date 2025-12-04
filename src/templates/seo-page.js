@@ -1,3 +1,4 @@
+
 import * as React from "react"
 
 import Layout from "../components/layout"
@@ -16,6 +17,7 @@ import ContactAndCompareBox from "../components/contact-and-compare-box"
 import Video from "../components/video"
 import Reviews from "../components/reviews"
 import Mdx from "../components/mdx"
+import ProvenExpertStars from "../components/proven-expert-stars"
 
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -73,7 +75,7 @@ const Place = ({ placeData, long, description }) => {
   return <>{placeData.short}</>
 }
 
-const SeoPage = ({ data, pageContext }) => {
+const SeoPage = ({ data, pageContext, location }) => {
   let {
     mdx: {
       frontmatter: {
@@ -113,7 +115,8 @@ const SeoPage = ({ data, pageContext }) => {
     if (placeData?.zipcode) placeName += `${placeData.zipcode} `
     placeName += placeData?.short || placeData?.title || ""
     if (seoTitle) seoTitle = seoTitle.replace(/<Place \/>/, placeName)
-    if (seoDescription) seoDescription = seoDescription.replace(/<Place \/>/, placeName)
+    if (seoDescription)
+      seoDescription = seoDescription.replace(/<Place \/>/, placeName)
   }
 
   // 5) CTAs
@@ -146,6 +149,10 @@ const SeoPage = ({ data, pageContext }) => {
     Reviews,
   }
 
+  // Basis-URL – hier hart https://www.lpe.de, weil das deine Domain ist
+  const siteUrl = "https://www.lpe.de"
+  const pageUrl = `${siteUrl}${location?.pathname || ""}`
+
   return (
     <Layout>
       <Seo title={seoTitle} description={seoDescription} />
@@ -159,7 +166,10 @@ const SeoPage = ({ data, pageContext }) => {
         description={heroDescription}
         image={
           safeHeroImage ? (
-            <GatsbyImage image={getImage(safeHeroImage)} alt={heroTitle || safeTitle} />
+            <GatsbyImage
+              image={getImage(safeHeroImage)}
+              alt={heroTitle || safeTitle}
+            />
           ) : undefined
         }
         ctas={ctas}
@@ -167,6 +177,7 @@ const SeoPage = ({ data, pageContext }) => {
       <Divider />
       <Section>
         <Mdx components={components}>{body}</Mdx>
+        <ProvenExpertStars pageUrl={pageUrl} placeData={placeData} />
       </Section>
     </Layout>
   )
