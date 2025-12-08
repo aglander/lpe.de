@@ -12,28 +12,43 @@ const ProvenExpertStars = ({ pageUrl, placeData }) => {
     }
   `)
 
-  const rating = Number(dynamicValues?.ratingValue || 0)
-  const count = Number(dynamicValues?.reviewCount || 0)
+  /**
+   * ProvenExpert API liefert z. B.:
+   * ratingValue: 4.939668043374016
+   * reviewCount: 653
+   *
+   * ProvenExpert JSON-LD rundet auf:
+   * ratingValue: 4.94 (2 Nachkommastellen)
+   */
+
+  const rawRating = dynamicValues?.ratingValue
+    ? Number(dynamicValues.ratingValue)
+    : 0
+
+  const rating = rawRating > 0 ? Number(rawRating.toFixed(2)) : 0
+  const count = dynamicValues?.reviewCount
+    ? Number(dynamicValues.reviewCount)
+    : 0
 
   if (!(rating > 0 && count > 0)) return null
   if (!pageUrl) return null
 
   /**
-   * areaServed mit PostalAddress (Best Practice)
+   * areaServed Schema
    */
   let areaServed
-  if (placeData && placeData.zipcode && placeData.long) {
+  if (placeData?.zipcode && placeData?.long) {
     areaServed = {
       "@type": "City",
-      name: placeData.long, // z. B. "Berlin-Rahnsdorf" oder "Neuenhagen bei Berlin"
+      name: placeData.long,
       address: {
         "@type": "PostalAddress",
-        postalCode: String(placeData.zipcode), // z. B. "12589"
-        addressLocality: placeData.long,       // z. B. "Berlin-Rahnsdorf"
+        postalCode: String(placeData.zipcode),
+        addressLocality: placeData.long,
         addressCountry: "DE",
       },
     }
-}
+  }
 
   /**
    * Hauptschema für Google Rich Results
@@ -41,21 +56,22 @@ const ProvenExpertStars = ({ pageUrl, placeData }) => {
   const provenExpertData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "LPE Versicherungsmakler | Lars-Peter Eckhardt",
-    "description":
+    "@id": `${pageUrl}#localbusiness`,
+    name: "LPE Versicherungsmakler | Lars-Peter Eckhardt",
+    description:
       "Ihr Makler für: Altersvorsorge | Versicherungen | Finanzierungen | Immobilien",
-    "image":
+    image:
       "https://images.provenexpert.com/75/85/c0fdf5733a2767d5d7634b36fd88/lars-peter-eckhardt_full_1524080663.jpg",
-    "url": pageUrl,
-    "sameAs": ["https://www.provenexpert.com/lars-peter-eckhardt/"],
-    "aggregateRating": {
+    url: pageUrl,
+    sameAs: ["https://www.provenexpert.com/lars-peter-eckhardt/"],
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": rating,
-      "ratingCount": count,
-      "bestRating": 5,
-      "worstRating": 1
+      ratingValue: rating,  // 4.94
+      ratingCount: count,   // 653
+      bestRating: 5,
+      worstRating: 1,
     },
-    ...(areaServed ? { areaServed } : {})
+    ...(areaServed ? { areaServed } : {}),
   }
 
   return (
@@ -72,6 +88,7 @@ ProvenExpertStars.propTypes = {
     title: PropTypes.string,
     short: PropTypes.string,
     zipcode: PropTypes.string,
+    long: PropTypes.string,
   }),
 }
 
