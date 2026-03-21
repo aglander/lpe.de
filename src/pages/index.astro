@@ -6,6 +6,52 @@ import Section from "../components/Section.astro";
 import TypedText from "../components/TypedText.astro";
 import ContactForm from "../components/ContactForm.astro";
 import Reviews from "../components/mdx/Reviews.jsx";
+
+const criteria = [
+  {
+    title: "Unabhängigkeit",
+    text:
+      "Als Versicherungsmakler nach §34d GewO sind wir sogar gesetzlich dazu verpflichtet, die Interessen unserer Kunden unabhängig wahrzunehmen.",
+  },
+  {
+    title: "Kompetenz",
+    text:
+      "Die IHK-Ausbildungen zum Fachwirt für Finanzberatung, Baufinanzierungsberater und Generationenberater gewährleisten die ganzheitliche Beratung.",
+  },
+  {
+    title: "Erfahrung",
+    text:
+      "Die seit 1990 (GREY) und 1999 (LPE) erfolgreich bestehenden Versicherungs- & Finanzmaklerunternehmen wurden 2023 zu LPE & GREY vereinigt.",
+  },
+  {
+    title: "Vertrauen",
+    text:
+      "Versicherungen sind (keine) Vertrauenssache. Seien Sie gerne kritisch, prüfen und fordern Sie uns. Viele hundert Kunden vertrauen uns seit vielen Jahren!",
+  },
+];
+
+const consultingApproach = [
+  {
+    title: "Langfristig",
+    text:
+      "Am liebsten betrachten wir unseren gemeinsamen Weg langfristig und in allen Lebensphasen. Das bedeutet mehr Planungssicherheit für Sie!",
+  },
+  {
+    title: "Unabhängig",
+    text:
+      "Eine geeignet große Auswahl verschiedener Versicherungsgesellschaften, über 400 Banken und Bausparkassen sichert Ihnen ein breites Angebot!",
+  },
+  {
+    title: "Ganzheitlich",
+    text:
+      "Eine saubere Analyse Ihrer aktuellen Lebenssituation, die Erfassung von Zielen / Wünschen ermöglicht uns die individuelle Gestaltung Ihrer Lösungen!",
+  },
+  {
+    title: "Die „Extrameile“",
+    text:
+      "Ist unser „Liebe-Familie-Konzept“. Wir sind von der Notwendigkeit überzeugt und eröffnen Ihnen Lösungsmöglichkeiten die Sie beruhigen werden!",
+  },
+];
 ---
 
 <BaseLayout>
@@ -117,8 +163,7 @@ import Reviews from "../components/mdx/Reviews.jsx";
         Lars-Peter Eckhardt und das LPE & GREY-Team
       </h2>
       <p class="text-lg text-textlight">
-        Als mehrfach ausgezeichnete, unabhängige Versicherungsmakler und Finanzmakler
-        ist es unser Anspruch, Sie gut zu beraten und langfristig zu begleiten.
+        Als mehrfach ausgezeichnete, unabhängige Versicherungsmakler & Finanzmakler ist es unser Anspruch, Sie gut zu beraten, gut zu betreuen und möglichst sehr, sehr lange mit Ihnen zusammenzuarbeiten. Mein Team und ich stehen dafür an Ihrer Seite.
       </p>
     </div>
 
@@ -126,19 +171,27 @@ import Reviews from "../components/mdx/Reviews.jsx";
       <div class="content-box bg-white">
         <h3 class="mb-5 text-2xl">Unsere Kriterien</h3>
         <ul class="ml-12 text-left">
-          <li class="mt-2"><strong>Unabhängigkeit</strong><br />Wir vertreten konsequent die Interessen unserer Kunden.</li>
-          <li class="mt-2"><strong>Kompetenz</strong><br />IHK-Ausbildungen und Weiterbildungen sichern fundierte Beratung.</li>
-          <li class="mt-2"><strong>Erfahrung</strong><br />Die Unternehmen GREY und LPE wurden 2023 zu LPE & GREY vereinigt.</li>
-          <li class="mt-2"><strong>Vertrauen</strong><br />Viele hundert Kunden vertrauen uns seit vielen Jahren.</li>
+          {criteria.map((item) => (
+            <li class="relative mt-2">
+              <i class="fa fa-check-circle absolute -ml-10 mt-2 text-2xl text-green md:-ml-14 md:mt-3 md:text-4xl"></i>
+              <p class="text-textlight [hyphens:auto]">
+                <strong class="pb-2 text-grey">{item.title}</strong><br /> {item.text}
+              </p>
+            </li>
+          ))}
         </ul>
       </div>
       <div class="content-box bg-white">
         <h3 class="mb-5 text-2xl">Unser Beratungsansatz</h3>
         <ul class="ml-12 text-left">
-          <li class="mt-2"><strong>Langfristig</strong><br />Wir denken in Lebensphasen statt in Einzellösungen.</li>
-          <li class="mt-2"><strong>Unabhängig</strong><br />Eine große Auswahl verschiedener Anbieter sichert echte Optionen.</li>
-          <li class="mt-2"><strong>Ganzheitlich</strong><br />Analyse, Ziele und Wünsche führen zu individuell passenden Lösungen.</li>
-          <li class="mt-2"><strong>Die Extrameile</strong><br />Unser Liebe-Familie-Konzept erweitert klassische Beratung sinnvoll.</li>
+          {consultingApproach.map((item) => (
+            <li class="relative mt-2">
+              <i class="fa fa-check-circle absolute -ml-10 mt-2 text-2xl text-green md:-ml-14 md:mt-3 md:text-4xl"></i>
+              <p class="text-textlight [hyphens:auto]">
+                <strong class="pb-2 text-grey">{item.title}</strong><br /> {item.text}
+              </p>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
