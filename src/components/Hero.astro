@@ -1,0 +1,28 @@
+---
+const { title, description, image, ctas } = Astro.props;
+---
+
+<div class="mx-auto max-w-screen-huge lg:relative lg:flex lg:w-full">
+  <div class="lg:flex lg:w-1/2 lg:flex-1 lg:justify-end">
+    <div class="lg:max-w-screen-sm">
+      <slot name="custom">
+        <div class="px-2 py-10 md:px-0 md:py-20">
+          <h1 class="mb-2 py-2 text-4xl font-bold text-grey md:text-5xl md:leading-tight">
+            {title}
+          </h1>
+          {description && (
+            <p class="mb-5 text-textlight md:text-xl md:leading-normal">
+              {description}
+            </p>
+          )}
+          {ctas && <div class="mb-2"><slot name="ctas">{ctas}</slot></div>}
+        </div>
+      </slot>
+    </div>
+  </div>
+  <div class="mx-auto mb-5 w-2/3 lg:relative lg:mb-0 lg:w-1/2">
+    <div class="hero-image">
+      {image ? <img src={image.src ?? image} alt={image.alt ?? ""} /> : <slot name="image" />}
+    </div>
+  </div>
+</div>

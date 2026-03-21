@@ -55,7 +55,7 @@ const ProvenExpertStars = ({ pageUrl, placeData }) => {
    */
   const provenExpertData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "FinancialService", "InsuranceAgency"],
     "@id": `${pageUrl}#localbusiness`,
     name: "LPE Versicherungsmakler | Lars-Peter Eckhardt",
     description:

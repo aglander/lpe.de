@@ -1,12 +1,99 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-green: #68b436;
+  --color-darkgreen: #2c5313;
+  --color-lightgrey: #f7f9fa;
+  --color-divider: rgba(0, 0, 0, 0.12);
+  --color-grey: #5b5b5b;
+  --color-text: #5b5b5b;
+  --color-textlight: #718096;
+  --color-yellow: #ffbb00;
+  --color-footer: #5b5b5b;
+  --breakpoint-huge: 2000px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-text antialiased;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+
+  summary {
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded border border-green bg-green px-4 py-2 text-center uppercase text-white shadow hover:bg-darkgreen;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded border border-green bg-white px-4 py-2 text-center uppercase text-green shadow hover:bg-lightgrey;
+  }
+
+  .content-box {
+    @apply my-5 border-t border-b border-divider py-10 text-center md:rounded-2xl md:border md:p-10;
+  }
+
+  .mdx-content {
+    @apply text-base lg:text-xl lg:leading-9;
+  }
+
+  .mdx-content p {
+    @apply mb-6 text-base lg:text-lg lg:leading-7;
+  }
+
+  .mdx-content h1 {
+    @apply mb-10 text-3xl hyphens-auto lg:text-4xl;
+  }
+
+  .mdx-content h2 {
+    @apply mt-12 mb-8 border-b border-divider pb-4 text-xl hyphens-auto lg:text-3xl;
+  }
+
+  .mdx-content h3 {
+    @apply mt-8 mb-5 text-xl font-bold hyphens-auto lg:text-2xl;
+  }
+
+  .mdx-content ul {
+    @apply mb-8 ml-6 list-outside text-base lg:text-xl;
+    list-style-type: square;
+  }
+
+  .mdx-content ol {
+    @apply mb-8 ml-6 list-decimal text-base lg:text-xl;
+  }
+
+  .mdx-content a {
+    @apply text-green hover:text-darkgreen;
+  }
+
+  .mdx-content hr,
+  .divider {
+    @apply my-5 h-px border-0 bg-divider;
+  }
+}
 
 @layer utilities {
   .provenexpert {
     width: 1000px;
     height: 234px;
   }
+
   .whofinance {
     height: 71px;
     width: 100%;
@@ -17,17 +104,13 @@
     z-index: 999;
   }
 
-  .hyphens {
-    hyphens: auto;
+  .compare {
+    height: 1100px;
+    width: 100%;
   }
 
   .no-hyphens {
     hyphens: none;
-  }
-
-  .compare {
-    height: 1100px;
-    width: 100%;
   }
 }
 
@@ -39,7 +122,9 @@
     justify-content: flex-end;
   }
 
-  .hero-image > .gatsby-image-wrapper {
+  .hero-image img {
     width: 1000px;
+    height: auto;
+    object-fit: cover;
   }
 }

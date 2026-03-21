@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../components/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import { places } from "../lib/site.js";
+
+const seoPages = await getCollection("seo");
+---
+
+<BaseLayout title="Ortsverzeichnis | LPE.de">
+  <Section>
+    <div class="mb-2 text-center [hyphens:auto]">
+      <h1 class="py-2 text-2xl font-bold text-grey lg:text-4xl">Ortsverzeichnis</h1>
+    </div>
+    <div class="lg:flex lg:flex-wrap">
+      {places.map((place) => (
+        <div class="lg:w-1/2 lg:px-5">
+          <h2 class="mt-12 mb-8 border-b border-divider pb-4 text-4xl">{place.title}</h2>
+          <ul class="mb-8 ml-6 list-inside text-xl" style="list-style-type:square">
+            {seoPages.map((page) => (
+              <li>
+                <a
+                  href={`/${page.data.slug}-${place.slug}/`}
+                  class="font-bold text-green hover:text-darkgreen"
+                >
+                  {page.data.heroTitle}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>
