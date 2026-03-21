@@ -20,7 +20,8 @@
 
   body {
     @apply bg-white text-text antialiased;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+      ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
 
   a {
@@ -111,6 +112,49 @@
 
   .no-hyphens {
     hyphens: none;
+  }
+
+  .typed-text-shell {
+    display: inline-grid;
+    align-items: baseline;
+  }
+
+  .typed-text-shell > * {
+    grid-area: 1 / 1;
+  }
+
+  .typed-text-live {
+    display: inline-flex;
+    align-items: baseline;
+    white-space: nowrap;
+  }
+
+  .typed-text-value {
+    white-space: nowrap;
+  }
+
+  .typed-text-cursor {
+    display: inline-block;
+    margin-left: 0.04em;
+    animation: typed-cursor-blink 1s steps(1) infinite;
+  }
+
+  .typed-text-sizer {
+    visibility: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+}
+
+@keyframes typed-cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
   }
 }
 

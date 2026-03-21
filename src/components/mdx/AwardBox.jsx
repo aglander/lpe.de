@@ -11,7 +11,7 @@ export default function AwardBox() {
         description={
           <div className="no-hyphens">
             Seit 2011 wird LPE | Lars-Peter Eckhardt ununterbrochen durch die
-            unabhaengige Bewertungsplattform{" "}
+            unabhängige Bewertungsplattform{" "}
             <a
               href="https://www.whofinance.de/berater/lars-peter-eckhardt/"
               target="_blank"

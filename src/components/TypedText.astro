@@ -1,10 +1,19 @@
 ---
 const { strings = [], className = "" } = Astro.props;
 const id = `typed-${Math.random().toString(36).slice(2, 10)}`;
+const longestString = strings.reduce(
+  (longest, value) => (value.length > longest.length ? value : longest),
+  "",
+);
 ---
 
 <span class={className}>
-  <span id={id}></span>
+  <span class="typed-text-shell">
+    <span class="typed-text-sizer" aria-hidden="true">{longestString}|</span>
+    <span class="typed-text-live">
+      <span class="typed-text-value" id={id}></span><span class="typed-text-cursor" aria-hidden="true">|</span>
+    </span>
+  </span>
 </span>
 
 <script is:inline define:vars={{ id, strings }}>

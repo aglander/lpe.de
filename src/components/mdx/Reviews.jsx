@@ -31,7 +31,7 @@ export default function Reviews() {
           </>
         }
         title={<span className="text-green">Wir beraten Sie sehr gut, sagen unsere Kunden!</span>}
-        description="Die vielen positiven Bewertungen und Rueckmeldungen sind uns eine grosse Ehre und dauerhafter Anspruch zugleich."
+        description="Die vielen positiven Bewertungen und Rückmeldungen sind uns eine große Ehre und dauerhafter Anspruch zugleich."
       />
       <ProvenExpert />
       <div className="grid lg:grid-cols-3 lg:gap-5">
@@ -40,9 +40,9 @@ export default function Reviews() {
           authorPhoto="/images/Review1.png"
           topic="Altersvorsorge & Versicherungen"
         >
-          Seit Jahren mein persoenlicher Ansprechpartner Nr. 1 fuer Versicherungen
-          und Altersvorsorge. Gerade bei meiner Existenzgruendung hat Lars-Peter
-          Eckhardt mir ein tolles Paket geschnuert.
+          Seit Jahren mein persönlicher Ansprechpartner Nr. 1 für Versicherungen
+          und Altersvorsorge. Gerade bei meiner Existenzgründung hat Lars-Peter
+          Eckhardt mir ein tolles Paket geschnürt.
         </Review>
         <Review
           authorName="Arian Glander"
@@ -51,7 +51,7 @@ export default function Reviews() {
         >
           Seit zwei Jahrzehnten vertraue ich Lars-Peter Eckhardt wenn es um
           Versicherungen oder Finanzierungen geht. Er findet immer die richtige
-          Loesung.
+          Lösung.
         </Review>
         <Review
           authorName="Josefina Bils"
@@ -59,7 +59,7 @@ export default function Reviews() {
           topic="Finanzierung & Absicherung"
         >
           LPE hat uns zu unserer Traumimmobilie verholfen. Es war eine ehrliche
-          und vertrauensvolle Zusammenarbeit, fuer die wir als Familie sehr dankbar sind.
+          und vertrauensvolle Zusammenarbeit, für die wir als Familie sehr dankbar sind.
         </Review>
       </div>
       <div className="text-center">
