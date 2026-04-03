@@ -1,0 +1,83 @@
+---
+const { id, title } = Astro.props;
+const embedUrl = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+const thumbnailUrl = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+---
+
+<div class="inline-video-card p-3">
+  <div class="overflow-hidden border border-divider bg-footer shadow">
+    <button
+      type="button"
+      class="group relative block aspect-video w-full overflow-hidden text-left"
+      data-video-trigger
+      data-video-embed={embedUrl}
+      data-video-title={title}
+    >
+      <img
+        src={thumbnailUrl}
+        alt={title}
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 bg-black/35 transition-colors duration-300 group-hover:bg-black/25"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+        <span class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-green shadow">
+          <span class="ml-1 text-3xl leading-none">▶</span>
+        </span>
+        <p class="text-lg font-semibold text-white drop-shadow">{title}</p>
+      </div>
+    </button>
+  </div>
+</div>
+
+<script>
+  const bindInlineVideos = () => {
+    document.querySelectorAll("[data-video-trigger]").forEach((trigger) => {
+      if (trigger.dataset.bound === "true") return;
+      trigger.dataset.bound = "true";
+
+      trigger.addEventListener("click", () => {
+        const embed = trigger.dataset.videoEmbed;
+        const title = trigger.dataset.videoTitle || "YouTube video player";
+        if (!embed) return;
+
+        const frame = document.createElement("iframe");
+        frame.src = embed;
+        frame.title = title;
+        frame.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        frame.allowFullscreen = true;
+        frame.className = "absolute inset-0 h-full w-full border-0";
+
+        trigger.innerHTML = "";
+        trigger.appendChild(frame);
+        trigger.classList.remove("group");
+        trigger.setAttribute("aria-label", title);
+      });
+    });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bindInlineVideos, { once: true });
+  } else {
+    bindInlineVideos();
+  }
+
+  document.addEventListener("astro:page-load", bindInlineVideos);
+</script>
+
+<style>
+  .inline-video-card {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 100%;
+    vertical-align: top;
+  }
+
+  @media (min-width: 768px) {
+    .inline-video-card {
+      width: 50%;
+    }
+  }
+</style>

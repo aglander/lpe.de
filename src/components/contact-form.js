@@ -5,7 +5,7 @@ const TextInput = ({ type, label, name, required }) =>
   type === "textarea" ? (
     <textarea
       name={name}
-      class="mt-4 md:mt-8 py-4 h-28 block w-full text-xl rounded-md bg-lightgrey border-divider focus:border-green focus:bg-white focus:ring-0"
+      class="mt-4 md:mt-8 py-4 pl-4 h-28 block w-full text-xl rounded-md bg-lightgrey border-divider focus:border-green focus:bg-white focus:ring-0"
       placeholder={label}
       required={required}
     />
@@ -13,7 +13,7 @@ const TextInput = ({ type, label, name, required }) =>
     <input
       type={type}
       name={name}
-      class="mt-4 md:mt-8 py-4 block w-full text-xl rounded-md bg-lightgrey border-divider focus:border-green focus:bg-white focus:ring-0"
+      class="mt-4 md:mt-8 py-4 pl-4 block w-full text-xl rounded-md bg-lightgrey border-divider focus:border-green focus:bg-white focus:ring-0"
       placeholder={label}
       required={required}
     />

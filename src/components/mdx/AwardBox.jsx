@@ -24,9 +24,9 @@ export default function AwardBox() {
           </div>
         }
       />
-      <ul className="mx-auto flex max-w-3xl flex-wrap justify-center">
+      <ul className="mx-auto flex max-w-3xl list-none flex-wrap justify-center pl-0">
         {awards.map((award) => (
-          <li key={award} className="p-4">
+          <li key={award} className="list-none p-4">
             <a
               href="https://www.whofinance.de/berater/lars-peter-eckhardt/"
               target="_blank"

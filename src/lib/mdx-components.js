@@ -11,7 +11,7 @@ import Navigation from "../components/mdx/Navigation.jsx";
 import Place from "../components/mdx/Place.jsx";
 import ProvenExpert from "../components/mdx/ProvenExpert.jsx";
 import Reviews from "../components/mdx/Reviews.jsx";
-import Video from "../components/mdx/Video.jsx";
+import Video from "../components/mdx/Video.astro";
 
 export const createMdxComponents = ({ ctas, placeData } = {}) => ({
   AwardBox,

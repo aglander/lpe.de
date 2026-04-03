@@ -83,6 +83,14 @@
     @apply text-green hover:text-darkgreen;
   }
 
+  .mdx-content a.btn-primary {
+    @apply text-white hover:text-white;
+  }
+
+  .mdx-content a.btn-outline {
+    @apply text-green hover:text-green;
+  }
+
   .mdx-content hr,
   .divider {
     @apply my-5 h-px border-0 bg-divider;
@@ -162,13 +170,18 @@
   .hero-image {
     clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
     shape-outside: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
-    display: grid;
-    justify-content: flex-end;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    line-height: 0;
   }
 
   .hero-image img {
-    width: 1000px;
-    height: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
   }
 }

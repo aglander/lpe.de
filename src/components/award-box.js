@@ -22,8 +22,8 @@ const AwardBox = () => (
         </div>
       }
     />
-    <ul class="flex flex-wrap max-w-3xl justify-center mx-auto">
-      <li class="p-4">
+    <ul class="mx-auto flex max-w-3xl list-none flex-wrap justify-center pl-0">
+      <li class="list-none p-4">
         <a
           href="https://www.whofinance.de/berater/lars-peter-eckhardt/"
           target="_blank"
@@ -39,7 +39,7 @@ const AwardBox = () => (
           />
         </a>
       </li>
-      <li class="p-4">
+      <li class="list-none p-4">
         <a
           href="https://www.whofinance.de/berater/lars-peter-eckhardt/"
           target="_blank"
@@ -55,7 +55,7 @@ const AwardBox = () => (
           />
         </a>
       </li>
-      <li class="p-4">
+      <li class="list-none p-4">
         <a
           href="https://www.whofinance.de/berater/lars-peter-eckhardt/"
           target="_blank"
@@ -71,7 +71,7 @@ const AwardBox = () => (
           />
         </a>
       </li>
-      <li class="p-4">
+      <li class="list-none p-4">
         <a
           href="https://www.whofinance.de/berater/lars-peter-eckhardt/"
           target="_blank"
@@ -87,7 +87,7 @@ const AwardBox = () => (
           />
         </a>
       </li>
-      <li class="p-4">
+      <li class="list-none p-4">
         <a
           href="https://www.whofinance.de/berater/lars-peter-eckhardt/"
           target="_blank"
@@ -103,7 +103,7 @@ const AwardBox = () => (
           />
         </a>
       </li>
-      <li class="p-4">
+      <li class="list-none p-4">
         <a
           href="https://www.whofinance.de/berater/lars-peter-eckhardt/"
           target="_blank"

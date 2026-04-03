@@ -170,6 +170,36 @@ const HorizontalNavigation = ({ data }) => {
   )
 }
 
+const SectionNavigation = ({ data, id }) => {
+  const sections = data.filter(navItem => navItem.parentId === id)
+
+  return (
+    <ul class="mx-auto grid w-full max-w-6xl gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-3">
+      {sections.map(section => (
+        <li key={section.navId} class="min-w-0">
+          <h2 class="border-divider mt-2 border-b pb-3 text-lg text-green uppercase leading-snug hyphens-auto">
+            {section.title}
+          </h2>
+          <ul class="mt-6 space-y-3">
+            {data
+              .filter(navItem => navItem.parentId === section.navId)
+              .map(navItem => (
+                <li key={navItem.navId} class="min-w-0">
+                  <Link
+                    to={navItem.url}
+                    class="block text-base leading-8 text-text hover:text-green hyphens-auto"
+                  >
+                    {navItem.title}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 const Navigation = ({ horizontal, id }) => {
 
   const {
@@ -190,11 +220,7 @@ const Navigation = ({ horizontal, id }) => {
   if (horizontal) {
     return <HorizontalNavigation data={navigationData} />
   } else if (id) {
-    return (
-      <ul class="flex flex-wrap w-3/4 mx-auto">
-        <SubNavigationItems id={id} data={navigationData} />
-      </ul>
-    )
+    return <SectionNavigation id={id} data={navigationData} />
   } else {
     return <VerticalNavigation data={navigationData} id={id} />
   }

@@ -20,8 +20,8 @@ const { title, description, image, ctas } = Astro.props;
       </slot>
     </div>
   </div>
-  <div class="mx-auto mb-5 w-2/3 lg:relative lg:mb-0 lg:w-1/2">
-    <div class="hero-image">
+  <div class="mx-auto mb-5 w-2/3 lg:relative lg:mb-0 lg:flex lg:w-1/2 lg:self-stretch">
+    <div class="hero-image w-full">
       {image ? <img src={image.src ?? image} alt={image.alt ?? ""} /> : <slot name="image" />}
     </div>
   </div>

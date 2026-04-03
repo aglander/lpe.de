@@ -1,5 +1,7 @@
 ---
 import React from "react";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../components/BaseLayout.astro";
 import Divider from "../components/Divider.astro";
@@ -52,6 +54,32 @@ export async function getStaticPaths() {
 const { type, entry, placeData } = Astro.props;
 const { Content } = await render(entry);
 const asString = (value) => (typeof value === "string" ? value : undefined);
+const legacyPrintMap = {
+  "LPE-Datenschutz 2025.pdf": "lpe-allgemein/LPE_Datenschutz.pdf",
+  "LPE & GREY - Erstinformation 2025.pdf": "LPE & GREY - Erstinformation 2025.pdf",
+  "LPE & GREY - Impressum 2025.pdf": undefined,
+};
+const resolvePrintPath = (value) => {
+  const printValue = asString(value);
+  if (!printValue) return undefined;
+
+  const mappedValue = legacyPrintMap[printValue] ?? printValue;
+  if (!mappedValue) return undefined;
+
+  const normalizedValue = mappedValue.replace(/^\/+/, "");
+  const staticPath = join(process.cwd(), "static", normalizedValue);
+
+  return existsSync(staticPath) ? `/${normalizedValue}` : undefined;
+};
+const resolveHeroImage = (value, fallback = "assets/standard.jpg") => {
+  if (value && typeof value === "object") {
+    if (typeof value.src === "string") return value;
+    return { src: publicAsset(fallback), alt: "" };
+  }
+
+  const imagePath = asString(value) || fallback;
+  return { src: publicAsset(imagePath), alt: "" };
+};
 
 const pageTitle =
   type === "legal"
@@ -68,11 +96,12 @@ const ctas = React.createElement(PageCtas, {
 });
 const mdxComponents = createMdxComponents({ ctas, placeData });
 const pageUrl = new URL(Astro.url.pathname, siteMetadata.siteUrl).toString();
+const printPath = resolvePrintPath(entry.data.print);
 const heroImageValue =
   type === "seo"
     ? placeData?.heroImage || asString(entry.data.heroImage)?.replace(/^\.\.\//, "") || "assets/standard.jpg"
     : asString(entry.data.heroImage);
-const heroImage = publicAsset(heroImageValue);
+const heroImage = resolveHeroImage(heroImageValue);
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -82,13 +111,13 @@ const heroImage = publicAsset(heroImageValue);
         <h1 class="mb-2 py-2 text-4xl text-grey md:text-6xl">
           {asString(entry.data.title)}
         </h1>
-        {entry.data.date && entry.data.print && (
+        {entry.data.date && printPath && (
           <div class="grid grid-cols-2">
             <p class="mb-2 text-textlight md:text-xl">
               Zuletzt aktualisiert: {entry.data.date.toLocaleDateString("de-DE")}
             </p>
             <div class="text-right -mt-4">
-              <a href={`/${asString(entry.data.print)}`} class="btn-outline">Drucken</a>
+              <a href={printPath} class="btn-outline">Drucken</a>
             </div>
           </div>
         )}
@@ -99,7 +128,7 @@ const heroImage = publicAsset(heroImageValue);
     </Section>
   ) : (
     <>
-      <Hero image={{ src: heroImage, alt: entry.data.heroTitle }}>
+      <Hero image={{ ...heroImage, alt: entry.data.heroTitle }}>
         <div slot="custom" class="px-2 py-10 md:px-0 md:py-20">
           <h1 class="mb-2 py-2 text-4xl font-bold text-grey md:text-5xl md:leading-tight">
             {asString(entry.data.heroTitle)}
@@ -126,7 +155,7 @@ const heroImage = publicAsset(heroImageValue);
           </div>
         </div>
       </Hero>
-      <Divider />
+      <Divider className="!my-0" />
       <Section>
         <div class="mdx-content">
           <Content components={mdxComponents} />
