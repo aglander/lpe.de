@@ -32,7 +32,10 @@ const thumbnailUrl = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 
 <script>
   const bindInlineVideos = () => {
-    document.querySelectorAll("[data-video-trigger]").forEach((trigger) => {
+    document.querySelectorAll("[data-video-trigger]").forEach((node) => {
+      const trigger = node instanceof HTMLButtonElement ? node : null;
+      if (!trigger) return;
+
       if (trigger.dataset.bound === "true") return;
       trigger.dataset.bound = "true";
 

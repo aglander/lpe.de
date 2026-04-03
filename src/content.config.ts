@@ -13,6 +13,7 @@ const pageCollection = defineCollection({
     heroImage: z.any().optional(),
     compare: z.any().optional(),
     compareLabel: z.any().optional(),
+    backUrl: z.any().optional(),
   }),
 });
 
@@ -38,6 +39,7 @@ const seoCollection = defineCollection({
     heroImage: z.any().optional(),
     compare: z.any().optional(),
     compareLabel: z.any().optional(),
+    backUrl: z.any().optional(),
   }),
 });
 

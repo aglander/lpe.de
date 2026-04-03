@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../components/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import { places } from "../lib/site.js";
+import { normalizeSlug } from "../lib/routes.js";
 
 const seoPages = await getCollection("seo");
 ---
@@ -21,7 +22,7 @@ const seoPages = await getCollection("seo");
               <li class="flex items-start gap-4">
                 <span class="mt-3 h-3 w-3 shrink-0 bg-text"></span>
                 <a
-                  href={`/${page.data.slug}-${place.slug}/`}
+                  href={`/${page.data.slug}-${normalizeSlug(place.slug)}/`}
                   class="block font-bold text-green hover:text-darkgreen"
                 >
                   {page.data.heroTitle}

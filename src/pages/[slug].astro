@@ -56,7 +56,7 @@ const { Content } = await render(entry);
 const asString = (value) => (typeof value === "string" ? value : undefined);
 const legacyPrintMap = {
   "LPE-Datenschutz 2025.pdf": "lpe-allgemein/LPE_Datenschutz.pdf",
-  "LPE & GREY - Erstinformation 2025.pdf": "LPE & GREY - Erstinformation 2025.pdf",
+  "LPE & GREY - Erstinformation 2025.pdf": "lpe-allgemein/LPE_Erstinformation.pdf",
   "LPE & GREY - Impressum 2025.pdf": undefined,
 };
 const resolvePrintPath = (value) => {
@@ -92,6 +92,7 @@ const pageDescription =
 const ctas = React.createElement(PageCtas, {
   compare: typeof entry.data.compare === "string" ? entry.data.compare : undefined,
   compareLabel: typeof entry.data.compareLabel === "string" ? entry.data.compareLabel : undefined,
+  backUrl: typeof entry.data.backUrl === "string" ? entry.data.backUrl : undefined,
   slug: entry.data.slug,
 });
 const mdxComponents = createMdxComponents({ ctas, placeData });
@@ -150,6 +151,7 @@ const heroImage = resolveHeroImage(heroImageValue);
             <PageCtas
               compare={typeof entry.data.compare === "string" ? entry.data.compare : undefined}
               compareLabel={typeof entry.data.compareLabel === "string" ? entry.data.compareLabel : undefined}
+              backUrl={typeof entry.data.backUrl === "string" ? entry.data.backUrl : undefined}
               slug={entry.data.slug}
             />
           </div>

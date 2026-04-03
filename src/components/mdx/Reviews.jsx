@@ -6,13 +6,23 @@ import SectionHeader from "./SectionHeader.jsx";
 function Review({ children, authorName, authorPhoto, topic }) {
   return (
     <Box>
-      <i className="fas fa-quote-right mb-5 rounded-xl bg-green p-4 text-xl text-white lg:text-3xl"></i>
-      <p className="text-base [hyphens:auto]">{children}</p>
-      <div className="mt-5 mb-3 flex justify-center">
-        <img src={authorPhoto} alt={authorName} width="40" height="40" className="rounded-full" />
+      <div className="flex h-full flex-col">
+        <i className="fas fa-quote-right mx-auto mb-4 rounded-lg bg-green p-3 text-lg text-white lg:text-2xl"></i>
+        <p className="flex-1 text-base leading-7 [hyphens:auto]">{children}</p>
+        <div className="mt-3 flex flex-col items-center">
+          <img
+            src={authorPhoto}
+            alt={authorName}
+            width="44"
+            height="44"
+            className="mb-1.5 rounded-full object-cover"
+          />
+          <h3 className="mb-1 text-center text-xl font-bold leading-tight text-grey lg:text-2xl">
+            {authorName}
+          </h3>
+          <p className="text-center text-sm leading-snug text-textlight lg:text-base">{topic}</p>
+        </div>
       </div>
-      <h3>{authorName}</h3>
-      <p className="text-sm text-textlight">{topic}</p>
     </Box>
   );
 }
@@ -34,7 +44,7 @@ export default function Reviews() {
         description="Die vielen positiven Bewertungen und Rückmeldungen sind uns eine große Ehre und dauerhafter Anspruch zugleich."
       />
       <ProvenExpert />
-      <div className="grid lg:grid-cols-3 lg:gap-5">
+      <div className="grid gap-5 lg:grid-cols-3">
         <Review
           authorName="Steffi Richter"
           authorPhoto="/images/Review1.png"

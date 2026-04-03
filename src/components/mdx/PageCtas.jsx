@@ -1,10 +1,9 @@
 import React from "react";
 import Button from "./Button.jsx";
 
-export default function PageCtas({ compare, compareLabel, slug }) {
-  const backTarget = slug?.endsWith("-vergleichen")
-    ? `/${slug.split("-vergleichen")[0]}/`
-    : null;
+export default function PageCtas({ compare, compareLabel, slug, backUrl }) {
+  const backTarget =
+    backUrl || (slug?.endsWith("-vergleichen") ? `/${slug.split("-vergleichen")[0]}/` : null);
 
   return (
     <div className="flex flex-wrap gap-3">

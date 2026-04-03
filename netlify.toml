@@ -2,7 +2,7 @@
 
 [[redirects]]
   from = "/sitemap.xml"
-  to   = "/sitemap/sitemap-index.xml"
+  to   = "/sitemap-index.xml"
   status = 200
 
 [[redirects]]
@@ -25,4 +25,3 @@
   [headers.values]
     Content-Type = "application/xml; charset=utf-8"
     Cache-Control = "public, max-age=0, must-revalidate"
-
