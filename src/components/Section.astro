@@ -1,0 +1,9 @@
+---
+const { alternate = false } = Astro.props;
+---
+
+<section class:list={["px-2 py-10 md:py-20", alternate && "bg-lightgrey"]}>
+  <div class="mx-auto max-w-screen-lg text-text">
+    <slot />
+  </div>
+</section>

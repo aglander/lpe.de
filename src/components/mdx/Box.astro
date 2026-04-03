@@ -1,0 +1,11 @@
+---
+const { title, alternate = true } = Astro.props as {
+  title?: string;
+  alternate?: boolean;
+};
+---
+
+<div class:list={["content-box", alternate ? "bg-white" : "bg-lightgrey"]}>
+  {title ? <h2 class="mb-2 py-2 text-center text-2xl font-bold text-grey lg:text-4xl">{title}</h2> : null}
+  <slot />
+</div>

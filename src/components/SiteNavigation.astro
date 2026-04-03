@@ -1,0 +1,161 @@
+---
+import { getNavigationTree } from "../lib/navigation.js";
+import DesktopMegaMenu from "./DesktopMegaMenu.astro";
+import MobileNavDrawer from "./MobileNavDrawer.astro";
+
+const tree = await getNavigationTree();
+---
+
+<header class="fixed z-40 w-full border-b border-divider bg-white/95 backdrop-blur">
+  <div class="mx-auto flex max-w-screen-xl items-center gap-4 p-2">
+    <a href="/" aria-label="Zur Startseite">
+      <img
+        src="/images/LPE_Logo_full.png"
+        alt="LPE Logo"
+        width="147"
+        height="50"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        class="h-[50px] w-[147px] lg:hidden xl:block"
+      />
+      <img
+        src="/images/LPE_Logo_full.png"
+        alt="LPE Logo"
+        width="147"
+        height="50"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        class="hidden h-[50px] w-[147px] lg:block xl:hidden"
+      />
+    </a>
+
+    <div class="flex flex-1 items-center justify-end">
+      <DesktopMegaMenu items={tree} />
+      <MobileNavDrawer items={tree} />
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  const setupNavigation = () => {
+    const header = document.querySelector("header");
+    if (!header) return;
+    if (header.dataset.navInitialized === "true") return;
+    header.dataset.navInitialized = "true";
+
+    const desktopToggles = Array.from(header.querySelectorAll("[data-nav-toggle]"));
+    const desktopPanels = Array.from(header.querySelectorAll("[data-nav-panel]"));
+    const drawer = header.querySelector("#mobile-nav-drawer");
+    const drawerToggle = header.querySelector("[data-drawer-toggle]");
+    const drawerClose = header.querySelector("[data-drawer-close]");
+    const drawerLinks = Array.from(header.querySelectorAll("[data-drawer-link]"));
+    const accordionToggles = Array.from(header.querySelectorAll("[data-accordion-toggle]"));
+
+    const closeDesktopMenus = () => {
+      desktopToggles.forEach((toggle) => {
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.classList.remove("bg-lightgrey", "text-green");
+        toggle.querySelector("svg")?.classList.remove("rotate-180");
+      });
+
+      desktopPanels.forEach((panel) => {
+        panel.classList.add("hidden");
+      });
+    };
+
+    const toggleDesktopMenu = (panelId) => {
+      const toggle = header.querySelector(`[data-nav-toggle="${panelId}"]`);
+      const panel = header.querySelector(`#${panelId}`);
+      if (!toggle || !panel) return;
+
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      closeDesktopMenus();
+
+      if (isOpen) return;
+
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.classList.add("bg-lightgrey", "text-green");
+      toggle.querySelector("svg")?.classList.add("rotate-180");
+      panel.classList.remove("hidden");
+    };
+
+    const closeDrawer = () => {
+      if (!drawer) return;
+      drawer.classList.add("translate-x-full");
+    };
+
+    const openDrawer = () => {
+      if (!drawer) return;
+      drawer.classList.remove("translate-x-full");
+    };
+
+    const toggleAccordion = (panelId) => {
+      const toggle = header.querySelector(`[data-accordion-toggle="${panelId}"]`);
+      const panel = header.querySelector(`#${panelId}`);
+      if (!toggle || !panel) return;
+
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+      accordionToggles.forEach((item) => {
+        const itemPanel = header.querySelector(`#${item.getAttribute("data-accordion-toggle")}`);
+        item.setAttribute("aria-expanded", "false");
+        item.querySelector("[data-accordion-icon]")?.classList.remove("rotate-180");
+        itemPanel?.classList.add("hidden");
+      });
+
+      if (isOpen) return;
+
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.querySelector("[data-accordion-icon]")?.classList.add("rotate-180");
+      panel.classList.remove("hidden");
+    };
+
+    desktopToggles.forEach((toggle) => {
+      toggle.addEventListener("click", (event) => {
+        event.preventDefault();
+        toggleDesktopMenu(toggle.getAttribute("data-nav-toggle"));
+      });
+    });
+
+    drawerToggle?.addEventListener("click", () => {
+      const isClosed = drawer?.classList.contains("translate-x-full");
+      if (isClosed) {
+        openDrawer();
+      } else {
+        closeDrawer();
+      }
+    });
+
+    drawerClose?.addEventListener("click", closeDrawer);
+    drawerLinks.forEach((link) => link.addEventListener("click", closeDrawer));
+
+    accordionToggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        toggleAccordion(toggle.getAttribute("data-accordion-toggle"));
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!header.contains(event.target)) {
+        closeDesktopMenus();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeDesktopMenus();
+        closeDrawer();
+      }
+    });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupNavigation, { once: true });
+  } else {
+    setupNavigation();
+  }
+
+  window.addEventListener("astro:page-load", setupNavigation);
+</script>

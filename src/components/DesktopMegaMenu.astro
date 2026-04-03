@@ -1,0 +1,113 @@
+---
+type NavLink = {
+  href: string;
+  title: string;
+};
+
+type NavGroup = {
+  title: string;
+  href?: string;
+  links: NavLink[];
+};
+
+type NavItem = {
+  id: string;
+  title: string;
+  href?: string;
+  groups: NavGroup[];
+};
+
+const { items = [] } = Astro.props as { items?: NavItem[] };
+---
+
+<nav class="relative hidden lg:block lg:flex-1" aria-label="Hauptnavigation">
+  <ul class="flex items-center justify-end gap-1" data-desktop-nav>
+    {items.map((item: NavItem) => {
+      const dropdownId = `mega-menu-${item.id}`;
+      const hasGroups = item.groups.length > 0;
+
+      return (
+        <li>
+          {hasGroups ? (
+            <button
+              id={`${dropdownId}-button`}
+              type="button"
+              class="inline-flex items-center rounded-lg px-4 py-3 text-base font-medium text-text hover:bg-lightgrey hover:text-green focus:outline-none focus:ring-2 focus:ring-green/30"
+              data-nav-toggle={dropdownId}
+              aria-controls={dropdownId}
+              aria-expanded="false"
+            >
+              <span>{item.title}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="ml-2 h-4 w-4 shrink-0 transition-transform"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+          ) : (
+            <a
+              href={item.href}
+              class="inline-flex items-center rounded-lg px-4 py-3 text-base font-medium text-text hover:bg-lightgrey hover:text-green focus:outline-none focus:ring-2 focus:ring-green/30"
+            >
+              {item.title}
+            </a>
+          )}
+
+          {hasGroups ? (
+            <div
+              id={dropdownId}
+              class="absolute top-full left-1/2 z-50 mt-4 hidden w-[72rem] max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-2xl border border-divider bg-white p-8 shadow-2xl"
+              data-nav-panel
+            >
+              <div class="grid grid-cols-3 gap-8 xl:grid-cols-4">
+                {item.groups.map((group: NavGroup) => (
+                  <section class="min-w-0">
+                    {group.href ? (
+                      <a
+                        href={group.href}
+                        class="mb-3 block text-sm font-bold uppercase tracking-wide text-green hover:text-darkgreen"
+                      >
+                        {group.title}
+                      </a>
+                    ) : (
+                      <h2 class="mb-3 text-sm font-bold uppercase tracking-wide text-green">
+                        {group.title}
+                      </h2>
+                    )}
+
+                    {group.links.length > 0 ? (
+                      <ul class="space-y-2">
+                        {group.links.map((link: NavLink) => (
+                          <li>
+                            <a
+                              href={link.href}
+                              class="block text-sm leading-5 text-text hover:text-green"
+                            >
+                              {link.title}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </section>
+                ))}
+              </div>
+            </div>
+          ) : null}
+        </li>
+      );
+    })}
+
+    <li class="ml-4">
+      <a href="/kontakt/" class="btn-primary">Kontakt</a>
+    </li>
+  </ul>
+</nav>

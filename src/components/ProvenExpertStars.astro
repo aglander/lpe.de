@@ -1,0 +1,68 @@
+---
+import { provenExpert } from "../lib/site.js";
+
+type PlaceData = {
+  zipcode?: string | null;
+  long?: string;
+};
+
+type AreaServed = {
+  "@type": "City";
+  name: string;
+  address: {
+    "@type": "PostalAddress";
+    postalCode: string;
+    addressLocality: string;
+    addressCountry: "DE";
+  };
+};
+
+const { pageUrl, placeData } = Astro.props as {
+  pageUrl?: string;
+  placeData?: PlaceData;
+};
+const rawRating = provenExpert?.ratingValue ? Number(provenExpert.ratingValue) : 0;
+const rating = rawRating > 0 ? Number(rawRating.toFixed(2)) : 0;
+const count = provenExpert?.reviewCount ? Number(provenExpert.reviewCount) : 0;
+
+if (!(rating > 0 && count > 0) || !pageUrl) {
+  return null;
+}
+
+let areaServed: AreaServed | undefined;
+if (placeData?.zipcode && placeData?.long) {
+  areaServed = {
+    "@type": "City",
+    name: placeData.long,
+    address: {
+      "@type": "PostalAddress",
+      postalCode: String(placeData.zipcode),
+      addressLocality: placeData.long,
+      addressCountry: "DE",
+    },
+  };
+}
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "FinancialService", "InsuranceAgency"],
+  "@id": `${pageUrl}#localbusiness`,
+  name: "LPE Versicherungsmakler | Lars-Peter Eckhardt",
+  description:
+    "Ihr Makler für: Altersvorsorge | Versicherungen | Finanzierungen | Immobilien",
+  image:
+    "https://images.provenexpert.com/75/85/c0fdf5733a2767d5d7634b36fd88/lars-peter-eckhardt_full_1524080663.jpg",
+  url: pageUrl,
+  sameAs: ["https://www.provenexpert.com/lars-peter-eckhardt/"],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: rating,
+    ratingCount: count,
+    bestRating: 5,
+    worstRating: 1,
+  },
+  ...(areaServed ? { areaServed } : {}),
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />

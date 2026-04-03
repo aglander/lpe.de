@@ -1,0 +1,118 @@
+---
+import { footerLinks, siteMetadata } from "../lib/site.js";
+import SiteNavigation from "./SiteNavigation.astro";
+import CookieConsent from "./CookieConsent.astro";
+import "../styles/global.css";
+
+const {
+  title = siteMetadata.title,
+  description = siteMetadata.description,
+  image = siteMetadata.image,
+  noindex = false,
+} = Astro.props;
+
+const pathname = Astro.url.pathname || "/";
+const canonical = new URL(pathname, siteMetadata.siteUrl).toString();
+const ogImage = image.startsWith("http")
+  ? image
+  : new URL(image, siteMetadata.siteUrl).toString();
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content={siteMetadata.themeColor} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/png" href="/images/icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <slot name="head" />
+    <script
+      is:inline
+      defer
+      src="https://kit.fontawesome.com/85d252b77e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    {false && <CookieConsent trackingId={siteMetadata.trackingId} />}
+    <SiteNavigation />
+    <main class="pt-16">
+      <slot />
+    </main>
+    <iframe
+      src="/whofinance-footer.html"
+      class="whofinance hidden lg:block"
+      title="WhoFinance Footer"
+    ></iframe>
+    <footer class="bg-footer py-20 text-lightgrey">
+      <div class="mx-auto max-w-screen-xl md:flex">
+        <div class="mt-2 px-10">
+          <a href="/" title="LPE">
+            <img
+              src="/images/LPE_Logo_full.png"
+              alt="LPE Logo"
+              width="147"
+              height="50"
+              loading="lazy"
+              decoding="async"
+              class="h-[50px] w-[147px]"
+            />
+          </a>
+          <div class="mt-5">
+            <a href="https://www.facebook.com/LPE99" target="_blank" rel="noreferrer">
+              <span class="fab fa-facebook mr-2 text-2xl"></span>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCF95OM65f3Z4U2PLyTBsDrw"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="fab fa-youtube mr-2 text-2xl"></span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lars-peter-eckhardt-75a6a9132"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="fab fa-linkedin-in mr-2 text-2xl"></span>
+            </a>
+            <a
+              href="https://www.xing.com/profile/LarsPeter_Eckhardt"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="fab fa-xing mr-2 text-2xl"></span>
+            </a>
+          </div>
+        </div>
+        <div class="mt-2 px-10">
+          <ul>
+            {footerLinks.primary.map((link) => (
+              <li><a href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="mt-2 px-10">
+          <ul>
+            {footerLinks.secondary.map((link) => (
+              <li><a href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

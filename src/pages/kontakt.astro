@@ -1,0 +1,100 @@
+---
+import contactHero from "../images/kontakt-karte.png";
+import BaseLayout from "../components/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Divider from "../components/Divider.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+---
+
+<BaseLayout title="Kontakt | LPE.de">
+  <Hero image={{ asset: contactHero, alt: "Kontaktkarte" }}>
+    <div slot="custom" class="px-2 py-10 md:px-0 md:py-20">
+      <div id="contact-success" class="hidden text-center">
+        <i class="fa fa-check-circle mt-5 text-8xl text-green"></i>
+        <h2 class="py-2 text-2xl font-bold text-grey lg:text-4xl">Erfolgreich abgeschickt</h2>
+        <p class="text-lg text-textlight">
+          Vielen Dank für Ihre Nachricht. Wir werden Ihre Anfrage so schnell wie möglich bearbeiten.
+        </p>
+      </div>
+      <div id="contact-form-wrapper">
+        <ContactForm />
+      </div>
+    </div>
+  </Hero>
+
+  <Divider className="!my-0" />
+
+  <Section>
+    <div class="md:grid md:grid-cols-2 md:gap-40">
+      <div>
+        <div class="mb-2 text-center [hyphens:auto]">
+          <h2 class="py-2 text-2xl font-bold text-grey lg:text-4xl">Kontaktdaten</h2>
+          <p class="text-lg text-textlight">
+            Zögern Sie bitte nicht mit Ihrer Kontaktaufnahme. Wir kümmern uns gerne so schnell wie möglich um Ihr Anliegen.
+          </p>
+        </div>
+        <p>
+          <br />
+          <b>LPE & GREY</b><br />
+          <b>Versicherungsmakler & Finanzmakler GmbH & Co. KG</b><br />
+          Geschäftsführung: Lars-Peter Eckhardt<br />
+          E-Mail: Kontakt (at) LPE.de<br />
+          Webseite: <a href="https://www.lpe.de">www.LPE.de</a><br /><br />
+        </p>
+        <p>
+          <b>Zentrale / Postanschrift Müncheberg:</b><br />
+          Wasserstraße 2<br />
+          15374 Müncheberg<br />
+          Telefon: (033432) 89101<br />
+          WhatsApp: (033432) 89103<br />
+          Telefax: (033432) 89104<br /><br />
+        </p>
+        <p>
+          <b>Zweigstelle Woltersdorf bei Berlin:</b><br />
+          Lerchenstr. 40<br />
+          15569 Woltersdorf bei Berlin<br />
+          Telefon: (03362) 7000250<br />
+          WhatsApp: (033432) 89103<br />
+        </p>
+      </div>
+      <div class="mt-10 md:mt-0">
+        <div class="mb-2 text-center [hyphens:auto]">
+          <h2 class="py-2 text-2xl font-bold text-grey lg:text-4xl">Videoberatung</h2>
+          <p class="text-lg text-textlight">
+            Für unsere Videoberatung mit BRIDGE benötigen Sie keine Downloads oder Installationen.
+          </p>
+        </div>
+        <div class="text-center">
+          <p>
+            <a
+              href="https://fondsfinanz.br-idge.de/public/room.a?key=LPE&skipCheck=true"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa fa-laptop-house mt-5 p-5 text-9xl text-green"></i>
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://fondsfinanz.br-idge.de/public/room.a?key=LPE&skipCheck=true"
+              target="_blank"
+              rel="noreferrer"
+              class="btn-primary"
+            >
+              Jetzt starten
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <script is:inline>
+    const success = window.location.search === "?success";
+    if (success) {
+      document.getElementById("contact-success")?.classList.remove("hidden");
+      document.getElementById("contact-form-wrapper")?.classList.add("hidden");
+    }
+  </script>
+</BaseLayout>

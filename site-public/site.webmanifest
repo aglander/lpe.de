@@ -1,0 +1,15 @@
+{
+  "name": "lpe.de",
+  "short_name": "LPE.de",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#68B436",
+  "icons": [
+    {
+      "src": "/images/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

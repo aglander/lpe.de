@@ -1,0 +1,15 @@
+---
+import { normalizeMdxHref } from "../../lib/mdx-links.js";
+
+const { to, href, ...props } = Astro.props as {
+  to?: string;
+  href?: string;
+};
+
+const target = to || href || "#";
+const finalHref = normalizeMdxHref(target);
+---
+
+<a href={finalHref} {...props}>
+  <slot />
+</a>

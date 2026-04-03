@@ -1,0 +1,239 @@
+---
+import React from "react";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import type { ImageMetadata } from "astro";
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../components/BaseLayout.astro";
+import Divider from "../components/Divider.astro";
+import Hero from "../components/Hero.astro";
+import ProvenExpertStars from "../components/ProvenExpertStars.astro";
+import Section from "../components/Section.astro";
+import PageCtas from "../components/mdx/PageCtas.astro";
+import MdxPageCtas from "../components/mdx/PageCtas.jsx";
+import { getPlaces } from "../lib/content-data.js";
+import { createMdxComponents } from "../lib/mdx-components.js";
+import { siteMetadata } from "../lib/site.js";
+import {
+  normalizeSlug,
+  publicAsset,
+  replacePlaceTokens,
+} from "../lib/routes.js";
+
+type ServiceEntry = CollectionEntry<"page">;
+type LegalEntry = CollectionEntry<"legal">;
+type SeoEntry = CollectionEntry<"seo">;
+
+type SourcePlace = {
+  slug: string;
+  short?: string;
+  long?: string;
+  title?: string;
+  zipcode?: string | null;
+  heroImage?: string;
+};
+
+type PlaceData = {
+  slug: string;
+  short: string;
+  long: string;
+  title: string;
+  zipcode: string | null;
+  heroImage?: string;
+};
+
+type ServicePageProps = { type: "service"; entry: ServiceEntry; placeData?: undefined };
+type LegalPageProps = { type: "legal"; entry: LegalEntry; placeData?: undefined };
+type SeoPageProps = { type: "seo"; entry: SeoEntry; placeData: PlaceData };
+type PageProps = ServicePageProps | LegalPageProps | SeoPageProps;
+
+type LocalImageModule = { default: ImageMetadata };
+type LocalImageAsset = ImageMetadata;
+type HeroImage =
+  | { asset: LocalImageAsset; alt: string }
+  | { src: string; alt: string };
+
+const contentAssetModules = import.meta.glob("../content/assets/*.{jpg,jpeg,png,webp,avif,svg}", {
+  eager: true,
+}) as Record<string, LocalImageModule>;
+const imageModules = import.meta.glob("../images/*.{jpg,jpeg,png,webp,avif,svg}", {
+  eager: true,
+}) as Record<string, LocalImageModule>;
+
+const localImageModules = Object.fromEntries([
+  ...Object.entries(contentAssetModules).map(([path, module]) => [
+    `/assets/${path.split("/").pop()}`,
+    module.default,
+  ]),
+  ...Object.entries(imageModules).map(([path, module]) => [
+    `/images/${path.split("/").pop()}`,
+    module.default,
+  ]),
+]) as Record<string, LocalImageAsset>;
+
+export async function getStaticPaths() {
+  const serviceEntries = await getCollection("page");
+  const legalEntries = await getCollection("legal");
+  const seoEntries = await getCollection("seo");
+  const typedPlaces = (await getPlaces()) as SourcePlace[];
+
+  return [
+    ...serviceEntries.map((entry: ServiceEntry) => ({
+      params: { slug: entry.data.slug },
+      props: { type: "service", entry },
+    })),
+    ...legalEntries.map((entry: LegalEntry) => ({
+      params: { slug: entry.data.slug },
+      props: { type: "legal", entry },
+    })),
+    ...seoEntries.flatMap((entry: SeoEntry) =>
+      typedPlaces.map((place) => ({
+        params: { slug: `${entry.data.slug}-${normalizeSlug(place.slug)}` },
+        props: {
+          type: "seo",
+          entry,
+          placeData: {
+            ...place,
+            slug: normalizeSlug(place.slug),
+            short: place.short ?? "",
+            long: place.long ?? place.title ?? "",
+            title: place.title ?? place.long ?? place.short ?? place.slug,
+            zipcode: place.zipcode ?? null,
+          },
+        },
+      })),
+    ),
+  ];
+}
+
+const { type, entry, placeData } = Astro.props as PageProps;
+const { Content } = await render(entry);
+const asString = (value: unknown): string | undefined =>
+  typeof value === "string" ? value : undefined;
+const legacyPrintMap: Record<string, string | undefined> = {
+  "LPE-Datenschutz 2025.pdf": "lpe-allgemein/LPE_Datenschutz.pdf",
+  "LPE & GREY - Erstinformation 2025.pdf": "lpe-allgemein/LPE_Erstinformation.pdf",
+  "LPE & GREY - Impressum 2025.pdf": undefined,
+};
+const resolvePrintPath = (value: unknown): string | undefined => {
+  const printValue = asString(value);
+  if (!printValue) return undefined;
+
+  const mappedValue = legacyPrintMap[printValue] ?? printValue;
+  if (!mappedValue) return undefined;
+
+  const normalizedValue = mappedValue.replace(/^\/+/, "");
+  const staticPath = join(process.cwd(), "static", normalizedValue);
+
+  return existsSync(staticPath) ? `/${normalizedValue}` : undefined;
+};
+const isImageMetadata = (value: unknown): value is ImageMetadata =>
+  typeof value === "object" &&
+  value !== null &&
+  "src" in value &&
+  typeof value.src === "string";
+const resolveHeroImage = (
+  value: unknown,
+  fallback = "assets/standard.jpg",
+): HeroImage => {
+  if (isImageMetadata(value)) {
+    return { asset: value, alt: "" };
+  }
+
+  if (value && typeof value === "object") {
+    return { src: publicAsset(fallback), alt: "" };
+  }
+
+  const imagePath = asString(value) || fallback;
+  const publicPath = publicAsset(imagePath) ?? publicAsset(fallback)!;
+  const localAsset = localImageModules[publicPath];
+
+  if (localAsset) return { asset: localAsset, alt: "" };
+
+  return { src: publicPath, alt: "" };
+};
+
+const pageTitle =
+  type === "legal"
+    ? asString(entry.data.title) || siteMetadata.title
+    : replacePlaceTokens(asString(entry.data.seoTitle) || siteMetadata.title, placeData) ||
+      siteMetadata.title;
+const pageDescription =
+  replacePlaceTokens(asString(entry.data.seoDescription) || siteMetadata.description, placeData) ||
+  siteMetadata.description;
+const ctaProps = {
+  compare: typeof entry.data.compare === "string" ? entry.data.compare : undefined,
+  compareLabel: typeof entry.data.compareLabel === "string" ? entry.data.compareLabel : undefined,
+  backUrl: typeof entry.data.backUrl === "string" ? entry.data.backUrl : undefined,
+  slug: entry.data.slug,
+};
+const ctas = React.createElement(MdxPageCtas, ctaProps);
+const mdxComponents = createMdxComponents({ ctas, placeData });
+const pageUrl = new URL(Astro.url.pathname, siteMetadata.siteUrl).toString();
+const printPath = resolvePrintPath(entry.data.print);
+const heroImageValue =
+  type === "seo"
+    ? placeData.heroImage || asString(entry.data.heroImage)?.replace(/^\.\.\//, "") || "assets/standard.jpg"
+    : asString(entry.data.heroImage);
+const heroImage = resolveHeroImage(heroImageValue);
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  {type === "legal" ? (
+    <Section>
+      <div class="mb-5 border-b border-divider">
+        <h1 class="mb-2 py-2 text-4xl text-grey md:text-6xl">
+          {asString(entry.data.title)}
+        </h1>
+        {entry.data.date && printPath && (
+          <div class="grid grid-cols-2">
+            <p class="mb-2 text-textlight md:text-xl">
+              Zuletzt aktualisiert: {entry.data.date.toLocaleDateString("de-DE")}
+            </p>
+            <div class="text-right -mt-4">
+              <a href={printPath} class="btn-outline">Drucken</a>
+            </div>
+          </div>
+        )}
+      </div>
+      <div class="mdx-content">
+        <Content components={mdxComponents} />
+      </div>
+    </Section>
+  ) : (
+    <>
+      <Hero image={{ ...heroImage, alt: entry.data.heroTitle }}>
+        <div slot="custom" class="px-2 py-10 md:px-0 md:py-20">
+          <h1 class="mb-2 py-2 text-4xl font-bold text-grey md:text-5xl md:leading-tight">
+            {asString(entry.data.heroTitle)}
+            {(type === "seo" && placeData) || asString(entry.data.heroClaim) ? (
+              <>
+                <br />
+                <span class="text-green">
+                  {type === "seo" && placeData ? placeData.title : asString(entry.data.heroClaim)}
+                </span>
+              </>
+            ) : null}
+          </h1>
+          {asString(entry.data.heroDescription) && (
+            <p class="mb-5 text-textlight md:text-xl md:leading-normal">
+              {asString(entry.data.heroDescription)}
+            </p>
+          )}
+          <div class="mb-2">
+            <PageCtas
+              {...ctaProps}
+            />
+          </div>
+        </div>
+      </Hero>
+      <Divider className="!my-0" />
+      <Section>
+        <div class="mdx-content">
+          <Content components={mdxComponents} />
+        </div>
+        <ProvenExpertStars pageUrl={pageUrl} placeData={placeData} />
+      </Section>
+    </>
+  )}
+</BaseLayout>

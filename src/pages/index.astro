@@ -1,0 +1,216 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../components/BaseLayout.astro";
+import Divider from "../components/Divider.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import TypedText from "../components/TypedText.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Reviews from "../components/mdx/Reviews.jsx";
+import homeHero from "../images/LPE_Start.jpg";
+import portrait from "../images/LPE_HP.jpg";
+
+const criteria = [
+  {
+    title: "Unabhängigkeit",
+    text:
+      "Als Versicherungsmakler nach §34d GewO sind wir sogar gesetzlich dazu verpflichtet, die Interessen unserer Kunden unabhängig wahrzunehmen.",
+  },
+  {
+    title: "Kompetenz",
+    text:
+      "Die IHK-Ausbildungen zum Fachwirt für Finanzberatung, Baufinanzierungsberater und Generationenberater gewährleisten die ganzheitliche Beratung.",
+  },
+  {
+    title: "Erfahrung",
+    text:
+      "Die seit 1990 (GREY) und 1999 (LPE) erfolgreich bestehenden Versicherungs- & Finanzmaklerunternehmen wurden 2023 zu LPE & GREY vereinigt.",
+  },
+  {
+    title: "Vertrauen",
+    text:
+      "Versicherungen sind (keine) Vertrauenssache. Seien Sie gerne kritisch, prüfen und fordern Sie uns. Viele hundert Kunden vertrauen uns seit vielen Jahren!",
+  },
+];
+
+const consultingApproach = [
+  {
+    title: "Langfristig",
+    text:
+      "Am liebsten betrachten wir unseren gemeinsamen Weg langfristig und in allen Lebensphasen. Das bedeutet mehr Planungssicherheit für Sie!",
+  },
+  {
+    title: "Unabhängig",
+    text:
+      "Eine geeignet große Auswahl verschiedener Versicherungsgesellschaften, über 400 Banken und Bausparkassen sichert Ihnen ein breites Angebot!",
+  },
+  {
+    title: "Ganzheitlich",
+    text:
+      "Eine saubere Analyse Ihrer aktuellen Lebenssituation, die Erfassung von Zielen / Wünschen ermöglicht uns die individuelle Gestaltung Ihrer Lösungen!",
+  },
+  {
+    title: "Die „Extrameile“",
+    text:
+      "Ist unser „Liebe-Familie-Konzept“. Wir sind von der Notwendigkeit überzeugt und eröffnen Ihnen Lösungsmöglichkeiten die Sie beruhigen werden!",
+  },
+];
+---
+
+<BaseLayout>
+  <Hero image={{ asset: homeHero, alt: "Lars-Peter Eckhardt" }}>
+    <div slot="custom" class="px-2 py-10 md:px-0 md:py-20">
+      <h1 class="mb-2 py-2 text-4xl font-extrabold text-grey md:text-5xl md:leading-tight">
+        Willkommen bei <br /> Lars-Peter Eckhardt und dem LPE & GREY-Team,
+        <br /> Ihren unabhängigen <br />
+        <TypedText
+          strings={[
+            "Versicherungsmaklern",
+            "Finanzmaklern",
+            "Vorsorgeberatern",
+            "Generationenberatern",
+          ]}
+          className="text-green"
+        />
+      </h1>
+      <p class="mb-5 text-textlight md:text-xl md:leading-normal">
+        Wir beraten Sie sehr gerne persönlich, in unseren Büros, vor Ort und
+        selbstverständlich auch per Telefonberatung und Videoberatung.
+      </p>
+      <div class="mb-2">
+        <a href="/kontakt/" class="btn-primary">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </Hero>
+
+  <Divider className="!my-0" />
+
+  <Section alternate>
+    <div class="mb-2 text-center [hyphens:auto]">
+      <h2 class="py-2 text-2xl font-bold text-grey lg:text-4xl">
+        Das Wichtigste geregelt haben: Unser „Liebe-Familie-Konzept“
+        <span class="text-green"> mit einem bewährten Notfallplan!</span>
+      </h2>
+      <p class="text-lg text-textlight">
+        Wenn Sie es erlauben, möchten wir Sie am liebsten möglichst lange
+        begleiten. Daher sind unsere Beratungen langfristig und unsere
+        Lösungen individuell an alle Ihre Lebensphasen angelehnt. Wir
+        verbinden dabei im Optimalfall die vier folgenden Bereiche in unserem
+        <strong> „Liebe-Familie-Konzept“ mit einem bewährten Notfallplan!</strong>
+      </p>
+    </div>
+    <div class="flex flex-wrap justify-around">
+      <a class="max-w-lg py-4 text-center lg:p-4" href="/altersvorsorge/">
+        <i class="fas fa-piggy-bank text-4xl text-green"></i>
+        <h3 class="my-3 text-xl font-bold">Altersvorsorge</h3>
+        <p class="text-left text-textlight [hyphens:auto] lg:text-center">
+          Erhalten Sie Ihre finanzielle Unabhängigkeit im Alter! Mit einer guten
+          Planung schaffen Sie die richtige Balance zwischen jetzt gut leben,
+          für später sinnvoll investieren und im Ruhestand mit dem vorhandenen
+          Kapital auskommen. Dafür liefern wir Ihnen die passenden Strategien in
+          jeder Lebensphase!
+        </p>
+      </a>
+      <a class="max-w-lg py-4 text-center lg:p-4" href="/versicherungen/">
+        <i class="fas fa-file-contract text-4xl text-green"></i>
+        <h3 class="my-3 text-xl font-bold">Versicherungen</h3>
+        <p class="text-left text-textlight [hyphens:auto] lg:text-center">
+          Risiken richtig absichern! Von A - wie Arbeitskraftabsicherung, über
+          B - wie Betriebsversicherungen, F - wie Familienvorsorge und H - wie
+          Heim- & Haus schützen bis Z - wie Zusatzversicherungen. Viele
+          Anbieter, viele Tarife – der Versicherungsdschungel undurchschaubar?
+          Wir sorgen für die richtigen Absicherungen, zur richtigen Zeit!
+        </p>
+      </a>
+      <a class="max-w-lg py-4 text-center lg:p-4" href="/finanzierungen/">
+        <i class="fas fa-euro-sign text-4xl text-green"></i>
+        <h3 class="my-3 text-xl font-bold">Finanzierungen</h3>
+        <p class="text-left text-textlight [hyphens:auto] lg:text-center">
+          Leben Sie Ihren Traum! Die Planung für Ihren ersten Hausbau oder
+          der Kauf einer Immobilie (Haus oder Wohnung) für die Eigennutzung
+          oder als Kapitalanlage, die anstehende Anschlussfinanzierung oder
+          eine Sanierung / Modernisierung - mit individuell auf Sie
+          ausgerichteten Finanzierungslösungen erreichen Sie Ihren Traum und
+          behalten jederzeit die Kontrolle.
+        </p>
+      </a>
+      <a class="max-w-lg py-4 text-center lg:p-4" href="/liebe-familie/">
+        <i class="fas fa-heart text-4xl text-green"></i>
+        <h3 class="my-3 text-xl font-bold">Liebe Familie</h3>
+        <p class="text-left text-textlight [hyphens:auto] lg:text-center">
+          Das Wichtigste geregelt haben, die Harmonie in der Familie erhalten
+          und Niemandem zur Last fallen! Patientenverfügung und
+          Vorsorgevollmacht, Sorgerechtsverfügungen für Ihre Kinder, die Pflege
+          der Eltern und deren Unterhalt, sowie der letzte Wille. Einmal
+          geklärt und bei Bedarf angepasst, gibt es Ihnen und Ihrer Familie
+          dauerhaft ein rund um gutes Gefühl!
+        </p>
+      </a>
+    </div>
+  </Section>
+
+  <Divider />
+
+  <Section>
+    <Reviews />
+  </Section>
+
+  <Divider />
+
+  <Section alternate>
+    <div class="mb-2 text-center [hyphens:auto]">
+      <div class="inline-block h-24 w-24 overflow-hidden rounded-full">
+        <Image
+          src={portrait}
+          alt="Lars-Peter Eckhardt"
+          width={100}
+          height={133}
+          sizes="100px"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <h2 class="py-2 text-2xl font-bold text-grey lg:text-4xl">
+        Lars-Peter Eckhardt und das LPE & GREY-Team
+      </h2>
+      <p class="text-lg text-textlight">
+        Als mehrfach ausgezeichnete, unabhängige Versicherungsmakler & Finanzmakler ist es unser Anspruch, Sie gut zu beraten, gut zu betreuen und möglichst sehr, sehr lange mit Ihnen zusammenzuarbeiten. Mein Team und ich stehen dafür an Ihrer Seite.
+      </p>
+    </div>
+
+    <div class="lg:grid lg:grid-cols-2 lg:gap-5">
+      <div class="content-box bg-white">
+        <h3 class="mb-5 text-2xl">Unsere Kriterien</h3>
+        <ul class="ml-12 text-left">
+          {criteria.map((item) => (
+            <li class="relative mt-2">
+              <i class="fa fa-check-circle absolute -ml-10 mt-2 text-2xl text-green md:-ml-14 md:mt-3 md:text-4xl"></i>
+              <p class="text-textlight [hyphens:auto]">
+                <strong class="pb-2 text-grey">{item.title}</strong><br /> {item.text}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="content-box bg-white">
+        <h3 class="mb-5 text-2xl">Unser Beratungsansatz</h3>
+        <ul class="ml-12 text-left">
+          {consultingApproach.map((item) => (
+            <li class="relative mt-2">
+              <i class="fa fa-check-circle absolute -ml-10 mt-2 text-2xl text-green md:-ml-14 md:mt-3 md:text-4xl"></i>
+              <p class="text-textlight [hyphens:auto]">
+                <strong class="pb-2 text-grey">{item.title}</strong><br /> {item.text}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <Divider />
+
+  <Section>
+    <ContactForm />
+  </Section>
+</BaseLayout>

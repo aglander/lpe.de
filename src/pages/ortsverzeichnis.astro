@@ -1,0 +1,44 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "../components/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import { getPlaces } from "../lib/content-data.js";
+import { normalizeSlug } from "../lib/routes.js";
+
+type SeoEntry = CollectionEntry<"seo">;
+type Place = {
+  slug: string;
+  title: string;
+};
+
+const seoPages = await getCollection("seo");
+const typedPlaces = (await getPlaces()) as Place[];
+---
+
+<BaseLayout title="Ortsverzeichnis | LPE.de">
+  <Section>
+    <div class="mb-2 text-center [hyphens:auto]">
+      <h1 class="py-2 text-2xl font-bold text-grey lg:text-4xl">Ortsverzeichnis</h1>
+    </div>
+    <div class="lg:flex lg:flex-wrap">
+      {typedPlaces.map((place: Place) => (
+        <div class="lg:w-1/2 lg:px-5">
+          <h2 class="mt-12 mb-8 border-b border-divider pb-4 text-4xl">{place.title}</h2>
+          <ul class="mb-8 space-y-4 text-xl">
+            {seoPages.map((page: SeoEntry) => (
+              <li class="flex items-start gap-4">
+                <span class="mt-3 h-3 w-3 shrink-0 bg-text"></span>
+                <a
+                  href={`/${page.data.slug}-${normalizeSlug(place.slug)}/`}
+                  class="block font-bold text-green hover:text-darkgreen"
+                >
+                  {page.data.heroTitle}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

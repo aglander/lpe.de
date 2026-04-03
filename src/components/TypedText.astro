@@ -1,0 +1,49 @@
+---
+const { strings = [], className = "" } = Astro.props as {
+  strings?: string[];
+  className?: string;
+};
+const id = `typed-${Math.random().toString(36).slice(2, 10)}`;
+const longestString = strings.reduce(
+  (longest: string, value: string) => (value.length > longest.length ? value : longest),
+  "",
+);
+---
+
+<span class={className}>
+  <span class="typed-text-shell">
+    <span class="typed-text-sizer" aria-hidden="true">{longestString}|</span>
+    <span class="typed-text-live">
+      <span class="typed-text-value" id={id}></span><span class="typed-text-cursor" aria-hidden="true">|</span>
+    </span>
+  </span>
+</span>
+
+<script is:inline define:vars={{ id, strings }}>
+  const element = document.getElementById(id);
+  const values = strings;
+  let currentWord = 0;
+  let currentChar = 0;
+  let removing = false;
+
+  const tick = () => {
+    const word = values[currentWord] || "";
+    currentChar += removing ? -1 : 1;
+    element.textContent = word.slice(0, currentChar);
+
+    if (!removing && currentChar === word.length) {
+      removing = true;
+      window.setTimeout(tick, 1200);
+      return;
+    }
+
+    if (removing && currentChar === 0) {
+      removing = false;
+      currentWord = (currentWord + 1) % values.length;
+    }
+
+    window.setTimeout(tick, removing ? 35 : 55);
+  };
+
+  tick();
+</script>

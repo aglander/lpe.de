@@ -1,0 +1,22 @@
+---
+import { getInsurances } from "../../lib/content-data.js";
+
+type InsuranceItem = {
+  title: string;
+  data: string;
+};
+
+const { title } = Astro.props as { title?: string };
+const filteredInsurances = ((await getInsurances()) as InsuranceItem[]).filter((insurance) =>
+  title ? insurance.title === title : true,
+);
+---
+
+<div>
+  {filteredInsurances.map((insurance) => (
+    <div class="mb-5">
+      <h3 class="mb-3 text-lg">{insurance.title}</h3>
+      <p class="text-sm">{insurance.data}</p>
+    </div>
+  ))}
+</div>

@@ -1,0 +1,177 @@
+---
+type NavLink = {
+  href: string;
+  title: string;
+};
+
+type NavGroup = {
+  title: string;
+  href?: string;
+  links: NavLink[];
+};
+
+type NavItem = {
+  id: string;
+  title: string;
+  href?: string;
+  groups: NavGroup[];
+};
+
+const { items = [] } = Astro.props as { items?: NavItem[] };
+const drawerId = "mobile-nav-drawer";
+---
+
+<button
+  type="button"
+  class="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-divider bg-white px-4 text-sm font-semibold text-text shadow-sm hover:bg-lightgrey focus:outline-none focus:ring-2 focus:ring-green/30 lg:hidden"
+  data-drawer-toggle={drawerId}
+  aria-controls={drawerId}
+  aria-label="Menü öffnen"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-5 w-5 shrink-0"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M3 6h18"></path>
+    <path d="M3 12h18"></path>
+    <path d="M3 18h18"></path>
+  </svg>
+  <span>Menü</span>
+</button>
+
+<div
+  id={drawerId}
+  class="fixed top-0 right-0 z-50 h-screen w-full max-w-sm translate-x-full overflow-y-auto border-l border-divider bg-white p-5 transition-transform"
+  tabindex="-1"
+  aria-labelledby="mobile-nav-title"
+>
+  <div class="mb-6 flex items-center justify-between border-b border-divider pb-4">
+    <div class="flex items-center gap-3">
+      <img src="/images/LPE_Logo_single.svg" alt="" width="28" height="28" />
+      <h2 id="mobile-nav-title" class="text-lg font-semibold text-grey">Menü</h2>
+    </div>
+    <button
+      type="button"
+      class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-text hover:bg-lightgrey"
+      data-drawer-close
+      aria-controls={drawerId}
+      aria-label="Menü schließen"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M18 6L6 18"></path>
+        <path d="M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <nav aria-label="Mobile Navigation">
+    <div id="mobile-nav-accordion" class="space-y-3">
+      {items.map((item: NavItem) => {
+        const panelId = `mobile-nav-panel-${item.id}`;
+        const triggerId = `mobile-nav-trigger-${item.id}`;
+        const hasGroups = item.groups.length > 0;
+        return (
+          <section class="rounded-2xl border border-divider bg-lightgrey/40">
+            {hasGroups ? (
+              <>
+                <h2 id={triggerId}>
+                  <button
+                    type="button"
+                    class="flex w-full items-center justify-between gap-4 rounded-2xl px-4 py-4 text-left text-base font-semibold text-grey"
+                    data-accordion-toggle={panelId}
+                    aria-expanded="false"
+                    aria-controls={panelId}
+                  >
+                    <span>{item.title}</span>
+                    <svg
+                      data-accordion-icon
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 shrink-0 transition-transform"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                  </button>
+                </h2>
+                <div id={panelId} class="hidden px-4 pb-4" aria-labelledby={triggerId}>
+                  <div class="space-y-4 border-t border-divider pt-4">
+                    {item.groups.map((group: NavGroup) => (
+                      <div>
+                        {group.href ? (
+                          <a
+                            href={group.href}
+                            data-drawer-link
+                            class="mb-2 block text-sm font-bold uppercase tracking-wide text-green"
+                          >
+                            {group.title}
+                          </a>
+                        ) : (
+                          <h3 class="mb-2 text-sm font-bold uppercase tracking-wide text-green">
+                            {group.title}
+                          </h3>
+                        )}
+
+                        {group.links.length > 0 ? (
+                          <ul class="space-y-2">
+                            {group.links.map((link: NavLink) => (
+                              <li>
+                                <a
+                                  href={link.href}
+                                  data-drawer-link
+                                  class="block rounded-lg px-2 py-1 text-sm text-text hover:bg-white hover:text-green"
+                                >
+                                  {link.title}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            ) : (
+              <a
+                href={item.href}
+                data-drawer-link
+                class="flex w-full items-center rounded-2xl px-4 py-4 text-left text-base font-semibold text-grey"
+              >
+                {item.title}
+              </a>
+            )}
+          </section>
+        );
+      })}
+    </div>
+
+    <div class="mt-6">
+      <a href="/kontakt/" data-drawer-link class="btn-primary w-full">
+        Kontakt
+      </a>
+    </div>
+  </nav>
+</div>
