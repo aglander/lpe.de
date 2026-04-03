@@ -1,8 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import { footerLinks, siteMetadata } from "../lib/site.js";
 import SiteNavigation from "./SiteNavigation.astro";
 import CookieConsent from "./CookieConsent.astro";
 import "../styles/global.css";
+import logoFull from "../images/LPE_Logo_full.png";
 
 const {
   title = siteMetadata.title,
@@ -46,7 +48,7 @@ const ogImage = image.startsWith("http")
     ></script>
   </head>
   <body>
-    <CookieConsent trackingId={siteMetadata.trackingId} />
+    {false && <CookieConsent trackingId={siteMetadata.trackingId} />}
     <SiteNavigation />
     <main class="pt-16">
       <slot />
@@ -60,11 +62,14 @@ const ogImage = image.startsWith("http")
       <div class="mx-auto max-w-screen-xl md:flex">
         <div class="mt-2 px-10">
           <a href="/" title="LPE">
-            <img
-              src="/images/LPE_Logo_full.png"
+            <Image
+              src={logoFull}
               alt="LPE Logo"
               width="147"
               height="50"
+              sizes="147px"
+              loading="lazy"
+              decoding="async"
             />
           </a>
           <div class="mt-5">

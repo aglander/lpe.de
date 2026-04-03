@@ -1,16 +1,16 @@
 import React from "react";
-import AwardBox from "../components/mdx/AwardBox.jsx";
+import AwardBox from "../components/mdx/AwardBox.astro";
 import Box from "../components/mdx/Box.jsx";
 import CompareBox from "../components/mdx/CompareBox.jsx";
 import ContactAndCompareBox from "../components/mdx/ContactAndCompareBox.jsx";
-import Example from "../components/mdx/Example.jsx";
+import Example from "../components/mdx/Example.astro";
 import ExpandBox from "../components/mdx/ExpandBox.jsx";
 import InsurancesBox from "../components/mdx/InsurancesBox.jsx";
 import Link from "../components/mdx/Link.jsx";
 import Navigation from "../components/mdx/Navigation.jsx";
 import Place from "../components/mdx/Place.jsx";
-import ProvenExpert from "../components/mdx/ProvenExpert.jsx";
-import Reviews from "../components/mdx/Reviews.jsx";
+import ProvenExpert from "../components/mdx/ProvenExpert.astro";
+import Reviews from "../components/mdx/Reviews.astro";
 import Video from "../components/mdx/Video.astro";
 
 export const createMdxComponents = ({ ctas, placeData } = {}) => ({

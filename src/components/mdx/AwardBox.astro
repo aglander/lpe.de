@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import { awardImages } from "../../lib/local-images.js";
+---
+
+<div class="content-box bg-lightgrey">
+  <div class="mb-2 text-center [hyphens:auto]">
+    <p class="text-lg text-textlight no-hyphens">
+      Seit 2011 wird LPE | Lars-Peter Eckhardt ununterbrochen durch die unabhängige
+      Bewertungsplattform
+      <a
+        href="https://www.whofinance.de/berater/lars-peter-eckhardt/"
+        target="_blank"
+        rel="noreferrer"
+        class="text-green hover:text-darkgreen"
+      >
+        WhoFinance.de
+      </a>
+      als einer der Top Berater in Deutschland ausgezeichnet.
+    </p>
+  </div>
+  <ul class="mx-auto flex max-w-3xl list-none flex-wrap justify-center pl-0">
+    {awardImages.map((award, index) => (
+      <li class="list-none p-4">
+        <a
+          href="https://www.whofinance.de/berater/lars-peter-eckhardt/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            src={award}
+            alt={`Auszeichnung ${index + 1}`}
+            width={200}
+            height={92}
+            sizes="200px"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>

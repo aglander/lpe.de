@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const { title, description, image, ctas } = Astro.props;
 ---
 
@@ -20,9 +22,27 @@ const { title, description, image, ctas } = Astro.props;
       </slot>
     </div>
   </div>
-  <div class="mx-auto mb-5 w-2/3 lg:relative lg:mb-0 lg:flex lg:w-1/2 lg:self-stretch">
+  <div class="mx-auto w-2/3 lg:relative lg:flex lg:w-1/2 lg:self-stretch">
     <div class="hero-image w-full">
-      {image ? <img src={image.src ?? image} alt={image.alt ?? ""} /> : <slot name="image" />}
+      {image?.asset ? (
+        <Image
+          src={image.asset}
+          alt={image.alt ?? ""}
+          sizes="(min-width: 1024px) 50vw, 67vw"
+          loading="eager"
+          fetchpriority="high"
+        />
+      ) : image ? (
+        <img
+          src={image.src ?? image}
+          alt={image.alt ?? ""}
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+      ) : (
+        <slot name="image" />
+      )}
     </div>
   </div>
 </div>

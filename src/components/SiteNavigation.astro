@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import { getNavigationTree } from "../lib/navigation.js";
 import DesktopMegaMenu from "./DesktopMegaMenu.astro";
 import MobileNavDrawer from "./MobileNavDrawer.astro";
+import logoFull from "../images/LPE_Logo_full.png";
 
 const tree = getNavigationTree();
 ---
@@ -9,18 +11,24 @@ const tree = getNavigationTree();
 <header class="fixed z-40 w-full border-b border-divider bg-white/95 backdrop-blur">
   <div class="mx-auto flex max-w-screen-xl items-center gap-4 p-2">
     <a href="/" aria-label="Zur Startseite">
-      <img
-        src="/images/LPE_Logo_full.png"
+      <Image
+        src={logoFull}
         alt="LPE Logo"
         width="147"
         height="50"
+        sizes="147px"
+        loading="eager"
+        fetchpriority="high"
         class="lg:hidden xl:block"
       />
-      <img
-        src="/images/LPE_Logo_full.png"
+      <Image
+        src={logoFull}
         alt="LPE Logo"
         width="147"
         height="50"
+        sizes="147px"
+        loading="eager"
+        fetchpriority="high"
         class="hidden lg:block xl:hidden"
       />
     </a>

@@ -17,6 +17,24 @@ import {
   replacePlaceTokens,
 } from "../lib/routes.js";
 
+const contentAssetModules = import.meta.glob("../content/assets/*.{jpg,jpeg,png,webp,avif,svg}", {
+  eager: true,
+}) as Record<string, { default: unknown }>;
+const imageModules = import.meta.glob("../images/*.{jpg,jpeg,png,webp,avif,svg}", {
+  eager: true,
+}) as Record<string, { default: unknown }>;
+
+const localImageModules = Object.fromEntries([
+  ...Object.entries(contentAssetModules).map(([path, module]) => [
+    `/assets/${path.split("/").pop()}`,
+    module.default ?? module,
+  ]),
+  ...Object.entries(imageModules).map(([path, module]) => [
+    `/images/${path.split("/").pop()}`,
+    module.default ?? module,
+  ]),
+]);
+
 export async function getStaticPaths() {
   const serviceEntries = await getCollection("page");
   const legalEntries = await getCollection("legal");
@@ -73,12 +91,17 @@ const resolvePrintPath = (value) => {
 };
 const resolveHeroImage = (value, fallback = "assets/standard.jpg") => {
   if (value && typeof value === "object") {
-    if (typeof value.src === "string") return value;
+    if ("src" in value && typeof value.src === "string") return { asset: value, alt: "" };
     return { src: publicAsset(fallback), alt: "" };
   }
 
   const imagePath = asString(value) || fallback;
-  return { src: publicAsset(imagePath), alt: "" };
+  const publicPath = publicAsset(imagePath);
+  const localAsset = localImageModules[publicPath];
+
+  if (localAsset) return { asset: localAsset, alt: "" };
+
+  return { src: publicPath, alt: "" };
 };
 
 const pageTitle =
