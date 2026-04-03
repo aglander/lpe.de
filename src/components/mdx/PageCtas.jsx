@@ -1,9 +1,10 @@
 import React from "react";
 import Button from "./Button.jsx";
+import { getBackTarget } from "../../lib/mdx-links.js";
 
+// React bridge variant used when CTAs are injected into MDX as React elements.
 export default function PageCtas({ compare, compareLabel, slug, backUrl }) {
-  const backTarget =
-    backUrl || (slug?.endsWith("-vergleichen") ? `/${slug.split("-vergleichen")[0]}/` : null);
+  const backTarget = getBackTarget(slug, backUrl);
 
   return (
     <div className="flex flex-wrap gap-3">

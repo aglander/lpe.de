@@ -1,0 +1,17 @@
+---
+import { insurances } from "../../lib/site.js";
+
+const { title } = Astro.props as { title?: string };
+const filteredInsurances = insurances.filter((insurance) =>
+  title ? insurance.title === title : true,
+);
+---
+
+<div>
+  {filteredInsurances.map((insurance) => (
+    <div class="mb-5">
+      <h3 class="mb-3 text-lg">{insurance.title}</h3>
+      <p class="text-sm">{insurance.data}</p>
+    </div>
+  ))}
+</div>

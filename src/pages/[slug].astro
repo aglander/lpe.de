@@ -2,13 +2,15 @@
 import React from "react";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { getCollection, render } from "astro:content";
+import type { ImageMetadata } from "astro";
+import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../components/BaseLayout.astro";
 import Divider from "../components/Divider.astro";
 import Hero from "../components/Hero.astro";
 import ProvenExpertStars from "../components/ProvenExpertStars.astro";
 import Section from "../components/Section.astro";
-import PageCtas from "../components/mdx/PageCtas.jsx";
+import PageCtas from "../components/mdx/PageCtas.astro";
+import MdxPageCtas from "../components/mdx/PageCtas.jsx";
 import { createMdxComponents } from "../lib/mdx-components.js";
 import { places, siteMetadata } from "../lib/site.js";
 import {
@@ -17,40 +19,74 @@ import {
   replacePlaceTokens,
 } from "../lib/routes.js";
 
+type ServiceEntry = CollectionEntry<"page">;
+type LegalEntry = CollectionEntry<"legal">;
+type SeoEntry = CollectionEntry<"seo">;
+
+type SourcePlace = {
+  slug: string;
+  short?: string;
+  long?: string;
+  title?: string;
+  zipcode?: string | null;
+  heroImage?: string;
+};
+
+type PlaceData = {
+  slug: string;
+  short: string;
+  long: string;
+  title: string;
+  zipcode: string | null;
+  heroImage?: string;
+};
+
+type ServicePageProps = { type: "service"; entry: ServiceEntry; placeData?: undefined };
+type LegalPageProps = { type: "legal"; entry: LegalEntry; placeData?: undefined };
+type SeoPageProps = { type: "seo"; entry: SeoEntry; placeData: PlaceData };
+type PageProps = ServicePageProps | LegalPageProps | SeoPageProps;
+
+type LocalImageModule = { default: ImageMetadata };
+type LocalImageAsset = ImageMetadata;
+type HeroImage =
+  | { asset: LocalImageAsset; alt: string }
+  | { src: string; alt: string };
+
 const contentAssetModules = import.meta.glob("../content/assets/*.{jpg,jpeg,png,webp,avif,svg}", {
   eager: true,
-}) as Record<string, { default: unknown }>;
+}) as Record<string, LocalImageModule>;
 const imageModules = import.meta.glob("../images/*.{jpg,jpeg,png,webp,avif,svg}", {
   eager: true,
-}) as Record<string, { default: unknown }>;
+}) as Record<string, LocalImageModule>;
 
 const localImageModules = Object.fromEntries([
   ...Object.entries(contentAssetModules).map(([path, module]) => [
     `/assets/${path.split("/").pop()}`,
-    module.default ?? module,
+    module.default,
   ]),
   ...Object.entries(imageModules).map(([path, module]) => [
     `/images/${path.split("/").pop()}`,
-    module.default ?? module,
+    module.default,
   ]),
-]);
+]) as Record<string, LocalImageAsset>;
 
 export async function getStaticPaths() {
   const serviceEntries = await getCollection("page");
   const legalEntries = await getCollection("legal");
   const seoEntries = await getCollection("seo");
+  const typedPlaces = places as SourcePlace[];
 
   return [
-    ...serviceEntries.map((entry) => ({
+    ...serviceEntries.map((entry: ServiceEntry) => ({
       params: { slug: entry.data.slug },
       props: { type: "service", entry },
     })),
-    ...legalEntries.map((entry) => ({
+    ...legalEntries.map((entry: LegalEntry) => ({
       params: { slug: entry.data.slug },
       props: { type: "legal", entry },
     })),
-    ...seoEntries.flatMap((entry) =>
-      places.map((place) => ({
+    ...seoEntries.flatMap((entry: SeoEntry) =>
+      typedPlaces.map((place) => ({
         params: { slug: `${entry.data.slug}-${normalizeSlug(place.slug)}` },
         props: {
           type: "seo",
@@ -69,15 +105,16 @@ export async function getStaticPaths() {
   ];
 }
 
-const { type, entry, placeData } = Astro.props;
+const { type, entry, placeData } = Astro.props as PageProps;
 const { Content } = await render(entry);
-const asString = (value) => (typeof value === "string" ? value : undefined);
-const legacyPrintMap = {
+const asString = (value: unknown): string | undefined =>
+  typeof value === "string" ? value : undefined;
+const legacyPrintMap: Record<string, string | undefined> = {
   "LPE-Datenschutz 2025.pdf": "lpe-allgemein/LPE_Datenschutz.pdf",
   "LPE & GREY - Erstinformation 2025.pdf": "lpe-allgemein/LPE_Erstinformation.pdf",
   "LPE & GREY - Impressum 2025.pdf": undefined,
 };
-const resolvePrintPath = (value) => {
+const resolvePrintPath = (value: unknown): string | undefined => {
   const printValue = asString(value);
   if (!printValue) return undefined;
 
@@ -89,14 +126,25 @@ const resolvePrintPath = (value) => {
 
   return existsSync(staticPath) ? `/${normalizedValue}` : undefined;
 };
-const resolveHeroImage = (value, fallback = "assets/standard.jpg") => {
+const isImageMetadata = (value: unknown): value is ImageMetadata =>
+  typeof value === "object" &&
+  value !== null &&
+  "src" in value &&
+  typeof value.src === "string";
+const resolveHeroImage = (
+  value: unknown,
+  fallback = "assets/standard.jpg",
+): HeroImage => {
+  if (isImageMetadata(value)) {
+    return { asset: value, alt: "" };
+  }
+
   if (value && typeof value === "object") {
-    if ("src" in value && typeof value.src === "string") return { asset: value, alt: "" };
     return { src: publicAsset(fallback), alt: "" };
   }
 
   const imagePath = asString(value) || fallback;
-  const publicPath = publicAsset(imagePath);
+  const publicPath = publicAsset(imagePath) ?? publicAsset(fallback)!;
   const localAsset = localImageModules[publicPath];
 
   if (localAsset) return { asset: localAsset, alt: "" };
@@ -112,18 +160,19 @@ const pageTitle =
 const pageDescription =
   replacePlaceTokens(asString(entry.data.seoDescription) || siteMetadata.description, placeData) ||
   siteMetadata.description;
-const ctas = React.createElement(PageCtas, {
+const ctaProps = {
   compare: typeof entry.data.compare === "string" ? entry.data.compare : undefined,
   compareLabel: typeof entry.data.compareLabel === "string" ? entry.data.compareLabel : undefined,
   backUrl: typeof entry.data.backUrl === "string" ? entry.data.backUrl : undefined,
   slug: entry.data.slug,
-});
+};
+const ctas = React.createElement(MdxPageCtas, ctaProps);
 const mdxComponents = createMdxComponents({ ctas, placeData });
 const pageUrl = new URL(Astro.url.pathname, siteMetadata.siteUrl).toString();
 const printPath = resolvePrintPath(entry.data.print);
 const heroImageValue =
   type === "seo"
-    ? placeData?.heroImage || asString(entry.data.heroImage)?.replace(/^\.\.\//, "") || "assets/standard.jpg"
+    ? placeData.heroImage || asString(entry.data.heroImage)?.replace(/^\.\.\//, "") || "assets/standard.jpg"
     : asString(entry.data.heroImage);
 const heroImage = resolveHeroImage(heroImageValue);
 ---
@@ -172,10 +221,7 @@ const heroImage = resolveHeroImage(heroImageValue);
           )}
           <div class="mb-2">
             <PageCtas
-              compare={typeof entry.data.compare === "string" ? entry.data.compare : undefined}
-              compareLabel={typeof entry.data.compareLabel === "string" ? entry.data.compareLabel : undefined}
-              backUrl={typeof entry.data.backUrl === "string" ? entry.data.backUrl : undefined}
-              slug={entry.data.slug}
+              {...ctaProps}
             />
           </div>
         </div>

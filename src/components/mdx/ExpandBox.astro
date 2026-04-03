@@ -1,0 +1,13 @@
+---
+const { title } = Astro.props as { title: string };
+---
+
+<details class="rounded-md p-4 shadow">
+  <summary class="cursor-pointer text-xl uppercase text-green">
+    <i class="fas fa-angle-right mr-2 text-text details-marker"></i>
+    {title}
+  </summary>
+  <div class="pt-4">
+    <slot />
+  </div>
+</details>

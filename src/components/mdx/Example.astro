@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import { localImageMap } from "../../lib/local-images.js";
 
-const { title, children, number, link, image } = Astro.props;
+const { title, number, link, image } = Astro.props;
 const localImage = typeof image === "string" ? localImageMap[image] : undefined;
 ---
 

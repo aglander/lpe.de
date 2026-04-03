@@ -1,7 +1,26 @@
 ---
-import { provenExpert, siteMetadata } from "../lib/site.js";
+import { provenExpert } from "../lib/site.js";
 
-const { pageUrl, placeData } = Astro.props;
+type PlaceData = {
+  zipcode?: string | null;
+  long?: string;
+};
+
+type AreaServed = {
+  "@type": "City";
+  name: string;
+  address: {
+    "@type": "PostalAddress";
+    postalCode: string;
+    addressLocality: string;
+    addressCountry: "DE";
+  };
+};
+
+const { pageUrl, placeData } = Astro.props as {
+  pageUrl?: string;
+  placeData?: PlaceData;
+};
 const rawRating = provenExpert?.ratingValue ? Number(provenExpert.ratingValue) : 0;
 const rating = rawRating > 0 ? Number(rawRating.toFixed(2)) : 0;
 const count = provenExpert?.reviewCount ? Number(provenExpert.reviewCount) : 0;
@@ -10,7 +29,7 @@ if (!(rating > 0 && count > 0) || !pageUrl) {
   return null;
 }
 
-let areaServed;
+let areaServed: AreaServed | undefined;
 if (placeData?.zipcode && placeData?.long) {
   areaServed = {
     "@type": "City",
@@ -46,4 +65,4 @@ const schema = {
 };
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />

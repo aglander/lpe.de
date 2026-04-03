@@ -1,5 +1,23 @@
 ---
-const { items = [] } = Astro.props;
+type NavLink = {
+  href: string;
+  title: string;
+};
+
+type NavGroup = {
+  title: string;
+  href?: string;
+  links: NavLink[];
+};
+
+type NavItem = {
+  id: string;
+  title: string;
+  href?: string;
+  groups: NavGroup[];
+};
+
+const { items = [] } = Astro.props as { items?: NavItem[] };
 const drawerId = "mobile-nav-drawer";
 ---
 
@@ -65,7 +83,7 @@ const drawerId = "mobile-nav-drawer";
 
   <nav aria-label="Mobile Navigation">
     <div id="mobile-nav-accordion" class="space-y-3">
-      {items.map((item) => {
+      {items.map((item: NavItem) => {
         const panelId = `mobile-nav-panel-${item.id}`;
         const triggerId = `mobile-nav-trigger-${item.id}`;
         const hasGroups = item.groups.length > 0;
@@ -100,7 +118,7 @@ const drawerId = "mobile-nav-drawer";
                 </h2>
                 <div id={panelId} class="hidden px-4 pb-4" aria-labelledby={triggerId}>
                   <div class="space-y-4 border-t border-divider pt-4">
-                    {item.groups.map((group) => (
+                    {item.groups.map((group: NavGroup) => (
                       <div>
                         {group.href ? (
                           <a
@@ -118,7 +136,7 @@ const drawerId = "mobile-nav-drawer";
 
                         {group.links.length > 0 ? (
                           <ul class="space-y-2">
-                            {group.links.map((link) => (
+                            {group.links.map((link: NavLink) => (
                               <li>
                                 <a
                                   href={link.href}

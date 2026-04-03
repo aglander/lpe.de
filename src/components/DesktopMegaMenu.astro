@@ -1,10 +1,28 @@
 ---
-const { items = [] } = Astro.props;
+type NavLink = {
+  href: string;
+  title: string;
+};
+
+type NavGroup = {
+  title: string;
+  href?: string;
+  links: NavLink[];
+};
+
+type NavItem = {
+  id: string;
+  title: string;
+  href?: string;
+  groups: NavGroup[];
+};
+
+const { items = [] } = Astro.props as { items?: NavItem[] };
 ---
 
 <nav class="relative hidden lg:block lg:flex-1" aria-label="Hauptnavigation">
   <ul class="flex items-center justify-end gap-1" data-desktop-nav>
-    {items.map((item) => {
+    {items.map((item: NavItem) => {
       const dropdownId = `mega-menu-${item.id}`;
       const hasGroups = item.groups.length > 0;
 
@@ -50,7 +68,7 @@ const { items = [] } = Astro.props;
               data-nav-panel
             >
               <div class="grid grid-cols-3 gap-8 xl:grid-cols-4">
-                {item.groups.map((group) => (
+                {item.groups.map((group: NavGroup) => (
                   <section class="min-w-0">
                     {group.href ? (
                       <a
@@ -67,7 +85,7 @@ const { items = [] } = Astro.props;
 
                     {group.links.length > 0 ? (
                       <ul class="space-y-2">
-                        {group.links.map((link) => (
+                        {group.links.map((link: NavLink) => (
                           <li>
                             <a
                               href={link.href}

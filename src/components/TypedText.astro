@@ -1,8 +1,11 @@
 ---
-const { strings = [], className = "" } = Astro.props;
+const { strings = [], className = "" } = Astro.props as {
+  strings?: string[];
+  className?: string;
+};
 const id = `typed-${Math.random().toString(36).slice(2, 10)}`;
 const longestString = strings.reduce(
-  (longest, value) => (value.length > longest.length ? value : longest),
+  (longest: string, value: string) => (value.length > longest.length ? value : longest),
   "",
 );
 ---

@@ -1,0 +1,31 @@
+---
+import { isExternalHref, normalizeMdxHref } from "../../lib/mdx-links.js";
+
+const {
+  url,
+  outline = false,
+  className = "",
+} = Astro.props as {
+  url?: string;
+  outline?: boolean;
+  className?: string;
+};
+
+const classes = `${outline ? "btn-outline" : "btn-primary"} ${className}`.trim();
+const external = isExternalHref(url);
+const href = typeof url === "string" ? normalizeMdxHref(url) : undefined;
+---
+
+{href ? (
+  <a
+    href={href}
+    class={classes}
+    {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+  >
+    <slot />
+  </a>
+) : (
+  <button type="button" class={classes}>
+    <slot />
+  </button>
+)}

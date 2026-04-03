@@ -1,5 +1,6 @@
 import React from "react";
 
+// React bridge wrapper so MDX pages can receive runtime place data from the shared route.
 export default function Place({ placeData, long = false, description = false }) {
   if (!placeData) return null;
   if (description) {

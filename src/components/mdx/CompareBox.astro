@@ -1,0 +1,22 @@
+---
+import Box from "./Box.astro";
+import Link from "./Link.astro";
+
+const { url } = Astro.props as { url: string };
+---
+
+<Box>
+  <div class="mb-2 text-center [hyphens:auto]">
+    <h2 class="py-2 text-2xl font-bold text-grey lg:text-4xl">Jetzt vergleichen</h2>
+    <p class="text-lg text-textlight">
+      Mit Benutzung des Vergleichrechners bestaetige ich, dass ich die
+      <Link to="/erstinformation/" class="text-green hover:text-darkgreen">
+        Erstinformation
+      </Link>
+      gelesen und gespeichert habe.
+    </p>
+  </div>
+  <div class="-mx-5">
+    <iframe src={url} class="compare" title="Vergleichsrechner" />
+  </div>
+</Box>

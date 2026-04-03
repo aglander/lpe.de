@@ -1,0 +1,32 @@
+---
+import Button from "./Button.astro";
+import { getBackTarget } from "../../lib/mdx-links.js";
+
+const {
+  compare,
+  compareLabel,
+  slug,
+  backUrl,
+} = Astro.props as {
+  compare?: string;
+  compareLabel?: string;
+  slug?: string;
+  backUrl?: string;
+};
+
+const backTarget = getBackTarget(slug, backUrl);
+---
+
+<div class="flex flex-wrap gap-3">
+  {compare ? (
+    <Button outline url={compare}>
+      {compareLabel || "Selber vergleichen"}
+    </Button>
+  ) : null}
+  {backTarget ? (
+    <Button outline url={backTarget}>
+      &larr; zurueck
+    </Button>
+  ) : null}
+  <Button url="/kontakt/">Kontakt aufnehmen</Button>
+</div>

@@ -1,31 +1,42 @@
 import React from "react";
 import AwardBox from "../components/mdx/AwardBox.astro";
-import Box from "../components/mdx/Box.jsx";
-import CompareBox from "../components/mdx/CompareBox.jsx";
-import ContactAndCompareBox from "../components/mdx/ContactAndCompareBox.jsx";
+import Box from "../components/mdx/Box.astro";
+import CompareBox from "../components/mdx/CompareBox.astro";
+import ContactAndCompareBoxBridge from "../components/mdx/ContactAndCompareBox.jsx";
 import Example from "../components/mdx/Example.astro";
-import ExpandBox from "../components/mdx/ExpandBox.jsx";
-import InsurancesBox from "../components/mdx/InsurancesBox.jsx";
-import Link from "../components/mdx/Link.jsx";
-import Navigation from "../components/mdx/Navigation.jsx";
-import Place from "../components/mdx/Place.jsx";
+import ExpandBox from "../components/mdx/ExpandBox.astro";
+import InsurancesBox from "../components/mdx/InsurancesBox.astro";
+import Link from "../components/mdx/Link.astro";
+import Navigation from "../components/mdx/Navigation.astro";
+import PlaceBridge from "../components/mdx/Place.jsx";
 import ProvenExpert from "../components/mdx/ProvenExpert.astro";
 import Reviews from "../components/mdx/Reviews.astro";
 import Video from "../components/mdx/Video.astro";
 
-export const createMdxComponents = ({ ctas, placeData } = {}) => ({
+// These components can be rendered directly by MDX without a React bridge.
+const staticMdxComponents = {
   AwardBox,
-  Box: (props) => React.createElement(Box, { alternate: true, ...props }),
+  Box,
   CompareBox,
-  ContactAndCompareBox: () =>
-    React.createElement(ContactAndCompareBox, { ctas }),
   Example,
   ExpandBox,
   InsurancesBox,
   Link,
   Navigation,
-  Place: (props) => React.createElement(Place, { ...props, placeData }),
   ProvenExpert,
   Reviews,
   Video,
+};
+
+// These components still need React wrappers because MDX receives runtime-injected
+// values (`ctas`, `placeData`) from the shared route.
+const createBridgeComponents = ({ ctas, placeData }) => ({
+  ContactAndCompareBox: () =>
+    React.createElement(ContactAndCompareBoxBridge, { ctas }),
+  Place: (props) => React.createElement(PlaceBridge, { ...props, placeData }),
+});
+
+export const createMdxComponents = ({ ctas, placeData } = {}) => ({
+  ...staticMdxComponents,
+  ...createBridgeComponents({ ctas, placeData }),
 });

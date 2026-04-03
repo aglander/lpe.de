@@ -43,7 +43,9 @@
     "check": "astro check",
     "format": "prettier --write \"**/*.{astro,js,jsx,ts,tsx,json,md,mdx,css}\"",
     "seo:rankings": "node scripts/seo-rankings.mjs --file \"data/seo/LPE.de SEO.xlsx\"",
+    "audit:seo": "node scripts/validate-content-seo.mjs",
+    "audit:seo:strict": "node scripts/validate-content-seo.mjs --strict-warnings",
     "audit:urls": "node scripts/url-audit.mjs",
-    "test": "npm run check && npm run build && npm run audit:urls"
+    "test": "npm run check && npm run build && npm run audit:seo && npm run audit:urls"
   }
 }
