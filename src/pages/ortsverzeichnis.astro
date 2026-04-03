@@ -2,7 +2,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import BaseLayout from "../components/BaseLayout.astro";
 import Section from "../components/Section.astro";
-import { places } from "../lib/site.js";
+import { getPlaces } from "../lib/content-data.js";
 import { normalizeSlug } from "../lib/routes.js";
 
 type SeoEntry = CollectionEntry<"seo">;
@@ -12,7 +12,7 @@ type Place = {
 };
 
 const seoPages = await getCollection("seo");
-const typedPlaces = places as Place[];
+const typedPlaces = (await getPlaces()) as Place[];
 ---
 
 <BaseLayout title="Ortsverzeichnis | LPE.de">

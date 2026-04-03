@@ -1,7 +1,7 @@
-import { navigation } from "./site.js";
+import { getNavigation } from "./content-data.js";
 
-export const getChildren = (parentId) =>
-  navigation.filter((item) => {
+export const getChildren = async (parentId) =>
+  (await getNavigation()).filter((item) => {
     if (parentId == null) {
       return item.parentId == null;
     }
@@ -20,8 +20,8 @@ const toLink = (item) => ({
   href: normalizeHref(item.url),
 });
 
-const toGroup = (item) => {
-  const links = getChildren(item.navId)
+const toGroup = async (item) => {
+  const links = (await getChildren(item.navId))
     .filter((child) => child.url)
     .map(toLink);
 
@@ -35,10 +35,12 @@ const toGroup = (item) => {
   };
 };
 
-export const getNavigationTree = () =>
-  getChildren(null).map((item) => ({
-    id: item.navId,
-    title: item.title,
-    href: normalizeHref(item.url),
-    groups: getChildren(item.navId).map(toGroup).filter(Boolean),
-  }));
+export const getNavigationTree = async () =>
+  Promise.all(
+    (await getChildren(null)).map(async (item) => ({
+      id: item.navId,
+      title: item.title,
+      href: normalizeHref(item.url),
+      groups: (await Promise.all((await getChildren(item.navId)).map(toGroup))).filter(Boolean),
+    })),
+  );

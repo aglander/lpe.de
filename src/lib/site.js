@@ -1,6 +1,3 @@
-import navigation from "../data/navigation.json";
-import places from "../data/places.json";
-import insurances from "../data/insurances.json";
 import provenExpert from "../data/provenexpert.json";
 
 export const siteMetadata = {
@@ -13,7 +10,7 @@ export const siteMetadata = {
   trackingId: "UA-114309100-1",
 };
 
-export { navigation, places, insurances, provenExpert };
+export { provenExpert };
 
 export const footerLinks = {
   primary: [

@@ -1,5 +1,5 @@
 import React from "react";
-import { insurances } from "../../lib/site.js";
+import insurances from "../../content-data/insurances.json";
 
 export default function InsurancesBox({ title }) {
   return (

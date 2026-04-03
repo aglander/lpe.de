@@ -11,8 +11,9 @@ import ProvenExpertStars from "../components/ProvenExpertStars.astro";
 import Section from "../components/Section.astro";
 import PageCtas from "../components/mdx/PageCtas.astro";
 import MdxPageCtas from "../components/mdx/PageCtas.jsx";
+import { getPlaces } from "../lib/content-data.js";
 import { createMdxComponents } from "../lib/mdx-components.js";
-import { places, siteMetadata } from "../lib/site.js";
+import { siteMetadata } from "../lib/site.js";
 import {
   normalizeSlug,
   publicAsset,
@@ -74,7 +75,7 @@ export async function getStaticPaths() {
   const serviceEntries = await getCollection("page");
   const legalEntries = await getCollection("legal");
   const seoEntries = await getCollection("seo");
-  const typedPlaces = places as SourcePlace[];
+  const typedPlaces = (await getPlaces()) as SourcePlace[];
 
   return [
     ...serviceEntries.map((entry: ServiceEntry) => ({

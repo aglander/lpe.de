@@ -31,6 +31,27 @@ Important implementation detail:
 
 - `src/pages/[slug].astro` maps local `/assets/...` and `/images/...` hero paths to local asset modules so the shared `Hero.astro` component can render them through Astro `Image`.
 
+## Content Source Note
+
+- There are two different `data` areas in the repo and they should not be treated the same:
+  - the former root `data/seo/*` area was legacy import/archive material (`csv`/`xlsx`) and is no longer part of the repo's active content model
+  - `src/data/*.json` is still active runtime data for shared structured site data such as places, navigation, insurance lists, and ProvenExpert values
+- Editorial page content should continue to live in Astro content collections under `src/content/*`.
+- Shared redactionally maintained structured datasets should also prefer Astro content collections, even if the backing source files live outside `src/content/*` and are loaded through `src/content.config.ts`.
+- Current preferred split:
+  - `places`, `navigation`, and `insurances` are editorial datasets and should be maintained through the content collections layer
+  - `provenExpert` remains plain runtime JSON because it is operational snapshot data rather than authored content
+- Directory convention:
+  - `src/content/*` is for authored page/legal/SEO entries in MDX
+  - `src/content-data/*` is for structured editorial datasets that are loaded as Astro content collections from JSON
+  - `src/data/*` should be reserved only for non-editorial runtime/config snapshot data that is intentionally not modeled as a collection
+- Legacy spreadsheet exports should not be reintroduced as a root `data/*` content source.
+- If SEO spreadsheet imports return in the future, treat them as ad hoc input files outside the repo or in a temporary workspace and convert them into `src/content/seo/*`.
+- Preferred direction for future work:
+  - do not add new editorial content to root `data/*`
+  - if spreadsheet-based SEO imports return, convert them into generated or reviewed collection entries in `src/content/seo/*`
+  - only consider migrating `src/data/*.json` to collections if those files become editorially maintained documents rather than app configuration/shared structured data
+
 ## Recommended Next Astro Improvements
 
 ### High Priority

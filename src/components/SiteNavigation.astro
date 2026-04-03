@@ -3,7 +3,7 @@ import { getNavigationTree } from "../lib/navigation.js";
 import DesktopMegaMenu from "./DesktopMegaMenu.astro";
 import MobileNavDrawer from "./MobileNavDrawer.astro";
 
-const tree = getNavigationTree();
+const tree = await getNavigationTree();
 ---
 
 <header class="fixed z-40 w-full border-b border-divider bg-white/95 backdrop-blur">

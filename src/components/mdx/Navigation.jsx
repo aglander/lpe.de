@@ -1,5 +1,14 @@
 import React from "react";
-import { getChildren } from "../../lib/navigation.js";
+import navigation from "../../content-data/navigation.json";
+
+const getChildren = (parentId) =>
+  navigation.filter((item) => {
+    if (parentId == null) {
+      return item.parentId == null;
+    }
+
+    return item.parentId === parentId;
+  });
 
 export default function Navigation({ id }) {
   const sections = getChildren(id);

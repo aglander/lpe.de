@@ -35,7 +35,7 @@ const pages = slugsFromDir(path.join(root, "src/content/page"));
 const legal = slugsFromDir(path.join(root, "src/content/legal"));
 const seo = slugsFromDir(path.join(root, "src/content/seo"));
 const places = JSON.parse(
-  fs.readFileSync(path.join(root, "src/data/places.json"), "utf8"),
+  fs.readFileSync(path.join(root, "src/content-data/places.json"), "utf8"),
 );
 
 const expectedPaths = new Set([
