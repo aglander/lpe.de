@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 
 const { title, description, image, ctas } = Astro.props;
+const heroWidths = image?.widths ?? [480, 720, 960, 1280];
 ---
 
 <div class="mx-auto max-w-screen-huge lg:relative lg:flex lg:w-full">
@@ -28,9 +29,11 @@ const { title, description, image, ctas } = Astro.props;
         <Image
           src={image.asset}
           alt={image.alt ?? ""}
+          widths={heroWidths}
           sizes="(min-width: 1024px) 50vw, 67vw"
           loading="eager"
           fetchpriority="high"
+          quality={80}
         />
       ) : image ? (
         <img

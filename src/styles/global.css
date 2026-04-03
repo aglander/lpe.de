@@ -152,6 +152,14 @@
     white-space: nowrap;
     pointer-events: none;
   }
+
+  .details-marker {
+    transition: transform 150ms ease;
+  }
+
+  details[open] .details-marker {
+    transform: rotate(90deg);
+  }
 }
 
 @keyframes typed-cursor-blink {

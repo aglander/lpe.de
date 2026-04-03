@@ -6,8 +6,8 @@ import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
 import TypedText from "../components/TypedText.astro";
 import ContactForm from "../components/ContactForm.astro";
-import Reviews from "../components/mdx/Reviews.jsx";
-import homeHero from "../images/LPE_Start.jpg";
+import Reviews from "../components/mdx/Reviews.astro";
+import homeHero from "../images/LPE_Start_hero.jpg";
 import portrait from "../images/LPE_HP.jpg";
 
 const criteria = [
@@ -58,7 +58,7 @@ const consultingApproach = [
 ---
 
 <BaseLayout>
-  <Hero image={{ asset: homeHero, alt: "Lars-Peter Eckhardt" }}>
+  <Hero image={{ asset: homeHero, alt: "Lars-Peter Eckhardt", widths: [420, 640, 860, 1200] }}>
     <div slot="custom" class="px-2 py-10 md:px-0 md:py-20">
       <h1 class="mb-2 py-2 text-4xl font-extrabold text-grey md:text-5xl md:leading-tight">
         Willkommen bei <br /> Lars-Peter Eckhardt und dem LPE & GREY-Team,

@@ -38,13 +38,13 @@ const ogImage = image.startsWith("http")
     <link rel="icon" type="image/png" href="/images/icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
-    <slot name="head" />
     <script
       is:inline
       defer
       src="https://kit.fontawesome.com/85d252b77e.js"
       crossorigin="anonymous"
     ></script>
+    <slot name="head" />
   </head>
   <body>
     {false && <CookieConsent trackingId={siteMetadata.trackingId} />}
@@ -72,13 +72,21 @@ const ogImage = image.startsWith("http")
             />
           </a>
           <div class="mt-5">
-            <a href="https://www.facebook.com/LPE99" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.facebook.com/LPE99"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LPE auf Facebook"
+              title="LPE auf Facebook"
+            >
               <span class="fab fa-facebook mr-2 text-2xl"></span>
             </a>
             <a
               href="https://www.youtube.com/channel/UCF95OM65f3Z4U2PLyTBsDrw"
               target="_blank"
               rel="noreferrer"
+              aria-label="LPE auf YouTube"
+              title="LPE auf YouTube"
             >
               <span class="fab fa-youtube mr-2 text-2xl"></span>
             </a>
@@ -86,6 +94,8 @@ const ogImage = image.startsWith("http")
               href="https://www.linkedin.com/in/lars-peter-eckhardt-75a6a9132"
               target="_blank"
               rel="noreferrer"
+              aria-label="LPE auf LinkedIn"
+              title="LPE auf LinkedIn"
             >
               <span class="fab fa-linkedin-in mr-2 text-2xl"></span>
             </a>
@@ -93,6 +103,8 @@ const ogImage = image.startsWith("http")
               href="https://www.xing.com/profile/LarsPeter_Eckhardt"
               target="_blank"
               rel="noreferrer"
+              aria-label="LPE auf Xing"
+              title="LPE auf Xing"
             >
               <span class="fab fa-xing mr-2 text-2xl"></span>
             </a>
