@@ -117,3 +117,90 @@ Important implementation detail:
 - The remaining larger architectural question is how far the MDX bridge should move away from React wrappers for injected props like `ctas` and `placeData`.
 - The remaining React bridge is intentionally small and currently centered on `ContactAndCompareBox`, `Place`, and the MDX-side CTA wrappers.
 - `Reviews` is intentionally still on hold pending a separate decision about a more dynamic replacement.
+
+## Rating Module Redesign
+
+### Goal
+
+- The current review setup is scheduled for a future replacement, but this section is documentation only and does not start implementation work.
+- The existing ProvenExpert widget setup, the static `Reviews` section, and the current ProvenExpert-based structured-data approach are intended to be replaced by one unified rating module.
+- The target module should combine aggregated rating data with platform-specific recent reviews in one reusable site-wide component.
+
+### Planned Direction
+
+- Remove the current rating module on the website.
+- Remove the embedded ProvenExpert widget.
+- Introduce a new unified rating module.
+- The new module should show:
+  - the overall rating value and total number of ratings across all platforms
+  - clickable platform links / a platform overview
+  - individual reviews from API-accessible platforms
+- Planned API sources for v1:
+  - ProvenExpert
+- Google Maps / Google Business Profile remains a later expansion target, but is not part of the initial implementation because API access is not expected soon enough.
+- Facebook is not considered a reliable API-backed source for v1.
+- Initial implementation scope for actual review ingestion:
+  - pull review details from ProvenExpert only
+  - use the already downloaded ProvenExpert raw review snapshot as the current starting point
+  - keep the module architecture open for later Google integration once access is available
+
+### Planned Review Feed Rules
+
+- Only reviews with text should be shown.
+- Only 5-star reviews should be shown.
+- Reviews should be sorted by date descending.
+- The final visible feed should contain only the 20 newest matching reviews overall.
+- Each review card should include:
+  - reviewer name
+  - 5-star display
+  - review date
+  - review text
+  - deep link to the original review
+  - platform label or platform branding
+
+### Planned UI Behavior
+
+- The reviews should be displayed as horizontally scrollable cards.
+- v1 should use manual interaction only.
+- No auto-advance / autoplay behavior is planned for v1.
+
+### Planned Data Strategy
+
+- Review data should be refreshed once per day via GitHub Actions.
+- API data should be pre-fetched and cached as project data snapshots rather than loaded live in the browser.
+- The future implementation should be resilient to partial provider failures and continue using the last valid cached data where appropriate.
+- The first production-ready ingestion path should use ProvenExpert only.
+- Google review fetching should stay explicitly out of the first delivery slice until working API credentials and location access are available.
+
+### Planned Structured Data Direction
+
+- Future structured data should be generated as first-party JSON-LD rather than relying on ProvenExpert widget snippets.
+- The goal is a clean `aggregateRating` implementation on pages where the new module is present.
+- Visible Google stars in search results remain explicitly uncertain and must not be treated as guaranteed behavior.
+
+### Open To-dos On User Side
+
+- Clarify Google Business Profile API access and the affected business locations for a later expansion phase.
+- Decide which Google locations should feed into the module if more than one profile remains relevant once Google access exists.
+- Confirm whether external platform totals such as WhoFinance, KennstDuEinen, and Facebook should be manually maintained or represented only through the ProvenExpert aggregate total.
+- Decide whether Facebook is important enough to revisit later as a separate research track.
+- Confirm which target pages must definitely receive the new module if the final rollout is not truly global.
+- Align internal SEO expectations: structured data yes, but no promise of visible Google stars in search results.
+
+### Future Acceptance Criteria
+
+- No visible ProvenExpert widgets remain in the frontend.
+- No legacy static `Reviews` section remains in the frontend.
+- The new module shows only matching reviews with text and 5 stars.
+- Reviews are correctly sorted by descending date.
+- No more than 20 cards are shown.
+- Platform links and deep links work correctly.
+- Daily snapshot refresh via GitHub Actions is robust against temporary API failures.
+- JSON-LD is generated from the same snapshot data source as the visible module.
+
+### Working Assumptions
+
+- `AGENT.md` is the correct place to track this plan.
+- This section documents the direction only and does not start implementation.
+- Build-time snapshots with daily refresh are the preferred data strategy.
+- Manual horizontal scrolling is the preferred interaction model for v1.

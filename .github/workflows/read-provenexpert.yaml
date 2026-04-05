@@ -1,27 +1,38 @@
-name: Read ProvenExpert
+name: Sync ProvenExpert
 on:
   schedule:
-    - cron: '0 0 * * *' # once per day at midnight UTC
+    - cron: '0 1 * * *' # nightly at 02:00 Europe/Berlin in winter / 03:00 in summer
+  workflow_dispatch:
 
 jobs:
-  ReadProvenExpert:
+  sync-provenexpert:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Call ProvenExpert and store response in file
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh ProvenExpert summary and latest reviews
         env:
+          PROVENEXPERT_API_ID: 14Jp3xmphSUZ5RKZjWGBmVwZ48TA1LmA
           PROVENEXPERT_API_KEY: ${{ secrets.PROVENEXPERT_API_KEY }}
-        run: |
-          curl -u "$PROVENEXPERT_API_KEY" \
-            https://www.provenexpert.com/api_rating_v2.json \
-            > src/data/provenexpert.json
+        run: npm run provenexpert:sync
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
-          author_name: Arian glander
-          author_email: glander@me.com
-          message: 'Updating provenexpert rating'
-          add: 'src/data/provenexpert.json'
+          author_name: Codex Automation
+          author_email: 199175422+chatgpt-codex-connector[bot]@users.noreply.github.com
+          message: |
+            chore: refresh ProvenExpert snapshots
+            
+            Co-authored-by: Codex <199175422+chatgpt-codex-connector[bot]@users.noreply.github.com>
+          add: 'src/data/provenexpert.json src/data/provenexpert-reviews-raw.json'

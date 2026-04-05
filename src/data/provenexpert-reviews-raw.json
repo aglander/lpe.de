@@ -1,0 +1,2898 @@
+{
+  "status": "success",
+  "fetchedAt": "2026-04-05T18:05:31.424Z",
+  "totalRatings": 138,
+  "ratings": [
+    {
+      "id": "2xQpkEwp5VmZlNmojAmohWaAjtwZjZ3A",
+      "created": 1775062674,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Ich habe sehr positive Erfahrungen mit dem Unternehmen gemacht und fühlte mich jederzeit gut beraten. Es wurde sehr individuell auf meine Wünsche eingegangen, bis die passende Versicherung gefunden wurde. Großes Lob!"
+    },
+    {
+      "id": "2xQphqwpkNQp482o5LGZlRmpjZGAl9JZ",
+      "created": 1774878224,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Mühlencafé Klnigs Wusterhausen"
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      }
+    },
+    {
+      "id": "2xGB4pmp1Hmoh52Z1twA4pQZjxwoi5zA",
+      "created": 1771601749,
+      "ratingValue": 4.8,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 4,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 4,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Hat uns bei der Baufinanzierung für eine Bestandsimmobilie unterstützt, nachdem bereits zwei Banken es abgelehnt hatten diese Immobilie zu finanzieren. Hat alles super geklappt!",
+      "comment": "Danke für Ihre Bewertung!"
+    },
+    {
+      "id": "2xQBj8zZkSaAlAKBj4JZj4TZjHmpmAGA",
+      "created": 1770044671,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 4
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Mit Herrn Eckardt und seinen Mitarbeiter*innen, erhielten wir kompetente und vertrauenswürdige Versicherungsexperten an unserer Seite. \nHerr Eckardt nahm sich viel Zeit für unsere Belange. Er erklärte uns Wesentliches, ausführlich und verständlich zu aktuellen Versicherungen. Auch fortlaufend kümmert er sich um aktuelle Angelegenheiten. \nWir sind Herrn Eckardt und seinem Team sehr dankbar.",
+      "comment": "Vielen Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "2xmAmpGZjN3p5RGpmSaA28zojVao3ZKB",
+      "created": 1769173260,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Wir sind sehr zufrieden! Wir bekommen immer zeitnah und unkompliziert einen Gesprächstermin. Herr Eckhardt beantwortet geduldig alle unsere Fragen und Anliegen. Er ist immer gut vorbereitet, erklärt und begründet die Versicherungsangebote sehr verständlich. Wir haben das Vertrauen gut beraten zu sein.",
+      "comment": "Vielen Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "2xmAmHGpiMGBkA3Zk9zplNmpjVmZkZUp",
+      "created": 1769168310,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "N Schnell"
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "comment": "Vielen Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "2xmAj8JZlHwokZ3plOUplNwpjVKA5Z3p",
+      "created": 1768993061,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Kompetente, schnelle, flexible Beratung",
+      "comment": "Vielen Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "2xmZ2xGBkMwpjAaZkEmZjuQAjZKpmVUA",
+      "created": 1765186006,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Freie Schule Woltersdorf"
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Er hat unsere Schule an vielen Stellen hinterfragt und sich auch vor schwierigen Themen nicht abschrecken lassen. (Bagger, Radlader, Ehrenamtliche, Container,...)",
+      "comment": "Vielen herzlichen Dank für die Bewertung. Die Schulabsicherung war ein herausforderndes Projekt, hat aber großen Spaß gemacht und ich freue mich auf unsere weitere Zusammenarbeit."
+    },
+    {
+      "id": "2tmp2pmA0xwp2DwAmLmokNUBjZUBiywA",
+      "created": 1760982857,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Jan Bernhauser"
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Ich fand die schnelle und unkomplizierte Bearbeitung hervorragend.",
+      "comment": "VIELEN DANK für Ihre Bewertung!"
+    },
+    {
+      "id": "2twplWmpmSQB5ZGpj8zp4RKAjNaojVaA",
+      "created": 1760440305,
+      "ratingValue": 4.8391919191919195,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Brigitte Lucke"
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 4.8,
+        "category_2": 4.818181818181818,
+        "category_3": 4.8,
+        "category_4": 4.777777777777778,
+        "category_5": 4.8
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_0-question_1": "Professionalität",
+        "category_0-question_2": "Zielerreichung",
+        "category_0-question_3": "Kundenorientierung",
+        "category_0-question_4": "Effizienz",
+        "category_0-question_5": "Kreative Impulse",
+        "category_0-question_6": "Kundenzufriedenheit",
+        "category_0-question_7": "Auftragserfolg",
+        "category_0-question_8": "Nachhaltigkeit",
+        "category_0-question_9": "Kundentreue",
+        "category_1": "Nutzen",
+        "category_1-question_1": "Handlungsempfehlungen",
+        "category_1-question_2": "Leistungsoptimierung",
+        "category_1-question_3": "Kostenoptimierung",
+        "category_1-question_4": "Produktbereinigung",
+        "category_1-question_5": "Bearbeitungszeit",
+        "category_1-question_6": "Zuverlässigkeit",
+        "category_1-question_7": "Vertrauensverhältnis",
+        "category_1-question_8": "Kundenbetreuung",
+        "category_1-question_9": "Interessenvertretung",
+        "category_1-question_10": "Zusatzleistungen",
+        "category_2": "Leistungen",
+        "category_2-question_1": "Leistungsspektrum",
+        "category_2-question_2": "Aktualität",
+        "category_2-question_3": "Fachkompetenz",
+        "category_2-question_4": "Ganzheitlichkeit",
+        "category_2-question_5": "Engagement",
+        "category_2-question_6": "Persönliches Auftreten",
+        "category_2-question_7": "Wertschätzung",
+        "category_2-question_8": "Mobilisierung",
+        "category_2-question_9": "Individuelle Beratung",
+        "category_2-question_10": "Schriftverkehr",
+        "category_2-question_11": "Dokumentation",
+        "category_3": "Umsetzung",
+        "category_3-question_1": "Bedarfsermittlung",
+        "category_3-question_2": "Finanzanalyse",
+        "category_3-question_3": "Lösungswege",
+        "category_3-question_4": "Entscheidungsfokus",
+        "category_3-question_5": "Produktivität",
+        "category_3-question_6": "Strukturiertheit",
+        "category_3-question_7": "Sorgfalt",
+        "category_3-question_8": "Qualitätssicherung",
+        "category_3-question_9": "Erreichbarkeit",
+        "category_3-question_10": "Flexibilität",
+        "category_4": "Beratung",
+        "category_4-question_1": "Problemverständnis",
+        "category_4-question_2": "Kundenwünsche",
+        "category_4-question_3": "Sensibilisierung",
+        "category_4-question_4": "Objektivität",
+        "category_4-question_5": "Überprüfbarkeit",
+        "category_4-question_6": "Kommunikation",
+        "category_4-question_7": "Erläuterungen",
+        "category_4-question_8": "Veranschaulichung",
+        "category_4-question_9": "Transparenz",
+        "category_5": "Kundenservice",
+        "category_5-question_1": "Problemlösung",
+        "category_5-question_2": "Ansprechbarkeit",
+        "category_5-question_3": "Sonderzeiten",
+        "category_5-question_4": "Geschäftszeiten",
+        "category_5-question_5": "Wartezeiten",
+        "category_5-question_6": "Geschäftsräume",
+        "category_5-question_7": "Ausstattung",
+        "category_5-question_8": "Verkehrsanbindung",
+        "category_5-question_9": "Parkmöglichkeiten",
+        "category_5-question_10": "Barrierefreiheit"
+      },
+      "feedback": "schnelle und gute Bearbeitung,",
+      "comment": "VIELEN DANK für Ihre Bewertung, Frau Lucke.",
+      "ratingDetails": {
+        "category_0": {
+          "question_1": 5,
+          "question_2": 5,
+          "question_3": 5,
+          "question_4": 5,
+          "question_5": 5,
+          "question_6": 5,
+          "question_7": 5,
+          "question_8": 5,
+          "question_9": 5
+        },
+        "category_1": {
+          "question_1": 5,
+          "question_2": 5,
+          "question_3": 5,
+          "question_4": 5,
+          "question_5": 5,
+          "question_6": 5,
+          "question_7": 5,
+          "question_8": 5,
+          "question_9": 5,
+          "question_10": 3
+        },
+        "category_2": {
+          "question_1": 5,
+          "question_2": 5,
+          "question_3": 5,
+          "question_4": 3,
+          "question_5": 5,
+          "question_6": 5,
+          "question_7": 5,
+          "question_8": 5,
+          "question_9": 5,
+          "question_10": 5,
+          "question_11": 5
+        },
+        "category_3": {
+          "question_1": 5,
+          "question_2": 3,
+          "question_3": 5,
+          "question_4": 5,
+          "question_5": 5,
+          "question_6": 5,
+          "question_7": 5,
+          "question_8": 5,
+          "question_9": 5,
+          "question_10": 5
+        },
+        "category_4": {
+          "question_1": 5,
+          "question_2": 5,
+          "question_3": 5,
+          "question_4": 3,
+          "question_5": 5,
+          "question_6": 5,
+          "question_7": 5,
+          "question_8": 5,
+          "question_9": 5
+        },
+        "category_5": {
+          "question_1": 5,
+          "question_2": 5,
+          "question_3": 5,
+          "question_4": 5,
+          "question_5": 5,
+          "question_6": 5,
+          "question_7": 5,
+          "question_8": 5,
+          "question_9": 5,
+          "question_10": 3
+        }
+      }
+    },
+    {
+      "id": "2twpj5TAmVGZ2xmAjVKZlDmAjZ3p5VUB",
+      "created": 1760338994,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Ein freundliches, kommunikatives und engagiertes Team, das bei Anfragen und Problemen zuverlässig berät und unterstützt.",
+      "comment": "VIELEN DANK für die Bewertung!"
+    },
+    {
+      "id": "2twpiWKBj5zojAmp1ZQZjywojLQpiuQB",
+      "created": 1760291274,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Sehr gute und kompetente Beratung",
+      "comment": "VIELEN DANK für die Bewertung!"
+    },
+    {
+      "id": "2twpiSKA0NwphqwZlR3okNmpjLQp5NmA",
+      "created": 1760286016,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Andreas M."
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice"
+      },
+      "comment": "VIELEN DANK für die Bewertung!"
+    },
+    {
+      "id": "2twpiqGAjxQAhWUplZGp3HwojxwZiWQZ",
+      "created": 1760261385,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Kompetente, stets freundliche und geduldige Beratung",
+      "comment": "\"Vielen Dank für Ihre Bewertung\""
+    },
+    {
+      "id": "2twp4ZKB4two4VwAhSmo4VmZj4JZ5ZKA",
+      "created": 1760098696,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 4
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "comment": "Vielen Dank für Ihre Bewertung"
+    },
+    {
+      "id": "2twp4VKAmZ3Z5Nap1VwplpwpjRwA0RUA",
+      "created": 1760093503,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Hannes Lemke"
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Wir wurde zum Thema, Baufinanzierung und Kreditabsicherung, insbesondere Risiko-Lebensversicherung, sehr kompetent und verständlich beraten. Herr Eckhardt hat sich Zeit genommen, alle Fragen zu beantworten, und die verschiedenen Optionen transparent erklärt. Wir haben uns jederzeit gut aufgehoben gefühlt und können  die Beratung absolut weiterempfehlen!",
+      "comment": "\"Vielen Dank für Ihre Bewertung\""
+    },
+    {
+      "id": "2twp4V3Z282ZhO3okymAkDGZjR3ZmNKp",
+      "created": 1760093035,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Thomas"
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "comment": "\"Vielen Dank für Ihre Bewertung\""
+    },
+    {
+      "id": "2tQphIGBkAwAhympkHGAkSapjZKp5xQZ",
+      "created": 1758091731,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 5,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Prima Versicherungsmakler: freundlich, fachkundig, gewissenhaft und fair. Volle Empfehlung.",
+      "comment": "VIELEN DANK"
+    },
+    {
+      "id": "2pmp4ZmZ4NUpjEmA5NQA3ZGpjRaplRQA",
+      "created": 1744319372,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Einen persönlichen Beratungstermin vor Ort habe ich sehr schnell bekommen.\nDas Gespräch war sehr hilfreich für mich, um in das für mich neue Thema einzusteigen.\nMir wurden verschiedene Möglichkeiten aufgezeigt.\nIch kann Herrn Lars-Peter Eckadt auf jeden Fall weiter empfehlen.",
+      "comment": "Herzlichen Dank für Ihre Bewertung, Frau Hänsel."
+    },
+    {
+      "id": "2pGp282p0R3p4tGAl9TBmpGZjpGZ5ZQZ",
+      "created": 1742126925,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Martina Schilke"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Ich würde Herrn Lars Peter Eckhard immer wieder als Versicherungsvertreter  nehmen. Er ist sehr kompetent und nett. Hat mein Anliegen  problemlos  erledigt, trotzdem  ich kein Termin  hatte . Habe alle Versicherungen  bei ihm. \n\nMartina Schilke.",
+      "comment": "Liebe Frau Schilke, herzlichen Dank für Ihre Bewertung und die lange Zusammenarbeit. Kleine Verbesserung, auf die wir wirklich wert legen. Wir sind Versicherungsmakler und keine Versicherungsvertreter. Trotzdem verstehen wir natürlich den Zusammenhang. In jedem Fall: VIELEN DANK. :-)"
+    },
+    {
+      "id": "2pmo0xGAlWmphAUAjSQB4N3AjLGAjxGB",
+      "created": 1739888098,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Ich fühle mich in allen Belangen immer sehr gut und souverän beraten.",
+      "comment": "Vielen lieben Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "2pGB4RUZ0HGAhWwA1LQZ2ZQpjxQBj8Jp",
+      "created": 1738068037,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr kompetentes Team, schnelle Bearbeitung der Fälle und immer ein sehr freundlicher Kontakt. Fühlen uns sehr gut aufgehoben. MfG",
+      "comment": "Vielen Dank für die freundliche Bewertung."
+    },
+    {
+      "id": "2pGAkSwAjW3AjHQZ0xmZlWQBjRUBjWmA",
+      "created": 1734153934,
+      "ratingValue": 4.8,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Manfred König"
+      },
+      "ratings": {
+        "category_0": 4.8
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "😀"
+    },
+    {
+      "id": "2pGAiSGpjVaZ5DQAiyGp182ZjNQA24TZ",
+      "created": 1734024462,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      }
+    },
+    {
+      "id": "2pGAiSGAlHGA3Rwo2tGp1Z3AjZap4R3Z",
+      "created": 1734022437,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      }
+    },
+    {
+      "id": "2pGAjpQZ082A08TZkWGZj52pjtGAhMwp",
+      "created": 1733324892,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Der schnelle und persönliche Service war sehr empfehlenswert. Ich musste mich um nichts kümmern. Lediglich ein paar Daten schicken und der Rest wurde erledigt. Sehr nett und freundlich",
+      "comment": "Vielen herzlichen Dank für Ihre ausführliche Bewertung!"
+    },
+    {
+      "id": "2pQAlOQZ4Nap58zphWaoh5TZjVGBmxQB",
+      "created": 1733165196,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Christina Sowinski"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "comment": "Vielen Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "2pQAjNUp24TpjZUBmOwZ2ZmZjHGAmqmo",
+      "created": 1732299882,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "modified": 1732300111,
+      "feedback": "Sehr kompetente Beratung in allen versicherungstechnischen Fragen, immer wieder gerne",
+      "comment": "Vielen Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "2pQAjN3A4VGA5ZGB242p3DmpjN3AlHGp",
+      "created": 1732298626,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "comment": "Vielen Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "2LmojymZlEwA5VwA4HmomNQpjHmplZGA",
+      "created": 1723634660,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr angenehm mit viel Zeit und Kundenorientierung.",
+      "comment": "VIELEN DAK für Ihre Bewertungen!"
+    },
+    {
+      "id": "2Lwo2tmZjyGZlZ3p5xGZjZ3ZjHGBkIQA",
+      "created": 1722188745,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Zeitnahe kompetente Beratung, Herr Eckhardt hat alle meine Anforderungen berücksichtigt, ich bin auf Empfehlung auf ihn aufmerksam geworden und kann diese gern weiter geben",
+      "comment": "VIELEN DANK für Ihre Bewertung bei ProvenExpert!"
+    },
+    {
+      "id": "2LmAkAQZjVwAlAKZ1LGZjWmAjZKpktwp",
+      "created": 1719480322,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "comment": "VIELEN DANK für Ihre Bewertung!"
+    },
+    {
+      "id": "2LmZlxmolAKZmVGpkNQZ3Z3ZjRmok5zZ",
+      "created": 1714592751,
+      "ratingValue": 4.8,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Martin Ruschitzka"
+      },
+      "ratings": {
+        "category_0": 4.8
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr angenehme, empathische und kompetente Beratung und Umsetzung.",
+      "comment": "VIELEN DANK für die Bewertung!"
+    },
+    {
+      "id": "2Hmolpwol92okDQZlRwZ2DGAjV3p4LQp",
+      "created": 1706195691,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr freundliche und zufriedenstellende Beratung",
+      "comment": "VIELEN DANK für Ihre Bewertung!"
+    },
+    {
+      "id": "2HmolNwAkSap342ZkZKp5DGBj4zAjWUp",
+      "created": 1706165981,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "comment": "HERZLICHEN DANK für Ihre Bewertung!"
+    },
+    {
+      "id": "2HGBiO3ZiEmpjRGpmOGB5DGBj8TB3ZKA",
+      "created": 1704709274,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Seriös, kompetent und Top Service!",
+      "comment": "VIELEN DANK für die Bewertung!"
+    },
+    {
+      "id": "2HGB1LQp4pmZmRaAiMGplxwAjDwAl9Tp",
+      "created": 1704291463,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "comment": "Vielen Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "2HGBkVmAlDmA3HGZjOGAkIQAjZ3ph5TA",
+      "created": 1704011556,
+      "ratingValue": 4.4,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 4.4
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "comment": "VIELEN DANK für Ihre Bewertung!"
+    },
+    {
+      "id": "2HGBkNwpmtGBmpGpiAwpmtmojZQB4HwZ",
+      "created": 1704005176,
+      "ratingValue": 4.8,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 4.8
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Auch wenn es am Ende nicht zu einem Abschluss kam, war die Zusammenarbeit sehr gut. Herr Eckhardt hat ein tolles Team, ist kompetent und bietet eine ausführliche Beratung.",
+      "comment": "VIELEN DANK für Ihre Bewertung!"
+    },
+    {
+      "id": "2HQBl5TBhIwAjxGplAKpi9JZjVwZiAwZ",
+      "created": 1703848101,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Neuabschluss einer Autovollkaskoversicherung - 3 aktuelle Angebote wurden übersichtlich gegenübergestellt und somit wurde man gut beraten. Alles funktionierte wunderbar digital.",
+      "comment": "VIELEN DANK für Ihre Bewertung!"
+    },
+    {
+      "id": "2HQB0DwZ5ZwokLGZ58zZkNUBjtGB2NGp",
+      "created": 1703166611,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Kevin L."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Ich fühle mich bei Herrn Eckhardt bestens aufgehoben. Er hat mich super beraten und durch ihn habe ich die bestmögliche Versicherung für mein KFZ erhalten. Ohne die fantastische Hilfe und Unterstützung hätte ich einiges an Geld verloren. Ich würde Hern Eckhardt jeder Zeit jedem weiterempfehlen, bei ihm ist man mit seinem Anliegen wirklich an der richtigen Adresse.",
+      "comment": "Lieber Kevin L., vielen Dank für das Vertrauen. Es ist auch für uns immer wieder ein gutes Gefühl, im Schadenfall vorher auf \"das richtige Pferd\" gesetzt zu haben. Das hat sich auch in Ihrem Fall gezeigt! "
+    },
+    {
+      "id": "2HQBlxmojOGZ0NQA3V3AlHGZjNwo08Tp",
+      "created": 1703058368,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr guter und umfassender Sevrvice"
+    },
+    {
+      "id": "2HmAjxwZmuQp1ZKZjOKB08zZj82p0pmZ",
+      "created": 1701876546,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Auch ich kann nur positive Erfahrungen mit Lars-Peter Eckhardt teilen. Herr Eckhardt nimmt sich Zeit, meine Bedürfnisse zu verstehen und mir dann gut durchdachte Optionen zu präsentieren. Sein Fachwissen und klare Erklärungen haben mir stets geholfen, die für mich richtigen Entscheidungen für meine Versicherungen zu treffen. Auch beim Abwickeln eines Versicherungsfalles, im Rahmen meiner Berufsunfähigkeitsversicherung, habe ich mich gut aufgehoben gefühlt. Lars-Peter Eckhardt war stets für Fragen verfügbar und die Kommunikation - wie immer - freundlich, transparent und zeitnah."
+    },
+    {
+      "id": "2HQZkuGZlxmZmImol42AlR3pjpwo5R3A",
+      "created": 1695383849,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Martin Krause"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Hier werden viele Versicherungen in Leistung und Preis verglichen. Ein großes Plus gegenüber Onlineportalen ist die persönliche Beratung da individuell auf alle Belange Rücksicht genommen werden kann. Freundliche Beratung mit hoher Sachkompetenz und viel Engagement für die Kunden.",
+      "comment": "VIELEN DANK, Martin Krause, für die nette Bewertung!"
+    },
+    {
+      "id": "2DmpmAmplWGAkWQZ3RQBmRUZj8JZmLGB",
+      "created": 1694449634,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Fühlen uns gut beraten, alle Fragen werden beantwortet und alles wird schnellstmöglich ermöglicht.."
+    },
+    {
+      "id": "2DGpmMwpmA3p082AjxwAktwZjZKZ5pmo",
+      "created": 1692364543,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Immer tolle Zusammenarbeit.  Das gesamte Team ist klasse und man kann sich 100% darauf verlassen. \nUnbedingt weiterzuempfehlen. Weiter so!!!",
+      "comment": "VIELEN DANK, Juli W., für die nette Bewertung!"
+    },
+    {
+      "id": "2DGpjO3ZkSQp0DmA3ZGAmpwpjDmAl8JA",
+      "created": 1692189649,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Stefan Schörgendorfer"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr geehrter Herr Eckhardt,\nvielen Dank für ihre wunderbare Beratung.\nSie haben für all meine Fragen optimale Lösungen gefunden und sie mir verständlich erklärt. Die jahrelange Zusammenarbeit mit ihnen, bestätigt nur mein Vertrauen in das Maklerbüro.\nBei Kummer und Sorgen stehen sie gerne mit Rat und Tat zur Seite.\n\nMit freundlichen Grüßen,\nStefan S.",
+      "comment": "Lieber Herr Schörgendorfer, vielen herzlichen Dank für Ihre Bewertungen. Schön, dass Sie so zufrieden mit uns sind!"
+    },
+    {
+      "id": "2DGZk9Tpj4zAlN3oiSGBiO3AjxQB0pGZ",
+      "created": 1679670282,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Herr Eckhardt berät sehr sachlich, umfassend und kompetent. Wir konnten auf Grundlage seiner Beratung fundierte Entscheidungen treffen."
+    },
+    {
+      "id": "2ZQA1VmZmOQAmqQBlSKpi5JAjZUZmAaA",
+      "created": 1665475568,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Alexander C."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Top Beratung, gerne wieder.",
+      "comment": "Hallo Alexander C., vielen Dank für die freundliche Bewertung!"
+    },
+    {
+      "id": "2ZwZhA3AjEwZjEwAjRaZjywZjZUAiA3p",
+      "created": 1663760324,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Uli Thagen"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Herr Eckhardt hat uns die Aktualisierung der Versicherungen organisiert. Gleichzeitig haben wir das Angebot genutzt und einen Notfallplan mit Patientenverfügung und Vorsorgevollmacht eingerichtet."
+    },
+    {
+      "id": "2ZQZ1VQBlVUZltwok5zo2RQpjZaomRKA",
+      "created": 1661282417,
+      "ratingValue": 4.4,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 4.4
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Spontane und schnelle Abwicklung einer KFZ-Versicherung mit kompetenter Beratung."
+    },
+    {
+      "id": "2Vwp3xwp0NwpkWwol9JZ2LGZjRQZlqmo",
+      "created": 1659346496,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Sven Köng"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      }
+    },
+    {
+      "id": "2VGBkVKAmVwpkNapkSaZkympjZUZ1Hwp",
+      "created": 1653728562,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Kompetente Beratung. Sehr gut auf unsere persönliche Situation eingegangen"
+    },
+    {
+      "id": "2VQB0NGZ2RapkAGA18JZhSwAjxQpj8JA",
+      "created": 1652818285,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "R. Barthel"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Freundliche, fachkundige und kompetente Beratung. Herr Eckhardt ist auf alle Fragen eingegangen.",
+      "comment": "Guten Tag R. Barthel, vielen Dank für Ihre Bewertung meiner Tätigkeit!"
+    },
+    {
+      "id": "2VwZ2Vmp0V3ZjxmZjVaAi5TBkVmZkymp",
+      "created": 1646669646,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Er ist sehr kompetent. Wir fühlen uns gut beraten und erhalten immer das passende Angebot für uns."
+    },
+    {
+      "id": "2RmplZmZ08TBlOwA3RwZ04zZjDGAjMmp",
+      "created": 1643262795,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Marcel Schuster"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Netter Mensch, arbeite gern mit ihm.",
+      "comment": "Lieber Marcel Schuster, vielen Dank für die netten Worte und Bewertung!"
+    },
+    {
+      "id": "2RwpmOmAlIGBkVwAlRGZk5Tp2VGpj4TZ",
+      "created": 1643055077,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      }
+    },
+    {
+      "id": "2Rwplqmpj9TBlVapkIGAjAmZkHQBmA3o",
+      "created": 1643020235,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Wir sind seit mehrere Monaten Kunden bei LPE. Wir haben durchaus eine umfangreiche, freundliche und vor allem, fachkundige Beratung bekommen.\n\nWir sind mit LPE sehr zufrieden und würden ihn jederzeit weiterempfehlen."
+    },
+    {
+      "id": "2RwpjAUpl8JZlNGp4pGAlZGAlNQp1Hmo",
+      "created": 1642921003,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Jennifer M.L."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Wir sind sehr zufrieden! Super Erreichbarkeit, zeitnahe Termine, sehr gute Kommunikation und Beratung. Wir haben Vertrauen.",
+      "comment": "VIELEN herzlichen DANK für die nette Bewertung!"
+    },
+    {
+      "id": "2RwpiSaA5ZKBiAUpkNUZ1twZ18Tp1ZmZ",
+      "created": 1642845855,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Kompetente Beratung"
+    },
+    {
+      "id": "2RwphW3ojtQp4VmpjEQZluwZmVwZ1ZUA",
+      "created": 1642785544,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      }
+    },
+    {
+      "id": "2RwZ1DmAkHmoiyGBmRGA4DmAmV3AkDmp",
+      "created": 1629832981,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "K. Bartels"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Herr Eckhardt hat mich sehr kompetent und ausführlich beraten und aufgeklärt.",
+      "comment": "Vielen Dank, Herr Bartels, für die nette Bewertung!"
+    },
+    {
+      "id": "2RwZ1DmZmVwAlDwpjWGA4pwp1N3Ah9zA",
+      "created": 1629832146,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Es war eine sehr kompetente und zuverlässige Beratung. Per Telefon oder E-Mail ist Herr Eckhardt immer gut erreichbar. Ich bin mit der gesamten Beratung zufrieden."
+    },
+    {
+      "id": "2RwZ1NGpmVUAiEmZ4xmZhSapl8zolSQA",
+      "created": 1629818174,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr kompetente Beratung. Geht auf den Kunden ein und kümmert sich um die Belange."
+    },
+    {
+      "id": "2RGZ4ZUZ1pwAlNwpmAmAkOaolRUp2pmp",
+      "created": 1629024343,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "engagiert, immer um Lösungen bemüht, sehr zuverlässig"
+    },
+    {
+      "id": "2Nwp14Jp3DmAlNaohywZj8zpk4JZjEmA",
+      "created": 1625664884,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr umfangreiche Bedarfsermittlung und dadurch sehr individuelle und passgenaue Lösungen."
+    },
+    {
+      "id": "2NGp18zAkEmplRaZ1pGZ4HwolxQA2pmo",
+      "created": 1624618708,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Kerstin Ramm"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr kompetente und freundliche Beratung, er ist auf alle Fragen und Probleme eingegangen. Zusammen haben wir die beste Lösung für mich gefunden.",
+      "comment": "Liebe Frau Ramm, meinen herzlichen Dank für Ihre nette Bewertung."
+    },
+    {
+      "id": "2NQB5ZmZlHwoiAQp3NmAjumojHwo0NGA",
+      "created": 1619604261,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Jürgen Walter"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Unkompliziert und schnell wurden meine Bedürfnisse analysiert und ausgeführt",
+      "comment": "Lieber Herr Walter, herzlichen Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "2NmAhymZjZKp1ZaAkyGAj9zp2HwZm8JZ",
+      "created": 1618645775,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Für jedes Problem wird eine Lösung gefunden und auf Kundenwünsche geht Herr Eckhardt sehr gut ein.  Sehr empfehlenswert."
+    },
+    {
+      "id": "2NmZ3Z3AmRaZmEGAmOGZjSwAlRQZjHGB",
+      "created": 1614280509,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "S.G."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Ich benötigte in einer persönlichen Notlage schnelle und unkomplizierte Hilfe, die ich von Herrn Eckhardt bekam! Danke,dafür!",
+      "comment": "Schön, dass ich Ihnen helfen konnte. "
+    },
+    {
+      "id": "2NmZ3pQZkDwp1pwo0N3ZiImo3tmAhAGB",
+      "created": 1614245908,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "H. NERLICH"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Wir haben als Familie die Themen Patientenverfüng und Vorsorgevollmachten geregelt. Dabei haben wir auch den Notfallplan besprochen und entsprechend ausgefüllt und somit organisiert. \nWir fanden gut, wie einfach alles zu regeln war und danken Herrn Eckardt für seine Unterstützung.",
+      "comment": "Vielen Dank, H.Nerlich, für Ihre Bewertung und Ihr Vertrauen."
+    },
+    {
+      "id": "2NmZ3DGBiAmAltwZiumAhyQA0Z3ohWKB",
+      "created": 1614236083,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Freundlich, nimmt sich Zeit, versucht das Beste für seine Kunden herauszuholen. Mit anderen Worten: sehr empfehlenswert.",
+      "comment": "Vielen Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "2NmZlDGp4HGphWKZi9zA0Nwp2RGpi9zZ",
+      "created": 1613909381,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Anja Sperling"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Beim Abschluss meiner Lebensversicherung hatte ich das Gefühl, sehr kompetent beraten worden zu sein.\nHerr Eckhardt hat rückblickend, erwartbare wichtige Informationen einfließen lassen, welche ich als Laie mit Sicherheit außenvorgelassen hätte. Das empfand ich als sehr kundenorientiert, wie man es sich in vielen Belangen wünscht, aber immer seltener in dieser Art erfährt.",
+      "comment": "Vielen Dank für den ausführlichen Kommentar."
+    },
+    {
+      "id": "2NwZmMQBk9zZkxGpj5zA2ZwZ1tQp3VUp",
+      "created": 1613720018,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr zufrieden waren wir mit unserer Kanuversicherung. Aber auch alles andere ist zu unserer Zufriedenheit. Stets freundliche und kompetente Beratung.",
+      "comment": "Vielen Dank für Ihr Feedback."
+    },
+    {
+      "id": "2NwZk5TA2xwZktGZl5JZiSmp082AmOQp",
+      "created": 1613603945,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Sebastian Habecker"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Was braucht es um einen enormen Finanzierungsberg zu besteigen?\n\nEinen ortskundigen Fachmann, der einem eine maßgeschneiderte Route aufzeigt, um auch sicher am Gipfelkreuz anzukommen!\n\nUnd genau diesen Fachmann haben wir in \"LPE\" gefunden. Er hat hartnäckig und professionell unseren Hauswunsch mit ermöglicht.\n\nWas ob der immensen Kaufsumme unerreichbar schien, hat \"LPE\" maßgeschneidert auf unsere Bedürfnisse und finanziellen Möglichkeiten zu einer machbaren Finanzierung zusammengeschnürt.\n\nWir werden  \"LPE\" immer wieder weiterempfehlen, weil wir unsere Finanzen bei ihm in vertrauenswürdigen Händen wissen.\n\nDas Gipfelkreuz ist erreicht. Jetzt liegt es an uns, den von \"LPE\" geebneten Weg ins Tal sicher zu bewältigen.",
+      "comment": "Vielen Dank für diese netten Worte. Ich wünsche viel Freude im neuen Haus!"
+    },
+    {
+      "id": "2NwZkqmAhEmZmR3p4tmA3RGpm8zAhWao",
+      "created": 1613592484,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Glander"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Seit 2 Jahrzehnten vertraue ich Lars-Peter Eckhardt wenn es um Versicherungen oder Finanzierungen geht. Er geht sehr gut auf meine Bedürfnisse ein und findet immer die richtige Lösung. Ich kann ihn uneingeschränkt und jederzeit weiterempfehlen.",
+      "comment": "Herzlichen Dank für die Bewertung!"
+    },
+    {
+      "id": "2NwZkMmZmSmojSKpmAQZ0V3Z04JBmSGA",
+      "created": 1613587441,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Kristina G."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Ich bin kompetent beraten worden und habe transparente Angebote erhalten. Meine Wünsche wurden dabei immer berücksichtigt.",
+      "comment": "VIELEN DANK für Ihre Bewertung bei ProvenExpert!"
+    },
+    {
+      "id": "2NwZkAwp2pGp4ZwZmRwA0LmpkLmo0NUZ",
+      "created": 1613577831,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Thomas Haubner"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Wir haben Herrn Eckhardt über dieses Portal gefunden und sind äußerst zufrieden 5 Sterne+. Wir wurden nach einem umfangreichen Checkup höchst kompetent und teils sehr kurzfristig zum Thema Riester, Vorsorge, Versicherung und Baufinanzierung beraten. Weiter so! Herzlichen Dank, Fam. Haubner",
+      "comment": "VIELEN DANK für Ihre nette Bewertung. Ich freue mich auf die nächsten Jahre!"
+    },
+    {
+      "id": "2NwZkAwok4TplSKA5xGAjAGA2HGpiWwZ",
+      "created": 1613576730,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Anna Müller"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Herr Eckhardt ist sehr freundlich und steht seinen Kunden jeder Zeit bei Fragen zur Verfügung.\nEr berät verständlich und lässt keine Fragen offen.",
+      "comment": "Vielen Dank, Frau Müller. Ich freue mich über Ihre netten Worte!"
+    },
+    {
+      "id": "2NGZ3RUp3RQB5tGpkpmAiSUAkxwolVUA",
+      "created": 1612176497,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Frank Kurzmann"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr nett und kompetent. Ich kann ihn nur weiter empfehlen.",
+      "comment": "VIELEN DANK. Kommen Sie gerne auf uns zu, wenn Sie weiteren Gesprächsbedarf haben."
+    },
+    {
+      "id": "2NQZ0ZQZm52ojLmpmWGA3ZQplVmAlump",
+      "created": 1610887418,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Bei mir ging es um Hausrat und Haftpflicht. Sehr angenehmes Arbeiten und ein zuverlässiger Fachmann.",
+      "comment": "Vielen Dank für die Bewertung meiner Tätigkeit."
+    },
+    {
+      "id": "1Z3p48zAmAGB3V3ZkumAmZUZlR3ZjOao",
+      "created": 1610135283,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Um uns ein größeres Projekt in Zukunft zu erfüllen ,haben wir Herrn Eckhardt um Beratung und Hilfe gebeten. Er hat uns alles ganz genau erläutert und gesellschaftsübergreifend das beste und nach unseren Anforderungen passende Angebot heraus gesucht.\nDesweiteren vereint Herr Eckhardt die moderne digitale Welt mit der eines klassischen Finanz-Beraters. ( kein Papierkrieg)\nWir sind Herrn Eckhardt für die kompetente Beratung sehr dankbar und wollen in Zukunft auch ihn für alle unsere Versicherungsverträge als Ansprechpartner.",
+      "comment": "VIELEN herzlichen Dank für die nette Bewertung!"
+    },
+    {
+      "id": "1ZaphSmo1RQp242ZmOaZ2N3plZ3p1N3Z",
+      "created": 1609177937,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Thoanjohlu"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Lars-Peter Eckert hat uns von Anfang an mit sehr viel Geduld, bei unserer Immobilienfinanzierung, beraten. Auf unsere Fragen und Wünsche ist er immer eingegangen und hat diese berücksichtigt. Dabei ist ein, für uns, super Finanzierungspaket entstanden. Wir werden auch in Zukunft seine sehr kompetente Arbeit in Anspruch nehmen und können Ihn nur weiterempfehlen.",
+      "comment": "Vielen herzlichen Dank für die netten Worte. Ich freue mich auf unsere zukünftige Zusammenarbeit!"
+    },
+    {
+      "id": "1Z3omuGZmWGp5HGBm4JZ2VaAmxQA1Hmo",
+      "created": 1606386162,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Das Beratungsgespräch verlief in einer sehr angenehmen, Atmosphäre, war zielorientiert und brachte ein für mich gutes Ergebnis. Bin vollkommen zufrieden.",
+      "comment": "Danke für Ihre Einschätzung."
+    },
+    {
+      "id": "1ZUBlOUBlVGp0LGp1RmZiWGp0Z3pkymo",
+      "created": 1603192866,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "s. h."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Wir haben das Komplettangebot genutzt: Hausfinanzierung, Versicherungsvergleich und Neuausrichtung, sowie Vollmachten und Patientenverfügung",
+      "comment": "Vielen Dank s.h. für Ihr Vertrauen. Schön, dass wir Ihnen umfassend zur Seite stehen können."
+    },
+    {
+      "id": "1ZUB5N3A2twAmHwAj4TZiAKB1HGpjIGB",
+      "created": 1602865000,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Marcel D."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Alles aus einer Hand. Hausfinanzierung mit einer Bank und KFW, Bauversicherungen.",
+      "comment": "Vielen Dank Marcel D. für die nette Bewertung. Wir haben Ihnen sehr gerne geholfen."
+    },
+    {
+      "id": "1ZUAj9Jp0NwomOGZlVwAkZQAlZaomNaZ",
+      "created": 1598864704,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Peter Herzer"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "comment": "VIELEN DANK für die Bewertung!"
+    },
+    {
+      "id": "1Z3Z3R3ojMmAlVUpmqmZlLGA1NQBkWap",
+      "created": 1597496262,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Birte"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr kompetent, sehr gute Beratung, angenehme ruhige Art, nicht aufdringlich.",
+      "comment": "Herzlichen Dank für die Bewertung!"
+    },
+    {
+      "id": "1ZaZkAGAiIQBl42p4LGZmImp2HmZkpmA",
+      "created": 1596798389,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Dr. H. Miethe"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Kompetente Unterstützung bei der Auswahl des Versicherungsunternehmens. Sehr gute, rasche Schadensabwicklung unter hartnäckige Durchsetzung  der Interessen des Versicherungsnehmers  \n(hohe Entschädigung im Versicherungsfall, intensive Kommunikation mit allen Beteiligten)",
+      "comment": "Lieber Dr. Miethe, schön, dass wir damals die richtige Wahl bei der Versicherung getroffen und Sie meiner Empfehlung gefolgt sind. Vielen Dank für das Vertrauen."
+    },
+    {
+      "id": "1ZaZi9zZjRaojumAh9TAjV3AkLwZmWmZ",
+      "created": 1596699149,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Ingolf Schlegel"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Wir kennen das Geschäft von Lars-Peter Eckhardt seit über 15 Jahren.\nSchon immer konnten wir zusammen Aufgaben um meine Familien- und Immobilienabsicherung lösen. Im letzten Monat konnten wir zusammen einen Absicherungsvertrag mit Arbeitgeberförderung abschließen.\nLars haben wir immer als ehrlichen, immer bemühten, geduldigen, kompetenten und schätzenswerten Menschen kennengelernt.",
+      "comment": "DANKESCHÖN für die netten Worte und die Bewertung."
+    },
+    {
+      "id": "1V3o3VapkSwAjN3ojO3AhOmo0xmp4Nwo",
+      "created": 1589112529,
+      "ratingValue": 4.8,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Nein"
+      },
+      "ratings": {
+        "category_0": 4.8
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Super Beratung \nKann ich nur weiter empfehlen",
+      "comment": "VIELEN DANK für Ihre Bewertung."
+    },
+    {
+      "id": "1VUBjVQZi9zo3Zao3RwAlLQp2Nwpm9Jp",
+      "created": 1585455291,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Juliane B."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Seit fast 2 Jahrzehnten super Betreuung und Beratung in den verschiedensten Feldern (Versicherungen/Baufinanzierung/Altersvorsorge). Er behält den Blick für das Wesentliche und harkt nach, wenn man selbst mal den Blick für diese Themen verloren hat. Immer wieder gerne!",
+      "comment": "Liebe Juliane B., herzlichen Dank für Ihre Aussagen. Ich finde es super, wenn ich so lange mit meinen Kunden zusammenarbeiten kann. Danke für das Vertrauen!"
+    },
+    {
+      "id": "1VaA1NGp4Zao3Zao3RGA3pGZltGA5VmZ",
+      "created": 1583680911,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Fam. Bonin"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Herr Eckhardt hat uns hinsichtlich der Folgefinanzierung für unsere Immobilie unterstützt. Dabei haben wir ihn als fachlich sehr kompetenten, umfassend beratenden und stets verbindlichen sowie  geduldigen Berater schätzen gelernt. Wir werden auch bei zukünftigen Projekten gerne mit ihm zusammenarbeiten.",
+      "comment": "Liebe Fam. Bonin, herzlichen Dank für Ihr Feedback. Die Zusammenarbeit war eine Freude. Auf die neuen Projekte!"
+    },
+    {
+      "id": "1VaA0RaAjWQBmRaokRQZlOaAjNaZmV3Z",
+      "created": 1583666882,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Ich kann LPE nur weiterempfehlen, er macht einen tollen Job. Ich war sehr zufrieden!"
+    },
+    {
+      "id": "1VaA0RaZ5Vwo3Zao3RQA5twp0xwpjMwZ",
+      "created": 1583665810,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Francine"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Kompetente und freundliche Beratung in Sachen Versicherung. Bei speziellen Wünschen erhält man immer eine super Beratung. Die Zusammenarbeit mit Herrn Eckardt läuft schon seit einigen Jahren und wir waren noch nie unzufrieden. Die Zufriedenheit der Kunden wird hier groß geschrieben!!",
+      "comment": "Vielen herzlichen Dank für die EInschätzung. Ich freue mich auf viele weitere Jahre mit guter Zusammenarbeit!"
+    },
+    {
+      "id": "1VaA0NQZkqQBmRaokRwAlV3ZkVaZjDwZ",
+      "created": 1583612119,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Susanne S."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Kompetent und freundlich zur Altersvorsorge beraten.",
+      "comment": "Herzlichen Dank für Ihre Bewertung!"
+    },
+    {
+      "id": "1V3Z4NQBjSwo0pQAlImp142o1LmomywA",
+      "created": 1580730561,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Benjamin Röbhels"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "LPE hat uns als Makler bei der Neuorganisation unserer Versicherungen geholfen. Gleichzeitig haben wir seinen Service wahrgenommen und unsere lange vor uns hergeschobene Patientenverfügung und Betreuungsverfügung auf den Weg gebracht. Hoffen wir, dass wir es nicht benötigen, aber ein gutes Gefühl, es erledigt zu haben.",
+      "comment": "Lieber Herr Röbhels, vielen Dank für Ihre Bewertung. Schön, dass Sie diese wichtigen Themen angegangen sind!"
+    },
+    {
+      "id": "1VUZ4NUBkOKBlqGBlOaolSQBktQAjZ3Z",
+      "created": 1577634012,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Kathi U."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Dank für die Hilfe und die Beratung",
+      "comment": "Herzlichen Dank für Ihre Bewertung. Ich bin Ihnen gerne wieder behilflich!"
+    },
+    {
+      "id": "1VUZ4NUBkNQZhqmA5twojSUpmZQB2ZUB",
+      "created": 1577633808,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Marcel Urbon"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Klare Empfehlung: Rentenabsicherung, Anschlussfinanzierung",
+      "comment": "Herzlichen Dank für Ihre Bewertung. Ich bin Ihnen gerne wieder behilflich!"
+    },
+    {
+      "id": "1VUZjRap1DwplSUZm92p5NGAkRUpmqwZ",
+      "created": 1577115220,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Herzlichen Dank mal wieder für die tolle und ausführliche  Beratung und die schnelle Abwicklung. Wir können Herrn Eckhardt nur weiterempfehlen.",
+      "comment": "Immer wieder gerne!"
+    },
+    {
+      "id": "1VUZjxGAhWKBiumZjNGplW3o2NGBjMwo",
+      "created": 1577096622,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Stephan"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Ich kann Herrn Eckhardt absolut weiterempfehlen. Er konnte mir bei meiner Produkthaftpflichtversicherung sehr weiterhelfen, obwohl es bei mir einige Besonderheiten gab. Auch die Betreeung als Bestandskunde läuft hervorragend",
+      "comment": "Hallo Stephan, vielen Dank für die Bewertung und weiterhin so großartigen geschäftlichen Erfolg."
+    },
+    {
+      "id": "1VUZjtmZkOGBiumZjNGp242pmtQpmIwZ",
+      "created": 1577092048,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Monika F."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Generationenberatung \"Liebe Familie\" nennt Herr Eckhardt das. Ich kam auf Empfehlung und wir konnten gemeinsam meine lang vor mir hergeschobenen Baustellen schließen. Patientenverfügung, Vorsorgevollmacht und mit dem Notfallordner gab es sogar noch ein Extra. Vielen Dank für die Hilfe.",
+      "comment": "Vielen Dank für Ihr Interesse und Ihre Bewertung, insbesondere zum Thema Generationenberatung."
+    },
+    {
+      "id": "1VUZjtGZ4HwplSUZm9Jp2ZKp1LwAlqwp",
+      "created": 1577091461,
+      "ratingValue": 4.8,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Milan Zarow"
+      },
+      "ratings": {
+        "category_0": 4.8
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Im Rahmen unserer Absicherungsüberprüfung haben wir L.P. Eckhardt um Rat gebeten. Wir konnten vergleichen und haben uns dann für ein neues Paket mit deutlich mehr Leistungen für etwas weniger Beitrag entschieden. Hoffen wir, dass wir den vielleicht etwas zu umfangreichen Schutz für unser Haus und Hausrat nicht in Anspruch nehmen müssen.",
+      "comment": "Lieber Herr Zarow, vielen Dank für Ihre Bewertung. Mehr Leistungen für einen guten Beitrag > Ziel erreicht, würde ich sagen! :-)"
+    },
+    {
+      "id": "1R3pjSapmqwplSUZm9TZ08zZ2Z3AmMmZ",
+      "created": 1576853239,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Heiko Schacht"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Wir sind seit ca. 5 Jahren Kunden und planen im nächsten Jahr unsere Anschlussfinanzierung für das Haus. Hier wurde uns geholfen und Licht ins Dunkel gebracht, welche Optionen wir haben.",
+      "comment": "Herr Schacht, schön, dass ich Ihnen auch hier behilflich sein konnte. Vielen Dank für Ihr Vertrauen und auf weiterhin sehr gute Zusammenarbeit!"
+    },
+    {
+      "id": "1R3pjSUplZaplSUZm9TZmDGAmNUp1xwZ",
+      "created": 1576852527,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Linda C."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Danke an Herrn Eckardt für die unfangreiche Beratung. Endlich sind wir das Altersvorsorgethema angegangen und haben auch die Familie abgesichert.",
+      "comment": "Aufgabe erkannt und gelöst. Schön, dass Sie uns gefragt haben!"
+    },
+    {
+      "id": "1R3pi9JA0VKBiumZjNwZj4JZjVGpm5zZ",
+      "created": 1576777038,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Karl Heinz R."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Gebäudeversicherung, Hausrat und Haftpflicht mit LPE abgeschlossen.",
+      "comment": "Lieber Herr R., wir behalten das zusammen im Blick. Danke für ihr Vertrauen!"
+    },
+    {
+      "id": "1R3phqwpjZKBlqGBlOKZjRaA1RmpmAaZ",
+      "created": 1576697359,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Frank H."
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Herr Eckhardt (LPE) hat bei der Finanzierung und Absicherung unseres Hauses unterstützt. Er sind zufrieden mit den Zinsmodalitäten und können ihn empfehlen.",
+      "comment": "Sehr geehrter Frank H., prima, dass wir Ihnen helfen konnten. Günstige Zinskonditionen sind ja zum Glück nur ein Bestandteil der richtigen Finanzierung. Danke für die Zusammenarbeit."
+    },
+    {
+      "id": "1Rap4VUB2HGBiumZjNwAjRwAkZQBmxwZ",
+      "created": 1575544933,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "M.Staubner"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Wir haben ein Hausgekauft und wurden von Herrn Eckardt zu den Themen: Finanzierung und Absicherungen der Immobilie und uns als Personen umfassend beraten. Vielen Dank für die Mühe."
+    },
+    {
+      "id": "1RKp4NQp1HGplAap4ZKZm4zA3LwAjZmZ",
+      "created": 1574440021,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Denise Matschek"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr kompetente, umfangreiche und individuelle auf den Punkt gebrachte Beratung."
+    },
+    {
+      "id": "1RKp3RUp0NGBiumZjNQB1Nwok8zp042o",
+      "created": 1574427712,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Seit vielen Jahren, kenne ich seine hervorragende Beratung und schnelle Hilfe. \nDankeschön"
+    },
+    {
+      "id": "1RUpjMmA3RGBiumZjNwZ3NQplpQAmOQA",
+      "created": 1573676913,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Frau C. Horvest"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Herzlichen Dank für die umfassende Beratung und Hilfe."
+    },
+    {
+      "id": "1RUB5RQAltGBiumZjNmZ5Z3pjtQB1ZmZ",
+      "created": 1569264680,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Herr Eckardt betreut uns seit 2010.\nSeine bedarfsgerechte und kompetente Beratung hat den Unterschied gemacht.\nEr ist schnell, nie aufdringlich und immer sehr aufmerksam!"
+    },
+    {
+      "id": "1R3A24zA1ZGBlqGBlOKAjRUp2HQZ1RwZ",
+      "created": 1568056915,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "H&A Hausservice UG"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "modified": 1568057579,
+      "feedback": "Wir würden LPE uneingeschränkt weiter empfehlen; er hat sich sowohl für unsere KFZ, als auch für die gesamte Absicherung der Firma sehr viel Zeit genommen und uns umfassend beraten. Vielen Dank dafür!"
+    },
+    {
+      "id": "1RKAjAmAiymZ5xQZkqGA1Vwo3RQAjOwZ",
+      "created": 1566324665,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      }
+    },
+    {
+      "id": "1RUAlN3okWUAmEwA5NUAlHmo0ZQBhqmZ",
+      "created": 1564658654,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Daniel Poppe"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Wir hatten Probleme mit unserer alten Versicherung. LPE zeigte uns Lücken auf, und machte uns verschiedene alternative Angebote. Detailfragen konnte er durch seine Kompetenz  zu unserer vollsten Zufriedenheit beantworten. Eine wirklich TOP Beratung! Dabei fühlten wir uns nie bedrängt. Natürlich empfehlen wir LPE weiter und sind froh jemanden gefunden zu haben, der uns mit seinem Fachwissen weiterhilft."
+    },
+    {
+      "id": "1RUZ4RaAmAUpl8TpiAUp3RUBjDmpmZ3Z",
+      "created": 1560860415,
+      "ratingValue": 4.6,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 4.6
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Ich bedanke mich für die verlässliche und vor allem (mir als Laie gegenüber) geduldige Zusammenarbeit!"
+    },
+    {
+      "id": "1RUZjNGAmLmAiWaZ5R3ZlAmplRUp1DwZ",
+      "created": 1560282422,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Kümmert sich hervorragend! Immer hilfsbereit und erreichbar."
+    },
+    {
+      "id": "1N3p1RQplyQBmMGZjN3AiOKBmpGpmEwZ",
+      "created": 1559567593,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "We had to refinance our construction project. Mr. Eckardt has led us perfectly through the jungle and we have successfully returned to civilization with a very good follow-up financing. THANKS A LOT!"
+    },
+    {
+      "id": "1Nap5VwpluQBmMGZjN3ZlEQAkpmp5LmZ",
+      "created": 1558785768,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Dr. S. Lange"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      }
+    },
+    {
+      "id": "1NKp5pwAiOQAmEwA5NKZ0VUZj8TAkOwZ",
+      "created": 1557755568,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      }
+    },
+    {
+      "id": "1Naoi5TZ5ZQAmEwA5NaZ4DmAkZ3o0VaZ",
+      "created": 1554751635,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Abdulrahim Al Khattab"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Ich bin seit jahren sehr zufrieden und ich kann weiterempfehlen, beste Beratung, Top Service ."
+    },
+    {
+      "id": "1N3Z2pmo1xQA0xQAmLGZl52AmDwokLwZ",
+      "created": 1547074393,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Christopher"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Lars-Peter Eckhardt hat uns zu unserer Traumimmobilie verholfen. Mit viel Geduld und einem Dauer positiven Denken auch wenn es mal schwer wurde. \nDabei hat er immer lösungsorientiert, nach unseren Wünschen und Interessen gearbeitet. Es war eine ehrliche und vertrauensvolle Zusammenarbeit, die mit Erreichen unserer Traumimmobilie nicht endet! \nWir sind sehr froh, als Familie, so einen Versicherungs- und Finanzmakler an unserer Seite zu haben.\n\nGanz liebe und dankende Grüße \n\n\nFamilie Bils (🙋‍♀️🙋‍♂️👶👶🐶)"
+    },
+    {
+      "id": "18Jp0pQAjS3ZjRmA1HmZhIGB48TA1LQB",
+      "created": 1540650189,
+      "ratingValue": 4.724444444444444,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Daniel F."
+      },
+      "ratings": {
+        "category_0": 4.724444444444444
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Seit Jahren unser Markler in Sachen Altersvorsorge, Versicherungen und Geldanlagen.\nSehr kompetent und vorallem mit der nötigen Ruhe und Zeit bei der Beratung. Wir waren/sind sehr zufrieden."
+    },
+    {
+      "id": "18JplNmpkRwplWUA3pmo1Dmp48TA1LGB",
+      "created": 1540493132,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Katja Bartels"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "War von der Beratung begeistert, meine Bedürfnisse und Vorstellungen wurden zu 100% umgesetzt und berücksichtigt.\nDer Abschluss erfolgte nach genauer Überlegung. Bei weiteren Fragen wurde ich SOFORT zurückgerufen und die Bearbeitung erfolgte ebenfalls sofort.\nDickes Lob!"
+    },
+    {
+      "id": "18JpjNUZjRaplWUA3pwpjxwo48TA1LmA",
+      "created": 1540407309,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Alexander Bremer"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Immer wieder gerne!"
+    },
+    {
+      "id": "18TpmuQZmSmAkDGpkpQZjWGp48TA1LQB",
+      "created": 1540325617,
+      "ratingValue": 4.95959595959596,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Stefanie Richter"
+      },
+      "ratings": {
+        "category_0": 4.95959595959596
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Seit Jahren mein persönlicher Ansprechpartner Nr. 1 für Versicherungen und Altersvorsorge - auch wenn das Thema Rente nicht mein Lieblingsthema ist ;-) Gerade bei meiner Existenzgründung hat Lars-Peter Eckhardt mir ein tolles Paket geschnürt. Als Alleinerziehende und Selbständige sind mir Sicherheit und Vorsorge wichtig.\nEmpfehlenswert für alle, die sich unabhängig und passend auf die eigene Lebenssituation beraten lassen möchten. Und für die, die darauf vertrauen möchten, dass ihnen zuverlässig geholfen wird, wenn mal was sein sollte.\nUnd für die, die einen Makler schätzen, der trotz der ernsten und formellen Angelegenheiten auch Spaß an der Sache hat."
+    },
+    {
+      "id": "18JA1VaZ4RmZjRmA1HmoiqQA48TA1Lwo",
+      "created": 1532355201,
+      "ratingValue": 4.4,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Susann B"
+      },
+      "ratings": {
+        "category_0": 4.4
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Schnelle und zielgerichtete Kommunikation. Ausführliche und transparente Beratung. Insgesamt eine angenehme und hilfreiche Zusammenarbeit"
+    },
+    {
+      "id": "18TAmIQZ3pmZiEQA5VmomOKA48TA1LmA",
+      "created": 1531924599,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Vielen Dank für die klasse Beratung und Unterstützung. \nWir kommen wieder!! ;)"
+    },
+    {
+      "id": "182Z5VGZjWmZiEQA5VQBluQZ48TA1LmA",
+      "created": 1530470850,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Ich bin jetzt schon seit Jahren bei Herrn Eckhardt und bin immer wieder zufrieden über die kompetente Beratung, sowohl in Versicherungs- als auch in Finanzfragen. Ich kann ihn nur weiterempfehlen!"
+    },
+    {
+      "id": "18JZ5LQpjSKB3NQA1pmolVQB48TA1LmA",
+      "created": 1528392909,
+      "ratingValue": 4.8,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 4.8
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr kurzfristige aber trotzdem kompetente und vollumfassende  Beratung!\n\nVielen Dank!"
+    },
+    {
+      "id": "18JZkxwAjAQZ5RKZjWGpkHQp48TA1LmA",
+      "created": 1527879363,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Daniela"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Ich würde Lars Peter Eckhard weiter empfehlen weil ich mich bei ihm gut aufgehoben fühle er nicht aufdringlich ist was eimem zu Verkaufen"
+    },
+    {
+      "id": "18JZkLwplVKB3NQA1pGZhIGA48TA1LmA",
+      "created": 1527868974,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Jürgen Krüger"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      }
+    },
+    {
+      "id": "18JZkDmA2HQZ5RKZjWQZ1NGB48TA1LmA",
+      "created": 1527859045,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Kann Herrn Eckhardt nur wärmstens empfehlen. Geht auf die Bedürfnisse und Wünsche ein. Zeigt dann bessere Alternativen oder Kompromissen auf, um daraus ein Rundumsorglos Paket zu schnüren."
+    },
+    {
+      "id": "18JZjDmZiEmZiEQA5VmZ2Zwp48TA1pwp",
+      "created": 1527792564,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Kompetent, unaufgeregt, sachlich, freundlich ohne jegliche Verkäufer Allüren ... einfach ein gutes Gefühl- gut versichert (worden) zu sein."
+    },
+    {
+      "id": "14zpk4TA3xwpmDwZ5LGAlOQZ48TA1LmA",
+      "created": 1524737145,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Stefanie Grytz"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr unkomplizierte und kompetente Beratung.  In meinem Fall auch eine recht schwierig Versicherung, die er schnell und kompetent löst. Ich bin seit Jahren sehr zufrieden und mag seine angenehme Art. Er ist immer ansprechbar und kümmert sich schnell."
+    },
+    {
+      "id": "14JplSKB3ZwpkWQphuwplOao48TA1LQB",
+      "created": 1524554099,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      }
+    },
+    {
+      "id": "14JplOQA5ZapkWQphuGBjDwo48TA1LQB",
+      "created": 1524499615,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Sehr sehr gründlich in der Vorbereitung, (sehr) viele Fragen.... Da kann man sicher sein, ein passendes Angebot zu bekommen und nicht nur schöne Bilder/ Prospekte, die im Ernstfall vielleicht nicht helfen.\nist aber auch menschlich ein angenehmer, lockerer Zeitgenosse."
+    },
+    {
+      "id": "14Jpk9TAiSUZ5RKZjWmp5V3p48TA1Lwo",
+      "created": 1524479165,
+      "ratingValue": 5,
+      "status": "published",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "name": "Johannes Wilk"
+      },
+      "ratings": {
+        "category_0": 5
+      },
+      "labels": {
+        "category_0": "Qualität"
+      },
+      "feedback": "Wir brauchten eine wirklich komplizierte Versicherung und haben in Lars-Peter Eckhardt den richtigen Mann gefunden. Er hat sich in unser Unternehmen reingedacht, es verstanden und das richtige Produkt ausgewählt.  Ein Makler der für seine Sache lebt und nicht nur ein Produkt verkaufen möchte."
+    }
+  ]
+}

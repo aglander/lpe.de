@@ -95,14 +95,27 @@
   .divider {
     @apply my-5 h-px border-0 bg-divider;
   }
+
+  .mdx-content .rating-module h2,
+  .mdx-content .rating-module h3,
+  .mdx-content .rating-module p {
+    @apply m-0 border-0 p-0;
+  }
+
+  .mdx-content .rating-module h2 {
+    @apply text-2xl font-bold text-grey lg:text-4xl;
+  }
+
+  .mdx-content .rating-module h3 {
+    @apply text-2xl font-bold text-grey;
+  }
+
+  .mdx-content .rating-module p {
+    @apply text-inherit;
+  }
 }
 
 @layer utilities {
-  .provenexpert {
-    width: 1000px;
-    height: 234px;
-  }
-
   .whofinance {
     height: 71px;
     width: 100%;

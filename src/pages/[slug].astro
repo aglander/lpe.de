@@ -7,12 +7,13 @@ import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../components/BaseLayout.astro";
 import Divider from "../components/Divider.astro";
 import Hero from "../components/Hero.astro";
-import ProvenExpertStars from "../components/ProvenExpertStars.astro";
+import RatingStructuredData from "../components/RatingStructuredData.astro";
 import Section from "../components/Section.astro";
 import PageCtas from "../components/mdx/PageCtas.astro";
 import MdxPageCtas from "../components/mdx/PageCtas.jsx";
 import { getPlaces } from "../lib/content-data.js";
 import { createMdxComponents } from "../lib/mdx-components.js";
+import { hasLegacyRatingMarkup } from "../lib/ratings.js";
 import { siteMetadata } from "../lib/site.js";
 import {
   normalizeSlug,
@@ -170,6 +171,7 @@ const ctaProps = {
 const ctas = React.createElement(MdxPageCtas, ctaProps);
 const mdxComponents = createMdxComponents({ ctas, placeData });
 const pageUrl = new URL(Astro.url.pathname, siteMetadata.siteUrl).toString();
+const hasRatingModule = type !== "legal" && hasLegacyRatingMarkup(entry.body);
 const printPath = resolvePrintPath(entry.data.print);
 const heroImageValue =
   type === "seo"
@@ -232,7 +234,7 @@ const heroImage = resolveHeroImage(heroImageValue);
         <div class="mdx-content">
           <Content components={mdxComponents} />
         </div>
-        <ProvenExpertStars pageUrl={pageUrl} placeData={placeData} />
+        {hasRatingModule && <RatingStructuredData pageUrl={pageUrl} placeData={placeData} />}
       </Section>
     </>
   )}

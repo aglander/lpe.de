@@ -6,6 +6,7 @@ import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
 import TypedText from "../components/TypedText.astro";
 import ContactForm from "../components/ContactForm.astro";
+import RatingStructuredData from "../components/RatingStructuredData.astro";
 import Reviews from "../components/mdx/Reviews.astro";
 import homeHero from "../images/LPE_Start_hero.jpg";
 import portrait from "../images/LPE_HP.jpg";
@@ -153,6 +154,7 @@ const consultingApproach = [
 
   <Section>
     <Reviews />
+    <RatingStructuredData pageUrl={new URL("/", "https://www.lpe.de").toString()} />
   </Section>
 
   <Divider />

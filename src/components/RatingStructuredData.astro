@@ -1,0 +1,117 @@
+---
+import { ratingPlatforms, ratingSummary } from "../lib/ratings.js";
+import { businessMetadata, officeLocations, siteMetadata } from "../lib/site.js";
+
+type PlaceData = {
+  zipcode?: string | null;
+  long?: string;
+};
+
+type AreaServed = {
+  "@type": "City";
+  name: string;
+  address: {
+    "@type": "PostalAddress";
+    postalCode: string;
+    addressLocality: string;
+    addressCountry: "DE";
+  };
+};
+
+const { pageUrl, placeData } = Astro.props as {
+  pageUrl?: string;
+  placeData?: PlaceData;
+};
+
+const rating = Number(ratingSummary.ratingValue.toFixed(2));
+const count = Number(ratingSummary.reviewCount);
+
+if (!(rating > 0 && count > 0) || !pageUrl) {
+  return null;
+}
+
+let areaServed: AreaServed | undefined;
+if (placeData?.zipcode && placeData?.long) {
+  areaServed = {
+    "@type": "City",
+    name: placeData.long,
+    address: {
+      "@type": "PostalAddress",
+      postalCode: String(placeData.zipcode),
+      addressLocality: placeData.long,
+      addressCountry: "DE",
+    },
+  };
+}
+
+const organizationId = `${siteMetadata.siteUrl}#organization`;
+const webPageId = `${pageUrl}#webpage`;
+const logoUrl = new URL(businessMetadata.logo, siteMetadata.siteUrl).toString();
+const imageUrl = new URL(businessMetadata.image, siteMetadata.siteUrl).toString();
+const contactPageUrl = new URL("/kontakt/", siteMetadata.siteUrl).toString();
+
+const locationNodes = officeLocations.map((location) => ({
+  "@type": "InsuranceAgency",
+  "@id": `${siteMetadata.siteUrl}#office-${location.id}`,
+  name: location.name,
+  image: imageUrl,
+  url: contactPageUrl,
+  email: businessMetadata.email,
+  telephone: location.telephone,
+  ...(location.faxNumber ? { faxNumber: location.faxNumber } : {}),
+  priceRange: businessMetadata.priceRange,
+  hasMap: location.hasMap,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: location.streetAddress,
+    addressLocality: location.addressLocality,
+    postalCode: location.postalCode,
+    addressCountry: location.addressCountry,
+  },
+}));
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "FinancialService"],
+      "@id": organizationId,
+      name: businessMetadata.name,
+      legalName: businessMetadata.legalName,
+      email: businessMetadata.email,
+      url: siteMetadata.siteUrl,
+      description:
+        "Ihr Makler für: Altersvorsorge | Versicherungen | Finanzierungen | Immobilien",
+      logo: logoUrl,
+      image: imageUrl,
+      founder: {
+        "@type": "Person",
+        name: businessMetadata.founder,
+      },
+      sameAs: ratingPlatforms.map((platform) => platform.href),
+      contactPoint: businessMetadata.contactPoint,
+      location: locationNodes.map((location) => ({ "@id": location["@id"] })),
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: rating,
+        reviewCount: count,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      ...(areaServed ? { areaServed } : {}),
+    },
+    {
+      "@type": "WebPage",
+      "@id": webPageId,
+      url: pageUrl,
+      about: [
+        { "@id": organizationId },
+        ...(areaServed ? [areaServed] : []),
+      ],
+    },
+    ...locationNodes,
+  ],
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />

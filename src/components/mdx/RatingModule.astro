@@ -1,0 +1,146 @@
+---
+import { featuredReviews, ratingPlatforms, ratingSummary } from "../../lib/ratings.js";
+
+const dateFormatter = new Intl.DateTimeFormat("de-DE", {
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+});
+
+const ratingValue = Number(ratingSummary.ratingValue.toFixed(2));
+const reviewCount = Number(ratingSummary.reviewCount);
+const portalCount = ratingPlatforms.length;
+const updatedAtLabel = ratingSummary.updatedAt
+  ? dateFormatter.format(new Date(ratingSummary.updatedAt))
+  : null;
+---
+
+<div class="rating-module my-10 space-y-6 lg:my-14">
+  <div class="text-center [hyphens:auto]">
+    <div class="flex items-center justify-center gap-3 text-yellow">
+      <i class="fas fa-star text-4xl text-yellow"></i>
+      <i class="fas fa-star text-4xl text-yellow"></i>
+      <i class="fas fa-star text-4xl text-yellow"></i>
+      <i class="fas fa-star text-4xl text-yellow"></i>
+      <i class="fas fa-star text-4xl text-yellow"></i>
+    </div>
+    <h2 class="py-2 text-2xl font-bold text-grey lg:text-4xl">
+      <span class="text-green">
+        {ratingValue.toFixed(2).replace(".", ",")} von 5 -
+      </span>{" "}
+      bewertet von unseren Kunden
+    </h2>
+    <p class="mt-2 text-lg text-textlight">
+      Basierend auf {reviewCount} Kundenbewertungen auf {portalCount} unabhängigen
+      Bewertungsportalen{updatedAtLabel ? ` (Stand: ${updatedAtLabel})` : ""}
+    </p>
+  </div>
+
+  <div>
+    <div class="mb-4 flex items-end justify-between gap-4">
+      <div>
+        <h3 class="text-2xl font-bold text-grey">Aktuelle Kundenstimmen</h3>
+      </div>
+      <div class="hidden items-center gap-2 md:flex">
+        <button
+          type="button"
+          class="rating-carousel-button inline-flex h-11 w-11 items-center justify-center rounded-full border border-divider bg-white text-grey shadow-sm transition hover:border-green hover:text-green"
+          data-direction="-1"
+          aria-label="Bewertungen nach links scrollen"
+        >
+          <span class="fas fa-chevron-left"></span>
+        </button>
+        <button
+          type="button"
+          class="rating-carousel-button inline-flex h-11 w-11 items-center justify-center rounded-full border border-divider bg-white text-grey shadow-sm transition hover:border-green hover:text-green"
+          data-direction="1"
+          aria-label="Bewertungen nach rechts scrollen"
+        >
+          <span class="fas fa-chevron-right"></span>
+        </button>
+      </div>
+    </div>
+
+    <div
+      data-rating-module
+      class="-mx-4 overflow-hidden px-4"
+    >
+      <div
+        data-rating-track
+        class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 pr-4 [scrollbar-width:thin]"
+      >
+        {featuredReviews.map((review) => (
+          <article class="content-box !my-0 flex w-[88%] shrink-0 snap-start flex-col !rounded-2xl !border !bg-white !p-6 text-left shadow-sm md:w-[440px]">
+            <div class="mb-4 flex items-start justify-between gap-4">
+              <div>
+                <p class="font-bold text-grey">{review.authorName}</p>
+                <p class="text-sm text-textlight">{dateFormatter.format(new Date(review.publishedAt))}</p>
+              </div>
+              <span class="rounded-full bg-lightgrey px-3 py-1 text-sm tracking-wide text-yellow" aria-label="5 von 5 Sternen">
+                ★★★★★
+              </span>
+            </div>
+
+            <p class="flex-1 text-base leading-7 text-textlight [hyphens:auto]">{review.text}</p>
+
+            <div class="mt-5">
+              <a
+                href={review.reviewUrl}
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex items-center gap-2 font-semibold text-green hover:text-darkgreen"
+              >
+                Bewertung ansehen
+                <span class="fas fa-arrow-up-right-from-square text-sm"></span>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap items-start justify-center gap-x-6 gap-y-4 pt-2">
+    {ratingPlatforms.map((platform) => {
+      return (
+        <a
+          href={platform.href}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={platform.name}
+          title={platform.name}
+          class="group flex min-w-28 shrink-0 flex-col items-center justify-start gap-2 px-1 py-1 text-center transition hover:-translate-y-0.5"
+        >
+          {platform.logoSrc ? (
+            <img
+              src={platform.logoSrc}
+              alt={platform.name}
+              loading="lazy"
+              decoding="async"
+              class="block h-auto max-h-10 w-auto max-w-[170px] object-contain opacity-70 saturate-[0.7] transition duration-200 group-hover:opacity-100 group-hover:saturate-100"
+            />
+          ) : (
+            <span class="fab fa-facebook-f text-2xl text-grey opacity-70 transition duration-200 group-hover:text-[#1877F2] group-hover:opacity-100"></span>
+          )}
+          <span class="text-xs leading-tight text-textlight">{platform.name}</span>
+        </a>
+      );
+    })}
+  </div>
+</div>
+
+<script is:inline>
+  document.querySelectorAll("[data-rating-module]").forEach((module) => {
+    const track = module.querySelector("[data-rating-track]");
+    if (!track) return;
+
+    const buttons = module.parentElement?.querySelectorAll(".rating-carousel-button");
+    buttons?.forEach((button) => {
+      button.addEventListener("click", () => {
+        const direction = Number(button.getAttribute("data-direction") || "0");
+        const amount = track.clientWidth * 0.85 * direction;
+        track.scrollBy({ left: amount, behavior: "smooth" });
+      });
+    });
+  });
+</script>

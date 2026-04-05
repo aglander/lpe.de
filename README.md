@@ -31,3 +31,34 @@ nach launch
 - Datenschutz Inhalte finalisieren
 - Page und Seo Page Inhalte finalisieren
 - Hero Bilder raussuchen
+
+## ProvenExpert API Testlauf
+
+Die API-Doku liegt lokal unter `docs/provenexpert-api.pdf`.
+
+API-Zugangsdaten bitte nicht im Code hinterlegen, sondern lokal in einer nicht versionierten `.env.local` speichern:
+
+```env
+PROVENEXPERT_API_ID=deine-api-id
+PROVENEXPERT_API_KEY=dein-api-key
+```
+
+Danach kann der Rohabruf aller Bewertungen so gestartet werden:
+
+```bash
+npm run provenexpert:fetch-raw
+```
+
+Die Ausgabe landet in `src/data/provenexpert-reviews-raw.json`.
+
+Die Summary fuer Gesamtwertung und Gesamtanzahl kann separat geholt werden:
+
+```bash
+npm run provenexpert:fetch-summary
+```
+
+Beides zusammen:
+
+```bash
+npm run provenexpert:sync
+```
