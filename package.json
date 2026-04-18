@@ -43,6 +43,8 @@
     "provenexpert:fetch-summary": "node --env-file-if-exists=.env.local scripts/provenexpert-fetch-summary.mjs",
     "provenexpert:fetch-raw": "node --env-file-if-exists=.env.local scripts/provenexpert-fetch-raw.mjs",
     "provenexpert:sync": "npm run provenexpert:fetch-summary && npm run provenexpert:fetch-raw",
+    "google:fetch-reviews": "node --env-file-if-exists=.env.local scripts/google-fetch-reviews.mjs",
+    "ratings:sync": "npm run provenexpert:sync && npm run google:fetch-reviews",
     "format": "prettier --write \"**/*.{astro,js,jsx,ts,tsx,json,md,mdx,css}\"",
     "audit:seo": "node scripts/validate-content-seo.mjs",
     "audit:seo:strict": "node scripts/validate-content-seo.mjs --strict-warnings",

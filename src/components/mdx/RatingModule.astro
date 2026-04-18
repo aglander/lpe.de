@@ -13,6 +13,18 @@ const portalCount = ratingPlatforms.length;
 const updatedAtLabel = ratingSummary.updatedAt
   ? dateFormatter.format(new Date(ratingSummary.updatedAt))
   : null;
+const hasReviewAvatars = featuredReviews.some((review) => typeof review.avatarUrl === "string" && review.avatarUrl.length > 0);
+
+const reviewsWithPreview = featuredReviews.map((review) => {
+  const fullText = typeof review.text === "string" ? review.text.replace(/\s+/g, " ").trim() : "";
+
+  return {
+    ...review,
+    fullText,
+    previewText: fullText,
+    isExpandable: fullText.length > 0,
+  };
+});
 ---
 
 <div class="rating-module my-10 space-y-6 lg:my-14">
@@ -67,28 +79,67 @@ const updatedAtLabel = ratingSummary.updatedAt
     >
       <div
         data-rating-track
-        class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 pr-4 [scrollbar-width:thin]"
+        class="flex items-start snap-x snap-mandatory gap-4 overflow-x-auto pb-4 pr-4 [scrollbar-width:thin]"
       >
-        {featuredReviews.map((review) => (
-          <article class="content-box !my-0 flex w-[88%] shrink-0 snap-start flex-col !rounded-2xl !border !bg-white !p-6 text-left shadow-sm md:w-[440px]">
-            <div class="mb-4 flex items-start justify-between gap-4">
-              <div>
-                <p class="font-bold text-grey">{review.authorName}</p>
-                <p class="text-sm text-textlight">{dateFormatter.format(new Date(review.publishedAt))}</p>
+        {reviewsWithPreview.map((review) => (
+          <article
+            class:list={[
+              "rating-review-card",
+              "content-box !my-0 flex h-[300px] w-[84%] shrink-0 self-start snap-start flex-col !rounded-2xl !border !bg-white !p-5 text-left shadow-sm sm:w-[72%] md:w-[380px]",
+              review.isExpandable && "rating-review-card--expandable cursor-pointer",
+            ]}
+            data-expandable={review.isExpandable ? "true" : "false"}
+            tabindex={review.isExpandable ? "0" : undefined}
+            role={review.isExpandable ? "button" : undefined}
+            aria-expanded={review.isExpandable ? "false" : undefined}
+          >
+            <div class="mb-3 flex items-start justify-between gap-3">
+              <div class="flex min-w-0 items-start gap-3">
+                {hasReviewAvatars && (
+                  review.avatarUrl ? (
+                    <img
+                      src={review.avatarUrl}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      referrerpolicy="no-referrer"
+                      class="mt-0.5 h-11 w-11 shrink-0 rounded-full border border-divider object-cover"
+                    />
+                  ) : (
+                    <span
+                      aria-hidden="true"
+                      class="mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-divider bg-lightgrey text-sm text-textlight"
+                    >
+                      <span class="fas fa-user"></span>
+                    </span>
+                  )
+                )}
+                <div class="min-w-0">
+                  <p class="truncate font-bold text-grey">{review.authorName}</p>
+                  <p class="truncate whitespace-nowrap text-sm text-textlight">
+                    <span>{dateFormatter.format(new Date(review.publishedAt))} · </span>
+                    <span>{review.providerLabel}</span>
+                  </p>
+                </div>
               </div>
-              <span class="rounded-full bg-lightgrey px-3 py-1 text-sm tracking-wide text-yellow" aria-label="5 von 5 Sternen">
+              <span class="shrink-0 text-sm tracking-wide text-yellow" aria-label="5 von 5 Sternen">
                 ★★★★★
               </span>
             </div>
 
-            <p class="flex-1 text-base leading-7 text-textlight [hyphens:auto]">{review.text}</p>
+            <p class="rating-review-text rating-review-preview h-[6rem] shrink-0 text-sm leading-6 text-textlight [hyphens:auto]">
+              {review.previewText}
+            </p>
+            <p class="rating-review-text rating-review-full text-sm leading-6 text-textlight [hyphens:auto]">
+              {review.fullText}
+            </p>
 
-            <div class="mt-5">
+            <div class="mt-auto pt-3">
               <a
                 href={review.reviewUrl}
                 target="_blank"
                 rel="noreferrer"
-                class="inline-flex items-center gap-2 font-semibold text-green hover:text-darkgreen"
+                class="inline-flex items-center gap-2 text-base leading-6 font-semibold text-green no-underline hover:text-darkgreen"
               >
                 Bewertung ansehen
                 <span class="fas fa-arrow-up-right-from-square text-sm"></span>
@@ -134,6 +185,7 @@ const updatedAtLabel = ratingSummary.updatedAt
     const track = module.querySelector("[data-rating-track]");
     if (!track) return;
 
+    const expandableCards = module.querySelectorAll("[data-expandable='true']");
     const buttons = module.parentElement?.querySelectorAll(".rating-carousel-button");
     buttons?.forEach((button) => {
       button.addEventListener("click", () => {
@@ -142,5 +194,38 @@ const updatedAtLabel = ratingSummary.updatedAt
         track.scrollBy({ left: amount, behavior: "smooth" });
       });
     });
+
+    const syncExpandedState = () => {
+      const isExpanded = module.classList.contains("rating-module-expanded");
+      expandableCards.forEach((card) => {
+        card.setAttribute("aria-expanded", String(isExpanded));
+      });
+    };
+
+    const toggleExpanded = () => {
+      module.classList.toggle("rating-module-expanded");
+      syncExpandedState();
+    };
+
+    expandableCards.forEach((card) => {
+      card.addEventListener("click", (event) => {
+        if (event.target instanceof Element && event.target.closest("a")) {
+          return;
+        }
+
+        toggleExpanded();
+      });
+
+      card.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") {
+          return;
+        }
+
+        event.preventDefault();
+        toggleExpanded();
+      });
+    });
+
+    syncExpandedState();
   });
 </script>

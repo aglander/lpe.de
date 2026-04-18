@@ -102,7 +102,17 @@
     @apply m-0 border-0 p-0;
   }
 
+  .rating-module h2,
+  .rating-module h3,
+  .rating-module p {
+    @apply m-0 border-0 p-0;
+  }
+
   .mdx-content .rating-module h2 {
+    @apply text-2xl font-bold text-grey lg:text-4xl;
+  }
+
+  .rating-module h2 {
     @apply text-2xl font-bold text-grey lg:text-4xl;
   }
 
@@ -110,8 +120,100 @@
     @apply text-2xl font-bold text-grey;
   }
 
+  .rating-module h3 {
+    @apply text-2xl font-bold text-grey;
+  }
+
   .mdx-content .rating-module p {
     @apply text-inherit;
+  }
+
+  .rating-module p {
+    @apply text-inherit;
+  }
+
+  .mdx-content .rating-module .rating-review-text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+
+  .rating-module .rating-review-text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+
+  .mdx-content .rating-module .rating-review-full {
+    display: none;
+  }
+
+  .rating-module .rating-review-full {
+    display: none;
+  }
+
+  .mdx-content .rating-module .rating-review-card--expandable:focus-visible {
+    outline: 2px solid var(--color-green, #75b82a);
+    outline-offset: 3px;
+  }
+
+  .rating-module .rating-review-card--expandable:focus-visible {
+    outline: 2px solid var(--color-green, #75b82a);
+    outline-offset: 3px;
+  }
+
+  .mdx-content .rating-module [data-rating-module].rating-module-expanded .rating-review-card {
+    align-self: stretch !important;
+    height: auto !important;
+  }
+
+  .rating-module [data-rating-module].rating-module-expanded .rating-review-card {
+    align-self: stretch !important;
+    height: auto !important;
+  }
+
+  .mdx-content .rating-module [data-rating-module].rating-module-expanded [data-rating-track] {
+    align-items: stretch !important;
+  }
+
+  .rating-module [data-rating-module].rating-module-expanded [data-rating-track] {
+    align-items: stretch !important;
+  }
+
+  .mdx-content .rating-module [data-rating-module].rating-module-expanded .rating-review-text {
+    display: block;
+    height: auto;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+  }
+
+  .rating-module [data-rating-module].rating-module-expanded .rating-review-text {
+    display: block;
+    height: auto;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+  }
+
+  .mdx-content .rating-module [data-rating-module].rating-module-expanded .rating-review-preview {
+    display: none;
+  }
+
+  .rating-module [data-rating-module].rating-module-expanded .rating-review-preview {
+    display: none;
+  }
+
+  .mdx-content .rating-module [data-rating-module].rating-module-expanded .rating-review-full {
+    display: block;
+  }
+
+  .rating-module [data-rating-module].rating-module-expanded .rating-review-full {
+    display: block;
   }
 }
 

@@ -9,6 +9,7 @@ import InsurancesBox from "../components/mdx/InsurancesBox.astro";
 import Link from "../components/mdx/Link.astro";
 import Navigation from "../components/mdx/Navigation.astro";
 import PlaceBridge from "../components/mdx/Place.jsx";
+import RatingModule from "../components/mdx/RatingModule.astro";
 import ProvenExpert from "../components/mdx/ProvenExpert.astro";
 import Reviews from "../components/mdx/Reviews.astro";
 import Video from "../components/mdx/Video.astro";
@@ -23,6 +24,7 @@ const staticMdxComponents = {
   InsurancesBox,
   Link,
   Navigation,
+  RatingModule,
   ProvenExpert,
   Reviews,
   Video,

@@ -1,5 +1,6 @@
 import provenExpertSummary from "../data/provenexpert.json";
 import provenExpertRaw from "../data/provenexpert-reviews-raw.json";
+import googlePlaceReviews from "../data/google-place-reviews.json";
 
 export const provenExpertProfileUrl = "https://www.provenexpert.com/de-de/lars-peter-eckhardt/";
 
@@ -54,6 +55,7 @@ const asNumber = (value) => {
 };
 
 const rawRatings = Array.isArray(provenExpertRaw?.ratings) ? provenExpertRaw.ratings : [];
+const googleProfiles = Array.isArray(googlePlaceReviews?.profiles) ? googlePlaceReviews.profiles : [];
 
 export const ratingSummary = {
   ratingValue: asNumber(provenExpertSummary?.ratingValue),
@@ -62,7 +64,7 @@ export const ratingSummary = {
   updatedAt: provenExpertRaw?.fetchedAt ?? null,
 };
 
-export const featuredReviews = rawRatings
+const provenExpertReviews = rawRatings
   .filter((review) => typeof review?.feedback === "string" && review.feedback.trim().length > 0)
   .filter((review) => asNumber(review?.ratingValue) >= 5)
   .map((review) => {
@@ -73,14 +75,48 @@ export const featuredReviews = rawRatings
       provider: "provenexpert",
       providerLabel: "ProvenExpert",
       authorName: review?.user?.name || (review?.user?.anonymous ? "Anonym" : "Unbekannt"),
+      avatarUrl: null,
       ratingValue: 5,
       publishedAt: timestamp,
       text: review.feedback.trim(),
       reviewUrl: provenExpertProfileUrl,
       sourceUrl: provenExpertProfileUrl,
     };
-  })
+  });
+
+const googleReviews = googleProfiles.flatMap((profile) => {
+  const reviews = Array.isArray(profile?.reviews) ? profile.reviews : [];
+
+  return reviews
+    .filter((review) => typeof review?.text === "string" && review.text.trim().length > 0)
+    .filter((review) => asNumber(review?.ratingValue) >= 5)
+    .map((review) => ({
+      id: review.id,
+      provider: "google",
+      providerLabel: profile?.name || review?.providerLabel || "Google",
+      authorName: review?.authorName || "Unbekannt",
+      avatarUrl: review?.avatarUrl || null,
+      ratingValue: 5,
+      publishedAt: Date.parse(review?.publishedAt ?? ""),
+      text: review.text.trim(),
+      reviewUrl: review?.reviewUrl || profile?.profileUrl,
+      sourceUrl: review?.sourceUrl || profile?.profileUrl,
+    }))
+    .filter((review) => Number.isFinite(review.publishedAt) && review.publishedAt > 0);
+});
+
+function buildReviewDedupKey(review) {
+  const author = String(review?.authorName ?? "").trim().toLowerCase();
+  const date = new Date(review?.publishedAt ?? 0).toISOString().slice(0, 10);
+  return `${author}::${date}`;
+}
+
+export const featuredReviews = [...provenExpertReviews, ...googleReviews]
   .sort((left, right) => right.publishedAt - left.publishedAt)
+  .filter((review, index, reviews) => {
+    const reviewKey = buildReviewDedupKey(review);
+    return reviews.findIndex((candidate) => buildReviewDedupKey(candidate) === reviewKey) === index;
+  })
   .slice(0, 20);
 
-export const hasLegacyRatingMarkup = (body = "") => /<(ProvenExpert|Reviews)\b/.test(body);
+export const hasLegacyRatingMarkup = (body = "") => /<(ProvenExpert|Reviews|RatingModule)\b/.test(body);

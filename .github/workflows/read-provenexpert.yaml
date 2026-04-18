@@ -1,4 +1,4 @@
-name: Sync ProvenExpert
+name: Sync Ratings
 on:
   schedule:
     - cron: '0 1 * * *' # nightly at 02:00 Europe/Berlin in winter / 03:00 in summer
@@ -20,11 +20,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Refresh ProvenExpert summary and latest reviews
+      - name: Refresh ProvenExpert and Google rating snapshots
         env:
           PROVENEXPERT_API_ID: 14Jp3xmphSUZ5RKZjWGBmVwZ48TA1LmA
           PROVENEXPERT_API_KEY: ${{ secrets.PROVENEXPERT_API_KEY }}
-        run: npm run provenexpert:sync
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+        run: npm run ratings:sync
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
@@ -32,7 +33,7 @@ jobs:
           author_name: Codex Automation
           author_email: 199175422+chatgpt-codex-connector[bot]@users.noreply.github.com
           message: |
-            chore: refresh ProvenExpert snapshots
+            chore: refresh rating snapshots
             
             Co-authored-by: Codex <199175422+chatgpt-codex-connector[bot]@users.noreply.github.com>
-          add: 'src/data/provenexpert.json src/data/provenexpert-reviews-raw.json'
+          add: 'src/data/provenexpert.json src/data/provenexpert-reviews-raw.json src/data/google-place-reviews.json'
