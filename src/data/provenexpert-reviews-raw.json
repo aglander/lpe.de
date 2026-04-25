@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "fetchedAt": "2026-04-24T04:19:25.424Z",
+  "fetchedAt": "2026-04-25T03:53:48.427Z",
   "totalRatings": 138,
   "ratings": [
     {
@@ -31,7 +31,8 @@
         "category_5": "Kundenservice",
         "category_6": "Preis / Leistung"
       },
-      "feedback": "Ich habe sehr positive Erfahrungen mit dem Unternehmen gemacht und fühlte mich jederzeit gut beraten. Es wurde sehr individuell auf meine Wünsche eingegangen, bis die passende Versicherung gefunden wurde. Großes Lob!"
+      "feedback": "Ich habe sehr positive Erfahrungen mit dem Unternehmen gemacht und fühlte mich jederzeit gut beraten. Es wurde sehr individuell auf meine Wünsche eingegangen, bis die passende Versicherung gefunden wurde. Großes Lob!",
+      "comment": "VIELEN DANK für Ihre Bewertung!"
     },
     {
       "id": "2xQphqwpkNQp482o5LGZlRmpjZGAl9JZ",
@@ -60,7 +61,8 @@
         "category_4": "Beratung",
         "category_5": "Kundenservice",
         "category_6": "Preis / Leistung"
-      }
+      },
+      "comment": "VIELEN DANK für Ihre Bewertung!"
     },
     {
       "id": "2xGB4pmp1Hmoh52Z1twA4pQZjxwoi5zA",
