@@ -1,8 +1,38 @@
 {
   "status": "success",
-  "fetchedAt": "2026-05-04T04:42:08.166Z",
-  "totalRatings": 138,
+  "fetchedAt": "2026-05-05T04:18:39.724Z",
+  "totalRatings": 139,
   "ratings": [
+    {
+      "id": "2xmp4VKBjtwZjNao482om82ojZQpkSKZ",
+      "created": 1777920264,
+      "ratingValue": 4.8,
+      "status": "unpublished",
+      "recommendation": 1,
+      "topicCode": "SRNE13",
+      "user": {
+        "anonymous": 1
+      },
+      "ratings": {
+        "category_0": 5,
+        "category_1": 5,
+        "category_2": 5,
+        "category_3": 4,
+        "category_4": 5,
+        "category_5": 5,
+        "category_6": 5
+      },
+      "labels": {
+        "category_0": "Qualität",
+        "category_1": "Nutzen",
+        "category_2": "Leistungen",
+        "category_3": "Umsetzung",
+        "category_4": "Beratung",
+        "category_5": "Kundenservice",
+        "category_6": "Preis / Leistung"
+      },
+      "feedback": "Herr Eckhardt hat uns durch die Zeit einer Schadensregulierung begleitet und stets mit sehr gutem Rat zur Seite gestanden. Vielen Dank!"
+    },
     {
       "id": "2xQpkEwp5VmZlNmojAmohWaAjtwZjZ3A",
       "created": 1775062674,
