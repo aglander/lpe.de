@@ -1,13 +1,13 @@
 {
   "status": "success",
-  "fetchedAt": "2026-05-05T04:18:39.724Z",
+  "fetchedAt": "2026-05-06T04:35:28.182Z",
   "totalRatings": 139,
   "ratings": [
     {
       "id": "2xmp4VKBjtwZjNao482om82ojZQpkSKZ",
       "created": 1777920264,
       "ratingValue": 4.8,
-      "status": "unpublished",
+      "status": "published",
       "recommendation": 1,
       "topicCode": "SRNE13",
       "user": {
