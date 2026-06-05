@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-04T05:58:56.028Z",
+  "fetchedAt": "2026-06-05T05:22:09.683Z",
   "maxReviewsPerProfile": 20,
   "profiles": [
     {
@@ -8,9 +8,9 @@
       "name": "Google | Müncheberg",
       "profileUrl": "https://g.page/r/CZbJCfeGOMFdEBM/review",
       "displayName": "Lars-Peter Eckhardt | LPE & GREY Versicherungsmakler & Finanzmakler GmbH & Co. KG",
-      "rating": 4.9,
-      "userRatingCount": 59,
-      "fetchedAt": "2026-06-04T05:58:55.915Z",
+      "rating": 5,
+      "userRatingCount": 60,
+      "fetchedAt": "2026-06-05T05:22:09.579Z",
       "reviews": [
         {
           "id": "places/ChIJW_HCPYEqqEcRlskJ94Y4wV0/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pVeFZYUlZiRUZMVUZjeFVrcGxhR2c1ZFRWdmVFRRAB",
@@ -97,7 +97,7 @@
       "displayName": "Lars-Peter Eckhardt | LPE & GREY Versicherungsmakler & Finanzmakler GmbH & Co. KG",
       "rating": 5,
       "userRatingCount": 95,
-      "fetchedAt": "2026-06-04T05:58:56.027Z",
+      "fetchedAt": "2026-06-05T05:22:09.682Z",
       "reviews": [
         {
           "id": "places/ChIJo0G5mdEwqEcRr6f3kfmAaHQ/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s1MVRFRkRkM2RoTFUxSWMyUXRWamRaTFZaa2JGRRAB",
