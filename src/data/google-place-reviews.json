@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-08T05:55:12.860Z",
+  "fetchedAt": "2026-06-09T05:10:30.681Z",
   "maxReviewsPerProfile": 20,
   "profiles": [
     {
@@ -10,7 +10,7 @@
       "displayName": "Lars-Peter Eckhardt | LPE & GREY Versicherungsmakler & Finanzmakler GmbH & Co. KG",
       "rating": 5,
       "userRatingCount": 60,
-      "fetchedAt": "2026-06-08T05:55:12.761Z",
+      "fetchedAt": "2026-06-09T05:10:30.557Z",
       "reviews": [
         {
           "id": "places/ChIJW_HCPYEqqEcRlskJ94Y4wV0/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pVeFZYUlZiRUZMVUZjeFVrcGxhR2c1ZFRWdmVFRRAB",
@@ -25,6 +25,21 @@
           "publishedAt": "2026-02-20T11:49:09.870443898Z",
           "text": "Hat uns dabei geholfen, eine Baufinanzierung für den Kauf einer Bestandsimmobilie zu günstigen Konditionen zu organisieren. Zuvor wurde die Immobilie zweimalig von anderen Banken abgelehnt für die Finanzierung. Hier hat dann aber alles gut geklappt.",
           "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pVeFZYUlZiRUZMVUZjeFVrcGxhR2c1ZFRWdmVFRRAB!2m1!1s0x47a82a813dc2f15b:0x5dc13886f709c996",
+          "sourceUrl": "https://g.page/r/CZbJCfeGOMFdEBM/review"
+        },
+        {
+          "id": "places/ChIJW_HCPYEqqEcRlskJ94Y4wV0/reviews/Ci9DQUlRQUNvZENodHljRjlvT25KdWRWTm5aRkYwZG5KTU5tcEdSUzFhT1hWWFdtYxAB",
+          "provider": "google",
+          "providerKey": "google-muencheberg",
+          "providerLabel": "Google | Müncheberg",
+          "placeId": "ChIJW_HCPYEqqEcRlskJ94Y4wV0",
+          "authorName": "Christiane Clucas",
+          "authorUrl": "https://www.google.com/maps/contrib/111912678913623251491/reviews",
+          "avatarUrl": "https://lh3.googleusercontent.com/a-/ALV-UjX4sHnu3PI-j_iwRArsOMLthw_2lXOBu9QzHS6de14-Q2kAIdM=s128-c0x00000000-cc-rp-mo",
+          "ratingValue": 5,
+          "publishedAt": "2026-02-12T14:56:44.400559308Z",
+          "text": "Auf der Suche nach Rechtsschutz Versicherungen,  bin ich in Müncheberg fündig geworden. Für die Umfangreiche Beratung und Geduld von  Frau Hein , möchte ich hier Dankeschön sagen . Weiter so.....kann ich nur empfehlen!!!!",
+          "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25KdWRWTm5aRkYwZG5KTU5tcEdSUzFhT1hWWFdtYxAB!2m1!1s0x47a82a813dc2f15b:0x5dc13886f709c996",
           "sourceUrl": "https://g.page/r/CZbJCfeGOMFdEBM/review"
         },
         {
@@ -97,7 +112,7 @@
       "displayName": "Lars-Peter Eckhardt | LPE & GREY Versicherungsmakler & Finanzmakler GmbH & Co. KG",
       "rating": 5,
       "userRatingCount": 95,
-      "fetchedAt": "2026-06-08T05:55:12.860Z",
+      "fetchedAt": "2026-06-09T05:10:30.681Z",
       "reviews": [
         {
           "id": "places/ChIJo0G5mdEwqEcRr6f3kfmAaHQ/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s1MVRFRkRkM2RoTFUxSWMyUXRWamRaTFZaa2JGRRAB",
