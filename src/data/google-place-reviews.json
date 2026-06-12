@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-11T05:53:52.959Z",
+  "fetchedAt": "2026-06-12T05:52:35.669Z",
   "maxReviewsPerProfile": 20,
   "profiles": [
     {
@@ -10,7 +10,7 @@
       "displayName": "Lars-Peter Eckhardt | LPE & GREY Versicherungsmakler & Finanzmakler GmbH & Co. KG",
       "rating": 5,
       "userRatingCount": 60,
-      "fetchedAt": "2026-06-11T05:53:52.835Z",
+      "fetchedAt": "2026-06-12T05:52:35.520Z",
       "reviews": [
         {
           "id": "places/ChIJW_HCPYEqqEcRlskJ94Y4wV0/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pVeFZYUlZiRUZMVUZjeFVrcGxhR2c1ZFRWdmVFRRAB",
@@ -55,6 +55,21 @@
           "publishedAt": "2025-12-07T09:10:30.308208712Z",
           "text": "Lars-Peter Eckhardt und seine KollegInnen sind sehr kompetente und freundliche Versicherungsmakler. Sie haben uns geholfen unsere Ferienhäuser so zu versichern, daß die Versicherungen tatsächlich auf diesen Spezialfall zutreffen, uns durch Kündigungsprozesse der alten, nicht auf die Objekte passenden Versicherungen geführt und uns, als nicht internet affine Kunden, durch online Abschlüsse begleitet. Dabei wurde auch die Beitrsgshöhe in unserem Interesse beachtet. Wir können Sie sehr empfehlen.",
           "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25wc2VVaFRVRkF6Y1ZGNVpDMWFTMVpOZWt4WlRsRRAB!2m1!1s0x47a82a813dc2f15b:0x5dc13886f709c996",
+          "sourceUrl": "https://g.page/r/CZbJCfeGOMFdEBM/review"
+        },
+        {
+          "id": "places/ChIJW_HCPYEqqEcRlskJ94Y4wV0/reviews/Ci9DQUlRQUNvZENodHljRjlvT201ak9UWTFPV2hDYzJ0aGRFVm1kRTVWYXpJMk5rRRAB",
+          "provider": "google",
+          "providerKey": "google-muencheberg",
+          "providerLabel": "Google | Müncheberg",
+          "placeId": "ChIJW_HCPYEqqEcRlskJ94Y4wV0",
+          "authorName": "Ines Behrendt",
+          "authorUrl": "https://www.google.com/maps/contrib/103240886562388381908/reviews",
+          "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocLQz-kuB1pbHzJn8XdU3c5mNczCM63lmAmzGeeT_LIOHQPFIg=s128-c0x00000000-cc-rp-mo",
+          "ratingValue": 5,
+          "publishedAt": "2025-11-07T15:52:18.125142427Z",
+          "text": "Heute möchte ich mich für die gute Zusammenarbeit mit dem Versicherungsbüro LPE & Grey bedanken.Ich bin schon viele Jahre Kunde und kann Sie nur weiter empfehlen.Ich wurde immer gut beraten und meine Anliegen wurden schnell bearbeitet.So war es jetzt auch bei meinen Autoversicherungen.es wurden gute Lösungen gefunden.(meine Tarife wurden umgestellt).nochmals vielen Dank.Ich wünsche Ihnen für die Zukunft alles Gute.",
+          "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT201ak9UWTFPV2hDYzJ0aGRFVm1kRTVWYXpJMk5rRRAB!2m1!1s0x47a82a813dc2f15b:0x5dc13886f709c996",
           "sourceUrl": "https://g.page/r/CZbJCfeGOMFdEBM/review"
         },
         {
@@ -112,7 +127,7 @@
       "displayName": "Lars-Peter Eckhardt | LPE & GREY Versicherungsmakler & Finanzmakler GmbH & Co. KG",
       "rating": 5,
       "userRatingCount": 95,
-      "fetchedAt": "2026-06-11T05:53:52.959Z",
+      "fetchedAt": "2026-06-12T05:52:35.669Z",
       "reviews": [
         {
           "id": "places/ChIJo0G5mdEwqEcRr6f3kfmAaHQ/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s1MVRFRkRkM2RoTFUxSWMyUXRWamRaTFZaa2JGRRAB",
