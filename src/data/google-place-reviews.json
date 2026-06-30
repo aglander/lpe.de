@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-29T05:54:13.936Z",
+  "fetchedAt": "2026-06-30T05:08:14.226Z",
   "maxReviewsPerProfile": 20,
   "profiles": [
     {
@@ -10,8 +10,23 @@
       "displayName": "Lars-Peter Eckhardt | LPE & GREY Versicherungsmakler & Finanzmakler GmbH & Co. KG",
       "rating": 5,
       "userRatingCount": 60,
-      "fetchedAt": "2026-06-29T05:54:13.817Z",
+      "fetchedAt": "2026-06-30T05:08:14.054Z",
       "reviews": [
+        {
+          "id": "places/ChIJW_HCPYEqqEcRlskJ94Y4wV0/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xKNFNqaExRblZHVGpReVoybDZWRFJ3VnpKMWJtYxAB",
+          "provider": "google",
+          "providerKey": "google-muencheberg",
+          "providerLabel": "Google | Müncheberg",
+          "placeId": "ChIJW_HCPYEqqEcRlskJ94Y4wV0",
+          "authorName": "Christa Jonack",
+          "authorUrl": "https://www.google.com/maps/contrib/108378346629135768032/reviews",
+          "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocI9QYAWmrkixp-ts8AxAFu-zyi6BhMeutigEUYxnVmQE8SiYg=s128-c0x00000000-cc-rp-mo",
+          "ratingValue": 5,
+          "publishedAt": "2026-05-07T09:24:54.709497430Z",
+          "text": "Seit ihrer Gründung sind wir bei der Firma Grey dabei.\nÜber 30 Jahre Kunde beweisen Zufriedenheit und grosses Vertrauen.\nWir wurden, sowohl als Firma wie auch privat immer bestens beraten und betreut.\nAuslandskrankenversicherungen, Reiserücktrittsversicherungen, Kontakt zur Unfallversicherung - wir wurden damit auch jetzt als Rentner freundlich und kompetent beraten.\nWir können dieses Team nur weiter empfehlen.",
+          "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xKNFNqaExRblZHVGpReVoybDZWRFJ3VnpKMWJtYxAB!2m1!1s0x47a82a813dc2f15b:0x5dc13886f709c996",
+          "sourceUrl": "https://g.page/r/CZbJCfeGOMFdEBM/review"
+        },
         {
           "id": "places/ChIJW_HCPYEqqEcRlskJ94Y4wV0/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pVeFZYUlZiRUZMVUZjeFVrcGxhR2c1ZFRWdmVFRRAB",
           "provider": "google",
@@ -127,7 +142,7 @@
       "displayName": "Lars-Peter Eckhardt | LPE & GREY Versicherungsmakler & Finanzmakler GmbH & Co. KG",
       "rating": 5,
       "userRatingCount": 95,
-      "fetchedAt": "2026-06-29T05:54:13.936Z",
+      "fetchedAt": "2026-06-30T05:08:14.226Z",
       "reviews": [
         {
           "id": "places/ChIJo0G5mdEwqEcRr6f3kfmAaHQ/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s1MVRFRkRkM2RoTFUxSWMyUXRWamRaTFZaa2JGRRAB",
