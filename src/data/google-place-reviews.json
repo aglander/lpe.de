@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-30T05:08:14.226Z",
+  "fetchedAt": "2026-07-01T05:25:49.922Z",
   "maxReviewsPerProfile": 20,
   "profiles": [
     {
@@ -10,8 +10,23 @@
       "displayName": "Lars-Peter Eckhardt | LPE & GREY Versicherungsmakler & Finanzmakler GmbH & Co. KG",
       "rating": 5,
       "userRatingCount": 60,
-      "fetchedAt": "2026-06-30T05:08:14.054Z",
+      "fetchedAt": "2026-07-01T05:25:49.789Z",
       "reviews": [
+        {
+          "id": "places/ChIJW_HCPYEqqEcRlskJ94Y4wV0/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tKalduZFhXWGQ1TVZKWlFrNUlRMVk0TmpSR1ptYxAB",
+          "provider": "google",
+          "providerKey": "google-muencheberg",
+          "providerLabel": "Google | Müncheberg",
+          "placeId": "ChIJW_HCPYEqqEcRlskJ94Y4wV0",
+          "authorName": "Franziska B.",
+          "authorUrl": "https://www.google.com/maps/contrib/104122533899000790233/reviews",
+          "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocIG79ZvJoBhyoYluLQBLFkO1x7aZ3qabE019IhIQ_fWX1_KLA=s128-c0x00000000-cc-rp-mo",
+          "ratingValue": 5,
+          "publishedAt": "2026-06-04T11:33:38.834366621Z",
+          "text": "Schon meine Eltern haben ihre Versicherungen in diesem Unternehmen in vertrauensvolle Hände gegeben und obwohl ich 500 km entfernt wohne, habe ich hier genau die Versicherung gefunden, die ich brauchte und am Heimatort nicht möglich war. Jetzt kann ich ganz beruhigt und entspannt sein. Vielen Dank für die kompetente Beratung und Unterstützung.",
+          "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tKalduZFhXWGQ1TVZKWlFrNUlRMVk0TmpSR1ptYxAB!2m1!1s0x47a82a813dc2f15b:0x5dc13886f709c996",
+          "sourceUrl": "https://g.page/r/CZbJCfeGOMFdEBM/review"
+        },
         {
           "id": "places/ChIJW_HCPYEqqEcRlskJ94Y4wV0/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xKNFNqaExRblZHVGpReVoybDZWRFJ3VnpKMWJtYxAB",
           "provider": "google",
@@ -142,7 +157,7 @@
       "displayName": "Lars-Peter Eckhardt | LPE & GREY Versicherungsmakler & Finanzmakler GmbH & Co. KG",
       "rating": 5,
       "userRatingCount": 95,
-      "fetchedAt": "2026-06-30T05:08:14.226Z",
+      "fetchedAt": "2026-07-01T05:25:49.921Z",
       "reviews": [
         {
           "id": "places/ChIJo0G5mdEwqEcRr6f3kfmAaHQ/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s1MVRFRkRkM2RoTFUxSWMyUXRWamRaTFZaa2JGRRAB",
